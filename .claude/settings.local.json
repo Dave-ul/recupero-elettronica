@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pdftotext '/home/davide/Scaricati/libro per il recupero.pdf' /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/libro.txt)",
+      "Bash(python3 -)",
+      "Bash(pdfimages -list -f 1 -l 3 \"/home/davide/Scaricati/libro per il recupero.pdf\")",
+      "Bash(chmod +x /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 40 0.04 0.05 0.46 0.30 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/probe/verifica_passaalto.png 8)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 39 0.52 0.50 1.00 0.90 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/probe/tabella6_try.png 6)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 40 0.12 0.075 0.47 0.145 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/probe/formula_4_45.png 14)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 40 0.04 0.30 0.47 0.40 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/probe/formula_4_47.png 12)",
+      "WebSearch",
+      "WebFetch(domain:www.edutecnica.it)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 37 0.55 0.70 0.93 0.94 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/figs/f44.png 6)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 38 0.09 0.36 0.47 0.78 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/figs/t5.png 6)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 38 0.70 0.26 0.97 0.56 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/figs/f45.png 6)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 39 0.542 0.583 0.972 0.775 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/figs/t6.png 6)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 40 0.06 0.78 0.47 0.96 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/figs/f48.png 6)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 39 0.542 0.583 0.972 0.862 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/figs/t6.png 6)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 40 0.055 0.842 0.44 0.935 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/figs/f48.png 7)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 38 0.152 0.393 0.449 0.723 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/figs/t5.png 7)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 37 0.55 0.787 0.97 0.947 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/figs/f44.png 7)",
+      "Bash(python3 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/crop.py 38 0.753 0.262 0.977 0.502 /tmp/claude-1000/-home-davide-Documenti-obsidian-Obsidian-2-0/9b8790e4-0ab5-4ccc-a597-841d2cd5a1b6/scratchpad/figs/f45.png 8)",
+      "Bash(find '/home/davide/Documenti/obsidian/Obsidian 2.0' -type d -not -path */.obsidian*)",
+      "Bash(find '/home/davide/Documenti/obsidian/Obsidian 2.0' -name *.md -not -path */.obsidian/*)",
+      "Bash(find '/home/davide/Documenti/obsidian/Obsidian 2.0' -iname *filtr* -not -path */.obsidian/*)"
+    ]
+  }
+}
