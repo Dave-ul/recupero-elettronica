@@ -1,8 +1,10 @@
 ---
 tags: [recupero, elettronica, fonti, trasparenza, lettera-majorana, audit]
 fonte_ufficiale: "MAJORANA lettera giudizio sospeso 09/06/2026 — IIS San Lazzaro di Savena (BO)"
-fonte_secondaria: "edutecnica.it — verificato coerente su 8/8 topic chiave"
-libro_mirandola: "VERIFICATO ✔ (dal 2026-07-19) — PDF scansionato 152 pagg. SENZA testo digitale, ma leggibile via OCR (tesseract -l ita) + lettura diretta delle immagini. Contenuti incrociati col testo reale capitolo per capitolo. Vedi §2 e la mappa pagine in §2bis."
+fonte_secondaria: "edutecnica.it — verificato coerente su 8/8 topic chiave; ora anche in PDF in Fonti/"
+libro_mirandola: "VERIFICATO ✔ (mappa pagine rifatta il 2026-08-19) — Fonti/Mirandola Volume 2/, 12 PDF, 282 pagine-PDF, senza strato di testo. Conversione: pagina stampata = 2·(pagina-PDF) − 6, offset costante, verificata su 4 folio in 3 capitoli. Vedi §2bis."
+fonti_aggiunte_2026_08_19: "appunti Poggi · tre verifiche FUSI del prof. Carli · Edutecnica in PDF · Mirandola Vol.1 e Vol.2"
+esame: "1 settembre 2026 — scritto 8:00-13:00 (Carli) · orale+pratico 14:00-17:00 (Carli e Protti insieme)"
 ---
 
 # 📚 Fonti del vault — Note di trasparenza
@@ -56,30 +58,217 @@ Domande, esercizi, esperienze e misure con l'oscilloscopio su tutto il programma
 
 ## 📂 2. Policy sulle fonti
 
-### ✅ FONTI VERIFICATE
+> [!important] Riallineamento del 2026-08-19
+> Questo paragrafo è stato riscritto. Il vault era stato costruito a luglio su un'altra
+> macchina, e **tutti i path che citava non esistono più**. Nel frattempo sono arrivate
+> **quattro fonti nuove** — gli appunti Poggi, le tre verifiche del prof. Carli, Edutecnica
+> in PDF e le scansioni complete dei due volumi Mirandola — di cui il vault non sapeva
+> niente. Tutto il materiale sta ora in un posto solo:
+>
+> ```
+> /home/parzivalkey/Scrivania/elettronicaa/Fonti/
+> ```
 
-#### **LETTERA Majorana** (fonte ufficiale del compito)
-- **Cosa**: documento protocollato dell'IIS Majorana che specifica gli argomenti d'esame
-- **Affidabilità**: 100% (firmato da Dirigente Scolastico Serafina Patrizia Scerra)
-- **Come la uso nel vault**: come **mappa argomenti** — ogni `[[Argomenti/X]]` deve coprire gli argomenti elencati nella LETTERA
-- **File di riferimento**: `~/Scaricati/MAJORANA_lettera_giudizio_sospeso_recuperi_(Secondo_Periodo).pdf` — **il PDF originale, con strato di testo** (a differenza del libro): si rilegge in qualunque momento con `pdftotext -layout`. *(Aggiornato il 2026-07-28: la versione precedente puntava a `/tmp/lettera_giudizio.txt`, un estratto temporaneo **che non esiste più**. Puntare a `/tmp` significava avere una fonte ufficiale non più verificabile.)*
-- **Testo verbatim delle due prove Carli** (riletto dal PDF il 2026-07-28):
+### 🥇 Gerarchia delle fonti
+
+Quando due fonti dicono cose diverse, vince quella più in alto. Quando una fonte **tace**
+su un argomento, quello è un indizio che l'argomento è fuori programma — ed è il criterio
+con cui è stato potato [[Calendario]].
+
+| # | Fonte | Cosa stabilisce |
+|---|---|---|
+| 1 | **La LETTERA** | **cosa esce.** Non si discute |
+| 2 | **Le tre verifiche FUSI del prof. Carli** | **come interroga, e su cosa sei caduto** |
+| 3 | **Le tre verifiche 4E sui diodi (foto)** | come interroga *a domande aperte* |
+| 4 | **Gli appunti Poggi** | **cosa è stato fatto davvero in classe** |
+| 5 | **Mirandola Vol. 2** | la teoria e il linguaggio ufficiali del corso |
+| 6 | **Edutecnica** | gli svolgimenti passo-passo che il Mirandola non dà |
+
+---
+
+### ✅ **La LETTERA Majorana** — fonte ufficiale del compito
+
+- **File**: `Fonti/MAJORANA_lettera_giudizio_sospeso_recuperi_(Secondo_Periodo).pdf`
+- **Affidabilità**: 100% (protocollo 2760, firmata dal Dirigente Scolastico)
+- **Ha uno strato di testo**: si rilegge in qualunque momento con `pdftotext -layout`
+- **Testo verbatim delle due prove Carli**:
   > PROVA SCRITTA: **esercizi** sui circuiti in corrente alternata, sui filtri passivi del primo ordine, sui transistor BJT, sui transistor JFET a canale N e sui transistor MOSFET a canale N ad arricchimento. PROVA ORALE: **domande sul diodo**, sui circuiti in corrente alternata e sui filtri passivi del primo ordine.
 
-#### **Verifiche reali del Prof. Carli** — 3 fogli fotografati, aggiunta 2026-07-28
+> [!info] Data e orario della prova — noti dal 2026-08-19
+> **Martedì 1 settembre 2026**: scritto **8:00-13:00** (cinque ore), orale **e** pratico
+> insieme **14:00-17:00**. Non sono due prove in due giorni: sono due sessioni dello stesso
+> giorno, con Carli e Protti insieme il pomeriggio. Vedi [[00 - Indice Generale]].
 
-- **Cosa**: due compiti in classe sui diodi, **16 + 23 = 39 domande aperte**, stesso docente. I Fogli B e C portano il riferimento *«libro capitolo 5 I diodi da pagina 192 a pagina 224»*; il Foglio A **no** (la sua consegna finisce a «in modo esaustivo:»). Fogli in `Allegati/`: `verifica-carli-diodi-16dom.jpeg`, `verifica-carli-4E-diodi-parte1.jpeg`, `verifica-carli-4E-diodi-parte2.jpeg` — **copie byte-identiche** agli originali (MD5 confrontati il 2026-07-28).
-- **Affidabilità**: **fonte diretta e di prima mano** su *come Carli interroga*. Per autorevolezza viene **subito dopo la LETTERA** e **prima** del libro e di edutecnica: non è materiale *analogo* alle domande d'esame, sono le domande del docente vero.
-- **Perché sono tue**: l'intestazione dei **Fogli B e C** dice **«Classe 4E»**. **4E è la sezione di elettronica dell'articolata 4BEM Meccanica-Elettronica**, cioè la classe dello studente indicata nella LETTERA. Sui fogli e nel frontmatter compaiono due sigle diverse per **la stessa classe**: non sono due sezioni.
-- **Il limite del Foglio A**: quel foglio ha il campo **CLASSE in bianco** (è il modulo vuoto della verifica). Prova il **docente** e l'**argomento**, non la classe. Le 16 domande sono comunque le stesse dei Fogli B/C nella sostanza, ma se serve citare un foglio con la classe accertata, sono B e C.
-- **Il limite, esplicito**: sono verifiche **in corso d'anno**, non la prova di recupero. Provano il **formato** (domande aperte con disegni, zero esercizi numerici), **non il programma**. Sullo **scope** del recupero prevale la LETTERA, che mette i diodi **all'orale** Carli e alla pratica Protti.
-- **Dove sono usate nel vault**: [[04 - Verifica tipo Carli — Diodi]] (trascrizione, mappa, risposte, checklist dei disegni); ricadute su [[Diodi]], [[02 - Prova Orale Carli]] e il callout di formato in [[01 - Prova Scritta Carli]].
+---
 
-#### **[edutecnica.it](https://www.edutecnica.it/)** (fonte secondaria online)
-- **Cosa**: manuale online di elettronica ed elettrotecnica, stile didattico ITI
-- **Affidabilità**: 8/8 topic chiave verificati coerenti col vault (BJT, MOSFET, JFET, Amplificatori, Diodi/Zener, Filtri RC/RL, Alimentatori, Trifase)
-- **Come la uso**: conferma formule, terminologie, correttezza tecnica
-- **URL principale per argomento**:
+### ✅ **Le tre verifiche del prof. Carli** — aggiunte il 2026-08-19
+
+- **File**: `Fonti/FUSI_02-03-26_260616_183723.pdf` (18 pp.) ·
+  `Fonti/FUSI_24-04-26_260616_183749.pdf` (18 pp.) ·
+  `Fonti/FUSI_29-05-26_260616_183828.pdf` (20 pp.)
+- **Cosa sono**: le prove scritte vere del docente, date in corso d'anno, **corrette a mano
+  e restituite**. Ogni fascicolo contiene il testo, il tuo svolgimento, e — nelle pagine
+  finali — lo svolgimento corretto.
+- **Perché contano più di qualunque libro**: non dicono solo *come* Carli formula un
+  esercizio. Dicono **su cosa sei caduto**, con le annotazioni in rosso del docente
+  («NON SVOLTO PER NULLA», «errato», «errata relazione che fornisce V_GS»). È la lista
+  degli argomenti da rifare, scritta da chi correggerà anche a settembre.
+- **Scansionate, senza strato di testo**: `pdftotext` restituisce 0 caratteri. Si leggono
+  come immagini.
+- **Dove sono usate nel vault**: [[05 - Verifiche FUSI (Carli)]] — trascrizione della mappa
+  esercizio → argomento e degli errori segnati — e in [[Calendario]], dove sono i
+  checkpoint dei giorni 1, 4, 7, 9, 10 e la sessione lunga del giorno 11.
+
+---
+
+### ✅ **Gli appunti Poggi** — aggiunti il 2026-08-19
+
+- **File**: `Fonti/appunti poggi.pdf` — 19 pagine, il quaderno del corso
+- **Cosa stabiliscono**: sono la prova documentale di **cosa è stato svolto in classe**.
+  Un argomento che non c'è né qui, né nella lettera, né in nessuna delle tre verifiche FUSI
+  è quasi certamente fuori programma: è il triplo filtro con cui [[Calendario]] ha tolto
+  risonanza, potenza in alternata, diagrammi di Bode, trifase e derating.
+- **Il limite, esplicito**: sono un **riassunto**, non una fonte a sé. Ogni pagina ha un
+  corrispettivo sul Mirandola, più esteso e con gli esempi svolti. Negli appunti mancano i
+  passaggi intermedi, ed è lì che si perdono i punti allo scritto. **Vanno sempre usati in
+  coppia col libro.**
+
+| appunti Poggi | Mirandola Vol. 2 |
+|---|---|
+| p. 1, 5, 7, 8 — numeri complessi, forme di rappresentazione | PDF 27-28 → libro 48-51 |
+| p. 6, 7 — segnale sinusoidale, T/f/ω | PDF 48-49 → libro 90-93 |
+| p. 4, 10 — impedenza, reattanze, serie e parallelo | PDF 28-30 → libro 51-55 |
+| p. 12, 16 — bipolo, quadripolo, matrice Z | PDF 63 → libro 120-121 |
+| p. 9, 18 — f.d.t., filtri del 1° ordine, poli | PDF 70-73 → libro 134-141 |
+| p. 3, 11, 13, 15 — BJT: struttura, zone, h_FE, caratteristiche | PDF 160-162 → libro 314-319 |
+| p. 17, 19 — JFET: analogia col BJT, maglie di polarizzazione | PDF 183-185 → libro 360-365 |
+
+> [!tip] Le due pagine che valgono più delle altre
+> **p. 9** (ricavo completo della G(s) di un passa-basso RC col partitore) e **p. 19** (le
+> due maglie del JFET: V_GS0 = −R_S·I_D0 e V_DD = I_D0·(R_S + R_D) + V_DS0). Sono i due
+> modelli di svolgimento su cui si reggono gli esercizi di progetto delle verifiche.
+
+---
+
+### ✅ **Le tre verifiche 4E sui diodi** — fogli fotografati, aggiunte 2026-07-28
+
+- **Cosa**: due compiti in classe sui diodi, **16 + 23 = 39 domande aperte**, stesso docente.
+  I Fogli B e C portano il riferimento *«libro capitolo 5 I diodi da pagina 192 a pagina 224»*;
+  il Foglio A no. Fogli in `Allegati/`: `verifica-carli-diodi-16dom.jpeg`,
+  `verifica-carli-4E-diodi-parte1.jpeg`, `verifica-carli-4E-diodi-parte2.jpeg`.
+- **Perché sono tue**: l'intestazione dei Fogli B e C dice «Classe 4E», che è la sezione di
+  elettronica dell'articolata 4BEM indicata nella LETTERA. Due sigle, una classe sola.
+- **Il limite del Foglio A**: campo CLASSE in bianco — prova il docente e l'argomento, non
+  la classe.
+- **Il limite, esplicito**: sono verifiche **in corso d'anno**. Provano il **formato**
+  (domande aperte con disegni, zero esercizi numerici), **non il programma**. Sullo scope
+  prevale la LETTERA, che mette i diodi all'**orale** Carli e alla pratica Protti.
+- **Dove sono usate**: [[04 - Verifica tipo Carli — Diodi]], con ricadute su [[Diodi]] e
+  [[02 - Prova Orale Carli]].
+
+> [!success] Le risposte sono già scritte
+> Le risposte alle **D1-D23** sono state redatte il 2026-08-19 e stanno in
+> `elettronicaa/diodi-risposte.html`. Il [[Calendario]] non le fa più riscrivere: le fa
+> **ripetere a voce** il 31 agosto, come richiamo a distanza.
+
+---
+
+### ✅ **Mirandola, «Elettrotecnica ed Elettronica» Vol. 2** (Zanichelli 2012)
+
+- **Dove**: `Fonti/Mirandola Volume 2/` — **12 PDF** divisi per intervallo di pagina-PDF
+  (`001-003.pdf`, `004-025.pdf`, … `237-282.pdf`), per un totale di **282 pagine-PDF**.
+- **Cos'è davvero**: non una scansione di carta, ma la **cattura schermo del lettore
+  digitale Zanichelli** — si vede la barra di interfaccia sovrapposta al centro di ogni
+  pagina («Tieni premuto ESC per uscire dalla modalità a schermo intero»). Conseguenza
+  pratica: la barra **copre una striscia orizzontale** a circa il 90% dell'altezza, e può
+  nascondere una riga di testo o una parte di figura. Se una figura sembra tagliata, non
+  è la figura: è la barra.
+- **Nessuno strato di testo**: `pdftotext` restituisce 0 caratteri. Si legge come immagine.
+- **Titolo confermato dal piè di pagina**: *Stefano Mirandola — ELETTROTECNICA ED
+  ELETTRONICA Vol.2 © Zanichelli 2012, per Elettronica*.
+- **Come si usa**: è il libro di classe, quello a cui il prof. rimanda esplicitamente. Le
+  sezioni QUESITI sono formulate come le domande dell'orale e le pagine FORMULE sono il
+  riassunto ufficiale. **Per la teoria e per l'orale è la fonte da usare.**
+
+#### §2bis — Da pagina-PDF a pagina stampata
+
+> [!check] Una formula sola, e stavolta è costante
+> ```
+> pagina stampata (sinistra) = 2 · (pagina-PDF) − 6
+> ```
+> Ogni pagina-PDF è **un'apertura di libro**, quindi mostra **due** folio: quello pari a
+> sinistra e il dispari a destra.
+>
+> **Verificata il 2026-08-19 leggendo il piè di pagina** su quattro punti in tre capitoli
+> diversi:
+>
+> | pagina-PDF | folio letti | testatina | atteso da formula |
+> |---|---|---|---|
+> | 27 | **48 \| 49** | «2 La corrente alternata» | 48 ✔ |
+> | 42 | **78 \| 79** | «2 La corrente alternata» | 78 ✔ |
+> | 99 | **192 \| 193** | «5 I diodi» | 192 ✔ |
+> | 160 | **314 \| 315** | «7 Gli amplificatori a transistor» | 314 ✔ |
+>
+> L'offset è **costante su tutto il volume**: questa scansione è continua, e non ha i salti
+> che aveva quella precedente. Resta comunque valida la regola di sempre — **leggi il folio
+> e la testatina prima di citare**, perché la testatina è l'unica cosa che dice a quale
+> *paragrafo* appartiene la pagina, e l'errore già commesso in passato è stato leggere il
+> folio giusto e attribuirlo alla sezione sbagliata.
+
+**Dove trovare un capitolo** (pagina-PDF calcolata come `(pagina libro + 6) / 2`):
+
+| Cap. | Titolo | Pagine libro | Pagine-PDF | File |
+|---|---|---|---|---|
+| 2 | La corrente alternata | 46-83 | 26-44 | `026-044.pdf` |
+| 3 | L'analisi dei segnali | 84-119 | 45-62 | `045-062.pdf` |
+| 4 | I quadripoli | 120-191 | 63-98 | `063-098.pdf` |
+| 5 | I diodi | 192-233 | 99-119 | `099-118.pdf` + `119-158.pdf` |
+| 6 | Amplificatori operazionali | 234-311 | 120-158 | ⛔ fuori programma |
+| 7 | Gli amplificatori a transistor (BJT e FET) | 312-385 | 159-195 | `159-195.pdf` |
+| 8 | Gli alimentatori | 386-427 | 196-216 | `196-216.pdf` |
+
+> [!warning] Il capitolo del BJT è il **7**, non il 6
+> Correzione storica che resta valida: il vault dava il BJT come «Capitolo 6». Il Capitolo 6
+> è quello sugli **amplificatori operazionali** — il libro stesso lo cita a p. 312:
+> «amplificatori operazionali, visti nel CAPITOLO 6». Gli allegati `libro-cap6-*.png` hanno
+> nomi non affidabili: verificare prima dell'uso.
+
+> [!danger] Fonte ritirata: `libro-OCR-completo.txt`
+> Fino al 2026-07-31 questo file dichiarava che il testo integrale del libro stava in
+> `/home/davide/Scaricati/libro-OCR-completo.txt`, prodotto con `tesseract` da una scansione
+> **diversa, a 152 pagine-PDF**, su un'altra macchina. **Quel file non esiste più, e neanche
+> quella scansione.**
+>
+> È la terza volta che il vault cita una fonte che non può più riaprire (prima
+> `/tmp/lettera_giudizio.txt`, poi i backup in `/tmp/recrop_work/`): è il difetto sistemico
+> **#6** registrato in [[00 - Audit e correzioni]]. Qui viene **ritirata**, non riscritta.
+>
+> **Cosa resta valido** dei riferimenti prodotti con quella fonte: i riferimenti *di
+> contenuto* — numero di FIGURA, numero di formula, titolo di paragrafo, numero di pagina
+> **stampata**. Quelli erano letti dal libro e il libro non è cambiato.
+> **Cosa non è più valido**: qualunque numero di **pagina-PDF** scritto prima del
+> 2026-08-19, e le tre formule di conversione per capitolo (`2·PDF+44`, `2·PDF+42`,
+> `2·PDF+122`) — erano corrette per la vecchia scansione e sono sbagliate per questa.
+
+---
+
+### ✅ **Edutecnica** — ora anche in PDF, aggiunto il 2026-08-19
+
+- **File**: `Fonti/Edutecnica Elettronica.pdf` · `Fonti/Edutecnica Elettrotecnica.pdf`
+- **Novità**: il vault citava solo il sito. I due PDF sono la stessa fonte, ma **citabile
+  per pagina e consultabile offline** — ed è così che [[Calendario]] la usa.
+- **A cosa serve davvero**: il Mirandola dà solo il risultato tra parentesi quadre;
+  Edutecnica mostra **lo svolgimento intero**. Quando devi imparare *come si fa* un
+  esercizio, e non solo se il risultato torna, vale di più. **Per la prova scritta è la
+  fonte da usare.**
+- **Affidabilità**: 8/8 topic chiave verificati coerenti col vault.
+- **Le due eccezioni da ricordare**:
+  - **Filtri del 1° ordine** — Edutecnica **non li tratta**. I suoi «circuiti accoppiati e
+    filtri di banda» (pp. 48-57) sono circuiti risonanti per radiofrequenza, un altro
+    argomento. Lì le uniche fonti sono il Mirandola e le pp. 9 e 18 di Poggi.
+  - **MOSFET** — qui è il contrario: il Mirandola gli dedica 5 pagine, la fonte vera è
+    Edutecnica (pp. 1-16).
+- **URL per argomento** (dominio unico autorizzato):
   - BJT: <https://www.edutecnica.it/elettronica/transistor/transistor.htm>
   - MOSFET: <https://www.edutecnica.it/elettronica/mosfet/mosfet.htm>
   - JFET: <https://www.edutecnica.it/elettronica/jfet/jfet.htm>
@@ -87,118 +276,52 @@ Domande, esercizi, esperienze e misure con l'oscilloscopio su tutto il programma
   - Diodi/Zener: <https://www.edutecnica.it/elettronica/zener/zener.htm>
   - Filtri: <https://www.edutecnica.it/elettronica/filtrip/filtrip.htm>
   - Alimentatori: <https://www.edutecnica.it/elettronica/alimentatori/alimentatori.htm>
-  - Trifase: <https://www.edutecnica.it/elettrotecnica/trifase/trifase.htm>
 
-### ✅ FONTE VERIFICATA (via OCR) — aggiornato 2026-07-19
+---
 
-#### **Libro Mirandola "Elettrotecnica ed Elettronica Vol.2"** (Zanichelli 2012)
-- **File**: `/home/davide/Scaricati/libro per il recupero.pdf` — ~76 MB, **152 pagine-PDF**
-- **Stato**: PDF scansionato (immagini). `pdftotext` restituisce 0 caratteri **perché non c'è uno strato di testo** — MA le pagine sono immagini nitide, quindi **leggibili**.
-- **Come è stato reso verificabile**: le pagine sono state passate all'**OCR** (`pdftoppm` a 200 dpi + `tesseract -l ita`) e **lette direttamente come immagini**. Il testo integrale è nel file **`/home/davide/Scaricati/libro-OCR-completo.txt`** (una pagina per blocco `===== PAGINA-PDF nnn =====`).
-- **Titolo confermato dai piè di pagina**: *Stefano Mirandola — ELETTROTECNICA ED ELETTRONICA Vol.2 © Zanichelli 2012, per Elettronica*.
-- **Implicazione**: i contenuti del vault **sono stati incrociati col testo reale**. Dove un argomento è stato verificato, il frontmatter riporta `libro_mirandola: "VERIFICATO ✔ …"` con capitolo, sezione e pagine reali. I segnaposto storici «pag. NON verificabile» vengono sostituiti mano a mano con i riferimenti veri.
+### ✅ **Approfondimenti online Zanichelli** dello stesso corso Mirandola
 
-### ✅ FONTE VERIFICATA — aggiunta 2026-07-25 (Lotto 13)
-
-#### **Approfondimenti online Zanichelli dello stesso corso Mirandola**
-
-- **Cosa**: schede di approfondimento e di laboratorio pubblicate da Zanichelli a corredo del *Corso di elettrotecnica ed elettronica* di Stefano Mirandola. Sono materiale **dello stesso autore e dello stesso editore** del libro cartaceo, quindi affidabilità pari al libro.
-- **Come sono state trovate**: cercando la sonda dell'oscilloscopio, argomento che **non è nelle 152 pagine scansionate**. Lo è invece qui.
-- **Scheda usata finora**: *La cancellazione polo-zero nella sonda dell'oscilloscopio (partitore compensato)* — $R_i = 1\ \text{M}\Omega$, $C_i \approx 150$ pF (oscilloscopio **+ cavo**), $R_s = 9\ \text{M}\Omega$, condizione $R_sC_s = R_iC_i$, dimostrazione della f.d.t. costante a $1/10$, $C_s = 16{,}7$ pF, taratura empirica con onda quadra.
+- **Cosa**: schede di approfondimento e di laboratorio pubblicate da Zanichelli a corredo
+  del corso. Stesso autore, stesso editore: affidabilità pari al libro.
+- **Scheda usata**: *La cancellazione polo-zero nella sonda dell'oscilloscopio (partitore
+  compensato)* — R_i = 1 MΩ, C_i ≈ 150 pF (oscilloscopio + cavo), R_s = 9 MΩ, condizione
+  R_sC_s = R_iC_i, f.d.t. costante a 1/10, C_s = 16,7 pF, taratura empirica con onda quadra.
   <https://online.scuola.zanichelli.it/mirandola-files/Corso_Elettr_V02/Laboratorio/Mirandola_V2_Laboratorio_Partitore_compensato.pdf>
-- **Dove è usata nel vault**: [[L'oscilloscopio]] §2 e §7; [[00 - Perchè (spiegazione intuitiva)]] §13.
+- **Dove è usata**: [[L'oscilloscopio]] §2 e §7; [[00 - Perchè (spiegazione intuitiva)]] §13.
 
-> [!important] Il PDF scansionato non è «il libro»
-> È **una parte** del libro: pp. ~48-427 del Vol. 2. Fuori da quell'intervallo ci sono il resto del volume, il **Volume 1** (a cui il libro stesso rimanda a p. 84 per le definizioni di segnale) e gli **approfondimenti online**. Prima di dichiarare un argomento assente dal libro — il difetto sistemico **#2**, che ha già colpito 4 volte — va cercato anche lì. Nel Lotto 13 questa ricerca ha evitato la quinta occorrenza.
+---
 
-> [!warning] Numero di pagina PDF ≠ numero di pagina stampato
-> Ogni **pagina-PDF** della scansione contiene **due pagine stampate** affiancate (una apertura di libro). Esempio verificato: la pagina-PDF **80** mostra le pagine stampate **202-203**; la pagina-PDF **2** mostra le **48-49**. La corrispondenza **non è una formula fissa** (c'è uno scarto di ~2 pagine da qualche parte nel volume), quindi i folio vengono controllati **sezione per sezione** dal piè di pagina reale.
->
-> **Formula verificata per il Cap. 5** (diodi): $\text{pagina stampata} = (\text{pagina-PDF} - 75)\cdot 2 + 192$. Non estrapolarla ad altri capitoli senza ricontrollare il piè di pagina.
+### ℹ️ **Mirandola Volume 1** — c'è, ed è fuori programma
 
-> [!tip] Come estrarre una figura dal PDF (metodo del Lotto 3)
-> ```bash
-> pdftoppm -f N -l N -r 200 -x X -y Y -W W -H H -png "libro per il recupero.pdf" out
-> ```
-> Ritaglia la **singola figura** invece della doppia pagina intera: ~20-50 KB contro ~1,2 MB. Non serve ImageMagick. Le coordinate si trovano renderizzando prima la pagina intera a 150 dpi (1754×987 px) e moltiplicando per 1,333 per passare a 200 dpi.
->
-> ⚠️ **I filename delle immagini in `Allegati/` non sono affidabili** per il numero di pagina: quelli generati prima del 2026-07-19 hanno numeri **non verificati** — controlla il piè di pagina nell'immagine prima di citarla. **Corretti il 2026-07-25** (Lotti 10-11, folio letti dall'immagine): `libro-cap7-pag100-mosfet-invertitore` → `libro-cap7-pp368-369-mosfet-polarizzazione-invertitore`; `libro-alim-pag110` → `libro-cap8-pp388-389-alimentatore-schema-blocchi`; `libro-alim-pag120-regolatori-78xx` → `libro-cap8-pp408-409-tabella-78xx`.
-> **Completato il 2026-07-26** (Lotto 15, folio e testatine letti dall'immagine): `libro-cap6-pag80-bjt-polarizzazione` → `libro-cap7-pp328-329-bjt-progetto-polarizzazione` (testatina «7 Gli amplificatori a transistor / 1 Il transistor bipolare (BJT)»); `libro-cap6-pag90-bjt-cc` → `libro-cap7-pp348-349-bjt-collettore-comune` (testatina «7 … / 2 Gli amplificatori a BJT»). Erano sbagliati **due volte**: capitolo (il BJT è il Cap. **7**) e pagina (80/90 invece di 328-329/348-349). **Nessun filename residuo non verificato.**
+- **Dove**: `Fonti/Mirandola Volume 1/` — 10 PDF, pagine-PDF 001-184.
+- **Perché è annotato qui anche se non serve**: il difetto sistemico **#2** del vault è
+  «dichiarare assente dal libro qualcosa che c'è», ed è già costato quattro correzioni. Il
+  Volume 1 c'è: è elettronica **digitale** (reti logiche, contatori, memorie,
+  microprocessori) e il Vol. 2 ci rimanda a p. 84 per le definizioni di base di segnale.
+- **Quando aprirlo**: praticamente mai. Nessuna voce della LETTERA lo tocca. Se serve una
+  definizione di segnale che il Vol. 2 dà per nota, sta lì.
 
-#### **§2bis — Mappa capitoli → pagine (verificata mano a mano)**
+---
 
-| Cap. | Titolo (dal libro) | Pagine-libro | Pagine-PDF | Stato |
-|---|---|---|---|---|
-| 2 | La corrente alternata — fasori | 46-51 | 1-3 | ✔ verificato |
-| 2 | La corrente alternata — impedenza R/L/C, reattanza, serie/parallelo, componenti reali | 52-61 | 4-8 | ✔ verificato |
-| 2 | La corrente alternata — **§2.1 «Risonanza serie»** (form. **2.20**, **2.21**, FIG. 11-12, ESEMPIO 3) | **55-56** | **5-6** | ✔ verificato (OCR + immagini) |
-| 2 | La corrente alternata — **§2.2 «Risonanza parallelo»** (form. **2.22**, **2.23**, correzione con $R_L$/$R_C$, FIG. 13-14, ESEMPIO 4) | **57-58** | **6-7** | ✔ verificato (OCR + immagini) |
-| 2 | La corrente alternata — chiusura §2 (oscillatori e filtri) + **§2.3 «Condensatori e induttori reali»** (FIG. 15, tg δ **2.24**) | **59** | **7** | ✔ verificato (immagine) |
-| 2 | La corrente alternata — **§3 «Il metodo simbolico»** (riquadro PROCEDIMENTO, ESEMPIO 5, FIG. 17A-17B) | **60-61** | **8** | ✔ verificato (OCR + immagine) |
-| 2 | La corrente alternata — **§4 «La potenza in alternata»** + §4.1 (form. 2.26-2.32, FIG. 18-19, ESEMPI 6-7) | **62-65** | **9-10** | ✔ verificato (OCR + immagini) |
-| 2 | La corrente alternata — **§4.2 «Il rifasamento degli impianti industriali»** (form. **2.33**, FIG. 22-24, ESEMPIO 8) | **65-67** | **10-11** | ✔ verificato (OCR + immagini) |
-| 2 | La corrente alternata — quesiti di riepilogo (**n. 13 risonanza serie/parallelo**, nn. 15-18 metodo simbolico, 19-24 potenze) | **80-81** | 18 | ✔ verificato (n. 13 letto dall'immagine) |
-| 2 | La corrente alternata — esercizi di fine capitolo (FIG. 40-44; nn. 9-10 FIG. 45-46; nn. 11-13 FIG. 47-49) | **82-83** | 19 | ✔ folio letto dal piè di pagina |
-| 3 | **«L'analisi dei segnali»** — apertura del capitolo + §1 «I segnali analogici», §1.1 «Il segnale audio» (FIG. 1-2) | **84-85** | **20** | ✔ verificato (immagine, 2026-07-25) — qui il libro cita l'**oscilloscopio** come strumento del dominio del tempo, e rimanda al **VOLUME 1** per le definizioni di base |
-| 3 | Metodo della trasformata di Laplace (**sezione interna** del Cap. 3, non il titolo del capitolo) | **102+** | **29+** | ✔ **presente nella scansione** — fuori programma |
-| 4 | I quadripoli — **§2.3 «Risposta di un quadripolo nel dominio del tempo»** (TABELLA 3 forme canoniche, form. **4.26**, FIGURA 24) | **138-139** | **48** | ✔ verificato (immagine, 2026-07-25) — «*per visualizzare la risposta al gradino sull'oscilloscopio si pone in ingresso un'**onda quadra***» |
-| 4 | I quadripoli — **§2.4 «Risposta di un quadripolo nel dominio della frequenza»** (form. **4.30-4.32**, FIGURA 29, ESEMPI 11-12) | **142-143** | **50** | ✔ verificato (immagine, 2026-07-25) — ampiezza e **sfasamento** rilevati con l'oscilloscopio al variare della frequenza |
-| 4 | I quadripoli — §6 «La qualità dei quadripoli (distorsione e **rumore**)» (Johnson/shot, form. 4.61-4.62) | **180-181** | **69** | ✔ folio letto dal piè di pagina (2026-07-22) |
-| 4 | I quadripoli — GUIDA ALLA PROGETTAZIONE: filtri **crossover** per diffusori acustici + PROGETTO 1 | **184-187** | **71-72** | ✔ folio letto dal piè di pagina |
-| 4 | I quadripoli — **quesiti di riepilogo** (parametri Z, adattamento, impedenze immagine; FIG. 80/83/86) | **188-189** | **73** | ✔ folio letto dal piè di pagina |
-| 4 | I quadripoli — **esercizi di fine capitolo** (nn. 17-19: RC serie, risposta ampiezza/fase, progetto passa alto 1° ordine) | **190-191** | **74** | ✔ folio letto dal piè di pagina |
-| 4 | I quadripoli — **§? «I filtri passivi del primo ordine»** (TABELLA 6 RC/RL passa basso e passa alto, TABELLA 7 filtri 2° ordine RLC, ESEMPIO 18) | **156-163** | **57-60** | ✔ folio verificato (PDF 58 → 158-159) — contenuto da auditare |
-| 4 | I quadripoli — **filtri del 2° ordine e fattore di qualità**: form. **4.49-4.50** (passa alto/passa banda RLC), **4.51** (picco), **4.52** $\xi = 1/2Q$, **4.53** $Q$, **4.54** $\omega_0$ media geometrica, **4.55-4.56** (Wien, doppio T); FIGURA 49-50 | **162-163** | **60** | ✔ **verificato (immagine, 2026-07-26, Lotto 15)** — folio e testatina «4 I quadripoli» letti dal piè di pagina. La **4.53** è stampata **in pulsazioni**: $Q = \omega_0/(\omega_{tH}-\omega_{tL})$, non $f_0/B$ |
-| 5 | **I diodi** — capitolo completo | **192-233** | **75-94** | ✔ verificato (OCR + immagini) |
-| 5 | I diodi — **§1 struttura, simbolo, polarizzazione** (FIGURA 5 «Diodo a semiconduttore: A) struttura; B) simboli circuitali; C) contenitore», FIGURA 6 «Polarizzazione di un diodo: A) diretta; B) inversa») | **196** | **77** | ✔ verificato (immagine, 2026-07-28) |
-| 5 | I diodi — **§1.3 curva caratteristica** (FIGURA 7 versi convenzionali + zone diretta/inversa; i sei punti dell'andamento; soglia $V_s \approx 0{,}6$ V) | **197** | **77** | ✔ verificato (immagine, 2026-07-28) |
-| 5 | I diodi — **§2.6 «Il limitatore»** (definizione del box RIEPILOGO; FIGURA 24 «Limitatori a bassa soglia e forme d'onda relative») | **210-211** | **84** | ✔ verificato (immagine, 2026-07-28) |
-| 5 | I diodi — limitatori, seguito (FIGURA 25 «Limitatori con diodi: A) in serie; B) in antiparallelo»; FIGURA 26 limitatore con generatore) | **212** | **85** | ✔ verificato (immagine, 2026-07-28) |
-| 5 | I diodi — **§4.2 breakdown inverso: effetto Zener ($V_Z<5$ V) vs effetto valanga ($V_Z>6$ V)** + TABELLA 4 (serie BZX55C, colonna $T_C$) | **220** | **89** | ✔ verificato (immagine + testatina «5 I diodi», 2026-07-28) |
-| 5 | I diodi — **§4.3 «Il regolatore di tensione a Zener»** (definizione di quadripolo regolatore, FIGURA 33 blocco funzionale, FIGURA 34 regolatore a Zener, form. **5.10** e **5.11**) | **221** | **89** | ✔ verificato (immagine + testatina, 2026-07-28) |
-| 6 | Amplificatori operazionali | — | — | ⚠️ **NON è il capitolo BJT** (vedi nota sotto) |
-| 7 | **Gli amplificatori a transistor** (BJT) — capitolo completo | **312-347** | **95-112** | ✔ verificato (OCR + immagini) |
-| 7 | Gli amplificatori a transistor — **§3 «I transistor FET e gli amplificatori a FET»** (JFET, MOSFET, ampl. a FET) | **358-369** | **118-124** | ✔ folio letto dall'immagine (2026-07-25) |
-| 7 | — **§3.3 «I MOSFET e le porte CMOS»** (FIG. 45 struttura, 46 simboli, 47 caratteristiche, **48 polarizzazione**, 49-50 invertitore/CMOS) | **366-368** | **122-123** | ✔ verificato (immagini) |
-| 8 | **Gli alimentatori** — §1 non stabilizzati + **fattore di ripple form. 8.1** (FIG. 3-5) | **388-389** | **133** | ✔ folio letto dall'immagine (2026-07-25) |
-| 8 | Gli alimentatori — **§3.1 «Regolatori integrati 78XX/79XX»** (FIG. **20** struttura interna, FIG. **21** collegamento completo) | **406-407** | **142** | ✔ verificato (immagine) |
-| 8 | Gli alimentatori — **TABELLA 1** famiglia 78XX ($V_D=2{,}5$ V), §3.2 duale FIG. 22, §3.3 correnti elevate FIG. 23, ESEMPIO 7 (form. $C=I_L/2fV_{rpp}$) | **408-409** | **143** | ✔ verificato (immagine) |
+### 🗺️ Dove sta cosa — mappa rapida
 
-> [!danger] Correzione di numerazione scoperta nel Lotto 4
-> Il vault dava il BJT come «Capitolo 6». **È sbagliato**: il capitolo del BJT è il **7, «Gli amplificatori a transistor»** (p. 312, frontespizio con il numero 7; formule numerate 7.1-7.14). Il **Capitolo 6 è quello sugli amplificatori operazionali** — il libro stesso lo cita a p. 312: «amplificatori operazionali, visti nel CAPITOLO 6».
->
-> Conseguenza pratica: i file `Allegati/libro-cap6-*.png` hanno **nomi non affidabili** (numero di capitolo e/o folio) — verificare prima dell'uso. Il file `libro-cap7-pag100-mosfet-*` è stato invece verificato e rinominato il 2026-07-25: era davvero Cap. 7 (§3.3), ma alle pp. **368-369**, non «pag. 100».
-
-> [!danger] Seconda affermazione falsa sulla scansione, scoperta nel Lotto 6
-> `Il metodo simbolico` sosteneva che il **Capitolo 3** (trasformata di Laplace) «**non è nella scansione** che hai». **È falso**: il Cap. 3 inizia a **p. 102** (pag.-PDF 29). Resta vero che è **fuori programma** — ma è una cosa diversa dal non esserci, e il vault presentava la seconda come giustificazione della prima.
->
-> È la **terza volta** che il vault dichiara assente dal libro qualcosa che c'è (Lotto 1: la stessa affermazione sul Cap. 3 nei fasori; Lotto 5: la base comune; qui). **Pattern da cercare attivamente**: `grep -rn "non è nella scansione\|non è presente\|il libro non tratta" Argomenti Esercizi`.
-
-> [!danger] Falsa correzione del 2026-07-20, ritirata il 2026-07-22 — il folio del rumore è **pp. 180-181**
-> Il 20/07 era stato annotato qui che la sezione sul **rumore** (Johnson/shot, form. 4.61-4.62), registrata a **pp. 180-181**, andava corretta in **pp. 190-191**. **Quella correzione era sbagliata**: il valore originale era giusto.
->
-> Verificato il 22/07 per **tre vie indipendenti**:
-> 1. L'**OCR** colloca le formule 4.61-4.62 nella pagina-PDF **069**, non nella 074.
-> 2. Il **piè di pagina della pagina-PDF 069**, letto a 300 dpi, riporta **180 | 181**, con testatina «**6** La qualità dei quadripoli (distorsione e rumore)».
-> 3. L'**immagine dell'allegato stesso** mostra il folio **180 | 181**: il rename del 20/07 aveva reso il filename in contraddizione col folio visibile dentro l'immagine.
->
-> La pagina-PDF **074 è davvero pp. 190-191** — ma contiene gli **esercizi di fine capitolo**, non il rumore. L'errore è stato leggere il folio della pagina giusta e attribuirlo alla **sezione sbagliata**.
->
-> **Ripristinato** in `Diodi.md`, `Amplificatori a BJT.md`, nella tabella §2bis qui sopra e nel nome dell'allegato (`libro-cap4-pp180-181-rumore-johnson-shot.png`).
->
-> **Lezione**: leggere il folio non basta se poi lo si associa alla sezione sbagliata. Va letta la **testatina** (che nomina il paragrafo) insieme al numero di pagina. Vedi [[00 - Audit e correzioni]], Lotto 8, difetto sistemico #4.
-
-**Conversione pagina Cap. 4**: `pagina stampata = 2·(pagina-PDF) + 42` — verificata in **cinque** punti con folio letti dal piè di pagina: PDF 58 → p. 158, PDF 69 → p. 180, PDF 71 → p. 184, PDF 72 → p. 186, PDF 73 → p. 188, PDF 74 → p. 190.
-
-> [!check] Le tre conversioni sono coerenti fra loro
-> Riscritte nella stessa forma: Cap. 2 → $2\cdot\text{PDF} + 44$; Cap. 4 → $2\cdot\text{PDF} + 42$; Cap. 5 → $2\cdot\text{PDF} + 42$; Cap. 7 → $2\cdot\text{PDF} + 122$; **Cap. 8 → $2\cdot\text{PDF} + 122$** (stesso offset del Cap. 7: la scansione è continua da Cap. 7 a Cap. 8 — verificato su PDF 142 → p. 406). Il FET (Cap. 7 §3) segue lo stesso offset: PDF 118 → p. 358, PDF 122 → p. 366, PDF 123 → p. 368.
-> Cap. 4 e Cap. 5 condividono lo stesso offset: fra Cap. 2 e Cap. 4 c'è lo **scarto di 2 pagine** già ipotizzato nel riquadro qui sopra, e da lì in poi la corrispondenza resta stabile fino al Cap. 5. Il salto grosso prima del Cap. 7 indica invece che **la scansione non è continua** (mancano pagine fra Cap. 5 e Cap. 7). ⚠️ Continuare comunque a leggere il folio prima di citare.
-
-**Conversione pagina Cap. 2**: `pagina stampata = (pagina-PDF − 1)·2 + 46` — verificata agli estremi su PDF 4 → p. 52 e PDF 8 → p. 60 (folio letto dal piè di pagina).
-
-**Conversione pagina Cap. 7**: `pagina stampata = (pagina-PDF − 95)·2 + 312` — verificata agli estremi su PDF 95 → pp. 312-313 e PDF 110 → pp. 342-343. ⚠️ Come per il Cap. 5, **non estrapolarla ad altri capitoli** senza ricontrollare il piè di pagina.
-
-> La tabella viene estesa a ogni lotto di audit (vedi [[00 - Audit e correzioni]]).
+```
+elettronicaa/
+├── Calendario_18_giorni.md      il piano giorno per giorno (copia in vault: Calendario.md)
+├── diodi-risposte.html          risposte D1-D23, già scritte
+├── Fonti/
+│   ├── MAJORANA_lettera_…pdf    la LETTERA
+│   ├── FUSI_02-03-26_…pdf       verifica alternata + filtri
+│   ├── FUSI_24-04-26_…pdf       verifica BJT
+│   ├── FUSI_29-05-26_…pdf       verifica JFET + MOSFET
+│   ├── appunti poggi.pdf        il quaderno del corso
+│   ├── Edutecnica Elettronica.pdf
+│   ├── Edutecnica Elettrotecnica.pdf
+│   ├── Mirandola Volume 1/      12 PDF — digitale, fuori programma
+│   ├── Mirandola Volume 2/      12 PDF — il libro di classe
+│   └── WhatsApp Image …jpeg     le tre foto delle verifiche 4E sui diodi
+└── Recupero Elettronica/        questo vault
+```
 
 ---
 
@@ -208,8 +331,8 @@ Domande, esercizi, esperienze e misure con l'oscilloscopio su tutto il programma
 
 | LETTERA | Argomenti vault | Esercizi svolti |
 |---|---|---|
-| Circuiti AC (impedenze, P/Q/S, fasori) | `[[Impedenza]]`, `[[Metodo simbolico]]`, `[[Potenze AC]]` | `[[Esercizi - Impedenza]]`, `[[Esercizi - Metodo simbolico]]`, `[[Esercizi - Potenze AC]]` |
-| Filtri passivi **1° ordine** (RC/RL) | `[[Filtri 1° ordine]]` | `[[Esercizi - Filtri]]` |
+| Circuiti AC (impedenze, P/Q/S, fasori) | `[[Impedenza dei bipoli R, L, C]]`, `[[Il metodo simbolico]]`, `[[Le potenze in alternata]]` | `[[Esercizi - Impedenza dei bipoli R, L, C]]`, `[[Esercizi - Il metodo simbolico]]`, `[[Esercizi - Le potenze in alternata]]` |
+| Filtri passivi **1° ordine** (RC/RL) | `[[Filtri passivi del primo ordine]]` | `[[Esercizi - Filtri passivi del primo ordine]]` |
 | BJT (pilota in corrente) | `[[BJT]]` | `[[Esercizi - BJT]]` |
 | JFET **canale N** | `[[JFET]]` | `[[Esercizi - JFET]]` |
 | MOSFET **canale N enhancement** | `[[MOSFET]]` | `[[Esercizi - MOSFET]]` |
@@ -228,30 +351,54 @@ Domande, esercizi, esperienze e misure con l'oscilloscopio su tutto il programma
 |---|---|
 | Circuiti con diodi | `[[Diodi]]`, `[[Alimentatori]]` |
 | Segnali sinusoidali | `[[Segnali sinusoidali e fasori]]` |
-| Reti RLC in regime sinusoidale | `[[Reti RLC]]`, `[[Impedenza]]` |
-| Filtri passivi | `[[Filtri 1° ordine]]` |
+| Reti RLC in regime sinusoidale | `[[Reti RLC e risonanza]]`, `[[Impedenza dei bipoli R, L, C]]` |
+| Filtri passivi | `[[Filtri passivi del primo ordine]]` |
 | BJT | `[[BJT]]` |
 | Amplificatori con BJT | `[[Amplificatori a BJT]]` |
 | **Uso oscilloscopio** | `[[L'oscilloscopio]]` ← strumento trasversale a tutti i punti |
 
-### Argomenti "extra" nel vault (fuori LETTERA — solo approfondimento)
+### Argomenti presenti nel vault ma non nominati dalla LETTERA
 
-| Argomento | File | Perché presente |
+Allineato il 2026-08-19 alla potatura di [[Calendario]]. Il criterio è il triplo filtro:
+un argomento resta **solo** se compare nella LETTERA, negli appunti Poggi, o in una delle
+tre verifiche FUSI.
+
+| Argomento | File | Stato |
 |---|---|---|
-| Sinusoidi, fasori, Fourier | `[[Segnali sinusoidali e fasori]]` | propedeutico ai circuiti AC (Carli scritta + Protti pratica) |
-| Potenze AC (P, Q, S, $\cos\varphi$) | `[[Potenze AC]]` | parte integrante "circuiti AC" Carli scritta |
-| Metodo simbolico | `[[Metodo simbolico]]` | procedura per risolvere circuiti AC |
-| Risonanza (ω₀, Q) | `[[Reti RLC]]` | parte integrante "reti RLC" Protti pratica |
-| Raddrizzatori, Graetz, 78xx | `[[Alimentatori]]` | parte integrante "circuiti con diodi" Carli orale + Protti pratica |
-| **Operazionali** | ❌ **ASSENTE** dal vault | non richiesto dalla LETTERA e non coperto dal libro/corso |
-| **MOSFET depletion / P-channel** | solo accenno in `[[MOSFET]]` | solo enhancement n è richiesto dalla LETTERA |
+| Sinusoidi e fasori | `[[Segnali sinusoidali e fasori]]` | ✅ **dentro** — propedeutico ai circuiti AC, e «segnali sinusoidali» è nella LETTERA per Protti |
+| Metodo simbolico | `[[Il metodo simbolico]]` | ✅ **dentro** — è *la* procedura per risolvere i circuiti AC della prova scritta |
+| Reti RLC in regime sinusoidale | `[[Reti RLC e risonanza]]` §1-2 | ✅ **dentro** — nominato dalla LETTERA per Protti. È l'analisi con le impedenze complesse |
+| Amplificatori a BJT | `[[Amplificatori a BJT]]` | ✅ **dentro** — nominato dalla LETTERA per Protti |
+| Potenze AC (P, Q, S, cos φ) | `[[Le potenze in alternata]]` §1-2 | 📖 **solo lettura per l'orale**, 20 min il 20 agosto. Non è in Poggi né in nessuna verifica, ma all'orale la LETTERA dice «circuiti in corrente alternata» senza restringere |
+| Risonanza (ω₀, Q, banda) | `[[Reti RLC e risonanza]]` §3+ | 📖 **solo la definizione**, stessi 20 minuti. Non fatta in classe: la parola «risonanza» non compare né in Poggi né in nessuna delle tre verifiche |
+| Alimentatori (raddrizzatori, Graetz, 78xx) | `[[Alimentatori]]` §1 e §4 | 📖 **solo lettura**, 25 min il 23 agosto. La LETTERA dice «circuiti con diodi» per Protti, e l'alimentatore è il circuito con diodi del banco di laboratorio |
+| Rifasamento industriale e trifase | `[[Le potenze in alternata]]` §3 | ⛔ **fuori** — non nella LETTERA, non in Poggi, non in nessuna verifica |
+| Diagrammi di Bode, filtri 2° ordine, passa-banda | `[[Filtri passivi del primo ordine]]` | ⛔ **fuori** — la LETTERA dice «filtri passivi del **primo** ordine» |
+| Amplificatori operazionali | ❌ assente dal vault | ⛔ **fuori** — Cap. 6 del libro, mai richiesto |
+| MOSFET depletion e canale P · JFET canale P | accenno in `[[MOSFET]]`, `[[JFET]]` | ⛔ **fuori** — la LETTERA dice «canale N ad arricchimento» |
 
----
+## 📋 4. Note operative
 
-## 📋 4. Note operative per lo studente Carli
-
-1. **Studia dalla LETTERA + edutecnica.it + Mirandola** — ora tutte e 3 sono fonti VERIFICATE (il libro via OCR/lettura pagine, vedi `libro-OCR-completo.txt`).
-2. **Mirandola** è il libro di testo del corso: usalo con fiducia per **figure**, **schemi** ed **esempi svolti**. I riferimenti di pagina nel vault sono controllati sul testo reale; ricorda solo che *pagina-PDF ≠ pagina stampata* (vedi riquadro in §2).
-3. **Per la prova Carli (settembre 2026)**: punta sugli argomenti della LETTERA scritta/orale. Gli "extra" (operazionali, P-channel, depletion) sono **fuori programma** — non sprecare tempo.
-4. **Per la prova Protti (settembre 2026)**: pratica con l'oscilloscopio reale; usa `[[L'oscilloscopio]]` del vault + misure in laboratorio.
-5. **In caso di dubbio su una formula**: è confermata sia da edutecnica.it sia dal testo Mirandola (OCR in `libro-OCR-completo.txt`). Le discrepanze trovate e risolte sono elencate in [[00 - Audit e correzioni]].
+1. **L'ordine in cui aprire le cose**, quando studi un argomento: prima la pagina di
+   [[Calendario]] del giorno, che dice cosa e in che ordine; poi gli **appunti Poggi**
+   come indice; poi le pagine del **Mirandola** corrispondenti, per i passaggi intermedi;
+   poi **Edutecnica** per gli esercizi svolti; e la nota del **vault** quando una
+   spiegazione non scende al primo colpo.
+2. **Le verifiche FUSI non sono un ripasso finale, sono il termometro.** Ogni checkpoint
+   del calendario ne rifà una porzione da zero e cronometrata. Gli esercizi segnati «NON
+   SVOLTO PER NULLA» o «errato» in rosso sono, letteralmente, la lista di cosa il docente
+   sa già che non sai fare: vedi [[05 - Verifiche FUSI (Carli)]].
+3. **Mirandola per la teoria e per l'orale, Edutecnica per lo scritto.** Il libro dà solo
+   il risultato tra parentesi quadre; Edutecnica mostra lo svolgimento. Due eccezioni:
+   i **filtri del 1° ordine** (solo Mirandola + Poggi) e i **MOSFET** (soprattutto
+   Edutecnica).
+4. **Fuori programma, e non è una perdita: è tempo guadagnato.** Amplificatori
+   operazionali, MOSFET depletion e canale P, JFET canale P, trifase e rifasamento
+   industriale, diagrammi di Bode, filtri del 2° ordine, derating. Nessuno compare nella
+   LETTERA, negli appunti Poggi o nelle tre verifiche FUSI.
+5. **Per il pomeriggio del 1° settembre** (orale + pratico insieme, 14:00-17:00): le tre
+   domande d'orale di Carli sono **diodo, circuiti in alternata, filtri del 1° ordine** —
+   tutte e tre, non solo il diodo. Per Protti serve l'oscilloscopio su tutto il programma:
+   [[L'oscilloscopio]] e [[03 - Prova Pratica Protti]].
+6. **In caso di dubbio su una formula**: si controlla su Edutecnica **e** sul Mirandola.
+   Le discrepanze trovate e risolte sono in [[00 - Audit e correzioni]].

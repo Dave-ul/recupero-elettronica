@@ -4,8 +4,17 @@ fonte: "MAJORANA — Lettera di giudizio sospeso (Secondo Periodo), 09/06/2026"
 docente: Prof. Carlo Carli
 tipologia: Orale
 ---
-
 # 02 — Prova Orale (Prof. Carli)
+
+> [!abstract] 📅 Quando · 1 settembre, **14:00 – 17:00** — insieme alla pratica di Protti
+> Non è una prova a sé: è **mezza sessione**, l'altra mezza è [[03 - Prova Pratica Protti|il
+> laboratorio di Protti]], con i due docenti presenti insieme.
+>
+> La preparano: il **diodo** già dal 19 agosto (risposte D1-D23 in
+> `elettronicaa/diodi-risposte.html`), **alternata** e **filtri** dai giorni 1-4 di
+> [[Calendario]], e la prova a voce della mattina del **giorno 11** (30 agosto). Il ripasso
+> finale è il **giorno 12** (31 agosto), 40 minuti a voce.
+
 
 > [!info] Dove serve
 > È la **prova orale** di teoria del docente Carlo Carli. Non ci sono esercizi da risolvere davanti al foglio: ci sono **definizioni, teoremi, dimostrazioni rapide**, domande di ragionamento e analisi di schemi "a voce".
@@ -64,8 +73,8 @@ All'orale la lista si traduce in domande di tipo:
 | Cos'è un **filtro passa-basso / passa-alto**? | Rete che seleziona frequenze basse/alte sopra/sotto una $f_t$ | [[Filtri passivi del primo ordine]] |
 | Cos'è un **diodo a giunzione**? | Componente a semiconduttore con due terminali (anodo, catodo) che conduce in un solo verso | [[Diodi]] |
 | Cos'è un **BJT**? | Transistor a giunzione bipolare (NPN o PNP), pilotato in corrente dalla base | [[BJT]] |
-| Cos'è un **MOSFET**? | Transistor a effetto di campo con gate isolato (ossido), pilotato in tensione | [[BJT#MOSFET]] |
-| Cos'è un **JFET**? | FET a giunzione, gate direttamente connesso al canale tramite giunzione p-n | [[BJT#JFET]] |
+| Cos'è un **MOSFET**? | Transistor a effetto di campo con gate isolato (ossido), pilotato in tensione | [[MOSFET]] |
+| Cos'è un **JFET**? | FET a giunzione, gate direttamente connesso al canale tramite giunzione p-n | [[JFET]] |
 
 ### 🟡 Spiegazioni da saper fare
 
@@ -91,7 +100,7 @@ All'orale la lista si traduce in domande di tipo:
 >
 > Perché il gate del MOSFET è isolato da uno strato di ossido, quindi **non assorbe corrente continua** (corrente di gate ≈ 0). Nel BJT invece serve sempre una $I_B$ per mandare il transistor in zona attiva. Il MOSFET scalda meno perché non c'è la potenza $V_{BE} \cdot I_B$.
 >
-> Vedi: [[BJT#MOSFET]].
+> Vedi: [[MOSFET]].
 
 > [!question] "Perché il fattore di potenza è $\cos\varphi$?"
 >
@@ -113,7 +122,7 @@ All'orale la lista si traduce in domande di tipo:
 >
 > Il JFET ha il gate connesso al canale tramite una **giunzione p-n** che va polarizzata **in inversa**; questo preclude di avere $V_{GS}$ positiva. Il MOSFET ha il gate **isolato da uno strato di ossido**: $V_{GS}$ può essere positivo, negativo, o nullo; curve molto più flessibili.
 >
-> Vedi: [[BJT#JFET]].
+> Vedi: [[JFET]].
 
 > [!danger] "Diodo vs Zener: stessa struttura, comportamento opposto"
 >
@@ -214,22 +223,27 @@ All'orale la lista si traduce in domande di tipo:
 
 ## Checklist finale
 
-### Circuiti CA
+### Circuiti CA — *nominati dalla lettera*
 - [ ] Fasori e rappresentazione complessa
 - [ ] Impedenze di R, L, C e valori limite
 - [ ] Metodo simbolico, limiti (regime + isofrequenza)
-- [ ] Potenze e triangolo
-- [ ] Rifasamento — senso industriale
-- [ ] Risonanza serie e parallelo
-- [ ] Filtri RC/RL — passa basso, passa alto
-- [ ] L'oscilloscopio [[L'oscilloscopio]] (per ricollegarti alla pratica)
+- [ ] Filtri RC/RL del 1° ordine — passa basso, passa alto, come si ricava $f_t$
+- [ ] Come si rilevano risposta in ampiezza e fase all'oscilloscopio (serve anche a Protti, stessa sessione)
 
-### Componenti
-- [ ] Diodo a giunzione: curva V-I
-- [ ] Diodo Zener: tensione di breakdown
+### Il diodo — *nominato dalla lettera*
+- [ ] Curva V-I, i tre modelli, Shockley
+- [ ] Raddrizzatori e limitatori, con le forme d'onda
+- [ ] Zener: i due meccanismi di breakdown, il regolatore
+- [ ] Le risposte D1-D23 ripetute a voce senza guardare (`elettronicaa/diodi-risposte.html`)
+
+### Assicurazione — *non nella lettera, ma «circuiti in alternata» è generico*
+- [ ] Potenze P/Q/S e triangolo, senso di $\cos\varphi$ — a livello descrittivo
+- [ ] Cos'è la risonanza e perché la rete diventa resistiva — la sola definizione
+- [ ] ⛔ **Non** rifasamento industriale, **non** trifase, **non** Q-factor e banda: fuori scope, vedi [[Calendario]]
+
+### Componenti — *confronti che Carli può chiedere, ma sono materia della scritta*
 - [ ] BJT: struttura, regioni, $\beta$
-- [ ] MOSFET: enhancement vs depletion
-- [ ] JFET: cenni, differenza dal MOSFET
+- [ ] MOSFET enhancement vs JFET: pilotaggio in tensione, gate isolato vs giunzione
 
 ### Collegamento teoria-pratica
 - [ ] Sai indicare quale grandezza è misurabile in laboratorio (oscilloscopio)

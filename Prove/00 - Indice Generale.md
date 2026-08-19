@@ -15,7 +15,7 @@ fonte: "MAJORANA — Lettera di giudizio sospeso (Secondo Periodo), 09/06/2026"
 | # | Prova | Docente | Tipologia | Cosa puoi aspettarti |
 |---|---|---|---|---|
 | **01** | [[01 - Prova Scritta Carli]] | Prof. Carlo Carli | Scritta (teoria) | LETTERA verbatim: **esercizi** su circuiti AC, filtri 1° ordine, BJT, JFET **a canale N**, MOSFET **a canale N ad arricchimento**. ⚠️ Le verifiche vere di Carli sono però **a domande aperte con disegni**: vedi la ricalibratura in testa a `01` |
-| **02** | [[02 - Prova Orale Carli]] | Prof. Carlo Carli | Orale (teoria) | Definizioni, teoremi, dimostrazioni rapide, analisi di schemi |
+| **02** | [[02 - Prova Orale Carli]] | Prof. Carlo Carli | Orale (teoria) | Definizioni, teoremi, dimostrazioni rapide, analisi di schemi. LETTERA: **diodo, circuiti AC, filtri 1° ordine** — tutti e tre |
 | **03** | [[03 - Prova Pratica Protti]] | Prof. Giampaolo Protti | Orale + pratica (lab) | Misure con oscilloscopio, collaudo di circuiti, domande sul funzionamento |
 
 **Più un banco di ripasso** — non è una quarta prova, è materiale d'esame vero:
@@ -25,7 +25,9 @@ fonte: "MAJORANA — Lettera di giudizio sospeso (Secondo Periodo), 09/06/2026"
 | **04** | [[04 - Verifica tipo Carli — Diodi]] | Le **39 domande aperte sui diodi** di due verifiche reali del Prof. Carli alla classe 4E (fogli fotografati, 2026-07-28): trascrizione fedele, mappa 39 domande → 27 argomenti, risposte da compito, checklist dei 15 disegni. Serve soprattutto la **02** (la LETTERA mette i diodi all'orale) |
 
 > [!tip] Strategia di preparazione
-> Le prove **01** e **02** (Carli) sono **complementari**: ciò che non scrivi al compito lo puoi recuperare all'orale — quindi evita di lasciare completamente buchi in un argomento. La **03** (Protti) è indipendente: è una prova di laboratorio, ti misuri davanti alla strumentazione.
+> Le prove **01** e **02** (Carli) sono **complementari**: ciò che non scrivi al compito lo puoi recuperare all'orale — quindi evita di lasciare completamente buchi in un argomento.
+>
+> ⚠️ *Corretto il 2026-08-19*: qui c'era scritto che la **03** (Protti) è «indipendente». **Non lo è.** Orale e pratico sono la **stessa sessione**, dalle 14:00 alle 17:00, con i due docenti insieme. Si preparano insieme, e si sostengono insieme: dal diodo a voce si passa alle misure all'oscilloscopio senza soluzione di continuità.
 
 ---
 
@@ -61,16 +63,49 @@ La lettera del consiglio di classe (09/06/2026) indica gli argomenti da recupera
 | JFET (canale n) | [[JFET]] | [[Esercizi - JFET]] | 01, 02 |
 | Alimentatori (raddrizzatori, filtri, regolatori 78xx) | [[Alimentatori]] | [[Esercizi - Alimentatori]] | 01, 02, 03 |
 | Oscilloscopio e misure | [[L'oscilloscopio]] | — | 03 |
-| **Simulazione prova scritta** | [[Esercizi - Simulazione finale]] | — | 01 (simulazione d'esame completa, 90 min) |
+| **Batteria di allenamento** | [[Esercizi - Simulazione finale]] | — | 01 (6 esercizi in 90 min — **non** la prova reale, che dura 5 ore) |
+| **Le tre verifiche vere del prof.** | **[[05 - Verifiche FUSI (Carli)]]** | — | **01** — sono i checkpoint del [[Calendario]] |
 
 ---
 
-## Calendario
+## 📅 Calendario e orario della prova
 
-> [!warning] Date da confermare
-> Le verifiche di recupero sono previste per la **prima settimana di settembre 2026**. Il calendario dettagliato (data e ora di ciascuna prova) sarà pubblicato sul **sito dell'IIS Ettore Majorana di San Lazzaro di Savena (BO)**, via Caselle 26 — l'istituto che ha protocollato la LETTERA. Consulta il sito ufficiale (cercare "calendario esami di recupero"); in alternativa chiedi conferma al coordinatore di classe.
+> [!important] Martedì 1 settembre 2026 — tutto in un giorno
+> | | Orario | Chi | Cosa |
+> |---|---|---|---|
+> | **Mattina** | **8:00 – 13:00** | Carli | prova **scritta** — cinque ore |
+> | *pausa* | 13:00 – 14:00 | — | *un'ora, ed è tempo di studio* |
+> | **Pomeriggio** | **14:00 – 17:00** | Carli **e** Protti | **orale + pratico**, insieme |
 >
-> *(Corretto il 2026-07-28: qui c'era scritto «Majorana **di Seriate**», un altro istituto. La LETTERA in intestazione dice San Lazzaro di Savena — vedi [[00 - Fonti e note]] §1.)*
+> *(Aggiornato il 2026-08-19: qui c'era un riquadro «Date da confermare» che rimandava al
+> sito dell'Istituto. La data e gli orari sono ora noti.)*
+
+**Cosa cambia rispetto a quello che il vault assumeva.** Lo scritto dura **cinque ore**, non
+i 90 minuti ipotizzati: in cinque ore i cinque argomenti della lettera ci stanno tutti,
+quindi non se ne può lasciare fuori nessuno. E l'orale non è una prova a sé: è **mezza**
+sessione pomeridiana, l'altra mezza è il laboratorio di Protti.
+
+**Il piano giorno per giorno è in [[Calendario]]** — 12 giorni, dal 20 al 31 agosto, con i
+checkpoint sulle [[05 - Verifiche FUSI (Carli)|tre verifiche vere del prof.]].
+
+### Quando si studia cosa
+
+| Giorni | Argomento | Prove che prepara |
+|---|---|---|
+| 1 · 20 ago | metodo simbolico, reti RLC, alternata | 01, 02, 03 |
+| 2-3 · 21-22 ago | f.d.t., poli, filtri del 1° ordine | 01, 02, 03 |
+| 4 · 23 ago | 🔁 checkpoint alternata+filtri · esercizi diodo | 01, 02, 03 |
+| 5-7 · 24-26 ago | BJT, polarizzazione, amplificatore · 🔁 checkpoint | 01, 03 |
+| 8-9 · 27-28 ago | JFET · 🔁 checkpoint | 01 |
+| 10 · 29 ago | MOSFET · 🔁 checkpoint | 01 |
+| 11 · 30 ago | 🎯 prova generale: orale/pratico + sessione lunga | 01, 02, 03 |
+| 12 · 31 ago | vigilia: D1-D23 a voce, pagine FORMULE | 02, 03 |
+
+### L'ora di pausa, 13:00-14:00
+
+È tempo di studio, e va deciso adesso per non doverlo decidere allora. **Due cose sole**:
+le risposte **D1-D23** (`elettronicaa/diodi-risposte.html`) e il [[Cheat Sheet A4 visuale]].
+Niente esercizi, niente libro: il pomeriggio è orale, non scritto.
 
 ---
 

@@ -4,8 +4,13 @@ fonte: "MAJORANA — Lettera di giudizio sospeso (Secondo Periodo), 09/06/2026"
 docente: Prof. Giampaolo Protti
 tipologia: Orale + Pratica (laboratorio)
 ---
-
 # 03 — Prova Pratica (Prof. Protti)
+
+> [!abstract] 📅 Quando · 1 settembre, **14:00 – 17:00** — insieme all'orale di Carli
+> Stessa sessione di [[02 - Prova Orale Carli]]: si passa dalle domande a voce alle misure
+> all'oscilloscopio senza soluzione di continuità. La prepara la mattina del **giorno 11**
+> di [[Calendario]] (30 agosto), insieme all'orale.
+
 
 > [!info] Dove serve
 > È la **prova pratica** di laboratorio del docente Giampaolo Protti. Si svolge in laboratorio: ti vengono chiesti **esercizi di misura** sull'oscilloscopio, sul collaudo di circuiti, e domande sul funzionamento di circuiti reali. È la prova dove "capisci se hai capito davvero".

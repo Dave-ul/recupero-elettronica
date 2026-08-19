@@ -4,8 +4,13 @@ fonte: "MAJORANA — Lettera di giudizio sospeso (Secondo Periodo), 09/06/2026"
 docente: Prof. Carlo Carli
 tipologia: Scritta
 ---
-
 # 01 — Prova Scritta (Prof. Carli)
+
+> [!abstract] 📅 Quando · 1 settembre, **8:00 – 13:00** (cinque ore)
+> La preparano i giorni **1-10** di [[Calendario]] (20-29 agosto), uno per argomento, e i
+> checkpoint sulle [[05 - Verifiche FUSI (Carli)|tre verifiche vere del prof.]]. La prova di
+> resistenza sulle cinque ore è la sessione lunga del **giorno 11** (30 agosto).
+
 
 > [!info] Dove serve
 > È la **prova scritta** di teoria del docente Carlo Carli. La LETTERA dice **«esercizi»**, quindi è la prova più "computazionale": dati e circuiti forniti, da risolvere in un tempo limitato. Ma leggi prima il callout qui sotto.
@@ -71,7 +76,7 @@ In forma scritta, questo si traduce tipicamente in:
 - [ ] [[Esercizi - BJT]]
 
 ### 🟡 MOSFET — cenni
-- [ ] [[BJT#MOSFET]] — enhancement/depletion, threshold, $K$, $V_{GS}$
+- [ ] [[MOSFET]] — enhancement/depletion, threshold, $K$, $V_{GS}$
 - [ ] Polarizzazione base del MOSFET
 - [ ] Lettura delle curve caratteristiche
 
@@ -170,4 +175,4 @@ In forma scritta, questo si traduce tipicamente in:
 6. Esercizio di [[Esercizi - BJT]] (calcolo del punto di lavoro in partitore)
 
 > [!success] Traguardo
-> Quando svolgi **tutti e 6** in meno di 90 minuti ciascuno, sei pronto per la prova scritta. Se sbagli ancora sui segni del rifasamento o sui quadranti, torna sui prerequisiti e rifalli.
+> Quando svolgi **tutti e 6** in meno di 90 minuti in totale, hai la velocità che serve. La prova vera dura **cinque ore**: il tempo non sarà il problema, la resistenza sì. Se sbagli ancora sui segni del rifasamento o sui quadranti, torna sui prerequisiti e rifalli.

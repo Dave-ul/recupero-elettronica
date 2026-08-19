@@ -12,7 +12,9 @@ prove: [scritta, orale, pratica]
 > [!tip] Come usarlo
 > - In Obsidian: clicca sui link `[[...]]` per saltare al file.
 > - Per ogni macroarea: 1) rileggi la teoria in `Argomenti/` → 2) fai gli esercizi qui → 3) verifica con `Prove/01 - Prova Scritta Carli`.
-> - Per la simulazione completa d'esame: `[[Esercizi - Simulazione finale]]` (90 min).
+> - Per allenarti a batteria: `[[Esercizi - Simulazione finale]]` (90 min). ⚠️ Non è la
+>   simulazione della prova reale, che dura **cinque ore**: quella è la sessione lunga del
+>   30 agosto, con le tre verifiche FUSI in fila — vedi [[Calendario]] e [[05 - Verifiche FUSI (Carli)]].
 
 ---
 
@@ -32,7 +34,7 @@ prove: [scritta, orale, pratica]
 | **JFET n** | [[Esercizi - JFET]] | [[Argomenti/JFET\|JFET]] | 01, 02 |
 | **Amplificatori a BJT** | [[Esercizi - Amplificatori a BJT]] | [[Argomenti/Amplificatori a BJT\|Amplificatori a BJT]] | 02, 03 |
 | **Alimentatori** | [[Esercizi - Alimentatori]] | [[Argomenti/Alimentatori\|Alimentatori]] | 01, 02, 03 |
-| **Simulazione d'esame** | [[Esercizi - Simulazione finale]] | (tutti gli Argomenti) | 01 (simulazione 90 min) |
+| **Batteria da 90 min** | [[Esercizi - Simulazione finale]] | (tutti gli Argomenti) | 01 (allenamento, non la prova reale da 5h) |
 
 ---
 
@@ -71,7 +73,7 @@ Segui questo ordine, dal facile al difficile:
 | 10 | `[[Esercizi - JFET]]` | 1.5h | Autopolarizzazione, discriminante |
 | 11 | `[[Esercizi - Amplificatori a BJT]]` | 2h | Parametri h CE/CC/CB |
 | 12 | `[[Esercizi - Alimentatori]]` | 1.5h | Ripple, dropout 78xx, regolatore serie |
-| 13 | `[[Esercizi - Simulazione finale]]` | 2h (×3 sessioni) | Tutto insieme sotto timer 90 min |
+| 13 | `[[Esercizi - Simulazione finale]]` | 2h (×3 sessioni) | Tutto insieme sotto timer 90 min (allenamento) |
 
 **Tempo totale stimato**: ~20 ore di studio distribuite su 2-3 settimane.
 
@@ -89,7 +91,13 @@ Per ogni `Esercizi - X.md`, c'è una sezione **"Pattern di errore frequenti (Car
 
 ## 📐 Simulazione d'esame completa
 
-Il file [[Esercizi - Simulazione finale]] contiene **6 problemi misti** (E1–E6, uno per macroarea) da svolgere sotto timer 90 min, esattamente come la prova reale Carli.
+Il file [[Esercizi - Simulazione finale]] contiene **6 problemi misti** (E1–E6, uno per macroarea) da svolgere sotto timer 90 min.
+
+> [!warning] Non confonderla con la prova reale
+> La prova scritta del 1° settembre dura **cinque ore** (8:00-13:00). Questa batteria da 90
+> minuti serve ad allenare la velocità su un esercizio per macroarea; la prova di resistenza
+> sulle cinque ore è la sessione lunga del **30 agosto** con le tre verifiche del prof. in
+> fila — vedi [[05 - Verifiche FUSI (Carli)]].
 
 - E1: Impedenze + regime sinusoidale (15 min, medio)
 - E2: Filtro passa-basso RL (15 min, facile)

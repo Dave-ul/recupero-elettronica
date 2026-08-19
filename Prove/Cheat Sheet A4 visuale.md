@@ -1,6 +1,6 @@
 ---
 tags: [recupero, elettronica, cheat-sheet, comparazione]
-fonte: "confronto diretto per consultazione 5s durante compito 90 min"
+fonte: "confronto diretto per consultazione 5s durante lo scritto (1 set., 8:00-13:00) e nella pausa 13:00-14:00"
 ---
 
 # 🗺️ Cheat Sheet A4 — 5s lookup compito 90' Carli

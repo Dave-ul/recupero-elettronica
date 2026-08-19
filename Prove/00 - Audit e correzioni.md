@@ -9,6 +9,14 @@ aggiornato: 2026-07-28
 
 ## Metodo di verifica
 
+> [!warning] Registro storico — coordinate non più valide
+> Questa sezione descrive il metodo com'era a **luglio 2026** e va letta come cronaca, non
+> come istruzioni. Il file `libro-OCR-completo.txt` citato qui sotto è stato **ritirato**, e
+> la scansione a «152 pagine-PDF» con corrispondenza non lineare non è più quella in `Fonti/`:
+> il Vol. 2 attuale copre le pagine-PDF 001-282 con offset costante
+> (`pagina stampata = 2 · pagina-PDF − 6`).
+> **Le coordinate valide oggi stanno in [[00 - Fonti e note]] §2bis.**
+
 - **Libro Mirandola** *Elettrotecnica ed Elettronica Vol.2* (Zanichelli 2012): reso verificabile via **OCR** (`pdftoppm` 200 dpi + `tesseract -l ita`) e **lettura diretta delle pagine**. Testo integrale in `/home/davide/Scaricati/libro-OCR-completo.txt` (152 pagine-PDF, blocchi `===== PAGINA-PDF nnn =====`).
 - **edutecnica.it**: confronto formule/terminologia.
 - ⚠️ **pagina-PDF ≠ pagina stampata**: ogni pagina-PDF = 2 pagine di libro affiancate; la corrispondenza non è lineare, i folio si controllano dal piè di pagina reale.
@@ -835,3 +843,13 @@ Y [1260-1316]  ink 19-26% <-- FOOTER Zanichelli 2012 + folio (4 0 8 / 4 0 9)
 * I 9 file sono coerenti col contenuto atteso (OCR match 6-8/8 sigle / keywords richieste tutte trovate / nessun file vuoto).
 * Backup di sicurezza in `~/recrop_backups/` per ognuna — ripristinabili in qualsiasi momento.
 * Audit file aggiornato: il Lotto 19 originale elencava p143 a 616 KB e segnalava il problema nella sezione "Casi limite gestiti e fix applicati"; questo addendum lo aggiorna a 380 KB e chiude il cerchio.
+
+---
+
+## Lotto 20 — Chiusura "TABELLA 4 vs TABELLA 1" ✔ (2026-08-10)
+
+> **Contesto**: il Lotto 19 (Addendum) lasciava aperta la discrepanza fra l'OCR del crop (`TABELLA 4`) e `Argomenti/Alimentatori.md` (`TABELLA 1`), con la raccomandazione di aggiungere ad `Alimentatori.md` una nota del tipo «Mirandola etichetta questa tabella come Tabella 4 nel layout» per documentare entrambi i riferimenti.
+
+**Verifica diretta dell'immagine** (`Allegati/libro-cap8-pp408-409-tabella-78xx.png`, letta a piena risoluzione): la didascalia stampata sotto la griglia recita, senza ambiguità, **«TABELLA 1 Caratteristiche principali degli integrati della famiglia 78XX; le resistenze termiche sono riferite al contenitore TO-220.»** Nessun "4" nella cifra: era un **misread OCR** (confusione 1↔4, già ipotizzata come possibile causa nel Lotto 19).
+
+**Decisione**: `Argomenti/Alimentatori.md` **non viene modificato** — la nota raccomandata dal Lotto 19 avrebbe introdotto un'affermazione falsa ("il libro la chiama Tabella 4") in un file dichiarato `VERIFICATO ✔`. È lo stesso principio del difetto sistemico #3 applicato in anticipo: prima di scrivere una correzione/precisazione, va aperta l'immagine — qui bastava farlo per scoprire che non serviva alcuna modifica.

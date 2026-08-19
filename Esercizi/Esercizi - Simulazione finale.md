@@ -6,16 +6,20 @@ libro_mirandola: "VERIFICATO ✔ (2026-07-25) per derivazione — file trasversa
 prove: [scritta, orale, pratica]
 ---
 
-# Esercizi — Simulazione finale d'esame (prova completa Carli)
+# Esercizi — Batteria da 90 minuti (allenamento alla velocità)
 
 > [!info] Come usare questo file
-> Questa è una **simulazione realistica** della prova scritta Carli, 90 minuti totali, 6 esercizi (uno per macroarea). Per ogni esercizio è indicato il tempo consigliato. Comincia dagli esercizi che conosci meglio (per prendere confidenza), poi passa a quelli più complessi. Usa una calcolatrice scientifica + formulario personale di numeri complessi/fasori. Tieni d'occhio l'orologio: se a metà tempo non hai fatto almeno 4 esercizi, lascia perdere la precisione sull'ultimo e metti la formula anche senza il calcolo finale.
+> Sei esercizi, uno per macroarea, sotto timer da 90 minuti. **Non è la simulazione della
+> prova reale**: quella dura **cinque ore** (1 settembre, 8:00-13:00) e si prova il 30 agosto
+> mettendo in fila le tre verifiche del prof. — vedi [[05 - Verifiche FUSI (Carli)]] e
+> [[Calendario]]. Questo file allena una cosa diversa e comunque necessaria: la **velocità**
+> su un esercizio tipo per argomento. Per ogni esercizio è indicato il tempo consigliato. Comincia dagli esercizi che conosci meglio (per prendere confidenza), poi passa a quelli più complessi. Usa una calcolatrice scientifica + formulario personale di numeri complessi/fasori. Tieni d'occhio l'orologio: se a metà tempo non hai fatto almeno 4 esercizi, lascia perdere la precisione sull'ultimo e metti la formula anche senza il calcolo finale.
 
 ---
 
 ## Setup della simulazione
 
-**Tempo totale**: 90 minuti (= 1,5 ore).
+**Tempo totale**: 90 minuti (= 1,5 ore). *La prova reale ne dura 300.*
 **Esercizi**: 6.
 **Materiali ammessi**: penna, calcolatrice, formulario (NO libro, NO appunti di teoria).
 
@@ -164,7 +168,8 @@ prove: [scritta, orale, pratica]
 > [!success] Dopo la simulazione
 > 1. Per ogni esercizio risolto con errori, identifica il punto di errore preciso (aritmetica? concetto? unità di misura?).
 > 2. Per ogni esercizio non risolto, leggi la soluzione e scomponila in 3-4 sotto-passi; ripeti l'esercizio il giorno dopo senza guardare.
-> 3. Quando arrivi a 5/6 esercizi risolti correttamente in 75 minuti, sei pronto per la prova reale.
+> 3. Quando arrivi a 5/6 esercizi risolti correttamente in 75 minuti, hai la velocità che serve.
+>    Manca ancora la **resistenza**: quella si prova il 30 agosto sulle tre verifiche in fila.
 
 ---
 

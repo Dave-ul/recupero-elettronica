@@ -13,7 +13,18 @@ prove: [scritta, orale, pratica]
 > Apri [[00 - Perchè (spiegazione intuitiva)]] — è il file hub con spiegazioni ricorsive "bambino di 4 anni" per **tutti i 13 argomenti** del vault. Ogni sezione parte da "Cos'è?" → "Perché?" → "Perché ancora?" → ... → "Cosa c'entra con il resto?". Da consultare quando una formula o un concetto non "scende".
 
 > [!warning] Trasparenza fonti — leggi prima di fidarti
-> Le 3 fonti del vault sono dichiarate in modo trasparente nel file [[Prove/00 - Fonti e note]]: la LETTERA Majorana del 09/06/2026 (fonte UFFICIALE del compito), edutecnica.it (fonte secondaria verificata 8/8 topic), e il libro Mirandola Vol.2 che è NON verificabile (PDF scansionato 152 pp senza OCR — le citazioni storiche di 'pag. 80', 'Cap. 6' sono basate sulla prassi didattica, non sul testo reale). Per questo studia usando LETTERA + edutecnica.it, e usa Mirandola solo come riferimento per le figure che hai visto in classe.
+> Le fonti del vault sono dichiarate in [[Prove/00 - Fonti e note]], in ordine di autorità:
+> la **LETTERA** Majorana del 09/06/2026 (cosa esce), le **tre verifiche FUSI del prof. Carli**
+> corrette a mano (su cosa sei caduto — vedi [[05 - Verifiche FUSI (Carli)]]), gli **appunti
+> Poggi** (cosa è stato fatto in classe), il **Mirandola Vol. 2** e **Edutecnica**.
+> *(Riallineato il 2026-08-19: questo callout diceva che il Mirandola è «NON verificabile», il che
+> contraddiceva [[Prove/00 - Fonti e note]] e non è più vero. Le pagine del libro sono citabili con
+> la conversione `pagina stampata = 2·(pagina-PDF) − 6`, verificata su quattro folio.)*
+
+> [!tip] 📅 Quando si studia cosa
+> Il piano giorno per giorno è in **[[Calendario]]** — 12 giorni fino alla prova del
+> **1 settembre** (scritto 8:00-13:00, orale + pratico insieme 14:00-17:00). Ogni giornata
+> dice quali di queste note aprire.
 
 
 
@@ -27,12 +38,13 @@ prove: [scritta, orale, pratica]
 
 ## 🎯 Macroaree dello scope (lettera di giudizio sospeso)
 
-| Macroarea | Argomenti coperti | Esami dove cade |
+| Macroarea | Argomenti coperti | Dove cade |
 |---|---|---|
-| **AC in regime sinusoidale** | [[Segnali sinusoidali e fasori]], [[Impedenza dei bipoli R, L, C]], [[Il metodo simbolico]], [[Le potenze in alternata]], [[Reti RLC e risonanza]], [[Filtri passivi del primo ordine]] | Scritta + Orale Carli |
-| **Semiconduttori e circuiti attivi** | [[Diodi]], [[BJT]], [[MOSFET]], [[JFET]] | BJT/MOSFET/JFET: Scritta Carli • Diodi: Orale Carli + Pratica Protti |
-| **Applicazioni** | [[Amplificatori a BJT]] (Protti pratica) · [[Alimentatori]] (Protti pratica, in «circuiti con diodi») | Pratica Protti |
-| **Strumentazione** | [[L'oscilloscopio]] | Pratica Protti |
+| **AC in regime sinusoidale** | [[Segnali sinusoidali e fasori]], [[Impedenza dei bipoli R, L, C]], [[Il metodo simbolico]], [[Reti RLC e risonanza]] §1-2, [[Filtri passivi del primo ordine]] | **scritto** + **orale** Carli + **pratico** Protti |
+| **Semiconduttori e circuiti attivi** | [[BJT]], [[MOSFET]], [[JFET]] | **scritto** Carli · [[Diodi]] → **orale** Carli + **pratico** Protti |
+| **Applicazioni** | [[Amplificatori a BJT]] | **pratico** Protti (nominato dalla lettera) |
+| **Strumentazione** | [[L'oscilloscopio]] | **pratico** Protti — trasversale a tutto |
+| **Solo lettura per l'orale** | [[Le potenze in alternata]] §1-2, [[Reti RLC e risonanza]] §3, [[Alimentatori]] §1 e §4 | 45 minuti in tutto, zero esercizi — vedi [[Calendario]] |
 
 ---
 
@@ -70,31 +82,47 @@ prove: [scritta, orale, pratica]
 
 ## 🧭 Percorso rapido per ciascuna prova
 
-### 📝 Prova scritta Carli (90 min, 6 esercizi)
-1. [[Segnali sinusoidali e fasori]] — conversioni di forma
-2. [[Impedenza dei bipoli R, L, C]] — calcolo $\bar{Z}_{\text{eq}}$
-3. [[Il metodo simbolico]] — procedura operativa
-4. [[Le potenze in alternata]] — P, Q, S, rifasamento trifase ⭐
-5. [[Reti RLC e risonanza]] — Q-factor, banda passante
-6. [[Filtri passivi del primo ordine]] — RC/RL, $f_t$ (con errata corrige libro)
-7. [[Diodi]] — circuiti con diodi, Zener stabilizzatore
-8. [[Alimentatori]] — raddrizzatori, regolatori
-9. [[BJT]] — polarizzazione partitore, Darlington
-10. [[MOSFET]] — parabolica con verifica di saturazione ⭐
-11. [[JFET]] — autopolarizzazione, discriminante
+### 📝 Prova scritta Carli (1 settembre, 8:00-13:00 — **cinque ore**)
 
-### 🎙️ Prova orale Carli (definizioni + confronti)
-1. [[Diodi]] — barriera di potenziale, Zener vs normale
-2. Tutti i 13 argomenti — domande tipo pronte in ogni nota
+La lettera nomina **cinque** argomenti, e sono questi. In cinque ore ci stanno tutti:
+non contare su nessuno che non esca.
 
-### 🔬 Prova pratica Protti (lab)
-1. [[L'oscilloscopio]] — procedure di misura, AC/DC coupling, probe
-2. [[Diodi]] — misura V_γ, ripple, breakdown Zener (vedi `[[Diodi#6.b Misurazioni Pratiche]]`)
-3. [[Amplificatori a BJT]] — misura $A_v$ con oscilloscopio, verifica inversione di fase
-4. [[Alimentatori]] — misura ripple, test regolatore 78xx
-5. [[Filtri passivi del primo ordine]] — verifica $f_t$ con sweep di frequenza
-6. [[BJT]] — verifica punto di lavoro con multimetro ($V_{CE} \approx V_{CC}/2$)
-7. [[Reti RLC e risonanza]] — sweep e misura $f_0$
+1. **Circuiti in corrente alternata** — [[Segnali sinusoidali e fasori]] · [[Impedenza dei bipoli R, L, C]] · [[Il metodo simbolico]] · [[Reti RLC e risonanza]] §1-2
+2. **Filtri passivi del primo ordine** — [[Filtri passivi del primo ordine]], RC/RL, $f_t$ ⭐
+3. **Transistor BJT** — [[BJT]], polarizzazione a partitore
+4. **Transistor JFET a canale N** — [[JFET]], autopolarizzazione ⭐
+5. **Transistor MOSFET a canale N ad arricchimento** — [[MOSFET]], parabolica con verifica di saturazione ⭐
+
+> [!warning] Cosa **non** è nella prova scritta
+> Il **diodo** (la lettera lo mette all'orale e alla pratica), le **potenze in alternata** e
+> il **rifasamento trifase**, la **risonanza** con Q-factor e banda, gli **alimentatori**, i
+> **diagrammi di Bode** e i **filtri del 2° ordine**. Fino al 2026-08-19 questa lista ne
+> elencava undici invece di cinque: la lettera ne dice cinque.
+
+### 🎙️ Prova orale Carli (1 settembre, pomeriggio — insieme a Protti)
+
+La lettera ne nomina **tre**, non uno solo:
+
+1. **Il diodo** — [[Diodi]] · le 39 domande vere in [[04 - Verifica tipo Carli — Diodi]] · le risposte D1-D23 già scritte in `elettronicaa/diodi-risposte.html`
+2. **I circuiti in corrente alternata** — [[Impedenza dei bipoli R, L, C]] · [[Il metodo simbolico]]
+3. **I filtri passivi del primo ordine** — [[Filtri passivi del primo ordine]]
+
+> Le domande già pronte, divise per livello (definizione / spiegazione / confronto), sono in
+> [[Prove/02 - Prova Orale Carli]]. Il diodo è coperto; **alternata e filtri vanno provati a
+> voce**, ed è quello che si fa la mattina del 30 agosto.
+
+### 🔬 Prova pratica Protti (1 settembre, 14:00-17:00 — stessa sessione dell'orale)
+
+«Domande, esercizi, esperienze e **misure con l'oscilloscopio** su tutto il programma»:
+
+1. [[L'oscilloscopio]] — procedure di misura, coupling AC/DC, trigger, sonda ×1 e ×10
+2. [[Diodi]] — circuiti con diodi: raddrizzatore, ripple, breakdown Zener · e [[Alimentatori]]
+3. [[Segnali sinusoidali e fasori]] — misura di $V_p$, $V_{eff}$, $T$, sfasamento
+4. [[Reti RLC e risonanza]] §1-2 — reti RLC in regime sinusoidale
+5. [[Filtri passivi del primo ordine]] — verifica di $f_t$ con sweep di frequenza
+6. [[BJT]] — punto di lavoro e [[Amplificatori a BJT]] — misura di $A_v$, verifica dell'inversione di fase
+
+> Procedure, trappole e sequenza operativa: [[Prove/03 - Prova Pratica Protti]].
 
 ---
 
@@ -106,7 +134,7 @@ I tre più critici in assoluto (da memorizzare):
 
 1. **Filtri**: RL → $f_t = R/(2\pi L)$ (NON $L/R$). Vedi `[[Filtri passivi del primo ordine]]` §4.
 2. **MOSFET**: parabolica $I_D = K(V_{GS}-V_{th})^2$ vale SOLO in saturazione. **Verifica sempre** $V_{DS} > V_{GS} - V_{th}$. Vedi `[[MOSFET]]` §3.
-3. **Trifase**: $C_{\text{fase}} = \Delta Q/(3\omega V_{\text{fase}}^2)$ con $V_{\text{fase}} = V_{\text{conc}}/\sqrt{3}$. Vedi `[[Le potenze in alternata]]` §3.
+3. **JFET**: tutti gli esercizi di progetto escono da due sole relazioni — $V_{GS0} = -R_S I_{D0}$ e $V_{DD} = I_{D0}(R_S + R_D) + V_{DS0}$. Sulla verifica 29-05 tre esercizi su cinque sono «NON SVOLTO»: vedi [[05 - Verifiche FUSI (Carli)]].
 
 ---
 
@@ -115,4 +143,6 @@ I tre più critici in assoluto (da memorizzare):
 - **Esercizi svolti** → vedi [[Esercizi]]
 - **Prove d'esame (Carli + Protti)** → vedi [[Prove/00 - Indice Generale|Indice Generale]]
 - **Formulario rapido** → vedi [[Prove/Formulario rapido|Formulario rapido]]
+- **Le tre verifiche vere del prof.** → vedi [[05 - Verifiche FUSI (Carli)]]
+- **Il piano giorno per giorno** → vedi [[Calendario]]
 - **Simulazione d'esame completa** → vedi [[Esercizi/Esercizi - Simulazione finale|Simulazione finale]]
