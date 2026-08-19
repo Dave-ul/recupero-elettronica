@@ -89,6 +89,50 @@ $$V_{DS} = V_{DD} - I_D \cdot (R_D + R_S)$$
 
 ---
 
+## 3-bis. Come lo chiede Carli: il **progetto** (la strada inversa)
+
+> [!important] Due esercizi su tre della parte MOSFET sono di progetto
+> Il §3 risolve l'**analisi**: dato il partitore, trova $I_D$ e $V_{DS}$. Carli chiede anche
+> l'inverso — **dato $I_D$, dimensiona $R_D$, $R_1$, $R_2$** — e lì $V_{GS}$ arriva da
+> un'altra strada. Confonderle è l'errore che il prof. ha segnato a lettere maiuscole:
+> «errata relazione che fornisce $V_{GS}$».
+
+**Le due strade per $V_{GS}$, da tenere separate:**
+
+| Situazione | Da dove viene $V_{GS}$ | A che serve la parabolica |
+|---|---|---|
+| **Analisi** — il partitore è dato | $V_{GS}=V_{R2}=V_{DD}\dfrac{R_2}{R_1+R_2}$ (meno $V_S$ se c'è $R_S$) | a ricavare $I_D = K(V_{GS}-V_t)^2$ |
+| **Progetto** — $I_D$ è dato | $V_{GS}=\sqrt{\dfrac{I_D}{K}}+V_t$ | è la stessa formula, invertita |
+
+> [!danger] Sull'esercizio di analisi il prof. ha cancellato la radice scrivendo «NON SERVE»
+> Se il partitore è dato, $V_{GS}$ è già determinato dal circuito: usare
+> $\sqrt{I_D/K}+V_t$ lì significa risolvere due volte lo stesso vincolo. E attenzione a non
+> scrivere $\sqrt{I_D/R_D}$ al posto di $\sqrt{I_D/K}$: è l'errore esatto della verifica.
+
+**La procedura di progetto, nell'ordine in cui la scrive Carli** (dati $V_{DD}$, $I_D$, $K$,
+$V_t$, $R_1+R_2$):
+
+1. $V_{GS} = \sqrt{I_D/K} + V_t$
+2. **Si sceglie $V_{DS}$**, rispettando il vincolo di saturazione $V_{DS}\ge V_{GS}-V_t$ —
+   testualmente: «quindi ad esempio si fissa $V_{DS}=6$ V». Non è un calcolo, è una scelta
+   di progetto: dichiarala e motivala.
+3. $R_D = \dfrac{V_{DD}-V_{DS}}{I_D}$ &nbsp;(se c'è $R_S$: $R_D = \dfrac{V_{DD}-V_{DS}-V_S}{I_D}$)
+4. $V_{R2} = V_{GS}$ &nbsp;(se c'è $R_S$: $V_{R2} = V_{GS}+V_S$, con $V_S = R_S I_D$)
+5. $R_2 = \dfrac{V_{R2}}{V_{DD}}(R_1+R_2)$, &nbsp; $R_1 = (R_1+R_2)-R_2$
+
+> [!danger] Con $R_S$, il source non è a massa
+> Sull'ultimo esercizio della verifica il prof. corregge quattro righe di fila, tutte figlie
+> di questa dimenticanza: $I_S = I_D$ (non un partitore di correnti), $V_S = R_S I_D$ (non un
+> partitore di tensioni), $V_{R2} = V_{GS}+V_S$, e $R_D$ calcolata sottraendo anche $V_S$.
+> Vedi [[05 - Verifiche FUSI (Carli)]] §6.
+
+> [!tip] Controllo di unità che salva un esercizio
+> $K$ si dà in **mA/V²**: con $K=0{,}6$ mA/V² e $V_{GS}-V_t=11{,}9$ V viene
+> $I_D = 0{,}6\cdot10^{-3}\cdot141{,}6 = 84{,}9$ **mA**, non 84,9 A. Sul foglio della verifica
+> quel fattore $10^{-3}$ perso è segnato in rosso.
+
+---
+
 ## 4. Esempio numerico completo (da edutecnica.it — Esercizio 5)
 
 **Dati:** $V_{DD}=18\text{ V}$, $R_1=5{,}6\text{ k}\Omega$, $R_2=4{,}7\text{ k}\Omega$, $R_D=2{,}2\text{ k}\Omega$, $R_S=1{,}2\text{ k}\Omega$, $K=0{,}4\text{ mA/V}^2$, $V_{th}=3\text{ V}$.

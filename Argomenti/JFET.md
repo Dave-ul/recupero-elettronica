@@ -112,6 +112,59 @@ Verifica: $V_{DS} \ge V_{GS} - V_P$ per essere in saturazione (pinch-off).
 
 ---
 
+## 4-bis. Come lo chiede Carli: il **progetto** della polarizzazione
+
+> [!important] Cinque esercizi su otto della verifica 29-05 sono di questo tipo
+> Il §4 risolve il problema di **analisi** (dato il circuito, trova il punto di lavoro).
+> Carli chiede quasi sempre l'inverso: **dato il punto di lavoro, dimensiona le
+> resistenze**. È molto più corto — non c'è nessuna equazione di 2° grado — e si regge su
+> due sole relazioni, le stesse degli **appunti Poggi p. 19**.
+
+**Dati tipici**: $V_{DD}$, $I_{D0}$, $V_{DS0}$ e $V_{GS0}$ (oppure $V_P$ e $I_{DSS}$).
+**Incognite**: $R_S$, $R_D$, $R_G$.
+
+1. **Maglia d'ingresso** → $V_{GS0} = -R_S I_{D0}$, quindi
+   $$R_S = -\frac{V_{GS0}}{I_{D0}}$$
+2. **Maglia d'uscita** → $V_{DD} = I_{D0}(R_S+R_D)+V_{DS0}$, quindi
+   $$R_D = \frac{V_{DD}-V_{DS0}-R_S I_{D0}}{I_{D0}}$$
+3. **$R_G$ non si calcola: si sceglie.**
+
+> [!danger] $R_G$ è l'errore che il prof. ha segnato di suo pugno
+> Sulla verifica 29-05 lo studente aveva provato a ricavarla con
+> $R_G = V_{GS}/I_G$ e $I_G = V_{GS}/(R_S+R_D)$. Carli barra entrambe le righe con un
+> doppio «NO» e scrive: **«$R_G$ si fissa ad esempio al valore $R_G = 5\ \text{M}\Omega$»**.
+>
+> Il perché è fisico: la giunzione di gate è polarizzata **inversamente**, quindi
+> $I_G\approx 0$ e in $R_G$ non scorre corrente — non esiste nessuna equazione da cui
+> ricavarla. Serve solo a dare al gate il riferimento di massa, e si prende **grande**
+> (1 ÷ 10 M$\Omega$) per non abbassare la resistenza d'ingresso dello stadio.
+> All'esame: scrivi il valore **e** la frase che lo giustifica.
+
+**Se $V_{GS0}$ non è dato** ma ci sono $V_P$ e $I_{DSS}$, si ricava invertendo la
+parabolica di Shockley:
+
+$$I_D = I_{DSS}\left(1-\frac{V_{GS}}{V_P}\right)^2
+\qquad\Longrightarrow\qquad
+V_{GS} = V_P\left(1-\sqrt{\frac{I_D}{I_{DSS}}}\right)$$
+
+e poi si riparte dal punto 1. Sulla verifica 29-05 il prof. ha dato «relazioni usate
+corrette» a questa impostazione, togliendo i punti solo per i conti: **impostare bene paga
+anche quando i numeri escono storti**.
+
+> [!warning] Il segno di $V_P$ nei testi di Carli
+> Nella stessa prova Carli scrive «$V_P = 5$ V» in un esercizio e «$V_P = -4{,}5$ V» in un
+> altro. Il JFET a canale n ha pinch-off **negativo**: se il testo lo dà positivo, sta
+> usando $|V_P|$. Guarda il circuito (source con $R_S$ verso massa, gate a massa via $R_G$
+> ⇒ $V_{GS}$ **negativa**) e scegli il segno che rende $R_S$ positiva.
+
+**Variante con partitore di gate** (es. 5 della 29-05, non svolto): quando il gate è
+alimentato da $R_1$–$R_2$ invece che da $R_G$ a massa, la maglia d'ingresso diventa
+$V_G = V_{GS0}+V_S$ con $V_S=R_S I_{D0}$, e da $V_G$ si ricava
+$R_2 = \dfrac{V_G}{V_{DD}}(R_1+R_2)$, $\;R_1=(R_1+R_2)-R_2$. Vedi
+[[05 - Verifiche FUSI (Carli)]] §6 per la correzione del prof. su questo punto.
+
+---
+
 ## 5. Esempio numerico (costruito)
 
 **Dati:** $V_{DD}=15\text{ V}$, $R_D=2{,}2\text{ k}\Omega$, $R_S=220\text{ }\Omega$, $I_{DSS}=8\text{ mA}$, $V_P=-4\text{ V}$.

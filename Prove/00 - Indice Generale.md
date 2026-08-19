@@ -65,6 +65,7 @@ La lettera del consiglio di classe (09/06/2026) indica gli argomenti da recupera
 | Oscilloscopio e misure | [[L'oscilloscopio]] | — | 03 |
 | **Batteria di allenamento** | [[Esercizi - Simulazione finale]] | — | 01 (6 esercizi in 90 min — **non** la prova reale, che dura 5 ore) |
 | **Le tre verifiche vere del prof.** | **[[05 - Verifiche FUSI (Carli)]]** | — | **01** — sono i checkpoint del [[Calendario]] |
+| **Audit delle note contro le fonti del docente** | [[06 - Audit delle note contro le fonti del docente]] | — | — (trasparenza: cosa delle note regge il confronto con Poggi e Carli) |
 
 ---
 

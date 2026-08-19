@@ -226,6 +226,64 @@ Le incognite sono **quattro** resistenze ($R_1$, $R_2$, $R_C$, $R_E$), quindi se
 
 ---
 
+## 4-bis. Come lo chiede Carli: **verificare** la saturazione
+
+> [!important] È la procedura che il prof. ha scritto di suo pugno sulla verifica 24-04
+> «Verificare che il transistor BJT funzioni in zona di saturazione, ipotizzando
+> $V_{BE}=0{,}8$ V e $V_{CEsat}=0{,}2$ V.» Non chiede *che cos'è* la saturazione: chiede di
+> **dimostrarla con tre conti**.
+
+1. **II principio di Kirchhoff alla maglia d'ingresso** → $\;I_B = \dfrac{V_{CC}-V_{BE}}{R_B}$
+2. **II principio di Kirchhoff alla maglia d'uscita** → $\;I_C = \dfrac{V_{CC}-V_{CEsat}}{R_C}$
+3. **Il test**: $\;\boxed{I_B > \dfrac{I_C}{h_{FE}}}\;$ «affinché il transistor BJT risulti
+   effettivamente in saturazione».
+
+Se la disuguaglianza vale, la base è **sovrapilotata**: il transistor non riesce ad assorbire
+tutta la $I_B$ che gli arriva e $V_{CE}$ collassa a $V_{CEsat}$. Se non vale, il BJT è ancora
+in zona attiva e $I_C=h_{FE}I_B$. Il richiamo degli appunti Poggi (p. 13) è lo stesso: **in
+saturazione $I_C = h_{FE} I_B$ non è più valida.**
+
+> [!danger] L'errore che Carli segna più spesso, su tre verifiche
+> Scrivere **una sola equazione con dentro elementi di due maglie diverse**, tipo
+> $V_{CC}=R_B I_B + R_C I_C$. Testuale: «errato perché l'equazione contiene al suo interno
+> sia un elemento della maglia di ingresso che è $R_B$ sia un elemento della maglia di uscita
+> $R_C$». Le due maglie si scrivono **separate**, sempre.
+>
+> Compagno di sventura: la maglia d'uscita **senza $V_{CE}$**. Con $R_E$ la forma completa è
+> $$V_{CC} = R_C I_C + V_{CE} + R_E I_E$$
+
+## 4-ter. Come lo chiede Carli: **interfaccia porta TTL – bobina di relè**
+
+> [!important] Es. 4 della verifica 24-04, lasciato in bianco
+> «Progettare un'interfaccia tra una porta TTL (tensione d'uscita compresa tra 0 V e 5 V) e
+> la bobina di un relè con: tensione di alimentazione 12 V, corrente 70 mA, $h_{FE\min}=75$.»
+> È un BJT usato **da interruttore**, non da amplificatore: la porta logica non può erogare
+> 70 mA, il transistor sì.
+
+Lo schema è uno solo: uscita TTL → $R_B$ → base; bobina tra $+12$ V e collettore; emettitore
+a massa. Il progetto sta in tre righe più una verifica:
+
+1. **La corrente da commutare è quella della bobina**: $I_C = 70$ mA (con $V_{CEsat}\approx0{,}2$ V
+   il relè vede praticamente i suoi 12 V).
+2. **Corrente di base minima** per saturare: $I_{B\min} = \dfrac{I_C}{h_{FE\min}} = \dfrac{70}{75} \approx 0{,}93$ mA.
+3. **Sovrapilotaggio**: si prende $I_B$ da **2 a 5 volte** $I_{B\min}$ — qui $I_B\approx 2$ mA —
+   così la saturazione resta garantita anche col peggior $h_{FE}$ e a caldo.
+4. **La resistenza di base** si dimensiona sul livello alto della porta TTL:
+   $$R_B = \frac{V_{OH}-V_{BE}}{I_B} = \frac{5-0{,}7}{2\text{ mA}} \approx 2{,}2\text{ k}\Omega$$
+5. **Verifica** con il test del §4-bis: $I_B = 1{,}95$ mA $> I_C/h_{FE} = 0{,}93$ mA ✅.
+
+> [!warning] Il diodo di ricircolo non è un dettaglio
+> La bobina è un **carico induttivo**: quando il transistor si spegne, $L\,di/dt$ genera una
+> sovratensione che distrugge la giunzione collettore-emettitore. Si mette un **diodo in
+> antiparallelo alla bobina** (catodo verso $+V$), che chiude la corrente su sé stessa
+> mentre decade. All'esame **disegnalo e scrivi perché c'è**: è mezza riga che vale un punto.
+
+> [!tip] Con la porta a 0 V
+> $V_{BE}=0$ ⇒ $I_B=0$ ⇒ interdizione ⇒ relè diseccitato. L'interfaccia funziona perché il
+> BJT lavora **solo** nei due estremi (saturazione e interdizione), mai in zona attiva.
+
+---
+
 ## 5. Cross-link a MOSFET e JFET — file dedicati
 
 I transistor **MOSFET** e **JFET** hanno **equazioni** e **regioni operative** *diverse* dal BJT (sono controllati **in tensione**, non in corrente). Per questo hanno ciascuno un file dedicato:

@@ -111,9 +111,12 @@ righe.
 
 **Le tre verifiche del prof. Carli** (`Fonti/FUSI_02-03-26…`, `FUSI_24-04-26…`,
 `FUSI_29-05-26…`) sono la fonte più preziosa che hai, e sono **corrette a mano**: dicono
-non solo come interroga, ma **su cosa sei caduto**. Ogni «NON SVOLTO PER NULLA» e ogni
-«errato» segnato in rosso è un pezzo di programma da rifare finché non esce al primo
-colpo. Sono i checkpoint dei giorni 4, 7, 9, 10 e la sessione lunga del giorno 11.
+come Carli formula gli esercizi, come li corregge e quanto li pesa. Sono i fogli di un
+compagno — **Alessio Fusi, 4BE** — non i tuoi: gli errori segnati in rosso sono un
+campionario di trappole, non la tua diagnosi. Il valore più alto sta nelle **soluzioni che
+il prof. ha scritto lui stesso sui retro di alcune pagine**: sono il procedimento che si
+aspetta di vedere sul foglio. Sono i checkpoint dei giorni 4, 7, 9, 10 e la sessione lunga
+del giorno 11.
 
 **Gli appunti Poggi** (`Fonti/appunti poggi.pdf`) sono il quaderno del corso: provano
 cosa è stato fatto davvero in classe. Sono un riassunto, non una fonte a sé — mancano i

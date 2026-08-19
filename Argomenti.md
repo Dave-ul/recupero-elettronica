@@ -15,7 +15,7 @@ prove: [scritta, orale, pratica]
 > [!warning] Trasparenza fonti — leggi prima di fidarti
 > Le fonti del vault sono dichiarate in [[Prove/00 - Fonti e note]], in ordine di autorità:
 > la **LETTERA** Majorana del 09/06/2026 (cosa esce), le **tre verifiche FUSI del prof. Carli**
-> corrette a mano (su cosa sei caduto — vedi [[05 - Verifiche FUSI (Carli)]]), gli **appunti
+> corrette a mano — i fogli di un compagno, non i tuoi: vedi [[05 - Verifiche FUSI (Carli)]], gli **appunti
 > Poggi** (cosa è stato fatto in classe), il **Mirandola Vol. 2** e **Edutecnica**.
 > *(Riallineato il 2026-08-19: questo callout diceva che il Mirandola è «NON verificabile», il che
 > contraddiceva [[Prove/00 - Fonti e note]] e non è più vero. Le pagine del libro sono citabili con
