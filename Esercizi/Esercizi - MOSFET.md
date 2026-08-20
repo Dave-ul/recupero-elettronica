@@ -1,6 +1,6 @@
 ---tags: [recupero, elettronica, esercizi, mosfet]
 fonte: "edutecnica.it/elettronica/mosfetx/ (esercizi svolti)"
-libro_mirandola: "VERIFICATO ✔ (2026-07-28) — coerente con Mirandola Vol.2, Cap. 7 §3.3 «I transistor MOSFET e le porte CMOS», pp. 366-368. MOSFET enhancement n: FIG. 45 struttura, FIG. 46 simboli, FIG. 47 caratteristiche depletion, FIG. 48 polarizzazione, FIG. 49-50 invertitore/CMOS. File trasversale: teoria già verificata nel [[Prove/00 - Audit e correzioni|Lotto 11]]. Conversion folio Cap. 7: pag. stampata = 2·PDF + 122."
+libro_mirandola: "VERIFICATO ✔ (2026-07-28) — coerente con Mirandola Vol.2, Cap. 7 §3.3 «I transistor MOSFET e le porte CMOS», pp. 366-368. MOSFET enhancement n: FIG. 45 struttura, FIG. 46 simboli, FIG. 47 caratteristiche depletion, FIG. 48 polarizzazione, FIG. 49-50 invertitore/CMOS. File trasversale: teoria già verificata nel [[00 - Audit e correzioni|Lotto 11]]. Conversion folio Cap. 7: pag. stampata = 2·PDF + 122."
 prove: [scritta]---
 
 # Esercizi — MOSFET enhancement (n-channel)

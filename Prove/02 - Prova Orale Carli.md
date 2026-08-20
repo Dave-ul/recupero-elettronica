@@ -11,7 +11,7 @@ tipologia: Orale
 > laboratorio di Protti]], con i due docenti presenti insieme.
 >
 > La preparano: il **diodo** già dal 19 agosto (risposte D1-D23 in
-> `elettronicaa/diodi-risposte.html`), **alternata** e **filtri** dai giorni 1-4 di
+> [[diodi-risposte]]), **alternata** e **filtri** dai giorni 1-4 di
 > [[Calendario]], e la prova a voce della mattina del **giorno 11** (30 agosto). Il ripasso
 > finale è il **giorno 12** (31 agosto), 40 minuti a voce.
 
@@ -234,7 +234,7 @@ All'orale la lista si traduce in domande di tipo:
 - [ ] Curva V-I, i tre modelli, Shockley
 - [ ] Raddrizzatori e limitatori, con le forme d'onda
 - [ ] Zener: i due meccanismi di breakdown, il regolatore
-- [ ] Le risposte D1-D23 ripetute a voce senza guardare (`elettronicaa/diodi-risposte.html`)
+- [ ] Le risposte D1-D23 ripetute a voce senza guardare ([[diodi-risposte]])
 
 ### Assicurazione — *non nella lettera, ma «circuiti in alternata» è generico*
 - [ ] Potenze P/Q/S e triangolo, senso di $\cos\varphi$ — a livello descrittivo

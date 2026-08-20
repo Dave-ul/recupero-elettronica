@@ -105,12 +105,22 @@ checkpoint sulle [[05 - Verifiche FUSI (Carli)|tre verifiche vere del prof.]].
 ### L'ora di pausa, 13:00-14:00
 
 È tempo di studio, e va deciso adesso per non doverlo decidere allora. **Due cose sole**:
-le risposte **D1-D23** (`elettronicaa/diodi-risposte.html`) e il [[Cheat Sheet A4 visuale]].
+le risposte **D1-D23** ([[diodi-risposte]]) e il [[Cheat Sheet A4 visuale]].
 Niente esercizi, niente libro: il pomeriggio è orale, non scritto.
 
 ---
 
-## Come sono organizzati gli appunti
+## Come è organizzato il vault
+
+| Cartella | Cosa contiene | Quando la apri |
+|---|---|---|
+| `Argomenti/` | 13 note di teoria + l'hub [[00 - Perchè (spiegazione intuitiva)\|«Perchè»]] | quando studi un argomento nuovo |
+| `Esercizi/` | 13 note di esercizi svolti passo-passo | subito dopo la teoria |
+| `Prove/` | `01`-`03` le tre prove · `04`-`05` il materiale vero del docente | quando prepari una prova specifica |
+| `Strumenti/` | [[Formulario rapido]] · [[Cheat Sheet A4 visuale]] · [[diodi-risposte]] | **il 1 settembre**: è quello che va in cartellina |
+| `Meta/` | [[00 - Fonti e note]] · [[00 - Audit e correzioni]] · [[06 - Audit delle note contro le fonti del docente]] | quando vuoi sapere da dove viene un contenuto |
+| `Allegati/` | 70 immagini indicizzate in [[INDEX]] | mai direttamente: le richiamano le note |
+| `Fonti/` | i 25 PDF sorgente — libro, appunti, verifiche, LETTERA | quando il [[Calendario]] ti manda su una pagina precisa |
 
 Ogni argomento in `Argomenti/` segue lo stesso schema:
 
@@ -170,4 +180,4 @@ Ogni esercizio in `Esercizi/` ha due parti:
 
 ---
 
-> [!warning] Trasparenza fonti: prima di fidarti dei contenuti del vault, leggi [[Prove/00 - Fonti e note]] che spiega LETTERA Majorana (fonte ufficiale), edutecnica.it (fonte secondaria verificata 8/8), libro Mirandola (ora VERIFICATO via OCR/lettura pagine — vedi [[Prove/00 - Audit e correzioni]]).
+> [!warning] Trasparenza fonti: prima di fidarti dei contenuti del vault, leggi [[00 - Fonti e note]] che spiega LETTERA Majorana (fonte ufficiale), edutecnica.it (fonte secondaria verificata 8/8), libro Mirandola (ora VERIFICATO via OCR/lettura pagine — vedi [[00 - Audit e correzioni]]).

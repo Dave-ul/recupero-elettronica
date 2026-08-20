@@ -1,6 +1,6 @@
 ---tags: [recupero, elettronica, esercizi, jfet, amplificatore, vcr, switch]
 fonte: "edutecnica.it/elettronica/jfet/ + jfetx/ + ajfet/ + ajfetx/ + esercizi costruiti per il recupero"
-libro_mirandola: "VERIFICATO ✔ (2026-07-28) — coerente con Mirandola Vol.2, Cap. 7 «Gli amplificatori a transistor», §3 «I transistor FET e gli amplificatori a FET» — parte JFET pp. 358-365. Struttura, pinch-off, polarizzazione, curve d'uscita del 2N3819 (FIG. 42 a p. 362). File trasversale: teoria già verificata nel [[Prove/00 - Audit e correzioni|Lotto 12]]. Conversion folio Cap. 7: pag. stampata = 2·PDF + 122."
+libro_mirandola: "VERIFICATO ✔ (2026-07-28) — coerente con Mirandola Vol.2, Cap. 7 «Gli amplificatori a transistor», §3 «I transistor FET e gli amplificatori a FET» — parte JFET pp. 358-365. Struttura, pinch-off, polarizzazione, curve d'uscita del 2N3819 (FIG. 42 a p. 362). File trasversale: teoria già verificata nel [[00 - Audit e correzioni|Lotto 12]]. Conversion folio Cap. 7: pag. stampata = 2·PDF + 122."
 prove: [scritta, orale, pratica]---
 
 # Esercizi — JFET (n-channel, amplificatori, VCR, switch, P-channel)

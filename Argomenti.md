@@ -13,12 +13,12 @@ prove: [scritta, orale, pratica]
 > Apri [[00 - Perchè (spiegazione intuitiva)]] — è il file hub con spiegazioni ricorsive "bambino di 4 anni" per **tutti i 13 argomenti** del vault. Ogni sezione parte da "Cos'è?" → "Perché?" → "Perché ancora?" → ... → "Cosa c'entra con il resto?". Da consultare quando una formula o un concetto non "scende".
 
 > [!warning] Trasparenza fonti — leggi prima di fidarti
-> Le fonti del vault sono dichiarate in [[Prove/00 - Fonti e note]], in ordine di autorità:
+> Le fonti del vault sono dichiarate in [[00 - Fonti e note]], in ordine di autorità:
 > la **LETTERA** Majorana del 09/06/2026 (cosa esce), le **tre verifiche FUSI del prof. Carli**
 > corrette a mano — i fogli di un compagno, non i tuoi: vedi [[05 - Verifiche FUSI (Carli)]], gli **appunti
 > Poggi** (cosa è stato fatto in classe), il **Mirandola Vol. 2** e **Edutecnica**.
 > *(Riallineato il 2026-08-19: questo callout diceva che il Mirandola è «NON verificabile», il che
-> contraddiceva [[Prove/00 - Fonti e note]] e non è più vero. Le pagine del libro sono citabili con
+> contraddiceva [[00 - Fonti e note]] e non è più vero. Le pagine del libro sono citabili con
 > la conversione `pagina stampata = 2·(pagina-PDF) − 6`, verificata su quattro folio.)*
 
 > [!tip] 📅 Quando si studia cosa
@@ -32,7 +32,7 @@ prove: [scritta, orale, pratica]
 > [!tip] Come usarlo
 > - In Obsidian: clicca sui link `[[...]]` per saltare al file.
 > - Da Graph view: questo nodo si connette a tutti gli `Argomenti/*.md`, formando il cuore del vault.
-> - In [[Prove/00 - Indice Generale|Indice Generale]] trovi il mapping Argomenti → Esercizi → Prove.
+> - In [[00 - Indice Generale|Indice Generale]] trovi il mapping Argomenti → Esercizi → Prove.
 
 ---
 
@@ -103,12 +103,12 @@ non contare su nessuno che non esca.
 
 La lettera ne nomina **tre**, non uno solo:
 
-1. **Il diodo** — [[Diodi]] · le 39 domande vere in [[04 - Verifica tipo Carli — Diodi]] · le risposte D1-D23 già scritte in `elettronicaa/diodi-risposte.html`
+1. **Il diodo** — [[Diodi]] · le 39 domande vere in [[04 - Verifica tipo Carli — Diodi]] · le risposte D1-D23 già scritte in [[diodi-risposte]]
 2. **I circuiti in corrente alternata** — [[Impedenza dei bipoli R, L, C]] · [[Il metodo simbolico]]
 3. **I filtri passivi del primo ordine** — [[Filtri passivi del primo ordine]]
 
 > Le domande già pronte, divise per livello (definizione / spiegazione / confronto), sono in
-> [[Prove/02 - Prova Orale Carli]]. Il diodo è coperto; **alternata e filtri vanno provati a
+> [[02 - Prova Orale Carli]]. Il diodo è coperto; **alternata e filtri vanno provati a
 > voce**, ed è quello che si fa la mattina del 30 agosto.
 
 ### 🔬 Prova pratica Protti (1 settembre, 14:00-17:00 — stessa sessione dell'orale)
@@ -122,13 +122,13 @@ La lettera ne nomina **tre**, non uno solo:
 5. [[Filtri passivi del primo ordine]] — verifica di $f_t$ con sweep di frequenza
 6. [[BJT]] — punto di lavoro e [[Amplificatori a BJT]] — misura di $A_v$, verifica dell'inversione di fase
 
-> Procedure, trappole e sequenza operativa: [[Prove/03 - Prova Pratica Protti]].
+> Procedure, trappole e sequenza operativa: [[03 - Prova Pratica Protti]].
 
 ---
 
 ## ❌ Errori comuni (consultazione rapida)
 
-Gli errori "trappola" della [[Prove/01 - Prova Scritta Carli|prova scritta Carli]] sono documentati alla fine di ogni nota di teoria nella sezione **"Pattern di errore frequenti"** (vedi `[[Esercizi - Filtri passivi del primo ordine#Errori tipici]]`, `[[Esercizi - Diodi#Errori tipici]]`, ecc.).
+Gli errori "trappola" della [[01 - Prova Scritta Carli|prova scritta Carli]] sono documentati alla fine di ogni nota di teoria nella sezione **"Pattern di errore frequenti"** (vedi `[[Esercizi - Filtri passivi del primo ordine#Errori tipici]]`, `[[Esercizi - Diodi#Errori tipici]]`, ecc.).
 
 I tre più critici in assoluto (da memorizzare):
 
@@ -141,8 +141,8 @@ I tre più critici in assoluto (da memorizzare):
 ## 🔗 Link rapidi ad altre aree del vault
 
 - **Esercizi svolti** → vedi [[Esercizi]]
-- **Prove d'esame (Carli + Protti)** → vedi [[Prove/00 - Indice Generale|Indice Generale]]
-- **Formulario rapido** → vedi [[Prove/Formulario rapido|Formulario rapido]]
+- **Prove d'esame (Carli + Protti)** → vedi [[00 - Indice Generale|Indice Generale]]
+- **Formulario rapido** → vedi [[Formulario rapido|Formulario rapido]]
 - **Le tre verifiche vere del prof.** → vedi [[05 - Verifiche FUSI (Carli)]]
 - **Il piano giorno per giorno** → vedi [[Calendario]]
-- **Simulazione d'esame completa** → vedi [[Esercizi/Esercizi - Simulazione finale|Simulazione finale]]
+- **Simulazione d'esame completa** → vedi [[Esercizi - Simulazione finale|Simulazione finale]]

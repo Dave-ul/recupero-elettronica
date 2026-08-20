@@ -2,7 +2,7 @@
 tags: [recupero, elettronica, diodi, esercizi, scritta, pratica]
 fonte_secondaria: "edutecnica.it — verificato coerente su 8/8 topic chiave (BJT, MOSFET, JFET, Amplificatori, Diodi/Zener, Filtri RC/RL, Alimentatori, Trifase)"
 fonte_ufficiale: "MAJORANA lettera giudizio sospeso 09/06/2026 — IIS San Lazzaro di Savena (BO), classe 4BEM Meccanica-Elettronica, studente Davide Rocca"
-libro_mirandola: "VERIFICATO ✔ (2026-07-19) — coerente con Mirandola Vol.2, Cap. 5 «I diodi», pp. 192-233. Esercizi 1-2 del vault ricalcolati e confermati; corretto un errore dimensionale in Es. 2(c) (P_D). Esercizi edutecnica Z2 e Z9 ricalcolati e confermati; Z3 segnalato come non ricostruibile senza schema. Vedi [[Prove/00 - Audit e correzioni]]."
+libro_mirandola: "VERIFICATO ✔ (2026-07-19) — coerente con Mirandola Vol.2, Cap. 5 «I diodi», pp. 192-233. Esercizi 1-2 del vault ricalcolati e confermati; corretto un errore dimensionale in Es. 2(c) (P_D). Esercizi edutecnica Z2 e Z9 ricalcolati e confermati; Z3 segnalato come non ricostruibile senza schema. Vedi [[00 - Audit e correzioni]]."
 prove: [scritta, orale, pratica]
 ---
 

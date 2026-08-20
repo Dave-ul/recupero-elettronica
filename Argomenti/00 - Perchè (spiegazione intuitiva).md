@@ -32,7 +32,7 @@ libro_mirandola: "VERIFICATO ✔ (2026-07-25) per derivazione — file trasversa
 ---
 
 > [!warning] Trasparenza fonti
-> La fisica atomica di questa §0 (configurazione elettronica, reticolo covalente, bande di energia, drogaggio, giunzione p-n) non è verificabile nel libro Mirandola (PDF 152 pp scansionato SENZA OCR — vedi [[Prove/00 - Fonti e note]]). Le spiegazioni seguono prassi didattica standard (controllata su edutecnica.it e letteratura elettronica). Se devi portare un numero all’orale Carli, citane la fonte: è la fisica, non il libro.
+> La fisica atomica di questa §0 (configurazione elettronica, reticolo covalente, bande di energia, drogaggio, giunzione p-n) non è verificabile nel libro Mirandola (PDF 152 pp scansionato SENZA OCR — vedi [[00 - Fonti e note]]). Le spiegazioni seguono prassi didattica standard (controllata su edutecnica.it e letteratura elettronica). Se devi portare un numero all’orale Carli, citane la fonte: è la fisica, non il libro.
 
 
 **A. L'atomo grezzo: cos'è davvero un atomo di silicio**

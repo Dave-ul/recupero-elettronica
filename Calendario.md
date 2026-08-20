@@ -4,10 +4,6 @@ fonte: "LETTERA Majorana + appunti Poggi + le tre verifiche FUSI del prof. Carli
 esame: "1 settembre 2026 — scritto 8:00-13:00 · orale+pratico 14:00-17:00"
 ---
 
-> [!info] Questa è la copia nel vault
-> L'originale è `elettronicaa/Calendario_18_giorni.md`. Qui dentro i `[[link]]` alle note
-> funzionano; là fuori no. **Modifica una sola delle due** e ricopiala sull'altra.
-
 # Recupero — gli ultimi 12 giorni, dal 20 al 31 agosto
 ### *ricalibrato il 19 agosto, con l'orario d'esame ormai noto*
 
@@ -40,7 +36,7 @@ filtri — cioè i due giorni successivi — si costruiscono *sopra* le impedenz
 simbolico. Se quel gradino manca, i due giorni dopo non poggiano su niente. Per questo
 il **20 agosto è tutto lì**, e ha un checkpoint suo che decide se si può proseguire.
 
-**Il diodo è già chiuso.** Le risposte **D1-D23** sono scritte in `diodi-risposte.html`:
+**Il diodo è già chiuso.** Le risposte **D1-D23** sono scritte in [[diodi-risposte]]:
 coprono sia la giornata del 19 sia la parte orale che era prevista per il 23. Del vecchio
 "diodo seconda parte" restano solo gli **esercizi**, che stanno comodamente nel 23
 insieme al checkpoint.
@@ -150,7 +146,7 @@ Due eccezioni:
 | **Filtri del 1° ordine e f.d.t.** (giorni 2-3) | Edutecnica **non tratta questo argomento**: i suoi «filtri di banda» (pp. 48-57) sono circuiti risonanti accoppiati per radiofrequenza, un'altra cosa. Qui il Mirandola e le pagine 9 e 18 di Poggi sono le uniche fonti |
 | **MOSFET** (giorno 10) | Il Mirandola gli dedica 5 pagine in tutto: la fonte vera è Edutecnica, il Mirandola serve solo per la formula del partitore di gate |
 
-**E poi c'è il vault Obsidian** (`Recupero Elettronica/`): teoria riscritta, esercizi con
+**E poi c'è questo vault Obsidian**: teoria riscritta, esercizi con
 soluzione passo-passo, errori tipici e quesiti d'orale già pronti. Ogni giornata qui sotto
 ha una riga 🧠 con le note da aprire. Quando una spiegazione del libro non scende, la nota
 del vault è la seconda spiegazione della stessa cosa.
@@ -249,7 +245,7 @@ sono chiusi non ha senso aprire i filtri.
 - ✏️ **Edutecnica Elettronica pp. 74-78** — diodo Zener, esercizi 1-10
 - ✏️ **Mirandola PDF 118 → libro 230-231** — esercizi **1-12** sul diodo
 - 🧠 **vault**: `[[Esercizi - Diodi]]` · `[[Diodi]]` §4 (Zener) — la **teoria** del diodo
-  non va ristudiata, è già scritta in `diodi-risposte.html`
+  non va ristudiata, è già scritta in [[diodi-risposte]]
 
 **+25 minuti di lettura per l'orale** — alimentatori, descrittiva:
 
@@ -430,7 +426,7 @@ L'unico blocco lungo del piano.
 ## Giorno 12 · lunedì 31 agosto — vigilia
 ⏱️ **~40 minuti · niente conti, niente materiale nuovo**
 
-- ✏️ **Le domande sul diodo a voce**: apri `diodi-risposte.html`, ripeti **D1-D23** una per
+- ✏️ **Le domande sul diodo a voce**: apri [[diodi-risposte]], ripeti **D1-D23** una per
   una **senza guardare**, poi controlla. Crocetta su quelle su cui hai esitato, e rileggi
   solo quelle. Si fa camminando, in macchina, ovunque — è un richiamo a distanza di dodici
   giorni dalla prima scrittura, ed è il momento in cui le cose si fissano

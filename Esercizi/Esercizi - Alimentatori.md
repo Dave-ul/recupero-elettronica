@@ -1,6 +1,6 @@
 ---tags: [recupero, elettronica, esercizi, alimentatori, power-supply]
 fonte: "edutecnica.it/elettronica/alimentatorix + /stabix"
-libro_mirandola: "VERIFICATO ✔ (2026-07-28) — coerente con Mirandola Vol.2, Cap. 8 «Gli alimentatori». Sezioni coperte: §1 alimentatori non stabilizzati e fattore di ripple (form. 8.1) pp. 388-389; §3.1 regolatori integrati 78XX/79XX (FIG. 20-21) pp. 406-407; §3 regolatore serie a BJT, §3.2 duale e §3.3 correnti elevate pp. 408-409. ESEMPIO 7 del libro (dimensionamento C con raddrizzatore a ponte) pp. 408-409. File trasversale: teoria già verificata nel [[Prove/00 - Audit e correzioni|Lotto 10]]. Inoltre: refuso edutecnica confermato il 2026-07-28 (Es. A3: 12 mF vs 1,2 mF)."
+libro_mirandola: "VERIFICATO ✔ (2026-07-28) — coerente con Mirandola Vol.2, Cap. 8 «Gli alimentatori». Sezioni coperte: §1 alimentatori non stabilizzati e fattore di ripple (form. 8.1) pp. 388-389; §3.1 regolatori integrati 78XX/79XX (FIG. 20-21) pp. 406-407; §3 regolatore serie a BJT, §3.2 duale e §3.3 correnti elevate pp. 408-409. ESEMPIO 7 del libro (dimensionamento C con raddrizzatore a ponte) pp. 408-409. File trasversale: teoria già verificata nel [[00 - Audit e correzioni|Lotto 10]]. Inoltre: refuso edutecnica confermato il 2026-07-28 (Es. A3: 12 mF vs 1,2 mF)."
 prove: [scritta, pratica]---
 
 # Esercizi — Alimentatori (raddrizzatori, filtri, regolatori)

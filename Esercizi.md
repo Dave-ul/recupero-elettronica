@@ -22,18 +22,18 @@ prove: [scritta, orale, pratica]
 
 | Macroarea | Esercizi svolti | Teoria collegata | Prove rilevanti |
 |---|---|---|---|
-| **AC / fasori** | [[Esercizi - Segnali sinusoidali e fasori]] | [[Argomenti/Segnali sinusoidali e fasori\|Segnali sinusoidali e fasori]] | 01, 02, 03 |
-| **Impedenze R, L, C** | [[Esercizi - Impedenza dei bipoli R, L, C]] | [[Argomenti/Impedenza dei bipoli R, L, C\|Impedenza]] | 01, 02, 03 |
-| **Metodo simbolico** | [[Esercizi - Il metodo simbolico]] | [[Argomenti/Il metodo simbolico\|Il metodo simbolico]] | 01, 02 |
-| **Potenze AC + rifasamento** | [[Esercizi - Le potenze in alternata]] | [[Argomenti/Le potenze in alternata\|Le potenze in alternata]] | 01, 02 |
-| **Reti RLC + risonanza** | [[Esercizi - Reti RLC e risonanza]] | [[Argomenti/Reti RLC e risonanza\|Reti RLC]] | 01, 02 |
-| **Filtri primo ordine** | [[Esercizi - Filtri passivi del primo ordine]] | [[Argomenti/Filtri passivi del primo ordine\|Filtri]] | 01, 02, 03 |
-| **Diodi + Zener** | [[Esercizi - Diodi]] | [[Argomenti/Diodi\|Diodi]] | 01, 02, 03 |
-| **BJT** | [[Esercizi - BJT]] | [[Argomenti/BJT\|BJT]] | 01, 02 |
-| **MOSFET enhancement n** | [[Esercizi - MOSFET]] | [[Argomenti/MOSFET\|MOSFET]] | 01, 02 |
-| **JFET n** | [[Esercizi - JFET]] | [[Argomenti/JFET\|JFET]] | 01, 02 |
-| **Amplificatori a BJT** | [[Esercizi - Amplificatori a BJT]] | [[Argomenti/Amplificatori a BJT\|Amplificatori a BJT]] | 02, 03 |
-| **Alimentatori** | [[Esercizi - Alimentatori]] | [[Argomenti/Alimentatori\|Alimentatori]] | 01, 02, 03 |
+| **AC / fasori** | [[Esercizi - Segnali sinusoidali e fasori]] | [[Segnali sinusoidali e fasori\|Segnali sinusoidali e fasori]] | 01, 02, 03 |
+| **Impedenze R, L, C** | [[Esercizi - Impedenza dei bipoli R, L, C]] | [[Impedenza dei bipoli R, L, C\|Impedenza]] | 01, 02, 03 |
+| **Metodo simbolico** | [[Esercizi - Il metodo simbolico]] | [[Il metodo simbolico\|Il metodo simbolico]] | 01, 02 |
+| **Potenze AC + rifasamento** | [[Esercizi - Le potenze in alternata]] | [[Le potenze in alternata\|Le potenze in alternata]] | 01, 02 |
+| **Reti RLC + risonanza** | [[Esercizi - Reti RLC e risonanza]] | [[Reti RLC e risonanza\|Reti RLC]] | 01, 02 |
+| **Filtri primo ordine** | [[Esercizi - Filtri passivi del primo ordine]] | [[Filtri passivi del primo ordine\|Filtri]] | 01, 02, 03 |
+| **Diodi + Zener** | [[Esercizi - Diodi]] | [[Diodi\|Diodi]] | 01, 02, 03 |
+| **BJT** | [[Esercizi - BJT]] | [[BJT\|BJT]] | 01, 02 |
+| **MOSFET enhancement n** | [[Esercizi - MOSFET]] | [[MOSFET\|MOSFET]] | 01, 02 |
+| **JFET n** | [[Esercizi - JFET]] | [[JFET\|JFET]] | 01, 02 |
+| **Amplificatori a BJT** | [[Esercizi - Amplificatori a BJT]] | [[Amplificatori a BJT\|Amplificatori a BJT]] | 02, 03 |
+| **Alimentatori** | [[Esercizi - Alimentatori]] | [[Alimentatori\|Alimentatori]] | 01, 02, 03 |
 | **Batteria da 90 min** | [[Esercizi - Simulazione finale]] | (tutti gli Argomenti) | 01 (allenamento, non la prova reale da 5h) |
 
 ---
@@ -114,7 +114,7 @@ Il file [[Esercizi - Simulazione finale]] contiene **6 problemi misti** (E1–E6
 ## 🔗 Link rapidi ad altre aree del vault
 
 - **Tutti gli argomenti teorici** → vedi [[Argomenti]]
-- **Prove d'esame (Carli + Protti)** → vedi [[Prove/00 - Indice Generale|Indice Generale]]
-- **Formulario rapido** per il compito → vedi [[Prove/Formulario rapido|Formulario rapido]]
-- **Trasparenza fonti** (LETTERA Majorana + edutecnica.it + libro Mirandola) → vedi [[Prove/00 - Fonti e note]]
+- **Prove d'esame (Carli + Protti)** → vedi [[00 - Indice Generale|Indice Generale]]
+- **Formulario rapido** per il compito → vedi [[Formulario rapido|Formulario rapido]]
+- **Trasparenza fonti** (LETTERA Majorana + edutecnica.it + libro Mirandola) → vedi [[00 - Fonti e note]]
 - **Tutorial su misure di laboratorio** → vedi `[[Diodi#6.b Misurazioni Pratiche]]` + `[[L'oscilloscopio]]`

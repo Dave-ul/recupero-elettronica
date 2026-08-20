@@ -9,7 +9,7 @@ esame: "1 settembre 2026 — scritto 8:00-13:00 (Carli) · orale+pratico 14:00-1
 
 # 📚 Fonti del vault — Note di trasparenza
 
-> Questo file è la **dichiarazione di fonti** del vault Obsidian `Recupero Elettronica`. In 1 sola lettura, lo studente Carli può capire **da dove vengono i contenuti**, **cosa è verificato**, e **cosa NON è verificabile**. Tutti gli altri file del vault rimandano qui quando serve trasparenza.
+> Questo file è la **dichiarazione di fonti** del vault Obsidian `elettronicaa`. In 1 sola lettura, lo studente Carli può capire **da dove vengono i contenuti**, **cosa è verificato**, e **cosa NON è verificabile**. Tutti gli altri file del vault rimandano qui quando serve trasparenza.
 
 ---
 
@@ -168,7 +168,7 @@ con cui è stato potato [[Calendario]].
 
 > [!success] Le risposte sono già scritte
 > Le risposte alle **D1-D23** sono state redatte il 2026-08-19 e stanno in
-> `elettronicaa/diodi-risposte.html`. Il [[Calendario]] non le fa più riscrivere: le fa
+> [[diodi-risposte]] (in `Strumenti/`). Il [[Calendario]] non le fa più riscrivere: le fa
 > **ripetere a voce** il 31 agosto, come richiamo a distanza.
 
 ---
@@ -306,22 +306,39 @@ con cui è stato potato [[Calendario]].
 ### 🗺️ Dove sta cosa — mappa rapida
 
 ```
-elettronicaa/
-├── Calendario_18_giorni.md      il piano giorno per giorno (copia in vault: Calendario.md)
-├── diodi-risposte.html          risposte D1-D23, già scritte
-├── Fonti/
-│   ├── MAJORANA_lettera_…pdf    la LETTERA
-│   ├── FUSI_02-03-26_…pdf       verifica alternata + filtri
-│   ├── FUSI_24-04-26_…pdf       verifica BJT
-│   ├── FUSI_29-05-26_…pdf       verifica JFET + MOSFET
-│   ├── appunti poggi.pdf        il quaderno del corso
-│   ├── Edutecnica Elettronica.pdf
-│   ├── Edutecnica Elettrotecnica.pdf
-│   ├── Mirandola Volume 1/      12 PDF — digitale, fuori programma
-│   ├── Mirandola Volume 2/      12 PDF — il libro di classe
-│   └── WhatsApp Image …jpeg     le tre foto delle verifiche 4E sui diodi
-└── Recupero Elettronica/        questo vault
+elettronicaa/                    ← il vault Obsidian: tutto è qui dentro, tutto è linkabile
+├── 00 - Indice Generale.md      la mappa d'ingresso alle tre prove
+├── Calendario.md                il piano giorno per giorno — copia unica
+├── Argomenti.md · Esercizi.md   i due MOC di navigazione
+├── Argomenti/                   13 note di teoria + l'hub «00 - Perchè»
+├── Esercizi/                    13 note di esercizi svolti
+├── Prove/                       01-03 le tre prove · 04-05 il materiale vero del docente
+├── Strumenti/                   quello che si porta al compito
+│   ├── Formulario rapido.md
+│   ├── Cheat Sheet A4 visuale.md
+│   └── diodi-risposte.html      risposte D1-D23, già scritte
+├── Meta/                        trasparenza e registro — questo file sta qui
+├── Allegati/                    70 immagini + INDEX.md
+└── Fonti/                       i sorgenti, fuori da git perché pesano 274 MB
+    ├── MAJORANA_lettera_…pdf    la LETTERA
+    ├── FUSI_02-03-26_…pdf       verifica alternata + filtri
+    ├── FUSI_24-04-26_…pdf       verifica BJT
+    ├── FUSI_29-05-26_…pdf       verifica JFET + MOSFET
+    ├── appunti poggi.pdf        il quaderno del corso
+    ├── Edutecnica Elettronica.pdf
+    ├── Edutecnica Elettrotecnica.pdf
+    ├── Mirandola Volume 1/      10 PDF — digitale, fuori programma
+    ├── Mirandola Volume 2/      12 PDF — il libro di classe
+    └── WhatsApp Image …jpeg     le tre foto delle verifiche 4E sui diodi
 ```
+
+> [!info] Perché una radice sola
+> Fino al 2026-08-20 il vault era la sottocartella `Recupero Elettronica/`, e `Fonti/` e
+> `diodi-risposte.html` stavano **fuori**: si potevano solo citare come path testuali, non
+> aprire con un clic. Il calendario, per lo stesso motivo, esisteva in due copie da tenere
+> allineate a mano. Ora la radice è una: i PDF del Mirandola si aprono da dentro Obsidian e
+> il calendario è uno solo.
+
 
 ---
 
