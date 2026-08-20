@@ -853,3 +853,93 @@ Y [1260-1316]  ink 19-26% <-- FOOTER Zanichelli 2012 + folio (4 0 8 / 4 0 9)
 **Verifica diretta dell'immagine** (`Allegati/libro-cap8-pp408-409-tabella-78xx.png`, letta a piena risoluzione): la didascalia stampata sotto la griglia recita, senza ambiguità, **«TABELLA 1 Caratteristiche principali degli integrati della famiglia 78XX; le resistenze termiche sono riferite al contenitore TO-220.»** Nessun "4" nella cifra: era un **misread OCR** (confusione 1↔4, già ipotizzata come possibile causa nel Lotto 19).
 
 **Decisione**: `Argomenti/Alimentatori.md` **non viene modificato** — la nota raccomandata dal Lotto 19 avrebbe introdotto un'affermazione falsa ("il libro la chiama Tabella 4") in un file dichiarato `VERIFICATO ✔`. È lo stesso principio del difetto sistemico #3 applicato in anticipo: prima di scrivere una correzione/precisazione, va aperta l'immagine — qui bastava farlo per scoprire che non serviva alcuna modifica.
+
+---
+
+## Lotto 21 — Audit integrale della cartella e riorganizzazione in radice unica ✔ (2026-08-20)
+
+> **Contesto**: primo giorno dei 12 del [[Calendario]]. Il materiale è chiuso, da qui in poi si
+> studia soltanto — quindi era l'ultimo momento utile per un controllo di tutto, prima che gli
+> errori residui venissero studiati invece che corretti. Controllati tutti i 247 file: 42 note,
+> 70 allegati, 25 PDF sorgente, `diodi-risposte.html`, la configurazione Obsidian, lo stato git.
+
+### Cosa reggeva già
+
+144 wikilink, **zero rotti**. Zero allegati orfani. Git pulito. Le note di `Argomenti/` e
+`Esercizi/`, verificate pagina per pagina nei Lotti 1-20, non hanno prodotto un solo errore
+nuovo: il controllo di questo lotto non le ha toccate.
+
+### a) Tre errori di formula nei file di consultazione rapida
+
+Tutti e tre nei due file che si portano al compito — dove un errore pesa più che in una nota
+di teoria, perché lì non c'è tempo di ragionarci sopra.
+
+| Dove | Cosa c'era | Cosa c'è ora |
+|---|---|---|
+| `Cheat Sheet` §3 | $Q$ parallelo $= \omega_0 L/R$, **identico al serie** | $Q_p = R/(\omega_0 L)$ |
+| `Formulario` §5 | $f_0 \approx 159{,}15/\sqrt{L_{mH} C_{\mu F}}$ kHz | costante e unità coerenti (**mH·nF**), con il controllo numerico |
+| `Formulario` §7 | «valgono SOLO in saturazione **(zona ohmica)**» | la zona ohmica è l'**opposto** della saturazione |
+
+Il primo è il più insidioso: le altre quattro occorrenze del vault (`Formulario` §5,
+`Esercizi - Reti RLC` Es. R2, `Esercizi - Filtri` Es. F6) erano **corrette**. Era il Cheat
+Sheet a essere fuori linea, cioè il file più veloce da consultare e il meno verificato — è il
+**difetto sistemico #1** (fidarsi del file riassuntivo) applicato a sé stesso.
+
+### b) I file trasversali erano rimasti al vecchio scope
+
+Il riallineamento del 2026-08-19 (cinque argomenti allo scritto, cinque ore di prova) ha toccato
+le note di argomento ma **non i quattro file trasversali**, che portavano ancora scope e tempi
+di prima. Trifase e rifasamento industriale — che né la LETTERA, né Poggi, né le tre verifiche
+nominano — erano ancora in primo piano: §12 del Formulario, §5 del Cheat Sheet, terzo posto fra
+gli errori più costosi in `Esercizi`, ed E3 della Simulazione con la stella.
+
+Spostati in **appendice**, non cancellati: se all'orale la domanda arriva le formule ci sono.
+Il mnemonico #5 del Formulario, liberato, è andato alle due relazioni di progetto del JFET —
+l'argomento con tre «NON SVOLTO» su cinque nella verifica 29-05.
+
+Tempi rimessi in riga: il titolo del Cheat Sheet diceva ancora «compito **90'** Carli»
+contraddicendo il frontmatter dello stesso file due righe sopra; le «~20 ore su 2-3 settimane»
+di `Esercizi` sono ora dichiarate come **dentro** le ~40 ore dei 12 giorni; e il percorso in 13
+step ha una colonna **Giorno** che lo aggancia al [[Calendario]] invece di proporgli contro un
+secondo piano.
+
+### c) Un errore trovato mentre se ne sistemava un altro
+
+Marcando E3 come opzionale è emerso che **conteneva esattamente l'errore che il vault segnala**:
+$C_{\text{fase}}$ calcolata senza dividere per 3 — **145 µF invece di 48,5**. La soluzione che
+doveva insegnare l'errore lo commetteva. Corretta, con la nota che spiega cos'erano i 145 µF
+(la $C$ totale equivalente, $3 \times 48{,}5$).
+
+È il **difetto sistemico #4**, nuovo e da tenere d'occhio: *un avvertimento su un errore non è
+una verifica che l'errore non sia stato commesso*. Vale ovunque il vault dica «attenzione a X»
+— la soluzione lì accanto va ricontrollata proprio perché X è il punto delicato.
+
+### d) Riorganizzazione: una radice sola
+
+Il vault era `Recupero Elettronica/`, e le due cose più usate stavano **fuori**: i 25 PDF di
+`Fonti/` e `diodi-risposte.html`. Da fuori si potevano solo citare come path testuali. Per lo
+stesso motivo il calendario esisteva in **due copie** (`Calendario_18_giorni.md` — che poi
+descriveva 12 giorni, non 18 — e `Calendario.md`) allineate a mano, come i file stessi
+dichiaravano.
+
+Ora la radice è `elettronicaa/`. I PDF del Mirandola si aprono da dentro Obsidian,
+`diodi-risposte` è un wikilink, del calendario resta **una** copia. `Fonti/` è in `.gitignore`:
+274 MB non hanno motivo di stare in un repo che ne pesa 8.
+
+`Prove/` mescolava quattro cose con vite diverse; separate in `Prove/` (le prove e il materiale
+del docente), `Strumenti/` (la cartellina del 1 settembre), `Meta/` (questo registro e la
+trasparenza fonti), più `00 - Indice Generale` promosso in radice, dov'è un ingresso invece che
+un file sepolto.
+
+I **32 wikilink con path esplicito** sono stati accorciati alla forma breve. Tutti i nomi file
+del vault sono unici, quindi Obsidian li risolve da sola e non si romperanno alla prossima
+riorganizzazione. Rimossi `.trash/` (vuota) e `.claude/settings.local.json`, i cui permessi
+puntavano a `/home/davide`, path di un'altra macchina.
+
+### Verifica post-riorganizzazione
+
+* **Wikilink**: zero rotti. Le 8 stringhe che il controllo naive segnala sono le stesse note dal
+  **Lotto 17** — letterali dentro backtick nelle righe narrative di questo registro, non embed resi.
+* **Allegati**: zero orfani, tutte le 70 immagini referenziate.
+* **Git**: `size-pack` 7,95 MiB prima e dopo — `Fonti/` non è entrata.
+* **Residui**: nessuna occorrenza di `90'` né di «18 giorni» in tutto il vault.
