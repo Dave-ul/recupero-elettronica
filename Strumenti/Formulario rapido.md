@@ -300,29 +300,7 @@ $$P_{BJT} = (V_{in} - V_o) I_L$$
 
 ---
 
-## 12. Rifasamento trifase
-
-### 12.1 Tensioni trifase
-
-$$V_{\text{fase}} = \frac{V_{\text{conc}}}{\sqrt{3}} \qquad V_{\text{conc}} = \sqrt{3} \cdot V_{\text{fase}}$$
-
-### 12.2 Potenze trifase (carico equilibrato)
-
-$$P = \sqrt{3} V_{\text{conc}} I \cos\varphi \qquad Q = \sqrt{3} V_{\text{conc}} I \sin\varphi \qquad S = \sqrt{3} V_{\text{conc}} I$$
-
-### 12.3 Rifasamento (3 C tra fase e neutro, configurazione stella)
-
-$$C_{\text{fase}} = \frac{\Delta Q / 3}{\omega V_{\text{fase}}^2} = \frac{P(\tan\varphi - \tan\varphi')}{3 \omega V_{\text{fase}}^2}$$
-
-⚠️ **Mnemonico**: il risultato è la $C$ di **ciascuno dei 3 condensatori**. Per la **$C$ totale equivalente**: $C_{\text{eq}} = 3 C_{\text{fase}}$.
-
-### 12.4 Target
-
-$$\cos\varphi' \ge 0{,}9 \quad \text{(tipico, mai }1{,}0\text{ per evitare autoeccitazione)}$$
-
----
-
-## 13. Costanti e numeri da ricordare
+## 12. Costanti e numeri da ricordare
 
 | Simbolo | Valore |
 |---|---|
@@ -338,13 +316,47 @@ $$\cos\varphi' \ge 0{,}9 \quad \text{(tipico, mai }1{,}0\text{ per evitare autoe
 
 ---
 
-## 14. Mnemonico finale (le 5 cose che DEVI ricordare)
+## 13. Mnemonico finale (le 5 cose che DEVI ricordare)
 
 1. **Filtri**: RC → $f_t = 1/(2\pi RC)$. RL → $f_t = R/(2\pi L)$ (NON $L/R$).
 2. **Fasori**: cartesiano per somma/diff, polare per prod/quot. **Attenzione ai quadranti di $\arctan$**.
 3. **BJT**: $V_{CE} = V_{CC} - I_C R_C - I_E R_E$ (con $R_E$: non dimenticare il terzo termine).
 4. **MOSFET**: parabolica SOLO in saturazione. **Verifica finale** $V_{DS} > V_{GS} - V_{th}$.
-5. **Trifase**: $V_{\text{fase}} = V_{\text{conc}}/\sqrt{3}$, $\Delta Q_{\text{fase}} = \Delta Q/3$ (per il $C$ per fase).
+5. **JFET**: tutti gli esercizi di progetto escono da due sole relazioni —
+   $V_{GS0} = -R_S I_{D0}$ e $V_{DD} = I_{D0}(R_S + R_D) + V_{DS0}$.
+   *(Sulla verifica 29-05 tre esercizi su cinque sono «NON SVOLTO»: è l'argomento più scoperto.)*
+
+---
+
+## Appendice — fuori programma
+
+> [!warning] Perché è qui e non sopra
+> Il **sistema trifase e il rifasamento industriale** non compaiono **né nella LETTERA, né
+> negli appunti Poggi, né nelle tre verifiche del prof. Carli** — i tre filtri con cui è stato
+> potato il piano di studio (vedi [[Calendario]], «Cosa è dentro e cosa è fuori»).
+> Fino al 2026-08-20 stavano nel corpo del formulario, come paragrafo 12 e come punto 5 del
+> mnemonico finale. Non sono cancellati — se all'orale la domanda arriva, le formule sono
+> queste — ma non devono rubare attenzione il 1 settembre.
+
+## A1. Rifasamento trifase
+
+### A1.1 Tensioni trifase
+
+$$V_{\text{fase}} = \frac{V_{\text{conc}}}{\sqrt{3}} \qquad V_{\text{conc}} = \sqrt{3} \cdot V_{\text{fase}}$$
+
+### A1.2 Potenze trifase (carico equilibrato)
+
+$$P = \sqrt{3} V_{\text{conc}} I \cos\varphi \qquad Q = \sqrt{3} V_{\text{conc}} I \sin\varphi \qquad S = \sqrt{3} V_{\text{conc}} I$$
+
+### A1.3 Rifasamento (3 C tra fase e neutro, configurazione stella)
+
+$$C_{\text{fase}} = \frac{\Delta Q / 3}{\omega V_{\text{fase}}^2} = \frac{P(\tan\varphi - \tan\varphi')}{3 \omega V_{\text{fase}}^2}$$
+
+⚠️ **Mnemonico**: il risultato è la $C$ di **ciascuno dei 3 condensatori**. Per la **$C$ totale equivalente**: $C_{\text{eq}} = 3 C_{\text{fase}}$.
+
+### A1.4 Target
+
+$$\cos\varphi' \ge 0{,}9 \quad \text{(tipico, mai }1{,}0\text{ per evitare autoeccitazione)}$$
 
 ---
 

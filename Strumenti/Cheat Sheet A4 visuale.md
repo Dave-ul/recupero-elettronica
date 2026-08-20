@@ -3,7 +3,7 @@ tags: [recupero, elettronica, cheat-sheet, comparazione]
 fonte: "confronto diretto per consultazione 5s durante lo scritto (1 set., 8:00-13:00) e nella pausa 13:00-14:00"
 ---
 
-# 🗺️ Cheat Sheet A4 — 5s lookup compito 90' Carli
+# 🗺️ Cheat Sheet A4 — lookup da 5 secondi, scritto Carli (1 set., 8:00-13:00)
 
 > Tabella comparativa = confronto diretto. Per approfondire → `[[Formulario rapido]]` o hub `[[00 - Perchè (spiegazione intuitiva)]] §N`.
 
@@ -64,18 +64,7 @@ fonte: "confronto diretto per consultazione 5s durante lo scritto (1 set., 8:00-
 
 **Regola**: reattivo in **serie** blocca le basse, verso **massa** blocca le alte. **−3 dB** = metà potenza.
 
-## 5. Monofase vs Trifase
-
-| | **MONOFASE** | **TRIFASE** |
-|---|---|---|
-| **Fili** | 2 (fase + neutro) | 3 (R,S,T) + neutro opz. |
-| **Sfasamento** | — | 120° tra fasi |
-| **$V_{\text{conc}}$** | = $V_{\text{fase}}$ | $= \sqrt{3} \cdot V_{\text{fase}}$ |
-| **$P$ totale** | $P = V I \cos\varphi$ | $P = \sqrt{3} \cdot V_{\text{conc}} \cdot I \cos\varphi$ |
-| **$Q$ totale** | $Q = V I \sin\varphi$ | $Q = \sqrt{3} \cdot V_{\text{conc}} \cdot I \sin\varphi$ |
-| **Uso** | civile (230 V 50 Hz) | industriale (400 V 50 Hz) |
-
-## 6. AC vs DC
+## 5. AC vs DC
 
 | | **DC** (ω = 0) | **AC** (sinusoidale) |
 |---|---|---|
@@ -84,9 +73,9 @@ fonte: "confronto diretto per consultazione 5s durante lo scritto (1 set., 8:00-
 | **$V$ vs $I$ su L** | — | $V$ anticipa $I$ di 90° |
 | **$V$ vs $I$ su C** | — | $V$ ritarda $I$ di 90° |
 | **Potenza** | $P = V I$ | $P=VI\cos\varphi$, $Q=VI\sin\varphi$, $S=\sqrt{P^2+Q^2}$ |
-| **Rifasamento** | non serve | $C$ parallelo al carico induttivo → annulla $Q$ |
+| **Rifasamento** | non serve | $C$ parallelo al carico induttivo → annulla $Q$ *(monofase: in programma)* |
 
-## 7. Alimentatore a blocchi
+## 6. Alimentatore a blocchi
 
 ```
 AC 230V 50Hz → trafo (abbassa + isola) → AC es.12V
@@ -95,7 +84,7 @@ AC 230V 50Hz → trafo (abbassa + isola) → AC es.12V
 → regolatore 78xx (dropout 2V, V_in ≥ V_out + 2V) → DC stabile
 ```
 
-## 8. Mnemonico 30s (visione d'insieme)
+## 7. Mnemonico 30s (visione d'insieme)
 
 - **Sinusoidi**: rotazione → $\cos\omega t$ → derivata = $\sin$ (**Faraday**)
 - **Impedenze**: R pura, L anticipa +90°, C ritarda −90°
@@ -106,6 +95,27 @@ AC 230V 50Hz → trafo (abbassa + isola) → AC es.12V
 - **Amplificatori**: CE amplif+inverte; CC buffer $A_v\approx 1$; CB alte freq
 - **Alimentatore**: AC → trafo → ponte → C filtro → regolatore → DC
 - **Rifasamento**: C parallelo a $L$ → annulla $Q$ → meno $I$ in linea
-- **Trifase**: $P = \sqrt{3}\,V_{\text{conc}}\,I\cos\varphi$; $V_{\text{conc}}=\sqrt{3}\,V_{\text{fase}}$
 
-> **Lookup 5s** (§1 transistor · §2 amplif · §3 risonante · §3b diodi · §4 filtri · §5 trifase · §6 AC/DC · §7 alimentatore · §8 visione 30s)
+> **Lookup 5s** (§1 transistor · §2 amplif · §3 risonante · §3b diodi · §4 filtri · §5 AC/DC · §6 alimentatore · §7 visione 30s · **appendice** trifase, fuori programma)
+
+---
+
+## Appendice — fuori programma
+
+> [!warning] Perché è qui e non sopra
+> **Trifase e rifasamento industriale** non sono in nessuna delle tre fonti che hanno potato
+> il piano — LETTERA, appunti Poggi, le tre verifiche del prof. Vedi [[Calendario]],
+> «Cosa è dentro e cosa è fuori». Fino al 2026-08-20 questa tabella era il §5, in mezzo alle
+> altre: su una scheda che si consulta in 5 secondi, la posizione è essa stessa
+> un'informazione. Resta qui in caso di domanda all'orale.
+
+## A1. Monofase vs Trifase
+
+| | **MONOFASE** | **TRIFASE** |
+|---|---|---|
+| **Fili** | 2 (fase + neutro) | 3 (R,S,T) + neutro opz. |
+| **Sfasamento** | — | 120° tra fasi |
+| **$V_{\text{conc}}$** | = $V_{\text{fase}}$ | $= \sqrt{3} \cdot V_{\text{fase}}$ |
+| **$P$ totale** | $P = V I \cos\varphi$ | $P = \sqrt{3} \cdot V_{\text{conc}} \cdot I \cos\varphi$ |
+| **$Q$ totale** | $Q = V I \sin\varphi$ | $Q = \sqrt{3} \cdot V_{\text{conc}} \cdot I \sin\varphi$ |
+| **Uso** | civile (230 V 50 Hz) | industriale (400 V 50 Hz) |

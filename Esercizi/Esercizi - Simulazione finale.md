@@ -64,7 +64,13 @@ prove: [scritta, orale, pratica]
 
 ---
 
-## E3 — Potenze e rifasamento (15 min, medio)
+## E3 — Potenze e rifasamento (15 min, medio) — ⛔ **fuori programma**
+
+> [!warning] Questo esercizio è opzionale
+> Il **rifasamento trifase** non compare né nella LETTERA, né negli appunti Poggi, né nelle tre
+> verifiche del prof. Carli: il [[Calendario]] lo mette esplicitamente fuori. Resta qui perché
+> allena P/Q/S e $\cos\varphi$, che invece sono in programma per l'orale — ma se il tempo è
+> poco, **saltalo e tieni i 15 minuti per E6 (MOSFET)**, che è in programma ed è il più difficile.
 
 **Testo.** Un motore asincrono trifase è alimentato a $V = 380$ V (concatenata), $f = 50$ Hz. Il motore assorbe $P = 4$ kW con $\cos\varphi = 0{,}75$ (induttivo). Si vuole rifasare a $\cos\varphi' = 0{,}95$.
 - (a) Calcolare la potenza reattiva $Q$ prima del rifasamento.
@@ -76,7 +82,15 @@ prove: [scritta, orale, pratica]
 - $Q = P \tan\varphi = 4000 \cdot 0{,}8819 = 3528$ VAR (arrotondato 3,5 kVAR)
 - $Q' = P \tan\varphi' = 4000 \cdot 0{,}3287 = 1315$ VAR
 - $\Delta Q = Q - Q' = 2213$ VAR = potenza reattiva che il condensatore deve erogare
-- $C_{\text{fase}} = \Delta Q / (\omega V_{\text{fase}}^2)$ per rifasamento trifase a stella. $V_{\text{fase}} = V_{\text{conc}}/\sqrt{3} = 220$ V. $C = 2213/(314 \cdot 220^2) = 145\,\mu\text{F}$ per fase.
+- Ogni condensatore della stella eroga **un terzo** della reattiva totale: $\Delta Q/3 = 738$ VAR.
+  Con $V_{\text{fase}} = V_{\text{conc}}/\sqrt{3} = 220$ V:
+  $$C_{\text{fase}} = \frac{\Delta Q/3}{\omega V_{\text{fase}}^2} = \frac{738}{314{,}16 \cdot 220^2} = 48{,}5\,\mu\text{F} \text{ per fase}$$
+
+> [!danger] Correzione 2026-08-20 — qui c'era esattamente l'errore che il vault segnala
+> Lo svolgimento precedente scriveva $C = \Delta Q/(\omega V_{\text{fase}}^2) = 145\,\mu$F,
+> **senza dividere per 3**. È l'errore elencato in [[Esercizi]] fra i più costosi, commesso
+> nella soluzione che dovrebbe insegnarlo. I 145 µF sono la $C$ **totale equivalente**
+> ($3 \times 48{,}5$), non quella di ciascun condensatore.
 
 > [!warning] Risposta tipica dell'orale
 > "Perché non rifasare a $\cos\varphi' = 1$?" — Perché il sistema diventerebbe capacitivo → a vuoto si verifica **autoeccitazione** del motore (la tensione cresce pericolosamente). Il target $\cos\varphi' \geq 0{,}9$ è imposto dal gestore di rete proprio per evitare questo.
@@ -160,7 +174,7 @@ prove: [scritta, orale, pratica]
 |---|---|---|---|
 | E1 | 15' | medio | confondere $L$ con $C$ nella serie; sbagliare $\omega_0$ |
 | E2 | 15' | facile | dimenticare che in RL è $R/L$ (non $RC$); errata corrige libro |
-| E3 | 15' | medio | confondere tensione concatenata con tensione di fase |
+| E3 ⛔ | 15' | medio | confondere tensione concatenata con tensione di fase; **dimenticare il /3** sulla $C$ per fase — *fuori programma, esercizio opzionale* |
 | E4 | 15' | facile | dimenticare il range $V_{in,\min}$/$V_{in,\max}$ |
 | E5 | 15' | medio | non verificare la zona attiva ($\beta \to \alpha$ o errore $V_{CE}$) |
 | E6 | 15' | difficile | non accorgersi che $V_{DS}$ è negativo = rete mal dimensionata |
