@@ -40,7 +40,7 @@ fonte: "confronto diretto per consultazione 5s durante lo scritto (1 set., 8:00-
 | **Corrente totale** | **MASSIMA** | minima |
 | **$V_L$ o $V_C$** | $= Q \cdot V_{tot}$ ⚠️ | $= V_{tot}$ |
 | **$I_L$ o $I_C$** | $= I_{tot}$ | $= Q \cdot I_{tot}$ ⚠️ |
-| **$Q$ (merito)** | $\omega_0 L / R$ | $\omega_0 L / R$ |
+| **$Q$ (merito)** | $\dfrac{\omega_0 L}{R}$ | $\dfrac{R}{\omega_0 L}$ ⚠️ **reciproco, non uguale** |
 | **Banda passante** | $\omega_0 / Q$ | $\omega_0 / Q$ |
 
 ### 3b. Diodi — normale vs Zener vs Schottky

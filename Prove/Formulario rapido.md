@@ -73,7 +73,11 @@ $$\tan\varphi = Q/P \qquad \varphi = \arg Z$$
 
 ## 5. Reti RLC e risonanza
 
-$$\omega_0 = \frac{1}{\sqrt{LC}} = 2\pi f_0 \qquad f_0 \approx 159{,}15 / \sqrt{L_{\text{mH}} C_{\mu\text{F}}} \text{ kHz}$$
+$$\omega_0 = \frac{1}{\sqrt{LC}} = 2\pi f_0 \qquad f_0 \approx \frac{159{,}15}{\sqrt{L_{\text{mH}} \cdot C_{\text{nF}}}} \text{ kHz}$$
+
+> ⚠️ **Attenzione alle unità della scorciatoia**: la costante $159{,}15$ vale con $L$ in **mH** e $C$ in **nF**.
+> Con $C$ in **µF** la costante diventa $5{,}033$. Controllo: $L = 100\ \mu$H $= 0{,}1$ mH, $C = 10$ nF
+> $\Rightarrow f_0 = 159{,}15/\sqrt{0{,}1 \cdot 10} = 159{,}15$ kHz — è l'Es. R1 di [[Esercizi - Reti RLC e risonanza]].
 
 **Serie RLC** (risonanza serie):
 $$Q_s = \frac{\omega_0 L}{R} = \frac{1}{R\omega_0 C} = \frac{1}{R}\sqrt{\frac{L}{C}} = \frac{f_0}{\text{BW}}$$
@@ -127,7 +131,9 @@ Verifica: serve $I_B > I_{B,\text{sat}} = I_C/\beta$.
 
 ## 7. MOSFET enhancement n-channel (design in saturazione)
 
-> ⚠️ Tutte le formule valgono SOLO **in saturazione** (zona ohmica). Verifica finale: $V_{DS} > V_{GS} - V_{th}$.
+> ⚠️ Tutte le formule valgono SOLO **in saturazione**. Verifica finale: $V_{DS} > V_{GS} - V_{th}$.
+> Se la verifica fallisce il MOSFET è in **zona ohmica (triodo)**, che è l'**opposto** della saturazione,
+> e la parabolica non vale più: vedi l'Es. 4 di [[Esercizi - BJT]], risolto in triodo.
 
 ### 7.1 Equazione parabolica
 
