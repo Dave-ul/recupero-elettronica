@@ -1,0 +1,103 @@
+<svg viewBox="0 0 620 620" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, Menlo, monospace">
+  <rect width="100%" height="100%" fill="#FAFAF6"/>
+  <!-- ============ MODELLO A ============ -->
+  <text x="18" y="24" font-size="12.5" font-weight="700" fill="#16202B">MODELLO A — interruttore + generatore V_γ + resistore r_D</text>
+  <!-- conduzione -->
+  <text x="18" y="46" font-size="10.5" fill="#B0442A">POLARIZZAZIONE DIRETTA (ON)</text>
+  <line x1="18" y1="86" x2="46" y2="86" stroke="#16202B" stroke-width="2"/>
+  <!-- interruttore chiuso -->
+  <circle cx="48" cy="86" r="3" fill="#16202B"/>
+  <line x1="48" y1="86" x2="86" y2="86" stroke="#B0442A" stroke-width="2.4"/>
+  <circle cx="88" cy="86" r="3" fill="#16202B"/>
+  <line x1="88" y1="86" x2="108" y2="86" stroke="#16202B" stroke-width="2"/>
+  <!-- generatore -->
+  <line x1="108" y1="72" x2="108" y2="100" stroke="#16202B" stroke-width="2.4"/>
+  <line x1="118" y1="79" x2="118" y2="93" stroke="#16202B" stroke-width="2.4"/>
+  <line x1="118" y1="86" x2="140" y2="86" stroke="#16202B" stroke-width="2"/>
+  <text x="98" y="116" font-size="10.5" fill="#16202B">V_γ</text>
+  <!-- resistore -->
+  <rect x="140" y="75" width="46" height="22" fill="#fff" stroke="#16202B" stroke-width="2"/>
+  <text x="152" y="116" font-size="10.5" fill="#16202B">r_D</text>
+  <line x1="186" y1="86" x2="214" y2="86" stroke="#16202B" stroke-width="2"/>
+  <circle cx="18" cy="86" r="3.5" fill="#16202B"/><circle cx="214" cy="86" r="3.5" fill="#16202B"/>
+  <text x="10" y="70" font-size="11" font-weight="700" fill="#B0442A">A</text>
+  <text x="210" y="70" font-size="11" font-weight="700" fill="#1F6288">K</text>
+  <!-- interdizione -->
+  <text x="18" y="146" font-size="10.5" fill="#1F6288">POLARIZZAZIONE INVERSA (OFF)</text>
+  <line x1="18" y1="180" x2="66" y2="180" stroke="#16202B" stroke-width="2"/>
+  <circle cx="68" cy="180" r="3" fill="#16202B"/>
+  <line x1="68" y1="180" x2="100" y2="162" stroke="#1F6288" stroke-width="2.4"/>
+  <circle cx="112" cy="180" r="3" fill="#16202B"/>
+  <line x1="112" y1="180" x2="160" y2="180" stroke="#16202B" stroke-width="2"/>
+  <circle cx="18" cy="180" r="3.5" fill="#16202B"/><circle cx="160" cy="180" r="3.5" fill="#16202B"/>
+  <text x="46" y="204" font-size="10.5" fill="#1F6288">interruttore aperto — I = 0</text>
+  <!-- caratteristica A -->
+  <line x1="330" y1="160" x2="596" y2="160" stroke="#16202B" stroke-width="1.5"/>
+  <line x1="392" y1="180" x2="392" y2="36" stroke="#16202B" stroke-width="1.5"/>
+  <text x="580" y="176" font-size="10" fill="#5D6B78">V_D</text>
+  <text x="398" y="44" font-size="10" fill="#5D6B78">I_D</text>
+  <line x1="330" y1="160" x2="450" y2="160" stroke="#1F6288" stroke-width="2.6"/>
+  <line x1="450" y1="160" x2="524" y2="44" stroke="#B0442A" stroke-width="2.6"/>
+  <line x1="450" y1="160" x2="450" y2="172" stroke="#5D6B78" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="436" y="186" font-size="10" fill="#B0442A">V_γ</text>
+  <text x="478" y="112" font-size="10" fill="#B0442A">pendenza = 1/r_D</text>
+  <text x="330" y="206" font-size="10.5" fill="#5D6B78">il più accurato: la retta inclinata riproduce</text>
+  <text x="330" y="220" font-size="10.5" fill="#5D6B78">la pendenza reale del tratto di conduzione</text>
+
+  <line x1="18" y1="242" x2="600" y2="242" stroke="#D8DCD6" stroke-width="1.5"/>
+
+  <!-- ============ MODELLO B ============ -->
+  <text x="18" y="272" font-size="12.5" font-weight="700" fill="#16202B">MODELLO B — interruttore + generatore V_γ</text>
+  <text x="18" y="294" font-size="10.5" fill="#B0442A">POLARIZZAZIONE DIRETTA (ON)</text>
+  <line x1="18" y1="332" x2="46" y2="332" stroke="#16202B" stroke-width="2"/>
+  <circle cx="48" cy="332" r="3" fill="#16202B"/>
+  <line x1="48" y1="332" x2="86" y2="332" stroke="#B0442A" stroke-width="2.4"/>
+  <circle cx="88" cy="332" r="3" fill="#16202B"/>
+  <line x1="88" y1="332" x2="122" y2="332" stroke="#16202B" stroke-width="2"/>
+  <line x1="122" y1="318" x2="122" y2="346" stroke="#16202B" stroke-width="2.4"/>
+  <line x1="132" y1="325" x2="132" y2="339" stroke="#16202B" stroke-width="2.4"/>
+  <line x1="132" y1="332" x2="176" y2="332" stroke="#16202B" stroke-width="2"/>
+  <text x="112" y="362" font-size="10.5" fill="#16202B">V_γ</text>
+  <circle cx="18" cy="332" r="3.5" fill="#16202B"/><circle cx="176" cy="332" r="3.5" fill="#16202B"/>
+  <text x="10" y="316" font-size="11" font-weight="700" fill="#B0442A">A</text>
+  <text x="172" y="316" font-size="11" font-weight="700" fill="#1F6288">K</text>
+  <text x="18" y="392" font-size="10.5" fill="#1F6288">INVERSA (OFF): interruttore aperto — I = 0</text>
+  <!-- caratteristica B -->
+  <line x1="330" y1="380" x2="596" y2="380" stroke="#16202B" stroke-width="1.5"/>
+  <line x1="392" y1="400" x2="392" y2="272" stroke="#16202B" stroke-width="1.5"/>
+  <text x="580" y="396" font-size="10" fill="#5D6B78">V_D</text>
+  <text x="398" y="280" font-size="10" fill="#5D6B78">I_D</text>
+  <line x1="330" y1="380" x2="450" y2="380" stroke="#1F6288" stroke-width="2.6"/>
+  <line x1="450" y1="380" x2="450" y2="278" stroke="#B0442A" stroke-width="2.6"/>
+  <line x1="450" y1="380" x2="450" y2="392" stroke="#5D6B78" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="436" y="406" font-size="10" fill="#B0442A">V_γ</text>
+  <text x="330" y="426" font-size="10.5" fill="#5D6B78">r_D trascurata: in conduzione V_D = V_γ costante</text>
+
+  <line x1="18" y1="448" x2="600" y2="448" stroke="#D8DCD6" stroke-width="1.5"/>
+
+  <!-- ============ MODELLO C ============ -->
+  <text x="18" y="478" font-size="12.5" font-weight="700" fill="#16202B">MODELLO C — diodo ideale (solo interruttore)</text>
+  <text x="18" y="500" font-size="10.5" fill="#B0442A">DIRETTA (ON): interruttore chiuso</text>
+  <line x1="18" y1="532" x2="56" y2="532" stroke="#16202B" stroke-width="2"/>
+  <circle cx="58" cy="532" r="3" fill="#16202B"/>
+  <line x1="58" y1="532" x2="106" y2="532" stroke="#B0442A" stroke-width="2.4"/>
+  <circle cx="108" cy="532" r="3" fill="#16202B"/>
+  <line x1="108" y1="532" x2="146" y2="532" stroke="#16202B" stroke-width="2"/>
+  <circle cx="18" cy="532" r="3.5" fill="#16202B"/><circle cx="146" cy="532" r="3.5" fill="#16202B"/>
+  <text x="10" y="516" font-size="11" font-weight="700" fill="#B0442A">A</text>
+  <text x="142" y="516" font-size="11" font-weight="700" fill="#1F6288">K</text>
+  <text x="18" y="576" font-size="10.5" fill="#1F6288">INVERSA (OFF): interruttore aperto</text>
+  <line x1="18" y1="600" x2="66" y2="600" stroke="#16202B" stroke-width="2"/>
+  <circle cx="68" cy="600" r="3" fill="#16202B"/>
+  <line x1="68" y1="600" x2="100" y2="582" stroke="#1F6288" stroke-width="2.4"/>
+  <circle cx="112" cy="600" r="3" fill="#16202B"/>
+  <line x1="112" y1="600" x2="160" y2="600" stroke="#16202B" stroke-width="2"/>
+  <!-- caratteristica C -->
+  <line x1="330" y1="570" x2="596" y2="570" stroke="#16202B" stroke-width="1.5"/>
+  <line x1="392" y1="600" x2="392" y2="470" stroke="#16202B" stroke-width="1.5"/>
+  <text x="580" y="586" font-size="10" fill="#5D6B78">V_D</text>
+  <text x="398" y="478" font-size="10" fill="#5D6B78">I_D</text>
+  <line x1="330" y1="570" x2="392" y2="570" stroke="#1F6288" stroke-width="3"/>
+  <line x1="392" y1="570" x2="392" y2="476" stroke="#B0442A" stroke-width="3"/>
+  <text x="330" y="612" font-size="10.5" fill="#5D6B78">la caratteristica coincide con i semiassi: V_γ = 0, r_D = 0</text>
+</svg>

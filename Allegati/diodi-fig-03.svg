@@ -1,0 +1,70 @@
+<svg viewBox="0 0 620 290" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, Menlo, monospace">
+  <rect width="100%" height="100%" fill="#FAFAF6"/>
+  <!-- ===== DIRETTA (sinistra) ===== -->
+  <text x="20" y="26" font-size="12" font-weight="700" fill="#B0442A">POLARIZZAZIONE DIRETTA</text>
+  <!-- generatore -->
+  <line x1="45" y1="70" x2="45" y2="105" stroke="#16202B" stroke-width="2"/>
+  <line x1="30" y1="105" x2="60" y2="105" stroke="#16202B" stroke-width="2.5"/>
+  <line x1="37" y1="114" x2="53" y2="114" stroke="#16202B" stroke-width="2"/>
+  <line x1="30" y1="123" x2="60" y2="123" stroke="#16202B" stroke-width="2.5"/>
+  <line x1="37" y1="132" x2="53" y2="132" stroke="#16202B" stroke-width="2"/>
+  <line x1="45" y1="132" x2="45" y2="185" stroke="#16202B" stroke-width="2"/>
+  <text x="8" y="100" font-size="12" fill="#16202B">+</text>
+  <text x="10" y="148" font-size="12" fill="#16202B">–</text>
+  <text x="66" y="118" font-size="11.5" fill="#5D6B78">V</text>
+  <!-- maglia -->
+  <line x1="45" y1="70" x2="120" y2="70" stroke="#16202B" stroke-width="2"/>
+  <line x1="45" y1="185" x2="250" y2="185" stroke="#16202B" stroke-width="2"/>
+  <!-- resistenza -->
+  <rect x="120" y="58" width="54" height="24" fill="#fff" stroke="#16202B" stroke-width="2"/>
+  <text x="136" y="50" font-size="11.5" fill="#5D6B78">R</text>
+  <line x1="174" y1="70" x2="215" y2="70" stroke="#16202B" stroke-width="2"/>
+  <!-- diodo verticale, punta in giù -->
+  <line x1="250" y1="70" x2="250" y2="105" stroke="#16202B" stroke-width="2"/>
+  <polygon points="234,105 266,105 250,133" fill="#B0442A"/>
+  <line x1="234" y1="133" x2="266" y2="133" stroke="#B0442A" stroke-width="5"/>
+  <line x1="250" y1="133" x2="250" y2="185" stroke="#16202B" stroke-width="2"/>
+  <line x1="215" y1="70" x2="250" y2="70" stroke="#16202B" stroke-width="2"/>
+  <text x="272" y="95" font-size="11.5" fill="#B0442A">A (+)</text>
+  <text x="272" y="152" font-size="11.5" fill="#B0442A">K (–)</text>
+  <!-- freccia corrente -->
+  <line x1="190" y1="45" x2="222" y2="45" stroke="#B0442A" stroke-width="2"/>
+  <polygon points="222,45 214,41 214,49" fill="#B0442A"/>
+  <text x="176" y="34" font-size="11.5" fill="#B0442A">I grande</text>
+  <text x="20" y="215" font-size="11.5" fill="#5D6B78">barriera abbassata: V₀ – V</text>
+  <text x="20" y="233" font-size="11.5" fill="#5D6B78">regione di svuotamento stretta</text>
+  <text x="20" y="251" font-size="11.5" fill="#5D6B78">conducono i portatori MAGGIORITARI</text>
+  <text x="20" y="269" font-size="11.5" fill="#5D6B78">diodo ≈ corto circuito (interruttore chiuso)</text>
+
+  <line x1="330" y1="16" x2="330" y2="276" stroke="#D8DCD6" stroke-width="1.5"/>
+
+  <!-- ===== INVERSA (destra) ===== -->
+  <text x="352" y="26" font-size="12" font-weight="700" fill="#1F6288">POLARIZZAZIONE INVERSA</text>
+  <line x1="377" y1="70" x2="377" y2="105" stroke="#16202B" stroke-width="2"/>
+  <line x1="362" y1="105" x2="392" y2="105" stroke="#16202B" stroke-width="2"/>
+  <line x1="369" y1="114" x2="385" y2="114" stroke="#16202B" stroke-width="2.5"/>
+  <line x1="362" y1="123" x2="392" y2="123" stroke="#16202B" stroke-width="2"/>
+  <line x1="369" y1="132" x2="385" y2="132" stroke="#16202B" stroke-width="2.5"/>
+  <line x1="377" y1="132" x2="377" y2="185" stroke="#16202B" stroke-width="2"/>
+  <text x="340" y="100" font-size="12" fill="#16202B">–</text>
+  <text x="342" y="148" font-size="12" fill="#16202B">+</text>
+  <text x="398" y="118" font-size="11.5" fill="#5D6B78">V</text>
+  <line x1="377" y1="70" x2="452" y2="70" stroke="#16202B" stroke-width="2"/>
+  <line x1="377" y1="185" x2="582" y2="185" stroke="#16202B" stroke-width="2"/>
+  <rect x="452" y="58" width="54" height="24" fill="#fff" stroke="#16202B" stroke-width="2"/>
+  <text x="468" y="50" font-size="11.5" fill="#5D6B78">R</text>
+  <line x1="506" y1="70" x2="582" y2="70" stroke="#16202B" stroke-width="2"/>
+  <!-- diodo verticale punta in su -->
+  <line x1="582" y1="70" x2="582" y2="98" stroke="#16202B" stroke-width="2"/>
+  <line x1="566" y1="98" x2="598" y2="98" stroke="#1F6288" stroke-width="5"/>
+  <polygon points="566,126 598,126 582,98" fill="#1F6288"/>
+  <line x1="582" y1="126" x2="582" y2="185" stroke="#16202B" stroke-width="2"/>
+  <text x="520" y="95" font-size="11.5" fill="#1F6288">K (+)</text>
+  <text x="520" y="145" font-size="11.5" fill="#1F6288">A (–)</text>
+  <line x1="522" y1="45" x2="540" y2="45" stroke="#1F6288" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="486" y="34" font-size="11.5" fill="#1F6288">Iₛ ≈ 0</text>
+  <text x="352" y="215" font-size="11.5" fill="#5D6B78">barriera innalzata: V₀ + V</text>
+  <text x="352" y="233" font-size="11.5" fill="#5D6B78">regione di svuotamento allargata</text>
+  <text x="352" y="251" font-size="11.5" fill="#5D6B78">passano solo i portatori MINORITARI</text>
+  <text x="352" y="269" font-size="11.5" fill="#5D6B78">diodo ≈ circuito aperto (interruttore aperto)</text>
+</svg>

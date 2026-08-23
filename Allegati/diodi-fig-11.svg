@@ -1,0 +1,58 @@
+<svg viewBox="0 0 620 380" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, Menlo, monospace">
+  <rect width="100%" height="100%" fill="#FAFAF6"/>
+  <!-- simbolo -->
+  <text x="18" y="26" font-size="11.5" font-weight="700" fill="#16202B">SIMBOLO</text>
+  <line x1="30" y1="100" x2="98" y2="100" stroke="#16202B" stroke-width="2.5"/>
+  <line x1="152" y1="100" x2="220" y2="100" stroke="#16202B" stroke-width="2.5"/>
+  <polygon points="98,74 98,126 150,100" fill="#16202B"/>
+  <line x1="150" y1="74" x2="150" y2="126" stroke="#16202B" stroke-width="4.5"/>
+  <line x1="150" y1="74" x2="136" y2="74" stroke="#16202B" stroke-width="4.5"/>
+  <line x1="150" y1="126" x2="164" y2="126" stroke="#16202B" stroke-width="4.5"/>
+  <circle cx="30" cy="100" r="4" fill="#16202B"/><circle cx="220" cy="100" r="4" fill="#16202B"/>
+  <text x="22" y="84" font-size="12" font-weight="700" fill="#B0442A">A</text>
+  <text x="214" y="84" font-size="12" font-weight="700" fill="#1F6288">K</text>
+  <text x="18" y="158" font-size="10.5" fill="#5D6B78">la barretta è ripiegata alle estremità</text>
+  <text x="18" y="174" font-size="10.5" fill="#5D6B78">a formare una «Z»</text>
+  <!-- polarizzazione tipica -->
+  <text x="18" y="212" font-size="11.5" font-weight="700" fill="#16202B">POLARIZZAZIONE DI LAVORO</text>
+  <line x1="30" y1="270" x2="96" y2="270" stroke="#16202B" stroke-width="2"/>
+  <line x1="152" y1="270" x2="220" y2="270" stroke="#16202B" stroke-width="2"/>
+  <polygon points="150,244 150,296 98,270" fill="#1F6288"/>
+  <line x1="98" y1="244" x2="98" y2="296" stroke="#1F6288" stroke-width="4.5"/>
+  <line x1="98" y1="244" x2="112" y2="244" stroke="#1F6288" stroke-width="4.5"/>
+  <line x1="98" y1="296" x2="84" y2="296" stroke="#1F6288" stroke-width="4.5"/>
+  <text x="24" y="256" font-size="13" font-weight="700" fill="#1F6288">–</text>
+  <text x="212" y="256" font-size="13" font-weight="700" fill="#1F6288">+</text>
+  <text x="18" y="326" font-size="10.5" fill="#1F6288">lo Zener si polarizza sempre INVERSAMENTE:</text>
+  <text x="18" y="342" font-size="10.5" fill="#1F6288">+ sul catodo, – sull'anodo</text>
+
+  <line x1="262" y1="16" x2="262" y2="366" stroke="#D8DCD6" stroke-width="1.5"/>
+
+  <!-- caratteristica -->
+  <text x="288" y="26" font-size="11.5" font-weight="700" fill="#16202B">CURVA CARATTERISTICA</text>
+  <rect x="300" y="196" width="86" height="150" fill="rgba(31,98,136,.18)"/>
+  <line x1="290" y1="196" x2="600" y2="196" stroke="#16202B" stroke-width="1.6"/>
+  <line x1="512" y1="352" x2="512" y2="46" stroke="#16202B" stroke-width="1.6"/>
+  <text x="586" y="188" font-size="10" fill="#5D6B78">V_D</text>
+  <text x="520" y="56" font-size="10" fill="#5D6B78">I_D</text>
+  <!-- ramo diretto -->
+  <path d="M 512 196 C 530 195 542 190 550 180 C 558 168 562 110 564 56"
+        fill="none" stroke="#B0442A" stroke-width="2.6"/>
+  <text x="548" y="128" font-size="10" fill="#B0442A">conduzione</text>
+  <text x="548" y="142" font-size="10" fill="#B0442A">diretta (V_γ)</text>
+  <!-- ramo inverso -->
+  <path d="M 512 196 L 390 200" fill="none" stroke="#1F6288" stroke-width="2.6"/>
+  <path d="M 390 200 C 380 202 374 216 373 238 L 371 340" fill="none" stroke="#1F6288" stroke-width="3"/>
+  <!-- Vz -->
+  <line x1="386" y1="196" x2="386" y2="182" stroke="#1F6288" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="356" y="176" font-size="11" font-weight="700" fill="#1F6288">–V_Z</text>
+  <!-- Izk / Izm -->
+  <line x1="373" y1="240" x2="330" y2="240" stroke="#5D6B78" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="292" y="236" font-size="10" fill="#5D6B78">I_ZK</text>
+  <line x1="371" y1="330" x2="330" y2="330" stroke="#5D6B78" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="292" y="326" font-size="10" fill="#5D6B78">I_ZM</text>
+  <text x="300" y="288" font-size="10" font-weight="700" fill="#1F6288">ZONA DI LAVORO</text>
+  <text x="300" y="302" font-size="10" font-weight="700" fill="#1F6288">DELLO ZENER</text>
+  <text x="300" y="316" font-size="9.5" fill="#1F6288">(breakdown inverso)</text>
+  <text x="288" y="368" font-size="10" fill="#5D6B78">tratto quasi verticale → V ≈ costante = V_Z al variare di I</text>
+</svg>

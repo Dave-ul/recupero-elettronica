@@ -1,0 +1,43 @@
+<svg viewBox="0 0 620 400" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, Menlo, monospace">
+  <rect width="100%" height="100%" fill="#FAFAF6"/>
+  <!-- zone -->
+  <rect x="310" y="30" width="270" height="200" fill="rgba(176,68,42,.08)"/>
+  <rect x="140" y="230" width="170" height="130" fill="rgba(31,98,136,.08)"/>
+  <rect x="45"  y="230" width="95"  height="130" fill="rgba(31,98,136,.20)"/>
+  <!-- assi -->
+  <line x1="35" y1="230" x2="600" y2="230" stroke="#16202B" stroke-width="1.8"/>
+  <polygon points="600,230 590,225 590,235" fill="#16202B"/>
+  <line x1="310" y1="375" x2="310" y2="22" stroke="#16202B" stroke-width="1.8"/>
+  <polygon points="310,22 305,32 315,32" fill="#16202B"/>
+  <text x="578" y="252" font-size="13" font-weight="700" fill="#16202B">V_D</text>
+  <text x="322" y="34" font-size="13" font-weight="700" fill="#16202B">I_D</text>
+  <text x="316" y="248" font-size="11" fill="#5D6B78">0</text>
+  <!-- curva diretta -->
+  <path d="M 310 230 C 348 229.5 375 227 392 218 C 406 210 414 140 417 40"
+        fill="none" stroke="#B0442A" stroke-width="3"/>
+  <!-- curva inversa -->
+  <path d="M 310 230 L 152 236" fill="none" stroke="#1F6288" stroke-width="3"/>
+  <path d="M 152 236 C 140 237 132 270 130 370" fill="none" stroke="#1F6288" stroke-width="3"/>
+  <!-- soglia -->
+  <line x1="392" y1="230" x2="392" y2="200" stroke="#B0442A" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="368" y="255" font-size="11.5" font-weight="700" fill="#B0442A">V_γ</text>
+  <text x="342" y="272" font-size="11" fill="#B0442A">≈ 0,7 V (Si)  ≈ 0,3 V (Ge)</text>
+  <!-- breakdown -->
+  <line x1="148" y1="230" x2="148" y2="258" stroke="#1F6288" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="112" y="222" font-size="11.5" font-weight="700" fill="#1F6288">–V_BR</text>
+  <!-- Is -->
+  <line x1="230" y1="234" x2="230" y2="300" stroke="#5D6B78" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="188" y="316" font-size="11" fill="#1F6288">–I_S (nA ÷ µA)</text>
+  <!-- etichette zone -->
+  <text x="404" y="68" font-size="11.5" font-weight="700" fill="#B0442A">ZONA DI</text>
+  <text x="404" y="84" font-size="11.5" font-weight="700" fill="#B0442A">POLARIZZAZIONE</text>
+  <text x="404" y="100" font-size="11.5" font-weight="700" fill="#B0442A">DIRETTA</text>
+  <text x="404" y="116" font-size="11" fill="#B0442A">(I quadrante — conduzione)</text>
+  <text x="168" y="344" font-size="11.5" font-weight="700" fill="#1F6288">ZONA DI POLARIZZAZIONE INVERSA</text>
+  <text x="168" y="360" font-size="11" fill="#1F6288">(III quadrante — interdizione)</text>
+  <text x="50" y="300" font-size="11" font-weight="700" fill="#1F6288">ZONA DI</text>
+  <text x="50" y="316" font-size="11" font-weight="700" fill="#1F6288">BREAKDOWN</text>
+  <!-- ginocchio -->
+  <line x1="350" y1="228" x2="350" y2="190" stroke="#8A93A0" stroke-width="1"/>
+  <text x="322" y="182" font-size="10.5" fill="#5D6B78">ginocchio</text>
+</svg>

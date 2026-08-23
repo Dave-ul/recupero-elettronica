@@ -1,0 +1,53 @@
+<svg viewBox="0 0 620 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, Menlo, monospace">
+  <rect width="100%" height="100%" fill="#FAFAF6"/>
+  <!-- ingresso -->
+  <circle cx="40" cy="80" r="4.5" fill="#16202B"/>
+  <text x="16" y="66" font-size="12" font-weight="700" fill="#16202B">V_i</text>
+  <text x="10" y="52" font-size="9.5" fill="#5D6B78">(non stabilizzata)</text>
+  <line x1="40" y1="80" x2="120" y2="80" stroke="#16202B" stroke-width="2.2"/>
+  <!-- Rs -->
+  <rect x="120" y="66" width="70" height="28" fill="#fff" stroke="#16202B" stroke-width="2.2"/>
+  <text x="142" y="56" font-size="12" font-weight="700" fill="#16202B">R_S</text>
+  <line x1="190" y1="80" x2="440" y2="80" stroke="#16202B" stroke-width="2.2"/>
+  <!-- nodo -->
+  <circle cx="300" cy="80" r="4" fill="#16202B"/>
+  <!-- zener verticale: catodo in alto -->
+  <line x1="300" y1="80" x2="300" y2="118" stroke="#16202B" stroke-width="2.2"/>
+  <line x1="284" y1="118" x2="316" y2="118" stroke="#1F6288" stroke-width="4.5"/>
+  <line x1="284" y1="118" x2="284" y2="128" stroke="#1F6288" stroke-width="4.5"/>
+  <line x1="316" y1="118" x2="316" y2="108" stroke="#1F6288" stroke-width="4.5"/>
+  <polygon points="284,146 316,146 300,118" fill="#1F6288"/>
+  <line x1="300" y1="146" x2="300" y2="200" stroke="#16202B" stroke-width="2.2"/>
+  <text x="324" y="136" font-size="12" font-weight="700" fill="#1F6288">D_Z</text>
+  <text x="324" y="152" font-size="10" fill="#1F6288">V_Z</text>
+  <!-- carico -->
+  <line x1="440" y1="80" x2="440" y2="112" stroke="#16202B" stroke-width="2.2"/>
+  <rect x="426" y="112" width="28" height="58" fill="#fff" stroke="#16202B" stroke-width="2.2"/>
+  <text x="466" y="146" font-size="12" font-weight="700" fill="#16202B">R_L</text>
+  <line x1="440" y1="170" x2="440" y2="200" stroke="#16202B" stroke-width="2.2"/>
+  <!-- massa -->
+  <line x1="40" y1="80" x2="40" y2="200" stroke="#16202B" stroke-width="2.2"/>
+  <line x1="40" y1="200" x2="440" y2="200" stroke="#16202B" stroke-width="2.2"/>
+  <line x1="300" y1="200" x2="300" y2="216" stroke="#16202B" stroke-width="2.2"/>
+  <line x1="286" y1="216" x2="314" y2="216" stroke="#16202B" stroke-width="2.2"/>
+  <line x1="291" y1="222" x2="309" y2="222" stroke="#16202B" stroke-width="1.8"/>
+  <line x1="296" y1="228" x2="304" y2="228" stroke="#16202B" stroke-width="1.5"/>
+  <!-- uscita -->
+  <line x1="440" y1="80" x2="560" y2="80" stroke="#16202B" stroke-width="2.2"/>
+  <circle cx="560" cy="80" r="4.5" fill="#16202B"/>
+  <line x1="440" y1="200" x2="560" y2="200" stroke="#16202B" stroke-width="2.2"/>
+  <circle cx="560" cy="200" r="4.5" fill="#16202B"/>
+  <text x="520" y="66" font-size="12" font-weight="700" fill="#B0442A">V_o = V_Z</text>
+  <!-- correnti -->
+  <line x1="216" y1="60" x2="248" y2="60" stroke="#B0442A" stroke-width="1.8"/>
+  <polygon points="250,60 241,56 241,64" fill="#B0442A"/>
+  <text x="214" y="50" font-size="11" fill="#B0442A">I_S</text>
+  <line x1="272" y1="106" x2="272" y2="136" stroke="#1F6288" stroke-width="1.8"/>
+  <polygon points="272,138 268,129 276,129" fill="#1F6288"/>
+  <text x="248" y="120" font-size="11" fill="#1F6288">I_Z</text>
+  <line x1="400" y1="106" x2="400" y2="136" stroke="#B0442A" stroke-width="1.8"/>
+  <polygon points="400,138 396,129 404,129" fill="#B0442A"/>
+  <text x="376" y="120" font-size="11" fill="#B0442A">I_L</text>
+  <text x="40" y="262" font-size="11" fill="#5D6B78">Lo Zener è polarizzato INVERSAMENTE (catodo verso il +) ed è in PARALLELO al carico:</text>
+  <text x="40" y="280" font-size="11" fill="#5D6B78">impone quindi al carico la propria tensione V_Z. R_S limita la corrente e assorbe l'eccesso di tensione.</text>
+</svg>
