@@ -6,25 +6,25 @@ libro_mirandola: "VERIFICATO ✔ (2026-07-25) per derivazione — file trasversa
 prove: [scritta, orale, pratica]
 ---
 
-# Esercizi — Batteria da 90 minuti (allenamento alla velocità)
+# Esercizi — Batteria da 75 minuti (allenamento alla velocità)
 
 > [!info] Come usare questo file
-> Sei esercizi, uno per macroarea, sotto timer da 90 minuti. **Non è la simulazione della
+> Cinque esercizi, uno per macroarea, sotto timer da 75 minuti. **Non è la simulazione della
 > prova reale**: quella dura **cinque ore** (1 settembre, 8:00-13:00) e si prova il 30 agosto
 > mettendo in fila le tre verifiche del prof. — vedi [[05 - Verifiche FUSI (Carli)]] e
 > [[Calendario]]. Questo file allena una cosa diversa e comunque necessaria: la **velocità**
-> su un esercizio tipo per argomento. Per ogni esercizio è indicato il tempo consigliato. Comincia dagli esercizi che conosci meglio (per prendere confidenza), poi passa a quelli più complessi. Usa una calcolatrice scientifica + formulario personale di numeri complessi/fasori. Tieni d'occhio l'orologio: se a metà tempo non hai fatto almeno 4 esercizi, lascia perdere la precisione sull'ultimo e metti la formula anche senza il calcolo finale.
+> su un esercizio tipo per argomento. Per ogni esercizio è indicato il tempo consigliato. Comincia dagli esercizi che conosci meglio (per prendere confidenza), poi passa a quelli più complessi. Usa una calcolatrice scientifica + formulario personale di numeri complessi/fasori. Tieni d'occhio l'orologio: se a metà tempo non hai fatto almeno 3 esercizi, lascia perdere la precisione sull'ultimo e metti la formula anche senza il calcolo finale.
 
 ---
 
 ## Setup della simulazione
 
-**Tempo totale**: 90 minuti (= 1,5 ore). *La prova reale ne dura 300.*
-**Esercizi**: 6.
+**Tempo totale**: 75 minuti (= 1,25 ore). *La prova reale ne dura 300.*
+**Esercizi**: 5.
 **Materiali ammessi**: penna, calcolatrice, formulario (NO libro, NO appunti di teoria).
 
 > [!warning] Setup realistico
-> Prima di partire, metti un timer a 90 minuti. Togli cellulare, internet, chat. Quando hai finito, correggi e segna per ognuno: (a) **risolto correttamente**; (b) **risolto con errori**; (c) **non risolto**. Poi fai la sessione di "recupero" su quelli errati o non risolti.
+> Prima di partire, metti un timer a 75 minuti. Togli cellulare, internet, chat. Quando hai finito, correggi e segna per ognuno: (a) **risolto correttamente**; (b) **risolto con errori**; (c) **non risolto**. Poi fai la sessione di "recupero" su quelli errati o non risolti.
 
 ---
 
@@ -64,40 +64,7 @@ prove: [scritta, orale, pratica]
 
 ---
 
-## E3 — Potenze e rifasamento (15 min, medio) — ⛔ **fuori programma**
-
-> [!warning] Questo esercizio è opzionale
-> Il **rifasamento trifase** non compare né nella LETTERA, né negli appunti Poggi, né nelle tre
-> verifiche del prof. Carli: il [[Calendario]] lo mette esplicitamente fuori. Resta qui perché
-> allena P/Q/S e $\cos\varphi$, che invece sono in programma per l'orale — ma se il tempo è
-> poco, **saltalo e tieni i 15 minuti per E6 (MOSFET)**, che è in programma ed è il più difficile.
-
-**Testo.** Un motore asincrono trifase è alimentato a $V = 380$ V (concatenata), $f = 50$ Hz. Il motore assorbe $P = 4$ kW con $\cos\varphi = 0{,}75$ (induttivo). Si vuole rifasare a $\cos\varphi' = 0{,}95$.
-- (a) Calcolare la potenza reattiva $Q$ prima del rifasamento.
-- (b) Calcolare la potenza reattiva $Q'$ dopo il rifasamento.
-- (c) Calcolare la capacità di rifasamento per fase (è trifase, supponiamo equilibrato).
-
-**Svolgimento**:
-
-- $Q = P \tan\varphi = 4000 \cdot 0{,}8819 = 3528$ VAR (arrotondato 3,5 kVAR)
-- $Q' = P \tan\varphi' = 4000 \cdot 0{,}3287 = 1315$ VAR
-- $\Delta Q = Q - Q' = 2213$ VAR = potenza reattiva che il condensatore deve erogare
-- Ogni condensatore della stella eroga **un terzo** della reattiva totale: $\Delta Q/3 = 738$ VAR.
-  Con $V_{\text{fase}} = V_{\text{conc}}/\sqrt{3} = 220$ V:
-  $$C_{\text{fase}} = \frac{\Delta Q/3}{\omega V_{\text{fase}}^2} = \frac{738}{314{,}16 \cdot 220^2} = 48{,}5\,\mu\text{F} \text{ per fase}$$
-
-> [!danger] Correzione 2026-08-20 — qui c'era esattamente l'errore che il vault segnala
-> Lo svolgimento precedente scriveva $C = \Delta Q/(\omega V_{\text{fase}}^2) = 145\,\mu$F,
-> **senza dividere per 3**. È l'errore elencato in [[Esercizi]] fra i più costosi, commesso
-> nella soluzione che dovrebbe insegnarlo. I 145 µF sono la $C$ **totale equivalente**
-> ($3 \times 48{,}5$), non quella di ciascun condensatore.
-
-> [!warning] Risposta tipica dell'orale
-> "Perché non rifasare a $\cos\varphi' = 1$?" — Perché il sistema diventerebbe capacitivo → a vuoto si verifica **autoeccitazione** del motore (la tensione cresce pericolosamente). Il target $\cos\varphi' \geq 0{,}9$ è imposto dal gestore di rete proprio per evitare questo.
-
----
-
-## E4 — Stabilizzatore Zener (15 min, facile)
+## E3 — Stabilizzatore Zener (15 min, facile)
 
 **Testo.** Uno stabilizzatore Zener è formato da $R_S = 200\,\Omega$ in serie a uno Zener da $V_Z = 5{,}1$ V ($I_{Z,\min} = 5$ mA, $I_{Z,\max} = 60$ mA), con $V_{in} = 12$ V (variabile $\pm 10\%$).
 - (a) Calcolare la tensione di uscita $V_{out}$ (entro i limiti).
@@ -116,7 +83,7 @@ prove: [scritta, orale, pratica]
 
 ---
 
-## E5 — Polarizzazione BJT con partitore (15 min, medio)
+## E4 — Polarizzazione BJT con partitore (15 min, medio)
 
 **Testo.** Un BJT NPN è polarizzato con partitore $R_1 = 100\,\text{k}\Omega$, $R_2 = 50\,\text{k}\Omega$ (entrambi tra $V_{CC}$ e GND, con la base prelevata sul centrale), $R_C = 2\,\text{k}\Omega$, $R_E = 1\,\text{k}\Omega$, $V_{CC} = 20$ V, $\beta = 100$, $V_{BE} = 0{,}7$ V. Calcolare $I_C$ e $V_{CE}$.
 
@@ -133,7 +100,7 @@ prove: [scritta, orale, pratica]
 
 ---
 
-## E6 — MOSFET enhancement n (15 min, difficile)
+## E5 — MOSFET enhancement n (15 min, difficile)
 
 **Testo.** Un MOSFET NMOS enhancement ($K = 0{,}5\text{ mA/V}^2$, $V_T = 2$ V) è polarizzato con partitore di gate $R_1 = 1\,\text{M}\Omega$, $R_2 = 2\,\text{M}\Omega$ (tra $V_{DD}$ e GND), $R_S = 300\,\Omega$, $R_D = 2\,\text{k}\Omega$, **$V_{DD} = 24$ V**.
 - (a) Calcolare $V_{GS}$ e $I_D$ in regime.
@@ -174,15 +141,14 @@ prove: [scritta, orale, pratica]
 |---|---|---|---|
 | E1 | 15' | medio | confondere $L$ con $C$ nella serie; sbagliare $\omega_0$ |
 | E2 | 15' | facile | dimenticare che in RL è $R/L$ (non $RC$); errata corrige libro |
-| E3 ⛔ | 15' | medio | confondere tensione concatenata con tensione di fase; **dimenticare il /3** sulla $C$ per fase — *fuori programma, esercizio opzionale* |
-| E4 | 15' | facile | dimenticare il range $V_{in,\min}$/$V_{in,\max}$ |
-| E5 | 15' | medio | non verificare la zona attiva ($\beta \to \alpha$ o errore $V_{CE}$) |
-| E6 | 15' | difficile | non accorgersi che $V_{DS}$ è negativo = rete mal dimensionata |
+| E3 | 15' | facile | dimenticare il range $V_{in,\min}$/$V_{in,\max}$ |
+| E4 | 15' | medio | non verificare la zona attiva ($\beta \to \alpha$ o errore $V_{CE}$) |
+| E5 | 15' | difficile | non accorgersi che $V_{DS}$ è negativo = rete mal dimensionata |
 
 > [!success] Dopo la simulazione
 > 1. Per ogni esercizio risolto con errori, identifica il punto di errore preciso (aritmetica? concetto? unità di misura?).
 > 2. Per ogni esercizio non risolto, leggi la soluzione e scomponila in 3-4 sotto-passi; ripeti l'esercizio il giorno dopo senza guardare.
-> 3. Quando arrivi a 5/6 esercizi risolti correttamente in 75 minuti, hai la velocità che serve.
+> 3. Quando arrivi a 4/5 esercizi risolti correttamente in 60 minuti, hai la velocità che serve.
 >    Manca ancora la **resistenza**: quella si prova il 30 agosto sulle tre verifiche in fila.
 
 ---

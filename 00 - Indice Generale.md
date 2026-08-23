@@ -63,7 +63,7 @@ La lettera del consiglio di classe (09/06/2026) indica gli argomenti da recupera
 | JFET (canale n) | [[JFET]] | [[Esercizi - JFET]] | 01, 02 |
 | Alimentatori (raddrizzatori, filtri, regolatori 78xx) | [[Alimentatori]] | [[Esercizi - Alimentatori]] | 01, 02, 03 |
 | Oscilloscopio e misure | [[L'oscilloscopio]] | — | 03 |
-| **Batteria di allenamento** | [[Esercizi - Simulazione finale]] | — | 01 (6 esercizi in 90 min — **non** la prova reale, che dura 5 ore) |
+| **Batteria di allenamento** | [[Esercizi - Simulazione finale]] | — | 01 (5 esercizi in 75 min — **non** la prova reale, che dura 5 ore) |
 | **Le tre verifiche vere del prof.** | **[[05 - Verifiche FUSI (Carli)]]** | — | **01** — sono i checkpoint del [[Calendario]] |
 | **Audit delle note contro le fonti del docente** | [[06 - Audit delle note contro le fonti del docente]] | — | — (trasparenza: cosa delle note regge il confronto con Poggi e Carli) |
 
@@ -119,7 +119,7 @@ Niente esercizi, niente libro: il pomeriggio è orale, non scritto.
 | `Prove/` | `01`-`03` le tre prove · `04`-`05` il materiale vero del docente | quando prepari una prova specifica |
 | `Strumenti/` | [[Formulario rapido]] · [[Cheat Sheet A4 visuale]] · [[diodi-risposte]] | **il 1 settembre**: è quello che va in cartellina |
 | `Meta/` | [[00 - Fonti e note]] · [[00 - Audit e correzioni]] · [[06 - Audit delle note contro le fonti del docente]] | quando vuoi sapere da dove viene un contenuto |
-| `Allegati/` | 70 immagini indicizzate in [[INDEX]] | mai direttamente: le richiamano le note |
+| `Allegati/` | 74 immagini indicizzate in [[INDEX]] | mai direttamente: le richiamano le note |
 | `Fonti/` | i 25 PDF sorgente — libro, appunti, verifiche, LETTERA | quando il [[Calendario]] ti manda su una pagina precisa |
 
 Ogni argomento in `Argomenti/` segue lo stesso schema:

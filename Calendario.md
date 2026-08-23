@@ -51,21 +51,21 @@ finisce alle 17:00.
 
 ## Il calendario in una schermata
 
-| # | Data | Argomento | Ore |
-|---|---|---|---|
-| — | mer 19 | *diodo D1-D23* ✅ **già fatto** | — |
-| 1 | **gio 20** | ⚠️ **Recupero alternata**: metodo simbolico, reti RLC, e la 02-03 rifatta | 3h45 |
-| 2 | ven 21 | Funzione di trasferimento, quadripoli e poli | 3h30 |
-| 3 | sab 22 | Filtri del 1° ordine e frequenze di taglio | 2h30 |
-| 4 | dom 23 | 🔁 **verifica 02-03 integrale** + esercizi diodo e Zener | 3h30 |
-| 5 | lun 24 | BJT · teoria e zone di funzionamento | 3h |
-| 6 | mar 25 | BJT · polarizzazione e punto di lavoro | 3h30 |
-| 7 | mer 26 | BJT amplificatore + 🔁 **verifica 24-04** | 4h |
-| 8 | gio 27 | JFET | 3h30 |
-| 9 | ven 28 | 🔁 **verifica 29-05 · JFET** | 3h |
-| 10 | sab 29 | MOSFET + 🔁 **verifica 29-05 · MOSFET** | 3h |
-| 11 | **dom 30** | 🎯 **Prova generale**: mattina orale/pratico, pomeriggio le tre verifiche in fila | 4h30 |
-| 12 | **lun 31** | *vigilia: D1-D23 a voce + le pagine FORMULE* | **40 min** |
+| #   | Data       | Argomento                                                                         | Ore        |
+| --- | ---------- | --------------------------------------------------------------------------------- | ---------- |
+| —   | mer 19     | *diodo D1-D23* ✅ **già fatto**                                                    | —          |
+| 1   | **gio 20** | ⚠️ **Recupero alternata**: metodo simbolico, reti RLC, e la 02-03 rifatta         | 3h45       |
+| 2   | ven 21     | Funzione di trasferimento, quadripoli e poli                                      | 3h30       |
+| 3   | sab 22     | Filtri del 1° ordine e frequenze di taglio                                        | 2h30       |
+| 4   | dom 23     | 🔁 **verifica 02-03 integrale** + esercizi diodo e Zener                          | 3h30       |
+| 5   | lun 24     | BJT · teoria e zone di funzionamento                                              | 3h         |
+| 6   | mar 25     | BJT · polarizzazione e punto di lavoro                                            | 3h30       |
+| 7   | mer 26     | BJT amplificatore + 🔁 **verifica 24-04**                                         | 4h         |
+| 8   | gio 27     | JFET                                                                              | 3h30       |
+| 9   | ven 28     | 🔁 **verifica 29-05 · JFET**                                                      | 3h         |
+| 10  | sab 29     | MOSFET + 🔁 **verifica 29-05 · MOSFET**                                           | 3h         |
+| 11  | **dom 30** | 🎯 **Prova generale**: mattina orale/pratico, pomeriggio le tre verifiche in fila | 4h30       |
+| 12  | **lun 31** | *vigilia: D1-D23 a voce + le pagine FORMULE*                                      | **40 min** |
 
 **Legenda:** 📖 leggere · ✏️ esercizi · 🔁 verifica del prof. da rifare · 🧠 nota del vault Obsidian
 
@@ -117,17 +117,8 @@ del giorno 11.
 **Gli appunti Poggi** (`Fonti/appunti poggi.pdf`) sono il quaderno del corso: provano
 cosa è stato fatto davvero in classe. Sono un riassunto, non una fonte a sé — mancano i
 passaggi intermedi, ed è lì che si perdono i punti allo scritto. Usali come indice e come
-ripasso veloce, **ma studia sempre anche le pagine del libro corrispondenti**:
-
-| appunti Poggi | Mirandola Vol. 2 |
-|---|---|
-| p. 1, 5, 7, 8 — numeri complessi, forme di rappresentazione | PDF 27-28 → libro 48-51 |
-| p. 6, 7 — segnale sinusoidale, T/f/ω | PDF 48-49 → libro 90-93 |
-| p. 4, 10 — impedenza, reattanze, serie e parallelo | PDF 28-30 → libro 51-55 |
-| p. 12, 16 — bipolo, quadripolo, matrice Z | PDF 63 → libro 120-121 |
-| p. 9, 18 — f.d.t., filtri del 1° ordine, poli | PDF 70-73 → libro 134-141 |
-| p. 3, 11, 13, 15 — BJT: struttura, zone, h_FE, caratteristiche | PDF 160-162 → libro 314-319 |
-| p. 17, 19 — JFET: analogia col BJT, maglie di polarizzazione | PDF 183-185 → libro 360-365 |
+ripasso veloce, **ma studia sempre anche le pagine del libro corrispondenti**: la mappa
+pagina-per-pagina «appunti Poggi → Mirandola Vol. 2» sta in [[00 - Fonti e note]], §2.
 
 **Il Mirandola Volume 2** (`Fonti/Mirandola Volume 2/`, PDF divisi per intervalli di
 pagina) è il libro di classe: il prof. ci rimanda esplicitamente, le sue sezioni QUESITI

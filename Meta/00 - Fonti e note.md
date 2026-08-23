@@ -318,7 +318,7 @@ elettronicaa/                    ← il vault Obsidian: tutto è qui dentro, tut
 │   ├── Cheat Sheet A4 visuale.md
 │   └── diodi-risposte.html      risposte D1-D23, già scritte
 ├── Meta/                        trasparenza e registro — questo file sta qui
-├── Allegati/                    70 immagini + INDEX.md
+├── Allegati/                    74 immagini + INDEX.md
 └── Fonti/                       i sorgenti, fuori da git perché pesano 274 MB
     ├── MAJORANA_lettera_…pdf    la LETTERA
     ├── FUSI_02-03-26_…pdf       verifica alternata + filtri
@@ -389,10 +389,12 @@ tre verifiche FUSI.
 | Potenze AC (P, Q, S, cos φ) | `[[Le potenze in alternata]]` §1-2 | 📖 **solo lettura per l'orale**, 20 min il 20 agosto. Non è in Poggi né in nessuna verifica, ma all'orale la LETTERA dice «circuiti in corrente alternata» senza restringere |
 | Risonanza (ω₀, Q, banda) | `[[Reti RLC e risonanza]]` §3+ | 📖 **solo la definizione**, stessi 20 minuti. Non fatta in classe: la parola «risonanza» non compare né in Poggi né in nessuna delle tre verifiche |
 | Alimentatori (raddrizzatori, Graetz, 78xx) | `[[Alimentatori]]` §1 e §4 | 📖 **solo lettura**, 25 min il 23 agosto. La LETTERA dice «circuiti con diodi» per Protti, e l'alimentatore è il circuito con diodi del banco di laboratorio |
-| Rifasamento industriale e trifase | `[[Le potenze in alternata]]` §3 | ⛔ **fuori** — non nella LETTERA, non in Poggi, non in nessuna verifica |
+| Rifasamento **monofase** | `[[Le potenze in alternata]]` §5 | 📖 **dentro per l'orale** — è il rifasamento del libro (Mirandola §4.2, 220 V, una sola $C$ in parallelo al carico) |
+| Rifasamento **trifase** (sistema a 3 fili, $V_{\text{conc}}$, $C$ per fase) | **rimosso dal vault il 2026-08-21** | ⛔ **fuori** — non nella LETTERA, non in Poggi, non in nessuna verifica |
 | Diagrammi di Bode, filtri 2° ordine, passa-banda | `[[Filtri passivi del primo ordine]]` | ⛔ **fuori** — la LETTERA dice «filtri passivi del **primo** ordine» |
 | Amplificatori operazionali | ❌ assente dal vault | ⛔ **fuori** — Cap. 6 del libro, mai richiesto |
-| MOSFET depletion e canale P · JFET canale P | accenno in `[[MOSFET]]`, `[[JFET]]` | ⛔ **fuori** — la LETTERA dice «canale N ad arricchimento» |
+| MOSFET depletion | accenno di confronto in `[[MOSFET]]` §5 | ⛔ **fuori** — la LETTERA dice «ad arricchimento». Resta solo il quesito d'orale «differenza enhancement/depletion» |
+| JFET canale P | **rimosso dal vault il 2026-08-21** | ⛔ **fuori** — la LETTERA dice «canale N». Resta il warning anti-trabocchetto in `[[Formulario rapido]]` §8.1 |
 
 ## 📋 4. Note operative
 

@@ -591,10 +591,6 @@ Le tre foto sono state **riaperte e confrontate riga per riga** con il §1 di `0
 
 ---
 
-## Lotti successivi
-
----
-
 ## Lotto 16 — Chiusura gap Esercizi trasversali e pulizia vault ✔ (2026-07-28)
 
 > **Contesto**: Intervento di chiusura per (a) allineare i 3 file Esercizi che non avevano il campo `libro_mirandola` in frontmatter pur citando Mirandola nel corpo, e (b) ripulire 9 file residui in `.trash/`. È un lotto di **manutenzione**, non di verifica contenuto: nessuna formula ricalcolata. Tutte le affermazioni sono già state verificate nei Lotti 10, 11, 12.

@@ -96,26 +96,4 @@ AC 230V 50Hz → trafo (abbassa + isola) → AC es.12V
 - **Alimentatore**: AC → trafo → ponte → C filtro → regolatore → DC
 - **Rifasamento**: C parallelo a $L$ → annulla $Q$ → meno $I$ in linea
 
-> **Lookup 5s** (§1 transistor · §2 amplif · §3 risonante · §3b diodi · §4 filtri · §5 AC/DC · §6 alimentatore · §7 visione 30s · **appendice** trifase, fuori programma)
-
----
-
-## Appendice — fuori programma
-
-> [!warning] Perché è qui e non sopra
-> **Trifase e rifasamento industriale** non sono in nessuna delle tre fonti che hanno potato
-> il piano — LETTERA, appunti Poggi, le tre verifiche del prof. Vedi [[Calendario]],
-> «Cosa è dentro e cosa è fuori». Fino al 2026-08-20 questa tabella era il §5, in mezzo alle
-> altre: su una scheda che si consulta in 5 secondi, la posizione è essa stessa
-> un'informazione. Resta qui in caso di domanda all'orale.
-
-## A1. Monofase vs Trifase
-
-| | **MONOFASE** | **TRIFASE** |
-|---|---|---|
-| **Fili** | 2 (fase + neutro) | 3 (R,S,T) + neutro opz. |
-| **Sfasamento** | — | 120° tra fasi |
-| **$V_{\text{conc}}$** | = $V_{\text{fase}}$ | $= \sqrt{3} \cdot V_{\text{fase}}$ |
-| **$P$ totale** | $P = V I \cos\varphi$ | $P = \sqrt{3} \cdot V_{\text{conc}} \cdot I \cos\varphi$ |
-| **$Q$ totale** | $Q = V I \sin\varphi$ | $Q = \sqrt{3} \cdot V_{\text{conc}} \cdot I \sin\varphi$ |
-| **Uso** | civile (230 V 50 Hz) | industriale (400 V 50 Hz) |
+> **Lookup 5s** (§1 transistor · §2 amplif · §3 risonante · §3b diodi · §4 filtri · §5 AC/DC · §6 alimentatore · §7 visione 30s)

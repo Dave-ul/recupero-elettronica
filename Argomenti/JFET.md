@@ -274,7 +274,7 @@ Con $R_S = 1\text{ k}\Omega$ e gli stessi altri parametri:
 # ⤵ NUOVI CAPITOLI — Approfondimenti richiesti dalla lettera di giudizio sospeso ⤵
 
 > [!info] Nota di percorso
-> Le sezioni che seguono (9–20) approfondiscono tutti i sottoargomenti del JFET che la lettera di giudizio sospeso menziona (anche vagamente). Sequenza consigliata: leggere 9 e 10 (curve e $g_m$), poi 11–13 (amplificatori), poi 14–15 (VCR e switch), poi 16–17 (P-channel e piedinature), infine 18–20 (misure lab, temperatura, confronto BJT).
+> Le sezioni che seguono (9–20) approfondiscono tutti i sottoargomenti del JFET che la lettera di giudizio sospeso menziona (anche vagamente). Sequenza consigliata: leggere 9 e 10 (curve e $g_m$), poi 11–13 (amplificatori), poi 14–15 (VCR e switch), poi 16 (piedinature), infine 17–20 (misure lab, temperatura, confronto BJT).
 
 ---
 
@@ -537,41 +537,9 @@ $$R_{DS}(V_{GS}) \approx \frac{1}{K \cdot (V_{GS} - V_P)}$$
 
 ---
 
-## 16. JFET P-channel — il duale
+## 16. Piedinatura, package e simboli circuitali
 
-### 16.1 Cosa cambia
-
-Tutti i segni si invertono:
-
-| Grandezza | JFET n-channel | JFET P-channel |
-|---|---|---|
-| $V_P$ | $< 0$ | $> 0$ |
-| $V_{GS}$ operativo | $V_P \le V_{GS} \le 0$ | $0 \le V_{GS} \le V_P$ |
-| Verso di $I_D$ | Da D a S | Da S a D |
-| Alimentazione tipica | $V_{DD} > 0$ | $V_{SS} < 0$ |
-
-L'equazione parabolica resta la stessa: $I_D = I_{DSS} (1 - V_{GS}/V_P)^2$, ma con $V_P>0$. Anche la zona operativa ($V_{GS}$ con valori **positivi**) è invertita.
-
-### 16.2 Simbolo circuitale
-
-Il simbolo cambia nella **direzione della freccia** sul gate: freccia **uscente** dal gate (verso l'esterno del canale) → canale p. Freccia **entrante** → canale n.
-
-### 16.3 Esempio numerico (P-channel)
-
-Dati: $I_{DSS} = -6\text{ mA}$ (negativo!), $V_P = +4\text{ V}$, $V_{GS} = +2\text{ V}$.
-
-$$I_D = -6 \cdot (1 - 2/4)^2 = -6 \cdot (1/2)^2 = -6/4 = -1{,}5\text{ mA}$$
-
-Il segno negativo di $I_D$ significa che la corrente convenzionale fluisce dal source al drain (in un P-channel, è il verso "naturale").
-
-> [!warning] Trappola trabocchetto
-> Alla Carli scritta, un JFET P-channel con $V_{DD} < 0$ e $V_{SS} > 0$ è un classico errore per chi applica le formule del canale n senza pensarci. **Verifica sempre i segni di $V_P$, $V_{GS}$, $V_{DD}$ prima di mettere numeri nei conti.**
-
----
-
-## 17. Piedinatura, package e simboli circuitali
-
-### 17.1 Simboli circuitali
+### 16.1 Simboli circuitali
 
 ```
   JFET n-channel              JFET p-channel
@@ -589,7 +557,7 @@ Il segno negativo di $I_D$ significa che la corrente convenzionale fluisce dal s
         G (freccia dal basso verso l'alto = verso il canale; l'altra polarità = p-channel)
 ```
 
-### 17.2 Package TO-92 (il più comune per JFET discreti)
+### 16.2 Package TO-92 (il più comune per JFET discreti)
 
 Per il JFET n-channel tipo 2N3819, 2N4222, MP102 etc., package TO-92 con piedini:
 
@@ -611,7 +579,7 @@ Per il JFET n-channel tipo 2N3819, 2N4222, MP102 etc., package TO-92 con piedini
 > [!danger] Convenzioni invertite tra produttori
 > Le piedinature G-D-S e G-S-D si trovano entrambe a seconda del produttore. ** consultare SEMPRE il datasheet** prima di montare. Un errore di piedinatura col JFET è meno catastrofico che col BJT (bassi livelli di potenza), ma porta a comportamenti strani.
 
-### 17.3 Identificazione pratica con multimetro
+### 16.3 Identificazione pratica con multimetro
 
 Per riconoscere S, D, G senza datasheet:
 1. Multimetro in modalità **test diodi**.
@@ -621,9 +589,9 @@ Per riconoscere S, D, G senza datasheet:
 
 ---
 
-## 18. Misure in laboratorio (per Protti)
+## 17. Misure in laboratorio (per Protti)
 
-### 18.1 Misura di $I_{DSS}$
+### 17.1 Misura di $I_{DSS}$
 
 Setup:
 - $V_{GS} = 0$ → collegare Gate a Source (**cortocircuitare G e S**).
@@ -632,7 +600,7 @@ Setup:
 
 Lettura: il milliamperometro misura $I_D = I_{DSS}$ direttamente. Per un 2N3819 tipico: $I_{DSS} \approx 2\text{ – }20\text{ mA}$ (verrà specificato nel datasheet).
 
-### 18.2 Misura di $V_P$ ($V_{GS(off)}$)
+### 17.2 Misura di $V_P$ ($V_{GS(off)}$)
 
 Setup:
 - Aumentare la resistenza di source (es. $R_S = 1\text{ M}\Omega$) così che $V_{GS}$ diventi molto negativo.
@@ -642,7 +610,7 @@ Setup:
 
 In pratica: con $R_S$ variabile (potenziometro), regolare finché $I_D$ non crolla a zero → leggere la $V_{GS}$ dal potenziometro: è $V_P$.
 
-### 18.3 Tracciamento della transcaratteristica a punti
+### 17.3 Tracciamento della transcaratteristica a punti
 
 Setup con alimentatore variabile, multimetri per $V_{GS}$ e $I_D$:
 1. Polarizza il JFET in un circuito noto (es. autopolarizzazione).
@@ -650,7 +618,7 @@ Setup con alimentatore variabile, multimetri per $V_{GS}$ e $I_D$:
 3. Tabula e disegna la curva $I_D(V_{GS})$.
 4. Adatta la curva parabolica $I_D = I_{DSS}(1 - V_{GS}/V_P)^2$ ai dati → ricava $I_{DSS}$ e $V_P$.
 
-### 18.4 Misura del guadagno di un amplificatore CS
+### 17.4 Misura del guadagno di un amplificatore CS
 
 1. Misura $V_{CE}$ (o $V_{DS}$) a riposo → deve essere metà di $V_{DD}$ (in saturazione).
 2. Applica un segnale sinusoidale piccolo (decine di mV) al gate.
@@ -660,15 +628,15 @@ Setup con alimentatore variabile, multimetri per $V_{GS}$ e $I_D$:
 
 ---
 
-## 19. Effetto della temperatura e punto ZTC
+## 18. Effetto della temperatura e punto ZTC
 
-### 19.1 Due effetti contrastanti
+### 18.1 Due effetti contrastanti
 
 Quando il JFET si scalda:
 - ⬇ La **mobilità dei portatori** nel canale DIMINUISCE (per agitazione termica) → $I_D$ tende a calare.
 - ⬇ La **barriera di potenziale** della giunzione gate-canale DIMINUISCE (~2 mV/°C) → l'effetto di "strozzamento" del canale si riduce → $I_D$ tende a salire.
 
-### 19.2 Il punto ZTC (Zero Temperature Coefficient)
+### 18.2 Il punto ZTC (Zero Temperature Coefficient)
 
 I due effetti si compensano esattamente in un **punto di lavoro specifico**:
 - Se $V_{PZTC} \approx V_P + 0{,}7\text{ V}$ (per JFET n) → in quel punto, $I_D$ è **stabile in temperatura**.
@@ -680,9 +648,9 @@ In pratica: se il JFET è polarizzato a $V_{GS} \approx V_P/2$ (la "regola del q
 
 ---
 
-## 20. Confronto JFET vs BJT nel pre-amplificatore
+## 19. Confronto JFET vs BJT nel pre-amplificatore
 
-### 20.1 Tabella comparativa per applicazioni audio/RF/instrumentazione
+### 19.1 Tabella comparativa per applicazioni audio/RF/instrumentazione
 
 | Caratteristica | JFET (es. 2N3819) | BJT (es. BC547) |
 |---|---|---|
@@ -694,13 +662,13 @@ In pratica: se il JFET è polarizzato a $V_{GS} \approx V_P/2$ (la "regola del q
 | Velocità di commutazione | Buona ma inferiore al MOSFET | Buona (transistor più maturo) |
 | Disponibilità / costo | Minore, più caro | Ubiquitario, economico |
 
-### 20.2 Quando si sceglie il JFET
+### 19.2 Quando si sceglie il JFET
 
 - **Pre-amplificatori a basso rumore**: stadio input di un Hi-Fi, strumentazione di misura, microfono a condensatore.
 - **Applicazioni ad alta impedenza**: pickup piezo, sensori ad alto $Z$.
 - **Circuiti analogici a lunga costante di tempo**: $R \cdot C$ grandi, dove l'alta $Z_{in}$ del JFET è essenziale.
 
-### 20.3 Quando si sceglie il BJT
+### 19.3 Quando si sceglie il BJT
 
 - **Amplificatori a guadagno elevato** (con pochi stadi).
 - **Applicazioni a bassa tensione di alimentazione**: il BJT ha bisogno di ~0,7 V per accendersi, il JFET no.
@@ -708,21 +676,21 @@ In pratica: se il JFET è polarizzato a $V_{GS} \approx V_P/2$ (la "regola del q
 
 ---
 
-## 21. Limitazioni pratiche e zona di breakdown
+## 20. Limitazioni pratiche e zona di breakdown
 
-### 21.1 Tensione di breakdown
+### 20.1 Tensione di breakdown
 
 Ogni JFET ha un $V_{(BR)DSS}$ massimo (tipicamente 20–50 V, da datasheet). Operare oltre questo valore → guasto irreversibile.
 
-### 21.2 Corrente di gate inversa a caldo
+### 20.2 Corrente di gate inversa a caldo
 
 A temperature elevate, la giunzione gate-canale (anche in inversa) ha una **corrente di perdita** che cresce. In applicazioni di precisione, questo può disturbare la polarizzazione.
 
-### 21.3 Corrente di perdita drain-source in cutoff
+### 20.3 Corrente di perdita drain-source in cutoff
 
 Anche quando "spento" ($V_{GS} \le V_P$), un JFET reale ha una piccola corrente $I_{D(off)}$ di qualche µA o nA. Tranne che per applicazioni estreme, è trascurabile.
 
-### 21.4 Variabilità dei parametri
+### 20.4 Variabilità dei parametri
 
 $I_{DSS}$ e $V_P$ hanno **tolleranze ampie** (anche ±50% rispetto al valore nominale). Due JFET dello stesso lotto possono dare risultati abbastanza diversi. Per questo la polarizzazione più stabile è quella con degenerazione di source.
 

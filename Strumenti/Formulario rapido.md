@@ -328,38 +328,6 @@ $$P_{BJT} = (V_{in} - V_o) I_L$$
 
 ---
 
-## Appendice — fuori programma
-
-> [!warning] Perché è qui e non sopra
-> Il **sistema trifase e il rifasamento industriale** non compaiono **né nella LETTERA, né
-> negli appunti Poggi, né nelle tre verifiche del prof. Carli** — i tre filtri con cui è stato
-> potato il piano di studio (vedi [[Calendario]], «Cosa è dentro e cosa è fuori»).
-> Fino al 2026-08-20 stavano nel corpo del formulario, come paragrafo 12 e come punto 5 del
-> mnemonico finale. Non sono cancellati — se all'orale la domanda arriva, le formule sono
-> queste — ma non devono rubare attenzione il 1 settembre.
-
-## A1. Rifasamento trifase
-
-### A1.1 Tensioni trifase
-
-$$V_{\text{fase}} = \frac{V_{\text{conc}}}{\sqrt{3}} \qquad V_{\text{conc}} = \sqrt{3} \cdot V_{\text{fase}}$$
-
-### A1.2 Potenze trifase (carico equilibrato)
-
-$$P = \sqrt{3} V_{\text{conc}} I \cos\varphi \qquad Q = \sqrt{3} V_{\text{conc}} I \sin\varphi \qquad S = \sqrt{3} V_{\text{conc}} I$$
-
-### A1.3 Rifasamento (3 C tra fase e neutro, configurazione stella)
-
-$$C_{\text{fase}} = \frac{\Delta Q / 3}{\omega V_{\text{fase}}^2} = \frac{P(\tan\varphi - \tan\varphi')}{3 \omega V_{\text{fase}}^2}$$
-
-⚠️ **Mnemonico**: il risultato è la $C$ di **ciascuno dei 3 condensatori**. Per la **$C$ totale equivalente**: $C_{\text{eq}} = 3 C_{\text{fase}}$.
-
-### A1.4 Target
-
-$$\cos\varphi' \ge 0{,}9 \quad \text{(tipico, mai }1{,}0\text{ per evitare autoeccitazione)}$$
-
----
-
 ## Da qui in poi
 
 - Teoria completa: [[Argomenti]]

@@ -48,9 +48,9 @@ aggiornato: 2026-08-10
 | `fig-4-48-circuiti-esempio-19.png` | `Esercizi/Esercizi - Filtri passivi del primo ordine.md` |
 | `fig-4-t5-tipi-di-filtro.png` | `Argomenti/Filtri passivi del primo ordine.md` |
 | `fig-4-t6-filtri-rc-rl-primo-ordine.png` | `Argomenti/Filtri passivi del primo ordine.md` |
-| `libro-cap4-pp180-181-rumore-johnson-shot.png` | `Argomenti/Diodi.md`, `Prove/00 - Audit e correzioni.md`, `Prove/00 - Fonti e note.md` |
-| `libro-cap5-p196-fig5-struttura-simbolo-diodo.png` | `Argomenti/Diodi.md`, `Prove/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md` |
-| `libro-cap5-p196-fig6-polarizzazione-diretta-inversa.png` | `Argomenti/Diodi.md`, `Prove/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md` |
+| `libro-cap4-pp180-181-rumore-johnson-shot.png` | `Argomenti/Diodi.md`, `Meta/00 - Audit e correzioni.md`, `Meta/00 - Fonti e note.md` |
+| `libro-cap5-p196-fig5-struttura-simbolo-diodo.png` | `Argomenti/Diodi.md`, `Meta/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md` |
+| `libro-cap5-p196-fig6-polarizzazione-diretta-inversa.png` | `Argomenti/Diodi.md`, `Meta/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md` |
 | `libro-cap5-p197-fig7-versi-convenzionali-curva.png` | `Argomenti/Diodi.md`, `Prove/04 - Verifica tipo Carli — Diodi.md` |
 | `libro-cap5-p198-form5-1-shockley.png` | `Prove/04 - Verifica tipo Carli — Diodi.md` |
 | `libro-cap5-p199-tab1-modelli-equivalenti.png` | `Prove/04 - Verifica tipo Carli — Diodi.md` |
@@ -66,8 +66,8 @@ aggiornato: 2026-08-10
 | `libro-cap5-p220-due-meccanismi-breakdown.png` | `Prove/04 - Verifica tipo Carli — Diodi.md` |
 | `libro-cap5-p221-fig33-definizione-regolatore.png` | `Argomenti/Diodi.md`, `Prove/04 - Verifica tipo Carli — Diodi.md` |
 | `libro-cap5-p221-fig34-regolatore-zener.png` | `Argomenti/Diodi.md`, `Prove/04 - Verifica tipo Carli — Diodi.md` |
-| `libro-cap5-pp208-209-fissatore-moltiplicatore.png` | `Argomenti/Diodi.md`, `Prove/00 - Audit e correzioni.md` |
-| `libro-cap5-pp228-229-zener-esempio-formule.png` | `Argomenti/Diodi.md`, `Prove/00 - Audit e correzioni.md` |
+| `libro-cap5-pp208-209-fissatore-moltiplicatore.png` | `Argomenti/Diodi.md`, `Meta/00 - Audit e correzioni.md` |
+| `libro-cap5-pp228-229-zener-esempio-formule.png` | `Argomenti/Diodi.md`, `Meta/00 - Audit e correzioni.md` |
 | `libro-cap7-p313-fig1-simboli-bjt.png` | `Argomenti/BJT.md` |
 | `libro-cap7-p326-fig12-punto-lavoro-retta-carico.png` | `Argomenti/BJT.md` |
 | `libro-cap7-p326-fig13-polarizzazione-resistenza-base.png` | `Argomenti/BJT.md` |
@@ -76,12 +76,12 @@ aggiornato: 2026-08-10
 | `libro-cap7-p336-fig22-amplificatore-ce-completo.png` | `Argomenti/Amplificatori a BJT.md` |
 | `libro-cap7-p346-tabella1-progetto-ce.png` | `Argomenti/Amplificatori a BJT.md` |
 | `libro-cap7-p347-fig30-collettore-comune.png` | `Argomenti/Amplificatori a BJT.md` |
-| `libro-cap7-pp328-329-bjt-progetto-polarizzazione.png` | `Argomenti/BJT.md`, `Prove/00 - Audit e correzioni.md` |
-| `libro-cap7-pp348-349-bjt-collettore-comune.png` | `Argomenti/Amplificatori a BJT.md`, `Prove/00 - Audit e correzioni.md` |
-| `libro-cap7-pp368-369-mosfet-polarizzazione-invertitore.png` | `Argomenti/MOSFET.md`, `Prove/00 - Audit e correzioni.md` |
-| `libro-cap8-pp388-389-alimentatore-schema-blocchi.png` | `Argomenti/Alimentatori.md`, `Prove/00 - Audit e correzioni.md` |
-| `libro-cap8-pp406-407-regolatore-integrato-78xx.png` | `Argomenti/Alimentatori.md`, `Prove/00 - Audit e correzioni.md` |
-| `libro-cap8-pp408-409-tabella-78xx.png` | `Argomenti/Alimentatori.md`, `Prove/00 - Audit e correzioni.md` |
-| `verifica-carli-4E-diodi-parte1.jpeg` | `Prove/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md`, `Prove/00 - Fonti e note.md` |
-| `verifica-carli-4E-diodi-parte2.jpeg` | `Prove/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md`, `Prove/00 - Fonti e note.md` |
-| `verifica-carli-diodi-16dom.jpeg` | `Prove/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md`, `Prove/00 - Fonti e note.md` |
+| `libro-cap7-pp328-329-bjt-progetto-polarizzazione.png` | `Argomenti/BJT.md`, `Meta/00 - Audit e correzioni.md` |
+| `libro-cap7-pp348-349-bjt-collettore-comune.png` | `Argomenti/Amplificatori a BJT.md`, `Meta/00 - Audit e correzioni.md` |
+| `libro-cap7-pp368-369-mosfet-polarizzazione-invertitore.png` | `Argomenti/MOSFET.md`, `Meta/00 - Audit e correzioni.md` |
+| `libro-cap8-pp388-389-alimentatore-schema-blocchi.png` | `Argomenti/Alimentatori.md`, `Meta/00 - Audit e correzioni.md` |
+| `libro-cap8-pp406-407-regolatore-integrato-78xx.png` | `Argomenti/Alimentatori.md`, `Meta/00 - Audit e correzioni.md` |
+| `libro-cap8-pp408-409-tabella-78xx.png` | `Argomenti/Alimentatori.md`, `Meta/00 - Audit e correzioni.md` |
+| `verifica-carli-4E-diodi-parte1.jpeg` | `Meta/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md`, `Meta/00 - Fonti e note.md` |
+| `verifica-carli-4E-diodi-parte2.jpeg` | `Meta/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md`, `Meta/00 - Fonti e note.md` |
+| `verifica-carli-diodi-16dom.jpeg` | `Meta/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md`, `Meta/00 - Fonti e note.md` |

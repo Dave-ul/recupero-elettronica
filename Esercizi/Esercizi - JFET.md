@@ -3,7 +3,7 @@ fonte: "edutecnica.it/elettronica/jfet/ + jfetx/ + ajfet/ + ajfetx/ + esercizi c
 libro_mirandola: "VERIFICATO ✔ (2026-07-28) — coerente con Mirandola Vol.2, Cap. 7 «Gli amplificatori a transistor», §3 «I transistor FET e gli amplificatori a FET» — parte JFET pp. 358-365. Struttura, pinch-off, polarizzazione, curve d'uscita del 2N3819 (FIG. 42 a p. 362). File trasversale: teoria già verificata nel [[00 - Audit e correzioni|Lotto 12]]. Conversion folio Cap. 7: pag. stampata = 2·PDF + 122."
 prove: [scritta, orale, pratica]---
 
-# Esercizi — JFET (n-channel, amplificatori, VCR, switch, P-channel)
+# Esercizi — JFET (n-channel, amplificatori, VCR, switch)
 
 > [!info] Dove serve
 > **Scritta Carli** (LETTERA): esercizi su transistor JFET a canale n (polarizzazione + amplificazione). **Orale Carli** (LETTERA): NON cita JFET — solo «diodo, circuiti AC, filtri 1° ordine». I confronti BJT/MOSFET/JFET all'orale sono **estensione naturale** ma non testualmente richiesti. **Pratica Protti**: identificazione pin, misura $I_{DSS}$ e $V_P$, transcaratteristica.
@@ -285,95 +285,9 @@ Calcolare: $I_D$, $V_{GS}$, $g_m$, $A_v$ (guadagno), $R_{in}$, $R_{out}$.
 
 ---
 
-## Esercizio 9 — JFET P-channel (stesse formule, segni invertiti)
-
-> [!tip] Principio didattico
-> Il P-channel **non è un argomento nuovo**: è un N-channel con tutti i segni "rovesciati". Si usano le **stesse formule** dell'Es.1, applicate con $V_P > 0$ e alimentazione negativa. Nessuna nuova notazione, nessun formalismo inventato.
-
-> [!info] Convenzione usata in questo esercizio
-> Useremo la convenzione "P-channel con $I_{DSS}$ **negativo**" (come in alcuni testi: Millman, Sedra/Smith). In altre fonti (es. alcuni datasheet) $I_{DSS}$ è dato come **positivo** e il segno va gestito a parte nell'equazione. Stai attento: usa la convenzione che il tuo professore adotta, ma i **risultati numerici coincidono** (con segni applicati coerentemente).
-
-**Testo (analogo all'Es.1, ma P-channel).** Un JFET **P-channel** con:
-- $V_P = +4\text{ V}$ (parametro positivo! opposto al canale n)
-- $I_{DSS} = -6\text{ mA}$ (convenzione "segno-negativo"; la corrente massima è $|I_{DSS}|=6\text{ mA}$ ma nel P-channel scorre da S a D)
-- $V_{SS} = -12\text{ V}$ (alimentazione negativa)
-- $R_S = 220\text{ }\Omega$ (tra source e massa; massa è il potenziale alto per P-channel)
-- $R_D = 2{,}2\text{ k}\Omega$ (tra drain e $V_{SS}$)
-- $R_G$ da gate verso massa
-
-Calcolare $I_D$, $V_S$, $V_{GS}$, $V_D$, $V_{SD}$ (per P-channel si misura $V_{SD}$ invece di $V_{DS}$, ma il valore assoluto è lo stesso).
-
-**Svolgimento passo-passo (stesse formule dell'Es.1, segni "rovesciati").**
-
-1. **Polarità**: nel P-channel, il source è verso massa (potenziale alto) e il drain verso $V_{SS}$ (potenziale basso). La corrente convenzionale scorre da S a D, quindi $I_D$ ha segno **negativo** rispetto al verso "standard del libro" (che è da D a S). Useremo $I_D$ con segno.
-
-2. **Source**:
-   $$V_S = 0 - (-I_D) R_S = I_D R_S$$
-   (Attenzione: la corrente $I_D$ scorre dal source verso massa attraverso $R_S$, quindi $V_S$ è positivo se $I_D$ è negativo.)
-
-3. **Gate** (con $R_G$ a massa):
-   $$V_G = 0$$
-
-4. **$V_{GS}$**:
-   $$V_{GS} = V_G - V_S = 0 - I_D R_S = -I_D R_S = -0{,}220 \cdot I_D$$
-   
-   Stessa formula dell'Es.1, ma ora $I_D < 0$ → $V_{GS} > 0$ (richiesto dal P-channel).
-
-5. **Parabolica** del JFET (stessa formula!):
-   $$I_D = I_{DSS}\left(1 - \dfrac{V_{GS}}{V_P}\right)^2$$
-   
-   MA qui prendiamo $I_{DSS}$ come **negativo** (convenzione P-channel: la corrente massima scorre in verso opposto). Useremo il valore con segno $I_{DSS} = -6$ mA.
-   
-   Con $V_{GS} > 0$ e $V_P > 0$: il rapporto $V_{GS}/V_P$ è positivo.
-   $$I_D = -6 \cdot \left(1 - \dfrac{-0{,}220 I_D}{+4}\right)^2 = -6 \cdot \left(1 + 0{,}055 I_D\right)^2$$
-
-6. **Espansione**:
-   $$I_D = -6 \cdot (1 + 0{,}110 I_D + 0{,}003025 I_D^2)$$
-   $$= -6 - 0{,}660 I_D - 0{,}0182 I_D^2$$
-
-7. **Equazione di 2° grado** (riarrangiata per $I_D$):
-   $$0{,}0182 I_D^2 + 1{,}660 I_D + 6 = 0$$
-
-8. **Risoluzione**:
-   $$\Delta = 1{,}660^2 - 4 \cdot 0{,}0182 \cdot 6 = 2{,}756 - 0{,}437 = 2{,}319$$
-   $$\sqrt{\Delta} = 1{,}523 \qquad I_D = \dfrac{-1{,}660 \pm 1{,}523}{2 \cdot 0{,}0182}$$
-
-   - $I_{D1} = \dfrac{-1{,}660 + 1{,}523}{0{,}0364} = \dfrac{-0{,}137}{0{,}0364} \approx -3{,}76\text{ mA}$ ✅ ($\le |I_{DSS}|=6$)
-   - $I_{D2} = \dfrac{-1{,}660 - 1{,}523}{0{,}0364} = \dfrac{-3{,}183}{0{,}0364} \approx -87{,}4\text{ mA}$ ❌ SCARTATA (sopra $|I_{DSS}|$).
-
-   Risultato: $I_D \approx -3{,}76\text{ mA}$ (segno negativo = corrente da S a D, come per P-channel).
-
-9. **Verifica $V_{GS}$**:
-   $$V_{GS} = -0{,}220 \cdot (-3{,}76) = +0{,}827\text{ V} \quad (\text{tra } 0\text{ e } V_P=+4, ✅) $$
-
-10. **Tensione drain**:
-   $$V_D = V_{SS} + I_D R_D = -12 + (-3{,}76) \cdot 2{,}2 = -12 - 8{,}27 = -20{,}3\text{ V}$$
-    
-    (Significato: il drain è ancora più negativo di $V_{SS}$ perché la corrente crea una caduta ulteriore su $R_D$.)
-
-11. **$V_{SD}$** (tensione source-drain, direzione "positiva" del P-channel):
-   $$V_{SD} = V_S - V_D = (-I_D R_S) - V_D = 0{,}827 - (-20{,}3) = 21{,}1\text{ V}$$
-    
-    (Il source è a potenziale più alto del drain, come deve essere per il verso della corrente.)
-
-12. **Verifica pinch-off** (nel P-channel il pinch-off è $V_{SD} \ge V_{GS} - V_P$):
-   $$V_{GS} - V_P = 0{,}827 - 4 = -3{,}17\text{ V}$$
-   $$V_{SD} = 21{,}1\text{ V} \ge -3{,}17\text{ V}$$ ✅ **in saturazione**.
-
-> [!check] Risultato
-> $I_D \approx -3{,}76\text{ mA}$ (verso S→D), $V_{GS} \approx +0{,}83\text{ V}$, $V_{SD} \approx 21\text{ V}$, **in saturazione**.
-
-> [!tip] Confronto diretto con l'Es.1 (N-channel)
-> Stessi numeri di componenti, stessi passi del 2° grado → ottieni $|I_D|$ e $|V_{GS}|$ confrontabili ma con **segni opposti**. Il P-channel è il "fotocopia invertito" del N-channel.
-
-> [!danger] Trappola classica
-> Se applichi le formule del N-channel al P-channel **senza riflettere i segni di $V_P$, $V_{SS}$, $I_{DSS}$**, ottieni numeri sbagliati di segno. La Carli scritta potrebbe darti un P-channel come trabocchetto: **verifica sempre i segni prima di mettere numeri**.
-
----
-
 # 🔌 PARTE III — Applicazioni: VCR, Switch, Interruttore analogico
 
-## Esercizio 10 — JFET come VCR (Voltage Controlled Resistor)
+## Esercizio 9 — JFET come VCR (Voltage Controlled Resistor)
 
 **Testo.** Un JFET è usato come resistenza variabile in un partitore di tensione, per un controllo automatico di guadagno (AGC).
 
@@ -423,7 +337,7 @@ $$R_{DS}(V_{GS}) \approx \frac{r_{DS(on)}}{1 - V_{GS}/V_P}$$
 
 ---
 
-## Esercizio 11 — JFET come interruttore analogico (analog switch)
+## Esercizio 10 — JFET come interruttore analogico (analog switch)
 
 **Testo.** JFET 2N3819 con $r_{DS(on)} = 50\text{ }\Omega$, $V_P = -3\text{ V}$. Usato come switch ON/OFF su un segnale analogico.
 
@@ -512,7 +426,7 @@ Circuito:
 
 ---
 
-## Esercizio 12 — Punto ZTC (Zero Temperature Coefficient)
+## Esercizio 11 — Punto ZTC (Zero Temperature Coefficient)
 
 **Testo.** Un JFET n-channel con $I_{DSS} = 8\text{ mA}$, $V_P = -4\text{ V}$. A quale $V_{GS}$ il JFET è al **punto ZTC** (Zero Temperature Coefficient), cioè la corrente $I_D$ non varia apprezzabilmente con la temperatura?
 

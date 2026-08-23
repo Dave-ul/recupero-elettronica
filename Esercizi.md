@@ -12,7 +12,7 @@ prove: [scritta, orale, pratica]
 > [!tip] Come usarlo
 > - In Obsidian: clicca sui link `[[...]]` per saltare al file.
 > - Per ogni macroarea: 1) rileggi la teoria in `Argomenti/` → 2) fai gli esercizi qui → 3) verifica con `Prove/01 - Prova Scritta Carli`.
-> - Per allenarti a batteria: `[[Esercizi - Simulazione finale]]` (90 min). ⚠️ Non è la
+> - Per allenarti a batteria: `[[Esercizi - Simulazione finale]]` (75 min). ⚠️ Non è la
 >   simulazione della prova reale, che dura **cinque ore**: quella è la sessione lunga del
 >   30 agosto, con le tre verifiche FUSI in fila — vedi [[Calendario]] e [[05 - Verifiche FUSI (Carli)]].
 
@@ -34,7 +34,7 @@ prove: [scritta, orale, pratica]
 | **JFET n** | [[Esercizi - JFET]] | [[JFET\|JFET]] | 01, 02 |
 | **Amplificatori a BJT** | [[Esercizi - Amplificatori a BJT]] | [[Amplificatori a BJT\|Amplificatori a BJT]] | 02, 03 |
 | **Alimentatori** | [[Esercizi - Alimentatori]] | [[Alimentatori\|Alimentatori]] | 01, 02, 03 |
-| **Batteria da 90 min** | [[Esercizi - Simulazione finale]] | (tutti gli Argomenti) | 01 (allenamento, non la prova reale da 5h) |
+| **Batteria da 75 min** | [[Esercizi - Simulazione finale]] | (tutti gli Argomenti) | 01 (allenamento, non la prova reale da 5h) |
 
 ---
 
@@ -74,7 +74,7 @@ cade nel [[Calendario]]: i due piani vanno letti insieme, e dove divergono coman
 | 10 | `[[Esercizi - JFET]]` | **8-9** · 27-28 ago ⭐ | 1.5h | Autopolarizzazione, discriminante |
 | 11 | `[[Esercizi - Amplificatori a BJT]]` | **7** · 26 ago | 2h | Parametri h CE/CC/CB |
 | 12 | `[[Esercizi - Alimentatori]]` | **4** · solo lettura | 25 min | Schema a blocchi, ripple, 78xx *(descrittivi, per la pratica Protti)* |
-| 13 | `[[Esercizi - Simulazione finale]]` | *libera* | 1h30 | Allenamento alla velocità. La prova di resistenza sulle 5 ore è il **giorno 11** |
+| 13 | `[[Esercizi - Simulazione finale]]` | *libera* | 1h15 | Allenamento alla velocità. La prova di resistenza sulle 5 ore è il **giorno 11** |
 
 **Tempo totale stimato**: ~20 ore. Non sono però 20 ore a sé stanti: sono **dentro** le
 circa 40 ore dei 12 giorni del [[Calendario]], che a ciascuna di queste voci assegna un
@@ -94,26 +94,26 @@ Per ogni `Esercizi - X.md`, c'è una sezione **"Pattern di errore frequenti (Car
    → Vedi `[[Esercizi - JFET]]` e [[05 - Verifiche FUSI (Carli)]].
 
 > *(Fino al 2026-08-20 il terzo posto era del rifasamento trifase, che il [[Calendario]]
-> mette fuori programma. La formula resta in appendice al [[Formulario rapido]].)*
+> mette fuori programma. Il 2026-08-21 le formule trifase sono state rimosse dal vault:
+> resta il rifasamento **monofase**, che è in programma — vedi [[Le potenze in alternata]] §5.)*
 
 ---
 
 ## 📐 Simulazione d'esame completa
 
-Il file [[Esercizi - Simulazione finale]] contiene **6 problemi misti** (E1–E6, uno per macroarea) da svolgere sotto timer 90 min.
+Il file [[Esercizi - Simulazione finale]] contiene **5 problemi misti** (E1–E5, uno per macroarea) da svolgere sotto timer 75 min.
 
 > [!warning] Non confonderla con la prova reale
-> La prova scritta del 1° settembre dura **cinque ore** (8:00-13:00). Questa batteria da 90
+> La prova scritta del 1° settembre dura **cinque ore** (8:00-13:00). Questa batteria da 75
 > minuti serve ad allenare la velocità su un esercizio per macroarea; la prova di resistenza
 > sulle cinque ore è la sessione lunga del **30 agosto** con le tre verifiche del prof. in
 > fila — vedi [[05 - Verifiche FUSI (Carli)]].
 
 - E1: Impedenze + regime sinusoidale (15 min, medio)
 - E2: Filtro passa-basso RL (15 min, facile)
-- E3: Potenze + rifasamento trifase (15 min, medio) — ⛔ **fuori programma, opzionale**
-- E4: Stabilizzatore Zener (15 min, facile)
-- E5: BJT con partitore di base (15 min, medio)
-- E6: MOSFET enhancement n (15 min, difficile) ⭐
+- E3: Stabilizzatore Zener (15 min, facile)
+- E4: BJT con partitore di base (15 min, medio)
+- E5: MOSFET enhancement n (15 min, difficile) ⭐
 
 > [!warning] Preparazione minima
 > Prima di tentare la simulazione: aver svolto **almeno 2 sessioni complete** sui file `Esercizi - X.md` per macroarea, e aver letto la sezione "Pattern di errore frequenti" di ciascuno. 5/6 corretti = pronto per la prova reale.

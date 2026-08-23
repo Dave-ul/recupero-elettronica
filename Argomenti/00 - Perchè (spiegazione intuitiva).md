@@ -302,8 +302,6 @@ libro_mirandola: "VERIFICATO ✔ (2026-07-25) per derivazione — file trasversa
 >
 > **Perché lo fa la compagnia elettrica?** Perché la $Q$ che circola non le dà soldi (non viene "consumata"), ma le fa perdere soldi (perdite sulla linea). Il rifasamento obbligatorio sulle utenze industriali è un modo per far pagare le perdite di linea.
 >
-> **Cos'è il trifase?** Una distribuzione di potenza con **3 fili** invece di 2, sfasati di 120°. Il vantaggio: si può trasmettere più potenza con meno cavi. Il trifase di potenza è la spina "industriale" che si vede nelle officine.
->
 > **Cosa c'entra con il resto?** Le potenze AC sono richieste praticamente in OGNI esercizio della Carli scritta. Senza conoscerle, non risolvi gli esercizi con $\bar{Z}$ e $\varphi$.
 
 ---
