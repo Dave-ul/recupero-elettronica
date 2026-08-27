@@ -1,17 +1,117 @@
 ---
-tags: [recupero, elettronica, formulario, compito, rapido]
+tags: [recupero, elettronica, formulario, cheat-sheet, comparazione, compito, rapido]
 fonte_secondaria: "edutecnica.it — verificato coerente su 8/8 topic chiave (BJT, MOSFET, JFET, Amplificatori, Diodi/Zener, Filtri RC/RL, Alimentatori, Trifase)"
 fonte_ufficiale: "MAJORANA lettera giudizio sospeso 09/06/2026 — IIS San Lazzaro di Savena (BO), studente Davide Rocca, classe 4BEM"
 libro_mirandola: "VERIFICATO ✔ (2026-07-25) per derivazione — file trasversale: non cita direttamente il libro, ma raccoglie le formule dei file di argomento, ciascuno verificato pagina per pagina sul Mirandola nei Lotti 1-13 della bonifica. Per il riferimento di libro di ogni formula si va alla nota dell'argomento corrispondente. Vedi «00 - Fonti e note» e «00 - Audit e correzioni»."
 prove: [scritta]
+nota_unione: "2026-08-27 — «Cheat Sheet A4 visuale» è stato fuso qui dentro come Parte A. Le vecchie sezioni §1-§7 del Cheat Sheet sono ora §A1-§A7; la numerazione §1-§13 del Formulario è invariata."
 ---
 
-# 📋 Formulario rapido — da portare al compito Carli
+# 📋 Formulario + Cheat Sheet — da portare al compito Carli (1 set., 8:00-13:00)
 
 > [!warning] USO
-> Questo file è **SOLO formule**. Nessuna spiegazione: per i perché vedi [[Argomenti]] e [[Esercizi]]. Stampalo o tienilo aperto su un telefono durante il compito scritto. Il contenuto è organizzato per macroarea.
+> Questo file è **SOLO formule e tabelle**. Nessuna spiegazione: per i perché vedi [[Argomenti]] e [[Esercizi]]. Stampalo (A4 fronte-retro) o tienilo aperto su un telefono durante lo scritto.
+> - **[Parte A](#parte-a--tabelle-comparative-lookup-5-secondi)** = tabelle comparative, lookup da 5 secondi (§A1-§A7)
+> - **[Parte B](#parte-b--formule-per-macroarea)** = formulario per macroarea (§1-§13)
+
+> **Lookup 5s** → §A1 transistor · §A2 amplif · §A3 risonante · §A3b diodi · §A4 filtri · §A5 AC/DC · §A6 alimentatore · §A7 visione 30s
 
 ---
+
+# Parte A — Tabelle comparative (lookup 5 secondi)
+
+> Tabella comparativa = confronto diretto. Per la formula esatta scendi in **Parte B**; per il perché intuitivo vedi l'hub [[00 - Perchè (spiegazione intuitiva)]] §N.
+
+## A1. BJT vs MOSFET vs JFET
+
+| | **BJT** | **MOSFET** | **JFET** |
+|---|---|---|---|
+| **Pilotaggio** | Corrente $I_B$ | Tensione $V_{GS}$ (≥0) | Tensione $V_{GS}$ (≤0) |
+| **$Z_{in}$** | Bassa (~kΩ) | ~∞ (ossido isolante) | Molto alta (giunz. inversa) |
+| **Statico a riposo** | $I_B > 0$ sempre | ~0 (solo leak gate) | ~0 (gate inversa) |
+| **Corrente uscita** | $I_C = \beta I_B$ | $I_D = K(V_{GS}-V_{th})^2$ | $I_D = I_{DSS}(1-V_{GS}/V_P)^2$ |
+| **"Saturazione"** | Trans. **ON** ($V_{CE}\!\approx\!0{,}2$V) | **Amplifica** (I costante vs V) | come MOSFET |
+| **Switching** | lento (μs) | veloce (ns) | veloce (ns) |
+| **Rumore** | medio-alto (shot) | basso | bassissimo |
+| **Uso tipico** | amplif. analogica, TTL | CMOS, switching potenza | pre-amp audio, VCR |
+
+## A2. Amplificatori BJT — CE vs CC vs CB
+
+| | **CE** (Emettitore Comune) | **CC** (Emitter Follower) | **CB** (Base Comune) |
+|---|---|---|---|
+| **$A_v$** | Alto (10–100), **inverte 180°** | ≈ 1 (0,95–0,99) | Alto, NO inversione |
+| **$Z_{in}$** | ~kΩ | **alta** ~100 kΩ | bassa ~100 Ω |
+| **$Z_{out}$** | ~10 kΩ | **bassa** ~100 Ω | alta ~MΩ |
+| **$A_i$** | ≈ β (~100) | ≈ β | ≈ 1 |
+| **Uso** | generale, amplif. tensione | **buffer**, adatt. impedenza | RF, alte frequenze |
+
+## A3. RLC serie vs parallelo @ $\omega_0 = 1/\sqrt{LC}$
+
+| | **SERIE** | **PARALLELO** |
+|---|---|---|
+| **Impedenza a $\omega_0$** | **MINIMA** (= $R$) | **MASSIMA** (= $R$) |
+| **Corrente totale** | **MASSIMA** | minima |
+| **$V_L$ o $V_C$** | $= Q \cdot V_{tot}$ ⚠️ | $= V_{tot}$ |
+| **$I_L$ o $I_C$** | $= I_{tot}$ | $= Q \cdot I_{tot}$ ⚠️ |
+| **$Q$ (merito)** | $\dfrac{\omega_0 L}{R}$ | $\dfrac{R}{\omega_0 L}$ ⚠️ **reciproco, non uguale** |
+| **Banda passante** | $\omega_0 / Q$ | $\omega_0 / Q$ |
+
+### A3b. Diodi — normale vs Zener vs Schottky
+
+| | **Diodo normale** | **Zener** | **Schottky** |
+|---|---|---|---|
+| **$V_F$ diretta** | ≈ 0,7 V (Si) | ≈ 0,7 V | ≈ 0,2–0,4 V |
+| **Funzione tipica** | raddrizzatore | regolatore ($V_Z$ fisso) | switching rapido |
+| **Breakdown** | DISTRUTTIVO ⚠️ | **modalità di lavoro** | bassa backward leakage |
+| **Switching** | medio (~μs) | medio (~μs) | veloce (ns) |
+| **Uso** | Graetz, OR/AND logica | stabilizzatore (es. 5,6 V) | free-wheeling, RF, SMPS |
+
+## A4. Filtri RC vs RL (PB = passa-basso, PA = passa-alto)
+
+| Filtro | $f_t$ (taglio) | Dove va C/L |
+|---|---|---|
+| **RC PB** | $1/(2\pi R C)$ | C verso massa |
+| **RC PA** | $1/(2\pi R C)$ | C in serie |
+| **RL PB** | $R/(2\pi L)$ | L verso massa |
+| **RL PA** | $R/(2\pi L)$ | L in serie |
+
+**Regola**: reattivo in **serie** blocca le basse, verso **massa** blocca le alte. **−3 dB** = metà potenza.
+
+## A5. AC vs DC
+
+| | **DC** (ω = 0) | **AC** (sinusoidale) |
+|---|---|---|
+| **$X_L$** | 0 (corto) | $j\omega L$ |
+| **$X_C$** | ∞ (aperto) | $-j/(\omega C)$ |
+| **$V$ vs $I$ su L** | — | $V$ anticipa $I$ di 90° |
+| **$V$ vs $I$ su C** | — | $V$ ritarda $I$ di 90° |
+| **Potenza** | $P = V I$ | $P=VI\cos\varphi$, $Q=VI\sin\varphi$, $S=\sqrt{P^2+Q^2}$ |
+| **Rifasamento** | non serve | $C$ parallelo al carico induttivo → annulla $Q$ *(monofase: in programma)* |
+
+## A6. Alimentatore a blocchi
+
+```
+AC 230V 50Hz → trafo (abbassa + isola) → AC es.12V
+→ ponte Graetz (4 diodi) → DC pulsante ~17V picco
+→ C filtro (livella, ripple ≈ I_carico/(f·C), f=100Hz dopo ponte)
+→ regolatore 78xx (dropout 2V, V_in ≥ V_out + 2V) → DC stabile
+```
+
+## A7. Mnemonico 30s (visione d'insieme)
+
+- **Sinusoidi**: rotazione → $\cos\omega t$ → derivata = $\sin$ (**Faraday**)
+- **Impedenze**: R pura, L anticipa +90°, C ritarda −90°
+- **Potenze**: $P$ consumata, $Q$ rimbalzo, $S=\sqrt{P^2+Q^2}$ → **P+Q≠S**
+- **Risonanza**: $\omega_0^2=1/LC$ → $X_L=X_C$ → tutto resistivo
+- **Filtri**: ω alta → C verso massa; ω bassa → C in serie
+- **Transistor**: BJT $I_C=\beta I_B$ (sat=ON); MOSFET/JFET $I_D=K(…)^2$ (sat=amplifica)
+- **Amplificatori**: CE amplif+inverte; CC buffer $A_v\approx 1$; CB alte freq
+- **Alimentatore**: AC → trafo → ponte → C filtro → regolatore → DC
+- **Rifasamento**: C parallelo a $L$ → annulla $Q$ → meno $I$ in linea
+
+---
+
+# Parte B — Formule per macroarea
 
 ## 1. Impedenze (R, L, C) — regime sinusoidale
 

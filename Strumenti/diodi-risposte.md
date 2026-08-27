@@ -11,7 +11,7 @@ prove: [orale, scritta]
 > [!info] Dove serve
 > **Orale Carli**: sono le risposte già scritte alle **D1–D23** della scheda di verifica, più la scheda di integrazione. Non vanno riscritte, vanno **ripetute a voce**. Il calendario le colloca nel ripasso del diodo — vedi [[Calendario]] e [[02 - Prova Orale Carli]].
 
-Teoria completa: [[Diodi]] · esercizi: [[Esercizi - Diodi]] · schema per la cartellina: [[Cheat Sheet A4 visuale]].
+Teoria completa: [[Diodi]] · esercizi: [[Esercizi - Diodi]] · schema per la cartellina: [[Formulario rapido]] Parte A.
 
 ## Indice
 

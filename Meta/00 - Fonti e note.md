@@ -314,8 +314,7 @@ elettronicaa/                    ← il vault Obsidian: tutto è qui dentro, tut
 ├── Esercizi/                    13 note di esercizi svolti
 ├── Prove/                       01-03 le tre prove · 04-05 il materiale vero del docente
 ├── Strumenti/                   quello che si porta al compito
-│   ├── Formulario rapido.md
-│   ├── Cheat Sheet A4 visuale.md
+│   ├── Formulario rapido.md      Parte A cheat sheet + Parte B formule (uniti il 2026-08-27)
 │   └── diodi-risposte.html      risposte D1-D23, già scritte
 ├── Meta/                        trasparenza e registro — questo file sta qui
 ├── Allegati/                    74 immagini + INDEX.md
