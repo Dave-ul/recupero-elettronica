@@ -204,9 +204,22 @@ $$P_D \approx V_D \cdot \overline{I_D} = 0{,}7 \cdot 23{,}3\ \text{mA} = \mathbf
 
 - **Dati**: $V_{CC} = 24$ V, $V_{DD} = 6$ V, $R_1 = 1\,\text{k}$, $R_2 = 3\,\text{k}$, $i_2 = 5$ mA.
 - **Soluzione edutecnica**: $i_1 = 10$ mA, $i_{Z2} = 5$ mA.
-- **Dato mancante recuperato dalla fonte**: $V_{Z1} = 5$ V.
-- ⚠️ **Esercizio NON ricostruibile senza lo schema** (verificato 2026-07-19): serve sapere come sono collegati i due Zener. Le ipotesi semplici non tornano — se il nodo su $R_1$ fosse a $V_{Z1}=5$ V si avrebbe $i_1=(24-5)/1\text{k}=19$ mA, se fosse a $V_{DD}=6$ V si avrebbe 18 mA; la fonte dichiara **10 mA**, che richiede una caduta di 10 V su $R_1$ (nodo a 14 V) — compatibile solo con una configurazione a più Zener in serie.
-- 👉 **Cosa fare**: apri lo schema su [zenerx.htm](https://www.edutecnica.it/elettronica/zenerx/zenerx.htm) prima di usare questo esercizio. *(La versione precedente di questa nota concludeva "probabile typo di edutecnica": conclusione non giustificata, rimossa.)*
+- **RISOLTO (2026-08-28)**: schema recuperato da `Fonti/Edutecnica Elettronica.pdf`, p. 75. La
+  topologia è questa — e senza vederla l'esercizio è davvero indecidibile:
+  $+V_{CC} \to R_1 \to D_1$ (Zener) $\to$ **nodo P**; da P scende $D_2$ (Zener) a massa; sempre da P parte
+  $R_2$ verso l'alimentazione **negativa** $-V_{dd}$. La chiave è che $-V_{dd} = -6$ V è una tensione
+  negativa, non un secondo positivo.
+- **Svolgimento**:
+  1. La $i_2$ data fissa il potenziale del nodo P, perché $R_2$ va a $-V_{dd}$:
+     $$i_2 = \frac{V_P - (-V_{dd})}{R_2} \;\Longrightarrow\; 5\text{ mA} = \frac{V_P + 6}{3\text{ k}} \;\Longrightarrow\; V_P = 9\text{ V}$$
+     (quindi $D_2$ lavora in breakdown a $V_{Z2} = V_P = 9$ V).
+  2. Maglia d'ingresso, con $D_1$ in breakdown a $V_{Z1}=5$ V:
+     $$i_1 = \frac{V_{CC} - V_{Z1} - V_P}{R_1} = \frac{24 - 5 - 9}{1\text{ k}} = \mathbf{10\text{ mA}} \;✔$$
+  3. Kirchhoff al nodo P (entra $i_1$, escono $i_2$ e la corrente in $D_2$):
+     $$i_{Z2} = i_1 - i_2 = 10 - 5 = \mathbf{5\text{ mA}} \;✔$$
+- ✅ **edutecnica è corretta**: entrambi i valori dichiarati tornano. Le ipotesi tentate in precedenza
+  fallivano perché davano per scontato che il nodo stesse a 5 V o a 6 V; il nodo sta invece a **9 V**,
+  ed è la $R_2$ verso la tensione negativa a fissarlo.
 
 ### Es. Z4 — Calcolo correnti (più elementi)
 

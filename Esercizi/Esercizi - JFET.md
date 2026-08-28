@@ -577,7 +577,14 @@ $$V_{ZTC} \approx V_P + 0{,}7\text{ V}$$
 - **Soluzione edutecnica**: $R = 1\text{ k}\Omega$, $V_i = -5\text{ V}$.
 - **Procedura**: $R = (V_{DD}-V_L)/I_D = (16-6)/10\text{ mA} = 1\text{ k}\Omega$ ✓. Per la $V_i$, dalla parabolica inversa:
   $$V_{GS} = V_P\left(1-\sqrt{I_D/I_{DSS}}\right) = -2\left(1-\sqrt{10/100}\right) = -2(1-0{,}316) = -1{,}37\text{ V}$$
-- ⚠️ **La $V_i = -5$ V di edutecnica non torna** con questi dati: $V_{GS}=-5$ V è **oltre il cutoff** ($V_P = -2$ V), quindi il JFET sarebbe **spento** e il LED non si accenderebbe. Vale lo stesso per la scala «$-2$ V → ~25 mA, $-5$ V → ~80 mA»: a $V_{GS}=V_P=-2$ V la corrente è **zero**, non 25 mA. Con $V_P=-2$ V e $I_{DSS}=100$ mA la tensione giusta è $-1{,}37$ V; il $-5$ V ha senso solo se nel testo originale il JFET è pilotato rispetto al source o ha $V_P$ molto più negativo. Stessa situazione dell'**Es. J5**, dove edutecnica sbaglia $R_2$.
+- ⚠️ **La $V_i = -5$ V di edutecnica spegne il LED, non lo accende.** Schema verificato sul PDF in
+  `Fonti/Edutecnica Elettronica.pdf` (p. 33): $R$ e LED in serie sul **drain**, **source a massa**,
+  $V_i$ applicata al gate — quindi $V_{GS} = V_i$ senza mediazioni. Con $V_P = -2$ V, una $V_i = -5$ V
+  è **oltre il cutoff**: $I_D = 0$, LED spento. Per accenderlo serve $V_{GS} \ge -1{,}37$ V, e in pratica
+  basta $V_i = 0$: la corrente la limita comunque $R$ a $(16-6)/1\text{k} = 10$ mA, ed è per questo che
+  $R = 1$ k$\Omega$ è giusta. I $-5$ V sono il valore che serve per **interdire** il JFET con margine
+  — l'unica lettura che li rende sensati. Era falsa anche la scala «$-2$ V → ~25 mA»: a $V_{GS}=V_P$ la
+  corrente è **zero**.
 
 ### Es. J7 — Source bias classico (partitore + $R_S$)
 

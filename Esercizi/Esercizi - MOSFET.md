@@ -180,6 +180,10 @@ Con overdrive di 1 V la corrente coincide numericamente con $K$: se $K = 0{,}5\t
 - **Dati**: $V_T=3$ V, $I_{D(\text{on})}=18$ mA, $V_{GS}=10$ V, $I_D=4$ mA, $V_{DS}=6$ V, $V_{RS}=2$ V.
 - **Trovare**: dimensionare $R_S$, $R_D$.
 - **Procedura**: $R_S = V_{RS}/I_D = 2/4\text{ mA} = 500\,\Omega$. $R_D = (V_{DD} - V_{DS} - V_{RS})/I_D$.
+- ⚠️ **L'esercizio è incompleto alla fonte** (verificato su `Fonti/Edutecnica Elettronica.pdf`, p. 4):
+  la $V_{DD}$ non compare né nel testo né nella figura (dove il morsetto è etichettato solo «$+V_{DD}$»),
+  e non è pubblicata nessuna risposta. Senza $V_{DD}$ la $R_D$ non è calcolabile: usalo solo per la
+  parte su $R_S$, oppure fissa tu una $V_{DD}$ e dichiaralo.
 
 ## Pattern di errore frequenti (Carli scritta)
 

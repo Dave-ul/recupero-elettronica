@@ -1062,7 +1062,49 @@ Darlington compreso), [[Esercizi - Reti RLC e risonanza]], [[Esercizi - Le poten
 
 ### Da ricontrollare (non bloccante)
 
-- **Es. A2 di [[Esercizi - Amplificatori a BJT]]**: manca un dato nell'elenco (probabile $R_E$ non
-  bypassata da ~100 Ω). Da confrontare con lo schema su edutecnica.
-- **Es. J6 di [[Esercizi - JFET]]** e **Es. Z3 di [[Esercizi - Diodi]]**: servono gli schemi originali.
-- **Es. M7 di [[Esercizi - MOSFET]]**: la formula di $R_D$ usa una $V_{DD}$ che non compare nei dati.
+- ~~**Es. A2 di [[Esercizi - Amplificatori a BJT]]**, **Es. J6 di [[Esercizi - JFET]]**, **Es. Z3 di
+  [[Esercizi - Diodi]]**: servono gli schemi originali.~~ → **chiusi nel Lotto 22-bis** con i PDF di
+  Edutecnica in `Fonti/`.
+- **Es. M7 di [[Esercizi - MOSFET]]**: la $V_{DD}$ manca **anche nella fonte** — esercizio incompleto
+  all'origine, vedi Lotto 22-bis.
+
+---
+
+## Lotto 22-bis — I tre casi aperti chiusi con i PDF di Edutecnica ✔ (2026-08-28)
+
+Il Lotto 22 lasciava tre esercizi «non ricostruibili senza lo schema». Gli schemi c'erano:
+in `Fonti/Edutecnica Elettronica.pdf`, che ha **strato di testo** ed è quindi ricercabile
+(`pdftotext`) e rasterizzabile pagina per pagina (`pdftoppm`). Tutti e tre chiusi.
+
+**1. Es. A2 di [[Esercizi - Amplificatori a BJT]] — $A_v = -8{,}96$ (p. 46).** *Edutecnica è
+corretta*, e la mia ipotesi precedente («ci sarà una $R_E \approx 100\ \Omega$ non bypassata») era
+sbagliata. Nello schema l'emettitore è **a massa diretta** e il generatore attacca la base
+**attraverso $R_B$, senza condensatore di accoppiamento**: quindi i 13 kΩ stanno nella maglia
+d'ingresso anche in alternata.
+$$A_v = -\frac{h_{fe}R_C}{R_B+h_{ie}} = -\frac{130\cdot 1000}{14\,500} = -8{,}96$$
+I $-86{,}7$ sono il guadagno *dello stadio* ($v_o/v_{be}$); qui $R_B$ attenua il segnale del 90%
+prima della base. Lezione: la lista dei dati non dice **da dove entra il segnale**.
+
+**2. Es. J6 di [[Esercizi - JFET]] — il LED (p. 33).** Schema: $R$ e LED in serie sul drain,
+**source a massa**, $V_i$ al gate, quindi $V_{GS} = V_i$. Con $V_P = -2$ V la $V_i = -5$ V della
+fonte è **oltre il cutoff**: spegne il LED invece di accenderlo. $R = 1$ k$\Omega$ è invece giusta,
+ed è $R$ stessa a limitare la corrente a 10 mA — per accendere basta $V_i = 0$. I $-5$ V hanno
+senso solo come valore di **interdizione**. Segnalazione del Lotto 22 confermata.
+
+**3. Es. Z3 di [[Esercizi - Diodi]] — i due Zener (p. 75).** *Edutecnica è corretta*, e
+l'esercizio è del tutto risolvibile una volta visto lo schema: la $R_2$ va verso
+un'alimentazione **negativa** $-V_{dd}$, non verso un secondo positivo. Da lì
+$V_P = 3\text{k}\cdot 5\text{mA} - 6 = 9$ V, quindi $i_1 = (24-5-9)/1\text{k} = 10$ mA e
+$i_{Z2} = i_1 - i_2 = 5$ mA — entrambi i valori dichiarati. Le ipotesi tentate a luglio
+fallivano perché mettevano il nodo a 5 V o a 6 V invece che a 9 V. Svolgimento completo ora
+nella nota.
+
+**4. Es. M7 di [[Esercizi - MOSFET]] — resta aperto, ma per colpa della fonte** (p. 4): la
+$V_{DD}$ non compare né nel testo né nella figura, e nessuna risposta è pubblicata. L'esercizio
+è **incompleto all'origine**; la nota ora lo dice.
+
+> [!tip] Nota di metodo per i prossimi audit
+> I due PDF di Edutecnica sono **testo, non scansioni**: si cercano con
+> `pdftotext file.pdf -` e `grep`, e la pagina che interessa si guarda con
+> `pdftoppm -f N -l N -r 150 -png`. È il modo per risolvere gli esercizi «senza schema»
+> senza aprire il sito. Vale anche per il Mirandola, che invece è immagine e va letto a vista.

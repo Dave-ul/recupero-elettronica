@@ -200,7 +200,9 @@ Calcola $R_{in}$ (resistenza di ingresso vista tra base e massa).
 - **Soluzione**: $I_B = (2-0{,}7)/13\,\text{k} = 0{,}1\,\text{mA}$; $I_C = \beta I_B = 100 \cdot 0{,}1 = \mathbf{10\ mA}$; **$V_{CE} = 20 - 10 \cdot 1 = 10\text{ V}$** ✔.
 - ⚠️ **Due avvertenze su questo esercizio:**
   1. I «13 mA» che comparivano qui erano $h_{fe} I_B$ invece di $\beta I_B$: in DC si usa $\beta$ ($=h_{FE}$), $h_{fe}$ è il guadagno **ai piccoli segnali**. Con 13 mA la $V_{CE}$ sarebbe 7 V, non i 10 V dichiarati subito dopo — bastava questo controllo per accorgersene.
-  2. L'$A_v = -8{,}96$ **non è ricavabile dai dati elencati**: con essi $G_v = -h_{fe}R_C/h_{ie} = -130 \cdot 1/1{,}5 = -86{,}7$. Il $-8{,}96$ torna solo se c'è una $R_E \approx 100\ \Omega$ **non bypassata** ($G_v = -h_{fe}R_C/[h_{ie}+(1+h_{fe})R_E]$), che nell'elenco dei dati manca. Se un esercizio d'esame dà un $A_v$ dieci volte più piccolo dell'atteso, cerca la $R_E$ senza condensatore.
+  2. L'$A_v = -8{,}96$ **è corretto**, ma solo se si guarda lo schema (verificato sul PDF in `Fonti/Edutecnica Elettronica.pdf`, p. 46): l'emettitore è **a massa diretta** — niente $R_E$ — e il generatore $v_i$ attacca la base **attraverso $R_B$**, senza condensatore di accoppiamento. Quindi $R_B$ sta nella maglia d'ingresso anche in AC:
+     $$A_v = \frac{v_o}{v_i} = -\frac{h_{fe}R_C}{R_B + h_{ie}} = -\frac{130 \cdot 1000}{13\,000 + 1500} = -\frac{130\,000}{14\,500} = \mathbf{-8{,}96} \;✔$$
+     Il $-86{,}7$ che si ottiene con $-h_{fe}R_C/h_{ie}$ è il guadagno **dello stadio** ($v_o/v_{be}$): qui i 13 kΩ di $R_B$ si mangiano il 90% del segnale prima della base. È la stessa distinzione dell'Es. A1, dove però l'attenuazione la faceva $R_S$. **Morale: guarda sempre da dove entra il segnale**, non solo la lista dei dati.
 
 ### Es. A3 — Collettore comune (emitter follower)
 
