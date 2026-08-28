@@ -4,6 +4,7 @@ fonte_ufficiale: "MAJORANA lettera giudizio sospeso 09/06/2026 — IIS San Lazza
 fonte_secondaria: "edutecnica.it — verificato coerente su 8/8 topic chiave; ora anche in PDF in Fonti/"
 libro_mirandola: "VERIFICATO ✔ (mappa pagine rifatta il 2026-08-19) — Fonti/Mirandola Volume 2/, 12 PDF, 282 pagine-PDF, senza strato di testo. Conversione: pagina stampata = 2·(pagina-PDF) − 6, offset costante, verificata su 4 folio in 3 capitoli. Vedi §2bis."
 fonti_aggiunte_2026_08_19: "appunti Poggi · tre verifiche FUSI del prof. Carli · Edutecnica in PDF · Mirandola Vol.1 e Vol.2"
+fonti_aggiunte_2026_08_28: "pagina di quaderno del 18/3 sul BJT (foto) — seguito della p. 3 degli appunti Poggi, assente dal PDF. Vedi §2 e [[BJT]] §1-bis."
 esame: "1 settembre 2026 — scritto 8:00-13:00 (Carli) · orale+pratico 14:00-17:00 (Carli e Protti insieme)"
 ---
 
@@ -80,7 +81,7 @@ con cui è stato potato [[Calendario]].
 | 1 | **La LETTERA** | **cosa esce.** Non si discute |
 | 2 | **Le tre verifiche FUSI del prof. Carli** | **come interroga, e su cosa sei caduto** |
 | 3 | **Le tre verifiche 4E sui diodi (foto)** | come interroga *a domande aperte* |
-| 4 | **Gli appunti Poggi** | **cosa è stato fatto davvero in classe** |
+| 4 | **Gli appunti Poggi** (PDF a 20 pp. **+** la pagina fotografata del 18/3) | **cosa è stato fatto davvero in classe** |
 | 5 | **Mirandola Vol. 2** | la teoria e il linguaggio ufficiali del corso |
 | 6 | **Edutecnica** | gli svolgimenti passo-passo che il Mirandola non dà |
 
@@ -123,7 +124,8 @@ con cui è stato potato [[Calendario]].
 
 ### ✅ **Gli appunti Poggi** — aggiunti il 2026-08-19
 
-- **File**: `Fonti/appunti poggi.pdf` — 19 pagine, il quaderno del corso
+- **File**: `Fonti/appunti poggi.pdf` — **20** pagine, il quaderno del corso (più la pagina
+  sciolta del **18/3**, vedi la voce qui sotto)
 - **Cosa stabiliscono**: sono la prova documentale di **cosa è stato svolto in classe**.
   Un argomento che non c'è né qui, né nella lettera, né in nessuna delle tre verifiche FUSI
   è quasi certamente fuori programma: è il triplo filtro con cui [[Calendario]] ha tolto
@@ -142,11 +144,47 @@ con cui è stato potato [[Calendario]].
 | p. 9, 18 — f.d.t., filtri del 1° ordine, poli | PDF 70-73 → libro 134-141 |
 | p. 3, 11, 13, 15 — BJT: struttura, zone, h_FE, caratteristiche | PDF 160-162 → libro 314-319 |
 | p. 17, 19 — JFET: analogia col BJT, maglie di polarizzazione | PDF 183-185 → libro 360-365 |
+| **foto del 18/3** (fuori dal PDF) — drogaggio As/B, polarizzazione delle giunzioni, 3 schemi | PDF 160-163 → libro 313-317 e 326 |
 
 > [!tip] Le due pagine che valgono più delle altre
 > **p. 9** (ricavo completo della G(s) di un passa-basso RC col partitore) e **p. 19** (le
 > due maglie del JFET: V_GS0 = −R_S·I_D0 e V_DD = I_D0·(R_S + R_D) + V_DS0). Sono i due
 > modelli di svolgimento su cui si reggono gli esercizi di progetto delle verifiche.
+
+---
+
+### ✅ **La pagina di quaderno del 18/3 sul BJT** — foto, aggiunta 2026-08-28
+
+- **File**: `Fonti/WhatsApp Image 2026-08-28 at 18.03.57.jpeg` · copia linkabile in
+  `Allegati/appunti-poggi-18-03-bjt.jpeg`
+- **Cosa è**: **una pagina sola**, datata **18/3** in alto a destra, intitolata in rosso
+  «TRANSISTOR BJT». Contiene, nell'ordine: un richiamo sul **condensatore** (dielettrico,
+  campo elettrico, «le cariche libere non possono restare»), l'**etimologia** *transfer
+  resistor* con lo schema a blocchi ingresso/uscita, il **funzionamento del BJT** con la
+  struttura **n⁺⁺ — p — n** e i droganti **arsenico** e **boro** disegnati nel reticolo, il
+  **funzionamento con le polarizzazioni delle giunzioni**, e **tre schemi di
+  polarizzazione**.
+- **Perché sta nella famiglia «appunti Poggi»**: è lo **stesso quaderno** della **p. 3** di
+  `Fonti/appunti poggi.pdf` — stessa carta a quadretti a spirale, stessa mano, stessi
+  titoli in rosso, stessa data in alto a destra (lì «6/3»). La p. 3 è la lezione
+  **precedente** (definizione, npn/pnp, simboli, Kirchhoff); questa è il **seguito**, e nel
+  PDF a 20 pagine **non c'è**. Vale quindi lo stesso posto nella gerarchia: **#4 — cosa è
+  stato fatto davvero in classe**.
+- **Cosa aggiunge davvero al vault** (il resto era già coperto):
+  1. **i droganti hanno un nome**: **arsenico (As)** per la zona n, **boro (B)** per la p.
+     Il vault spiegava il drogaggio n col **fosforo** — stesso gruppo 15, stessa fisica, ma
+     a lezione si è detto arsenico;
+  2. **la struttura è asimmetrica**: **n⁺⁺** l'emettitore, **n** semplice il collettore. Il
+     Mirandola dice solo «le due zone esterne sono fortemente drogate»;
+  3. le due frasi da ripetere all'orale: «**BASE molto stretta**» e «**zona di svuotamento
+     tra base e collettore decisamente grande**»;
+  4. il **condensatore come modello della zona di svuotamento** — regione con campo e
+     senza portatori liberi.
+- **Il limite, esplicito**: è **una foto di una pagina**, non una fonte con numero di
+  pagina citabile. Come per tutti gli appunti, **vale in coppia col libro**: ogni
+  affermazione qui sopra ha un riscontro in Mirandola Cap. 7 §1, pp. 313-317 e p. 326.
+- **Dove è usata nel vault**: [[BJT]] §1-bis e §1-ter (trascrizione integrale) ·
+  [[00 - Perchè (spiegazione intuitiva)]] §0.E (nota su arsenico e boro).
 
 ---
 
@@ -329,6 +367,7 @@ elettronicaa/                    ← il vault Obsidian: tutto è qui dentro, tut
     ├── Mirandola Volume 1/      10 PDF — digitale, fuori programma
     ├── Mirandola Volume 2/      12 PDF — il libro di classe
     └── WhatsApp Image …jpeg     le tre foto delle verifiche 4E sui diodi
+                                  + la pagina di quaderno del 18/3 sul BJT
 ```
 
 > [!info] Perché una radice sola

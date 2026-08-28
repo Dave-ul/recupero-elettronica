@@ -103,9 +103,13 @@ libro_mirandola: "VERIFICATO ✔ (2026-07-25) per derivazione — file trasversa
 >
 > **Perché drogare con il fosforo (P, Z=15)?** Perché il fosforo è del **gruppo 15** (5 elettroni di valenza → gruppo sotto al silicio gruppo 14 sulla tavola periodica). Quando un atomo di fosforo prende il posto di un silicio nel reticolo, fa **4 legami covalenti** con i vicini (come tutti) ma ha **1 elettrone in più** che **NON** entra nei legami → resta **libero** sulla banda di conduzione → portatore maggioritario.
 >
+> **E l'arsenico?** Stessa identica cosa: **As (Z=33) è anch'esso del gruppo 15**, 5 elettroni di valenza, il quinto resta libero. **A lezione (appunti Poggi, pagina del 18/3) è stato usato l'arsenico**, non il fosforo — vedi [[BJT]] §1-bis. Fosforo, arsenico e antimonio sono tre droganti donatori equivalenti a questo livello: cambiano solo per come si diffondono nel silicio in fabbricazione.
+>
 > **Perché l'elettrone in più resta libero?** Perché non c'è un "posto legame" dove metterlo: i 4 vicini hanno già 4 elettroni da "legare". Il quinto è di troppo → vaga per il cristallo come un elettrone di conduzione → **portatore di tipo n** (n sta per "negativo", perché l'elettrone è −).
 >
 > **Cos'è il drogaggio di tipo p?** L'opposto: drogare con un elemento del **gruppo 13** (3 elettroni di valenza) come il **boro** (B, Z=5). Il boro prende il posto di un silicio ma fa solo **3 legami covalenti** col vicinato → al quarto legame **manca un elettrone** → **lacuna**.
+>
+> **Il boro è proprio quello usato a lezione**: gli appunti del 18/3 scrivono «fra Si e B **manca un e⁻**, quindi si crea una **LACUNA**» — la stessa frase, in tre parole ([[BJT]] §1-bis).
 >
 > **Cos'è una lacuna?** Un "**posto vuoto**" nel reticolo dove "dovrebbe" esserci un elettrone di valenza per completare il quarto legame covalente. È un'**assenza**, non un oggetto fisico vero — ma si **comporta come una carica positiva mobile**.
 >

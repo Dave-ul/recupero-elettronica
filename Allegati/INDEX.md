@@ -1,13 +1,13 @@
 ---
 tags: [recupero, elettronica, allegati, indice]
-aggiornato: 2026-08-10
+aggiornato: 2026-08-28
 ---
 
 # Indice delle immagini in Allegati/
 
 > Elenco generato automaticamente (join `grep` fra i nomi file in `Allegati/` e i wikilink `![[...]]` nei file di `Argomenti/`, `Esercizi/`, `Prove/`). Raccomandato nel Lotto 17 di [[00 - Audit e correzioni]], mai creato fino ad ora. Rigenerare con lo stesso script se si aggiungono nuove immagini.
 
-**Totale**: 74 immagini, 0 orfane (nessun file le referenzia).
+**Totale**: 75 immagini, 0 orfane (nessun file le referenzia).
 
 | Immagine | Referenziata da |
 |---|---|
@@ -82,6 +82,7 @@ aggiornato: 2026-08-10
 | `libro-cap8-pp388-389-alimentatore-schema-blocchi.png` | `Argomenti/Alimentatori.md`, `Meta/00 - Audit e correzioni.md` |
 | `libro-cap8-pp406-407-regolatore-integrato-78xx.png` | `Argomenti/Alimentatori.md`, `Meta/00 - Audit e correzioni.md` |
 | `libro-cap8-pp408-409-tabella-78xx.png` | `Argomenti/Alimentatori.md`, `Meta/00 - Audit e correzioni.md` |
+| `appunti-poggi-18-03-bjt.jpeg` | `Argomenti/BJT.md`, `Meta/00 - Fonti e note.md` |
 | `verifica-carli-4E-diodi-parte1.jpeg` | `Meta/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md`, `Meta/00 - Fonti e note.md` |
 | `verifica-carli-4E-diodi-parte2.jpeg` | `Meta/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md`, `Meta/00 - Fonti e note.md` |
 | `verifica-carli-diodi-16dom.jpeg` | `Meta/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md`, `Meta/00 - Fonti e note.md` |

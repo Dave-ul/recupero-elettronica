@@ -1108,3 +1108,40 @@ $V_{DD}$ non compare né nel testo né nella figura, e nessuna risposta è pubbl
 > `pdftotext file.pdf -` e `grep`, e la pagina che interessa si guarda con
 > `pdftoppm -f N -l N -r 150 -png`. È il modo per risolvere gli esercizi «senza schema»
 > senza aprire il sito. Vale anche per il Mirandola, che invece è immagine e va letto a vista.
+
+---
+
+## Lotto 23 — La pagina di quaderno del 18/3 entra nel vault ✔ (2026-08-28)
+
+Fonte nuova: **una foto di pagina di quaderno**, datata **18/3**, titolo «TRANSISTOR BJT».
+Riconosciuta come **lo stesso quaderno della p. 3 di `Fonti/appunti poggi.pdf`** (carta a
+quadretti a spirale, stessa mano, titoli in rosso, data in alto a destra — lì «6/3»), quindi
+è la **lezione successiva**, e nel PDF a 20 pagine **non c'era**. Registrata in
+[[00 - Fonti e note]] come voce propria dentro la famiglia «appunti Poggi», gerarchia **#4**.
+
+**Cosa ha cambiato nelle note** (il resto era già coperto e non è stato toccato):
+
+1. **[[BJT]] §1-bis, nuova** — trascrizione della pagina: etimologia *transfer resistor*,
+   reticolo drogato, struttura **n⁺⁺ — p — n**, polarizzazioni delle giunzioni, i tre schemi
+   di polarizzazione con la mappa verso §3 e §4a.
+2. **[[BJT]] §1-ter, nuova** — l'osservazione sul condensatore che apre la pagina, e il
+   motivo per cui sta lì: la zona di svuotamento **è** un condensatore (campo elettrico,
+   zero portatori liberi). Da qui la capacità di giunzione e la banda passante di
+   [[Amplificatori a BJT]].
+3. **[[BJT]] §1, precisazione** — il libro dice «le due zone esterne sono fortemente
+   drogate»; la pagina è più precisa: **fortemente drogato è l'emettitore**, il collettore è
+   drogato **poco**, proprio perché la zona di svuotamento B-C si allarghi dentro di lui.
+   Non è una correzione del libro, è un dettaglio che il libro non dà.
+4. **[[00 - Perchè (spiegazione intuitiva)]] §0.E** — il vault spiegava il drogaggio n col
+   **fosforo**; a lezione è stato usato l'**arsenico**. Nessuno dei due è sbagliato (gruppo
+   15 entrambi), ma ora la nota dice quale dei due è stato detto in classe. Il **boro** era
+   già quello giusto.
+5. **[[00 - Fonti e note]]** — nuova voce di fonte, riga nella tabella Poggi → Mirandola, mappa
+   della cartella `Fonti/`, e correzione di un dato vecchio: gli appunti Poggi sono **20**
+   pagine, non 19.
+
+> [!note] Perché non ha prodotto correzioni «vere»
+> Tutte e quattro le affermazioni della pagina trovano riscontro in Mirandola Cap. 7 §1
+> (pp. 313-317) e p. 326: il vault non diceva niente di sbagliato, diceva **meno**. Il
+> valore della pagina è che dice **con quali parole l'argomento è stato fatto in classe** —
+> ed è quella la formulazione che conviene usare all'orale.

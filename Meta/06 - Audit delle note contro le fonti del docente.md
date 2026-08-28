@@ -1,6 +1,6 @@
 ---
 tags: [recupero, elettronica, audit, trasparenza, carli, poggi]
-fonte: "confronto delle 14 note in Argomenti/ con gli appunti Poggi (19 pp.) e le tre verifiche FUSI del prof. Carli"
+fonte: "confronto delle 14 note in Argomenti/ con gli appunti Poggi (20 pp. + la pagina del 18/3) e le tre verifiche FUSI del prof. Carli"
 aggiunto: 2026-08-19
 metodo: "lettura diretta delle pagine come immagini — nessuno dei due PDF ha strato di testo"
 ---
@@ -34,6 +34,10 @@ metodo: "lettura diretta delle pagine come immagini — nessuno dei due PDF ha s
 | $h_{FE}=I_C/I_B$, adimensionale, $50<h_{FE}<500$; **$I_C=h_{FE}I_B$ non vale in saturazione**; $V_{BE}=0{,}7$ V, $V_{CEsat}\approx0{,}2$ V | Poggi p. 13 | [[BJT]] §2 e §5 | ✅ identico |
 | Progetto a partitore: $V_{RE}=V_{CC}/10$, $I_{partitore}=10\,I_B$ | Carli, sol. es. 3 del 24-04 · Mirandola 7.8-7.11 | [[BJT]] §4b, tabella dei quattro criteri | ✅ identico — **e questa è la ricetta che Carli usa** |
 | $C_E$ di by-pass: $X_{CE}\ll R_E$, rapporto almeno 10 | Mirandola ESEMPIO 7 | [[Amplificatori a BJT]] §2 | ✅ già copre l'es. 5 mai svolto da Fusi |
+| Struttura **n⁺⁺ — p — n**; droganti **As** (zona n) e **B** (zona p); «BASE molto stretta»; «zona di svuotamento tra base e collettore decisamente grande» | Poggi, **foto del 18/3** | [[BJT]] §1-bis | ✅ recepito il 2026-08-28 — il vault diceva «zone esterne fortemente drogate» (Mirandola) e drogante n = **fosforo** |
+| *Transfer resistor* = «resistore variabile a seconda della corrente ricevuta»; schema a blocchi corrente di comando → corrente d'uscita | Poggi, **foto del 18/3** | [[BJT]] §1-bis · [[00 - Perchè (spiegazione intuitiva)]] §8 | ✅ identico |
+| Giunzione **B-E diretta** ($V_{BE}=0{,}7$ V $=V_S$), **B-C inversa**; tre schemi di polarizzazione ($V_{BE}$+$V_{CB}$ · $V_{BE}$+$V_{CE}$ · $V_{CC}$ con $R_B$ e $R_C$) | Poggi, **foto del 18/3** | [[BJT]] §2 e §4a | ✅ identico |
+| Il condensatore: fra le armature c'è campo elettrico e **le cariche libere non possono restare** | Poggi, **foto del 18/3** | [[BJT]] §1-ter | ✅ recepito il 2026-08-28 — è il modello della zona di svuotamento |
 | JFET: $V_{GS0}=-R_S I_{D0}$ e $V_{DD}=I_{D0}(R_S+R_D)+V_{DS0}$ | Poggi p. 19 | [[JFET]] §4 (autopolarizzazione) | ✅ identico |
 | Quadripolo: $\bar{V}_i=\bar{Z}_{11}\bar{I}_i+\bar{Z}_{12}\bar{I}_o$, matrice $\bar{Z}$ | Poggi p. 16 | [[Amplificatori a BJT]] §5 (parametri ibridi $h$) | ⚠️ vedi §2, punto 6 |
 

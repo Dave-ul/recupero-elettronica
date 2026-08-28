@@ -3,6 +3,7 @@ tags: [recupero, elettronica, transistor, bjt]
 fonte_secondaria: "edutecnica.it — verificato coerente su 8/8 topic chiave (BJT, MOSFET, JFET, Amplificatori, Diodi/Zener, Filtri RC/RL, Alimentatori, Trifase)"
 fonte_ufficiale: "MAJORANA lettera giudizio sospeso 09/06/2026 — IIS San Lazzaro di Savena (BO), classe 4BEM Meccanica-Elettronica"
 libro_mirandola: "VERIFICATO ✔ (2026-07-19) — Mirandola Vol.2, Cap. 7 «Gli amplificatori a transistor», pp. 312-347 (pagg.-PDF 95-112). ATTENZIONE: il capitolo è il 7, NON il 6 (il Cap. 6 è sugli amplificatori operazionali). Conversione: pagina stampata = (pagina-PDF − 95)·2 + 312 — verificata su PDF 95 → pp. 312-313 e PDF 110 → pp. 342-343. Mappa sezioni: §1 Il transistor bipolare (BJT) p. 312 · §1.1 Il funzionamento del BJT NPN p. 313 (FIG. 1 simboli, FIG. 2 polarizzazione) · analogia col triodo FIG. 3 pp. 314-315 · modello di Ebers-Moll FIG. 4 e saturazione pp. 316-317 · curve caratteristiche, h_FE e iperbole di massima dissipazione FIG. 7 pp. 318-319 · ESEMPIO 2, dispersione di h_fe FIG. 8, resistenza termica pp. 320-321 · polarizzazione FIG. 9-10, formule 7.5 (maglia d'ingresso) e 7.6 (maglia d'uscita) pp. 322-323 · ESEMPIO 3 e rette di carico pp. 324-325 · FIG. 12 punto di lavoro, FIG. 13 polarizzazione con resistenza di base, ESEMPIO 4, FIG. 14 partitore + R_E pp. 326-327 · procedura di dimensionamento formule 7.8-7.11 ed ESEMPIO 5 pp. 328-329 · BJT in commutazione FIG. 16 ed ESEMPIO 6 pp. 330-331 · amplificatore a emettitore comune FIG. 17-19 pp. 332-333 · banda passante FIG. 21-23 pp. 336-337 · parametri ibridi h e quadripolo FIG. 26-27 pp. 340-341 · formule 7.13-7.14 pp. 342-343 · collettore comune (inseguitore) FIG. 30 pp. 346-347."
+appunti_poggi: "quaderno del corso — p. 3 del PDF (lezione del 6/3: struttura, simboli, Kirchhoff) + la pagina fotografata del 18/3 (drogaggio As/B, polarizzazioni delle giunzioni, tre schemi di polarizzazione), aggiunta il 2026-08-28 e riassunta in §1-bis e §1-ter."
 prove: [scritta, orale]
 ---
 
@@ -33,6 +34,8 @@ Un BJT (Bipolar Junction Transistor) è formato da **tre regioni di semicondutto
 >
 > Il libro sottolinea due dettagli costruttivi che spiegano il funzionamento: le **due zone esterne sono fortemente drogate**, mentre la **base ha spessore inferiore alle altre ed è debolmente drogata**. Da qui si deduce che il BJT è schematizzabile in prima approssimazione con **due diodi a giunzione PN «back-to-back»** — ma il libro avverte esplicitamente che *questo modello non riesce a spiegare il meccanismo dell'amplificazione*, che dipende proprio dal ridotto spessore della base, non riproducibile con due diodi distinti.
 >
+> **Precisazione dagli appunti** (§1-bis): «fortemente drogate» vale davvero solo per l'**emettitore**. Il quaderno del 18/3 disegna **n⁺⁺ — p — n**: emettitore drogatissimo, collettore drogato **poco**, e sono due scelte con due motivi diversi.
+>
 > Nota di scope: la struttura PNP «è meno utilizzata, specie nella realizzazione di circuiti integrati; per questo motivo nel seguito, salvo casi particolari, si farà sempre riferimento alla struttura NPN» (p. 313).
 
 I tre terminali sono:
@@ -45,6 +48,97 @@ I tre terminali sono:
 
 > [!tip] Il BJT è un amplificatore di corrente, non di tensione
 > Il BJT, di per sé, è un amplificatore **di corrente**: una piccola $I_B$ controlla una grande $I_C$. Per avere un amplificatore **di tensione** devi costruirci intorno una rete che trasformi la variazione di $I_C$ in una variazione di tensione (es. una resistenza di collettore). Vedi [[Amplificatori a BJT]].
+
+---
+
+## 1-bis. La pagina del 18/3 degli appunti Poggi — drogaggio, giunzioni, polarizzazioni
+
+> [!info] Fonte
+> Pagina di quaderno del **18 marzo**, aggiunta al vault il 2026-08-28. È il **seguito
+> della lezione del 6/3** che sta a p. 3 di `Fonti/appunti poggi.pdf` e che **nel PDF non
+> c'è**. Vedi [[00 - Fonti e note]].
+>
+> ![[appunti-poggi-18-03-bjt.jpeg]]
+
+**a) L'etimologia, dettata a lezione.** *Transfer resistor* = «**resistore variabile a
+seconda della corrente ricevuta**». Il disegno a blocchi è: **circuito d'ingresso** con la
+**corrente di comando** → **BJT** → **circuito d'uscita** con la **corrente d'uscita**. È la
+stessa idea di [[00 - Perchè (spiegazione intuitiva)]] §8, ma detta come la chiede Carli:
+il BJT è un *resistore pilotato in corrente*, non una scatola magica che amplifica.
+
+**b) I droganti hanno un nome: arsenico e boro.** La pagina disegna il reticolo e dice:
+
+| Zona | Drogante | Cosa succede nel reticolo |
+|---|---|---|
+| **n** | **As — arsenico** (gruppo 15) | fra due atomi di **Si** c'è un **legame covalente**; fra **Si** e **As** c'è **un e⁻ di troppo** → elettrone libero |
+| **p** | **B — boro** (gruppo 13) | fra **Si** e **B** **manca un e⁻** → si crea una **LACUNA** |
+
+> [!note] Arsenico, non fosforo
+> [[00 - Perchè (spiegazione intuitiva)]] §0.E spiega il drogaggio n con il **fosforo**.
+> Non è un errore: fosforo e arsenico sono **entrambi del gruppo 15** e fanno esattamente
+> la stessa cosa (5 elettroni di valenza, il quinto resta libero). Ma **a lezione è stato
+> usato l'arsenico**: all'orale conviene dire «As» e citare il fosforo come alternativa.
+
+**c) La struttura vera è asimmetrica: n⁺⁺ — p — n.** Il libro dice «le due zone esterne
+sono fortemente drogate»; la pagina è più precisa e disegna l'**emettitore n⁺⁺**, la
+**base p** e il **collettore n** *semplice*. Non sono intercambiabili:
+
+- l'**emettitore** è drogato molto più del collettore perché deve **iniettare** più
+  portatori possibile nella base;
+- il **collettore** è drogato poco perché così la **zona di svuotamento B-C** si allarga
+  quasi tutta **dentro il collettore** e regge la tensione inversa.
+
+Due annotazioni a margine della figura, entrambe da ripetere all'orale:
+
+- «**BASE molto stretta**» — è il motivo di $\beta$ alto (poca ricombinazione, §2);
+- «**zona di svuotamento tra base e collettore decisamente grande**» — è ciò che permette
+  alla giunzione B-C di stare in **polarizzazione inversa** senza rompersi, e di
+  «raccogliere» tutti gli elettroni che escono dalla base.
+
+**d) Diffusione e ricombinazione.** All'interfaccia n-p la pagina segna **corrente di
+diffusione** ed il **processo di ricombinazione**: gli elettroni della zona n e le lacune
+della zona p si muovono per diffusione, si incontrano e **si annullano a coppie**, lasciando
+gli ioni droganti scoperti — ed è da lì che nasce la zona di svuotamento.
+
+**e) Le polarizzazioni delle giunzioni.** Nella figura grande: **giunzione B-E polarizzata
+direttamente** ($V_{BE} = 0{,}7\ \text{V}$, la $V_S$ di soglia del diodo), **giunzione B-C
+polarizzata inversamente**. Gli elettroni escono dall'emettitore, attraversano la base
+sottile e vengono catturati dal campo del collettore; solo una piccola frazione si
+ricombina in base ed è la $I_B$. In controcorrente è disegnata la piccola $I_{\text{lacune}}$
+(i portatori minoritari), che è il termine trascurato nel modello di §2.
+
+**f) I tre schemi di polarizzazione disegnati in fondo alla pagina.**
+
+| # | Schema | Cosa fissa |
+|---|---|---|
+| 1 | due generatori, $V_{BE}$ e $V_{CB}$ | polarizza le **due giunzioni separatamente** — è lo schema «di principio», utile per capire, non per costruire |
+| 2 | due generatori, $V_{BE} = 0{,}7\ \text{V}$ e $V_{CE}$, emettitore a massa | è quello delle **caratteristiche d'uscita** ($I_C$ vs $V_{CE}$ a $I_B$ costante) di §3 |
+| 3 | **un solo generatore** $V_{CC}$, con $R_C$ sul collettore e $R_B$ in base da $V_{BB}$ | è la **polarizzazione con resistenza di base** di §4a — il primo circuito realizzabile davvero |
+
+Lo schema 3 è esattamente la FIGURA 13 di Mirandola p. 326 ripresa in §4a: **una sola
+alimentazione** al posto di due generatori è il passaggio che rende il circuito costruibile.
+
+---
+
+## 1-ter. L'osservazione sul condensatore (stessa pagina)
+
+La pagina si apre, *prima* del BJT, con un richiamo sul condensatore — e non è fuori tema:
+è il modello mentale con cui poi si legge la zona di svuotamento.
+
+Fra le armature c'è il **dielettrico**; il generatore $V_0$ carica le armature e fra esse si
+stabilisce un **campo elettrico $\vec{E}$**. L'annotazione a margine dice che le **cariche
+libere nel condensatore non possono restare**: se un elettrone finisce nel campo viene
+spinto verso l'armatura **+**, se ci finisce una carica positiva viene spinta verso la **−**.
+Il campo **spazza via** i portatori mobili dalla regione.
+
+> [!tip] Perché è sulla stessa pagina del BJT
+> La **zona di svuotamento** di una giunzione è la stessa cosa: una regione con un campo
+> elettrico e **senza portatori liberi**, perché il campo li ha spazzati via lasciando solo
+> gli **ioni droganti fissi**. Da qui due conseguenze che ritornano ovunque nel programma:
+> la giunzione **si comporta come un condensatore** (capacità di giunzione — è il motivo
+> per cui il BJT ha una **banda passante** finita, vedi [[Amplificatori a BJT]]), e la
+> giunzione B-C in inversa, con la sua zona di svuotamento larga, **non lascia passare
+> corrente** ma **accelera** gli elettroni che le arrivano dalla base.
 
 ---
 
