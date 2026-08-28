@@ -98,6 +98,17 @@ prove: [scritta, orale, pratica]
 > [!warning] Verifica zona attiva
 > $V_{CE} = 2{,}21$ V $> V_{CE,\text{sat}} = 0{,}2$ V ✅ il BJT è in zona attiva. Verificare SEMPRE. Se fosse $< 0{,}2$ V, il transistor è saturo e i calcoli non valgono.
 
+> [!danger] Qui l'approssimazione «partitore scarico» **non regge**: il risultato vero è $V_{CE} = 6{,}6$ V
+> Il metodo rapido usato sopra vale solo se la corrente nel partitore è $\gg I_B$. Verifichiamolo:
+> $$I_{\text{partitore}} = \frac{20}{150\text{ k}} = 133\ \mu\text{A} \qquad\text{contro}\qquad I_B \approx \frac{I_C}{\beta} \approx 59\ \mu\text{A}$$
+> Sono **confrontabili** (rapporto 2,3, non 10): la base "ruba" corrente al partitore e $V_B$ crolla sotto
+> i 6,67 V nominali. Col metodo esatto (Thévenin, $V_{TH} = 6{,}67$ V, $R_{TH} = R_1\parallel R_2 = 33{,}3$ k$\Omega$):
+> $$I_B = \frac{V_{TH}-V_{BE}}{R_{TH}+(\beta+1)R_E} = \frac{5{,}97}{33{,}3\text{k}+101\text{k}} = 44{,}4\ \mu\text{A}$$
+> $$I_C = \beta I_B = 4{,}44\text{ mA} \qquad I_E = 4{,}49\text{ mA} \qquad V_{CE} = 20 - 8{,}88 - 4{,}49 = \mathbf{6{,}63\text{ V}}$$
+> Differenza di **4,4 V** su $V_{CE}$: non un arrotondamento. Entrambi i metodi dicono "zona attiva", ma
+> se l'esercizio chiede il punto di lavoro, il numero giusto è 6,63 V. **Prima di usare la scorciatoia,
+> confronta sempre $I_{\text{partitore}}$ con $I_B$**: stessa trappola dell'Es. B4 di [[Esercizi - BJT]].
+
 ---
 
 ## E5 — MOSFET enhancement n (15 min, difficile)
@@ -130,8 +141,21 @@ prove: [scritta, orale, pratica]
 - $V_{GS} = 10 - 11 \cdot 0{,}3 = 6{,}7$ V. $V_{DS} = 15 - 11 \cdot 1{,}3 = 0{,}7$ V.
 - Saturazione: serve $V_{DS} > V_{GS} - V_T = 4{,}7$ V. $V_{DS} = 0{,}7 < 4{,}7$ → **triodo, NON saturazione!**
 
+**Si conclude risolvendo in zona di triodo** (perché l'$I_D = 11$ mA trovato sopra vale solo in
+saturazione, e quindi **non è la risposta**). In triodo:
+$$I_D = K\left[2(V_{GS}-V_T)V_{DS} - V_{DS}^2\right] \quad\text{con}\quad V_{GS} = 10 - 0{,}3 I_D,\;\; V_{DS} = 15 - 1{,}3 I_D$$
+Risolvendo il sistema si ottiene
+$$\boxed{I_D = 9{,}6\text{ mA} \qquad V_{GS} = 7{,}1\text{ V} \qquad V_{DS} = 2{,}5\text{ V}}$$
+coerente con l'ipotesi: $V_{DS} = 2{,}5 < V_{GS}-V_T = 5{,}1$ ✅. Nota che $I_D$ è **minore** degli 11 mA della
+parabolica: in triodo la corrente è sempre più bassa del valore di saturazione.
+
 > [!tip] Lezione didattica
-> Anche con $V_{DD}$ ragionevole, una rete di polarizzazione può portare il MOSFET fuori dalla saturazione. **Verifica SEMPRE** la condizione $V_{DS} > V_{GS} - V_T$ dopo aver trovato il punto di lavoro. Se non è soddisfatta, riduci $I_D$ (più $R_S$, meno $K$) oppure aumenta $V_{DD}$/$R_D$.
+> Anche con $V_{DD}$ ragionevole, una rete di polarizzazione può portare il MOSFET fuori dalla
+> saturazione. **Verifica SEMPRE** $V_{DS} > V_{GS} - V_T$ dopo aver trovato il punto di lavoro; se non è
+> soddisfatta, il risultato della parabolica va buttato e si rifà in triodo.
+> Per **riportarlo in saturazione**: aumenta $V_{DD}$, oppure **riduci $R_D$** (non aumentarla: nella
+> maglia $V_{DS} = V_{DD}-I_D(R_D+R_S)$ è proprio $R_D$ a mangiarsi la $V_{DS}$), oppure riduci $I_D$
+> alzando $R_S$.
 
 ---
 

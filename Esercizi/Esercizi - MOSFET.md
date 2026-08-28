@@ -1,7 +1,9 @@
----tags: [recupero, elettronica, esercizi, mosfet]
+---
+tags: [recupero, elettronica, esercizi, mosfet]
 fonte: "edutecnica.it/elettronica/mosfetx/ (esercizi svolti)"
 libro_mirandola: "VERIFICATO ✔ (2026-07-28) — coerente con Mirandola Vol.2, Cap. 7 §3.3 «I transistor MOSFET e le porte CMOS», pp. 366-368. MOSFET enhancement n: FIG. 45 struttura, FIG. 46 simboli, FIG. 47 caratteristiche depletion, FIG. 48 polarizzazione, FIG. 49-50 invertitore/CMOS. File trasversale: teoria già verificata nel [[00 - Audit e correzioni|Lotto 11]]. Conversion folio Cap. 7: pag. stampata = 2·PDF + 122."
-prove: [scritta]---
+prove: [scritta]
+---
 
 # Esercizi — MOSFET enhancement (n-channel)
 
@@ -66,8 +68,15 @@ Il punto Q cambia perché $R_D$ compare solo nella maglia di drain:
 - $V_{DS} = 18 - 2{,}33 \cdot (0{,}5 + 1{,}2) = 18 - 3{,}96 ≈ 14{,}0\text{ V}$.
 - Verifica: $V_{DS} = 14{,}0 > 2{,}42 = V_{GS}-V_{th}$ → **ancora in saturazione**.
 
-> [!tip] Riflessione didattica
-> Per *spostare* il transistor in triodo serve ridurre $R_D$ **molto** di più (es. $R_D = 0{,}1\text{ k}\Omega$). Riducendo $V_{DD}$ si ha lo stesso effetto: la $V_{DS}$ "cala" e il ginocchio si avvicina.
+> [!tip] Riflessione didattica — attenzione al verso
+> Per spostare il transistor in triodo bisogna **aumentare** $R_D$, non ridurla: nella maglia
+> d'uscita $V_{DS} = V_{DD} - I_D(R_D+R_S)$, quindi più $R_D$ cresce, più $V_{DS}$ scende verso il
+> ginocchio. Qui il confine è
+> $$V_{DS} = V_{GS}-V_{th} = 2{,}42\text{ V} \;\Rightarrow\; R_D + R_S = \frac{18-2{,}42}{2{,}33} = 6{,}69\text{ k}\Omega \;\Rightarrow\; R_D \gtrsim 5{,}5\text{ k}\Omega$$
+> Con $R_D = 0{,}5$ k$\Omega$ (questo esercizio) si va nella direzione **opposta**: $V_{DS}$ sale a 14 V,
+> ancora più dentro la saturazione. Riducendo invece $V_{DD}$ l'effetto è quello giusto: $V_{DS}$ cala.
+> ⚠️ Nota che finché si resta in saturazione $I_D$ **non cambia** al variare di $R_D$: la corrente è
+> fissata dalla sola maglia di gate.
 
 ---
 
@@ -96,9 +105,9 @@ $V_{GS} = V_G - I_D \cdot 0 = V_G = 4\text{ V}$ (con $R_S = 0$, la $V_{GS}$ è f
 
 $V_{GS} = 4\text{ V} > V_{th} = 3\text{ V}$ → **conduce**.
 
-$$I_D = K (V_{GS} - V_{th})^2 = K \cdot 1 = K \cdot 1 \text{ (A/V²)}$$
+$$I_D = K (V_{GS} - V_{th})^2 = K \cdot (4-3)^2 = K \cdot 1\ \text{V}^2$$
 
-Il valore di $K$ determina la corrente: se $K = 0{,}5\text{ mA/V}^2$ → $I_D = 0{,}5\text{ mA}$.
+Con overdrive di 1 V la corrente coincide numericamente con $K$: se $K = 0{,}5\text{ mA/V}^2$ → $I_D = 0{,}5\text{ mA}$.
 
 ---
 

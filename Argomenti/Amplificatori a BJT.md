@@ -308,7 +308,7 @@ Nel dominio della frequenza il CE ha un comportamento passa-banda:
 
 > [!check] La sequenza di misura su un amplificatore
 >
-> 1. **Controlla la polarizzazione a riposo** (segnale di ingresso = 0). Misura $V_{CE}$ con un multimetro. Deve essere ≈ $V_{CC}/2$.
+> 1. **Controlla la polarizzazione a riposo** (segnale di ingresso = 0). Misura $V_{CE}$ con un multimetro: deve valere $V_{CEQ} = (V_{CC}-V_{RE})/2 \approx 0{,}45\,V_{CC}$ se c'è la $R_E$ (criterio 7.9, §2.1), oppure $V_{CC}/2$ se $R_E$ non c'è. Con $V_{CC}=12$ V: 5,4 V, non 6 V.
 > 2. **Applica il segnale** a frequenza centrale (es. 1 kHz), ampiezza piccola (es. 10 mV$_{pp}$).
 > 3. **Misura $A_v$** dal rapporto $V_{out,pp} / V_{in,pp}$.
 > 4. **Verifica l'inversione di fase** (se è un CE): quando l'ingresso sale, l'uscita scende.
@@ -334,7 +334,11 @@ Nel dominio della frequenza il CE ha un comportamento passa-banda:
 > Si varia la frequenza del segnale di ingresso, tenendo fissa l'ampiezza. Si trova la frequenza a cui $V_{out,pp}$ cala a $A_v/\sqrt{2} \approx 0{,}707 A_v$. Quella è $f_H$ (per il taglio superiore).
 
 > [!question] Cos'è il "clipping"?
-> È il taglio della forma d'onda quando il transistor esce dalla zona attiva: in alto quando $I_C$ è limitato da $R_C$ (saturazione), in basso quando $V_{CE}$ è vicino a 0 (saturazione). In entrambi i casi la sinusoide viene "tronca".
+> È il taglio della forma d'onda quando il transistor esce dalla zona attiva. Sono **due meccanismi diversi**, non due volte la saturazione (vedi §5):
+> - **in basso**: il BJT va in **saturazione**, $V_{CE}$ non scende sotto $\approx 0{,}2$ V → si tronca la semionda negativa di $v_{out}$;
+> - **in alto**: il BJT va in **interdizione** (cutoff), $I_C \to 0$ e $V_{CE} \to V_{CC}$ → si tronca la semionda positiva.
+>
+> In entrambi i casi la sinusoide esce "tronca": è il segno che il punto di lavoro non è centrato o che il segnale d'ingresso è troppo grande.
 
 ---
 

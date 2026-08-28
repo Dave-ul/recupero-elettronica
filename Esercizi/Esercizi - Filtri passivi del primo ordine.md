@@ -355,7 +355,14 @@ $$f_H = \frac{R_{eq}}{2\pi L} = \frac{2166{,}7}{2\pi \cdot 10\cdot10^{-3}} = 34{
 
 - **Dati**: $C = 10$ nF, $R = 5\,\text{k}\Omega$, attenuazione $-6$ dB.
 - **Trovare**: $f$ corrispondente.
-- **Svolgimento**: per passa-alto RC $|A_v| = (f/f_L)/\sqrt{1 + (f/f_L)^2}$. Per $|A_v| = 10^{-6/20} \approx 0{,}501$: risolvendo si trova $f \approx 0{,}509 \cdot f_L$. $f_L = 1/(2\pi RC) = 1/(2\pi \cdot 5\text{k} \cdot 10\text{nF}) = 1/(2\pi \cdot 50\,\mu\text{s}) = 3183$ Hz. $f_{6dB} \approx 0{,}509 \cdot 3183 \approx 1620$ Hz.
+- **Svolgimento**: per passa-alto RC $|A_v| = (f/f_L)/\sqrt{1 + (f/f_L)^2}$. Posto $x = f/f_L$ e $|A_v| = 10^{-6/20} = 1/2$:
+$$\frac{x}{\sqrt{1+x^2}} = \frac12 \;\Longrightarrow\; x^2 = \frac{1+x^2}{4} \;\Longrightarrow\; x^2 = \frac13 \;\Longrightarrow\; x = \frac{1}{\sqrt3} = 0{,}577$$
+  $f_L = 1/(2\pi RC) = 1/(2\pi \cdot 5\text{k} \cdot 10\text{nF}) = 3183$ Hz, quindi $f_{6dB} = 0{,}577 \cdot 3183 = \mathbf{1838\ Hz}$.
+> [!danger] Correzione — il vecchio 1620 Hz era sbagliato
+> Qui era scritto $x \approx 0{,}509$, da cui 1620 Hz. Il valore giusto è $x = 1/\sqrt3 = 0{,}577$: risolvendo
+> $x/\sqrt{1+x^2} = 1/2$ si ottiene $x^2 = 1/3$, mai 0,509. Il numero corretto, **1838 Hz**, è lo stesso
+> che l'**Esercizio 8** di questa stessa nota ricava per altra via ($\omega = 20000/\sqrt3 = 11547$ rad/s):
+> due strade allo stesso risultato, ed era proprio la contraddizione fra i due punti a segnalare l'errore.
 
 ## Pattern di errore frequenti (Carli scritta)
 

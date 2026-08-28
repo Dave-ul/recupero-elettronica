@@ -80,7 +80,7 @@ V_DD
  │
  S ──┬── R_S ── GND
      │
-     (R_G dal source al gate, opzionale)
+     (R_G dal gate verso massa)
      │
      Gate
 ```
@@ -103,12 +103,18 @@ $$V_{DS} = V_{DD} - I_D (R_D + R_S)$$
 
 Verifica: $V_{DS} \ge V_{GS} - V_P$ per essere in saturazione (pinch-off).
 
-> [!danger] **Se $\Delta < 0$ nel 2° grado: la polarizzazione è FISICAMENTE IMPOSSIBILE**
-> Il 2° grado dell'autopolarizzazione ($I_D R_S + V_{GS} = 0$ + parabolica di Shockley) può dare discriminante **negativo**. Significa che non esiste alcun punto di lavoro in saturazione: il JFET, con quei valori di $R_S$, $I_{DSS}$, $V_P$, o resta bloccato in zona triodo (sotto pinch-off) o oscilla tra cutoff e massima corrente. Soluzione pratica:
-> 1. **Riduci $R_S$** finché $\Delta \geq 0$ (tipicamente serve $R_S \le |V_P|/(2 I_{DSS})$).
-> 2. **Cambia JFET** con $V_P$ più negativo (JFET "meno sensibile").
-> 3. Usa **degenerazione di source** (vedi §13) — ma attenzione: questo non risolve il problema del $\Delta$, lo mitiga solo tramite partitore.
-> Alla Carli scritta, se vedi $\Delta < 0$, scrivi: "con questi valori il JFET non può lavorare in saturazione autonoma" + motivazione + alternativa proposta. È un **7/8 garantito** in molte griglie di correzione.
+> [!danger] Il discriminante è **sempre positivo**: se ti viene $\Delta < 0$, hai sbagliato i conti
+> Sostituendo $V_{GS} = -I_D R_S$ nella Shockley e riordinando si ottiene sempre
+> $$\Delta = 1 + \frac{4 I_{DSS} R_S}{|V_P|} > 0$$
+> quindi con l'autopolarizzazione **un punto di lavoro esiste per qualunque $R_S > 0$**: uno dei due
+> termini è un $+1$ che non si può cancellare. Se il tuo $\Delta$ esce negativo, l'errore è nei
+> segni ($V_P$ e $V_{GS}$ sono entrambi negativi) o nell'espansione del quadrato — **rifai i conti,
+> non scrivere che la polarizzazione è impossibile**.
+>
+> Quello che va davvero verificato dopo aver trovato $I_D$ è **un'altra cosa**:
+> 1. la radice scelta è quella **più piccola** (l'altra dà $V_{GS} < V_P$, oltre il cutoff, oppure $I_D > I_{DSS}$);
+> 2. $V_{DS} \ge V_{GS} - V_P$, cioè si è davvero in saturazione e non in zona triodo;
+> 3. il punto non è troppo vicino al cutoff (vedi §5.1): lì la polarizzazione esiste ma è **instabile**.
 
 ---
 
@@ -211,7 +217,7 @@ Con $R_S = 1\text{ k}\Omega$ e gli stessi altri parametri:
 → Esiste ancora soluzione, ma il JFET è molto "schiacciato" vicino alla zona triodo. In laboratorio si misura una $V_{DS}$ vicina al ginocchio della caratteristica.
 
 > [!warning] Quando la polarizzazione diventa "borderline"
-> Il discriminante dell'equazione di 2° grado è **sempre positivo** (per la struttura stessa dell'equazione di autopolarizzazione). Tuttavia, per valori di $R_S$ molto grandi (es. $R_S \cdot I_{DSS} \approx |V_P|$), la soluzione valida ha $V_{GS}$ vicino a $V_P$: il JFET resta in pinch-off ma **molto vicino al cutoff**. In questa zona, piccole variazioni di $V_{DD}$ o di $I_{DSS}$ (per temperatura o per tolleranza del componente) provocano grandi salti di $I_D$: la polarizzazione è **instabile**. Per evitare il problema, in laboratorio si aggiunge un partitore al source ($R_1, R_2$ in serie a $R_S$), così $V_{GS}$ è fissata direttamente dal partitore e non più solo dalla caduta su $R_S$.
+> Il discriminante dell'equazione di 2° grado è **sempre positivo** (per la struttura stessa dell'equazione di autopolarizzazione). Tuttavia, per valori di $R_S$ molto grandi (es. $R_S \cdot I_{DSS} \approx |V_P|$), la soluzione valida ha $V_{GS}$ vicino a $V_P$: il JFET resta in pinch-off ma **molto vicino al cutoff**. In questa zona, piccole variazioni di $V_{DD}$ o di $I_{DSS}$ (per temperatura o per tolleranza del componente) provocano grandi salti di $I_D$: la polarizzazione è **instabile**. Per evitare il problema si aggiunge un **partitore di gate** ($R_1, R_2$ da $V_{DD}$ a massa, §4-bis): allora $V_{GS} = V_G - I_D R_S$ e la $V_{GS}$ non dipende più dalla sola caduta su $R_S$, così si può usare una $R_S$ grande (stabilizzante) senza spingere il punto di lavoro verso il cutoff.
 
 ---
 
@@ -235,7 +241,7 @@ Con $R_S = 1\text{ k}\Omega$ e gli stessi altri parametri:
 > $I_D = I_{DSS} \cdot (1 - V_{GS}/V_P)^2$ → parabolica (analoga a quella del MOSFET enhancement, ma con parametri diversi: $V_P<0$ e la curva ha il picco a $V_{GS}=0$, non a $V_{GS}>V_{th}$).
 
 > [!question] Come si polarizza un JFET n in pratica?
-> Quasi sempre con **autopolarizzazione**: $R_S$ tra source e massa, $R_G$ tra source e gate (per dare $V_G = V_S$... o meglio $V_G=0$ con $R_G$ a massa), $R_D$ tra $V_{DD}$ e drain. La $V_{GS}$ negativa nasce "automaticamente" dalla caduta su $R_S$.
+> Quasi sempre con **autopolarizzazione**: $R_S$ tra source e massa, $R_G$ tra **gate e massa** (non percorsa da corrente, quindi $V_G = 0$), $R_D$ tra $V_{DD}$ e drain. La $V_{GS}$ negativa nasce "automaticamente" dalla caduta su $R_S$: $V_{GS} = V_G - V_S = -I_D R_S$.
 
 > [!question] Quando si preferisce il JFET al BJT in uno stadio di ingresso?
 > Quando serve un'**alta impedenza di ingresso**: il JFET ha $Z_{in} \approx 10^{10}\text{ }\Omega$ (grazie alla giunzione gate-canale inversa), il BJT ha $Z_{in} \approx \beta \cdot r_\pi \approx \text{k}\Omega\text{―M}\Omega$. Esempio tipico: pre-amp per microfoni a condensatore, pickups piezo, strumentazione.
@@ -479,7 +485,7 @@ Combinazione dei due: CS con $R_S$ **non bypassato** da $C_S$.
 $$A_v = -\frac{g_m R_D}{1 + g_m R_S}$$
 
 - **Stabilità**: il guadagno dipende solo da $R_D/R_S$ (rapporto di resistori), non da $g_m$ del transistor. Poco sensibile a variazioni di $V_P$, $I_{DSS}$, temperatura.
-- **Tradeoff**: $A_v$ è **più basso** rispetto al CS puro. Si perde linearità (distorsione minore), si guadagna stabilità.
+- **Tradeoff**: $A_v$ è **più basso** rispetto al CS puro. In cambio si guadagna **stabilità e linearità** (la controreazione su $R_S$ riduce la distorsione).
 
 > [!tip] Per l'orale Carli
 > "Perché in certi schemi c'è $R_S$ non bypassato accanto al BJT o al JFET?" → "Per stabilizzare il punto di lavoro e linearizzare il guadagno, al prezzo di $|A_v|$ più basso."
@@ -641,7 +647,10 @@ Quando il JFET si scalda:
 I due effetti si compensano esattamente in un **punto di lavoro specifico**:
 - Se $V_{PZTC} \approx V_P + 0{,}7\text{ V}$ (per JFET n) → in quel punto, $I_D$ è **stabile in temperatura**.
 
-In pratica: se il JFET è polarizzato a $V_{GS} \approx V_P/2$ (la "regola del quarto di corrente" vista sopra), la stabilità termica è già accettabile. Polarizzare a $V_{GS}=0$ (cioè $I_D = I_{DSS}$) → JFET molto sensibile alla temperatura.
+In pratica: il coefficiente termico si annulla **solo** a $V_{GS} \approx V_P + 0{,}7$ V, dove però $I_D$ è
+piccolissima. ⚠️ La polarizzazione a $V_{GS} \approx V_P/2$ ("regola del quarto di corrente") **non**
+coincide con lo ZTC — si sceglie per avere $g_m$ decente e margine dal cutoff, non per la stabilità
+termica; è solo *meno* sensibile del caso $V_{GS}=0$ (cioè $I_D = I_{DSS}$), che è il peggiore.
 
 > [!tip] Per il laboratorio Protti
 > Se vedi che il circuito si "scalda" e la polarizzazione slitta, controlla se sei vicino al punto ZTC.

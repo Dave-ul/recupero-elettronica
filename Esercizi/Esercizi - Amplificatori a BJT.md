@@ -100,15 +100,21 @@ Calcola $R_{in}$ (resistenza di ingresso vista tra base e massa).
 
 **Soluzione:**
 
-> [!note] Approssimazione con $C_E$ in corto
-> Grazie al bypass di $R_E$, l'impedenza di ingresso è dominata dalla $r_\pi$:
-> $$R_{in} \approx r_\pi = (\beta + 1) \cdot r_e = 101 \cdot 25 = 2525\ \Omega \approx 2{,}5\ \text{k}\Omega$$
+> [!note] Con $C_E$ in corto
+> Guardando **dentro la base** l'impedenza è dominata da $r_\pi$:
+> $$r_\pi = (\beta + 1) \cdot r_e = 101 \cdot 25 = 2525\ \Omega \approx 2{,}5\ \text{k}\Omega$$
+> ma la $R_{in}$ **vista tra base e massa** include anche il partitore, che è in parallelo:
+> $$R_B = R_1 \parallel R_2 = 100 \parallel 22 = 18{,}0\ \text{k}\Omega$$
+> $$\boxed{R_{in} = R_B \parallel r_\pi = 18{,}0 \parallel 2{,}53 = 2{,}22\ \text{k}\Omega}$$
+> È la formula **7.13** del libro ($R_i = R_B \parallel h_{ie}$). Qui $R_B$ toglie solo il 12%, ma se il
+> partitore fosse "duro" (resistenze piccole) dominerebbe lui: **non si salta mai**.
 
 > [!tip] Senza $C_E$
-> Se non ci fosse il bypass, il contributo di $R_E$ salirebbe a:
-> $$R_{in} \approx r_\pi + (\beta+1) \cdot R_E = 2525 + 101 \cdot 470 \approx 50\ \text{k}\Omega$$
+> Se non ci fosse il bypass, guardando nella base si avrebbe
+> $$r_\pi + (\beta+1) R_E = 2525 + 101 \cdot 470 \approx 50\ \text{k}\Omega$$
+> e quindi $R_{in} = 18{,}0 \parallel 50 = 13{,}2\ \text{k}\Omega$.
 >
-> Il bypass abbatte l'impedenza di ingresso di un fattore ~20: perché? Perché senza bypass, il segnale su $R_E$ "ruba" tensione $v_{in}$ e quindi serve più $V_{in}$ per ottenere la stessa $V_{BE}$.
+> Il bypass abbatte l'impedenza di ingresso da 13,2 k$\Omega$ a 2,2 k$\Omega$ (fattore ~6): perché senza bypass il segnale su $R_E$ "ruba" tensione a $v_{in}$, e quindi serve più $V_{in}$ per ottenere la stessa $V_{BE}$. È il prezzo del guadagno più alto.
 
 ---
 
@@ -191,7 +197,10 @@ Calcola $R_{in}$ (resistenza di ingresso vista tra base e massa).
 ### Es. A2 — CE con $V_{BB}$ e $V_{CC}$
 
 - **Dati**: $V_{CC}=20\text{ V}$, $V_{BB}=2\text{ V}$, $R_B=13\,\text{k}\Omega$, $R_C=1\,\text{k}\Omega$, $\beta=100$, $V_{BE}=0{,}7\text{ V}$, $h_{ie}=1{,}5\,\text{k}\Omega$, $h_{fe}=130$.
-- **Soluzione**: $I_B = (2-0{,}7)/13\,\text{k} = 0{,}1\,\text{mA}$; $I_C = 13\,\text{mA}$; **$V_{CE}=10\text{ V}$**; **$A_v = -8{,}96$**.
+- **Soluzione**: $I_B = (2-0{,}7)/13\,\text{k} = 0{,}1\,\text{mA}$; $I_C = \beta I_B = 100 \cdot 0{,}1 = \mathbf{10\ mA}$; **$V_{CE} = 20 - 10 \cdot 1 = 10\text{ V}$** ✔.
+- ⚠️ **Due avvertenze su questo esercizio:**
+  1. I «13 mA» che comparivano qui erano $h_{fe} I_B$ invece di $\beta I_B$: in DC si usa $\beta$ ($=h_{FE}$), $h_{fe}$ è il guadagno **ai piccoli segnali**. Con 13 mA la $V_{CE}$ sarebbe 7 V, non i 10 V dichiarati subito dopo — bastava questo controllo per accorgersene.
+  2. L'$A_v = -8{,}96$ **non è ricavabile dai dati elencati**: con essi $G_v = -h_{fe}R_C/h_{ie} = -130 \cdot 1/1{,}5 = -86{,}7$. Il $-8{,}96$ torna solo se c'è una $R_E \approx 100\ \Omega$ **non bypassata** ($G_v = -h_{fe}R_C/[h_{ie}+(1+h_{fe})R_E]$), che nell'elenco dei dati manca. Se un esercizio d'esame dà un $A_v$ dieci volte più piccolo dell'atteso, cerca la $R_E$ senza condensatore.
 
 ### Es. A3 — Collettore comune (emitter follower)
 

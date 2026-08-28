@@ -193,7 +193,10 @@ $V_t$, $R_1+R_2$):
 
 ## 6. Quando il MOSFET NON va in saturazione anche con $V_{GS} > V_{th}$?
 
-Più precisamente: anche con $V_{GS} > V_{th}$, se la $V_{DS}$ **cade troppo** (es. $R_D$ piccolo), il transistor può essere **in triodo**. In tal caso:
+Più precisamente: anche con $V_{GS} > V_{th}$, se la $V_{DS}$ **cade troppo** — cioè se $R_D$ è
+**grande** (o $V_{DD}$ bassa) — il transistor finisce **in triodo**. ⚠️ Il verso è questo: nella maglia
+d'uscita $V_{DS} = V_{DD} - I_D(R_D+R_S)$, quindi è la $R_D$ *grande* a mangiarsi la $V_{DS}$; una $R_D$
+piccola spinge semmai più a fondo in saturazione. In tal caso:
 
 - La corrente $I_D$ è determinata dalla legge di Ohm su $R_{DS}$, NON dalla parabola.
 - In laboratorio questo si vede bene: riducendo $V_{DD}$ la $V_{DS}$ cala, e il punto sulla curva si avvicina al ginocchio → la corrente comincia a calare.

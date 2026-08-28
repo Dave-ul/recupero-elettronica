@@ -62,7 +62,7 @@ nota_unione: "2026-08-27 — «Cheat Sheet A4 visuale» è stato fuso qui dentro
 |---|---|---|---|
 | **$V_F$ diretta** | ≈ 0,7 V (Si) | ≈ 0,7 V | ≈ 0,2–0,4 V |
 | **Funzione tipica** | raddrizzatore | regolatore ($V_Z$ fisso) | switching rapido |
-| **Breakdown** | DISTRUTTIVO ⚠️ | **modalità di lavoro** | bassa backward leakage |
+| **Breakdown** | DISTRUTTIVO ⚠️ | **modalità di lavoro** | $V_{BR}$ bassa (20–100 V), leakage inverso **alto** ⚠️ |
 | **Switching** | medio (~μs) | medio (~μs) | veloce (ns) |
 | **Uso** | Graetz, OR/AND logica | stabilizzatore (es. 5,6 V) | free-wheeling, RF, SMPS |
 
@@ -72,10 +72,10 @@ nota_unione: "2026-08-27 — «Cheat Sheet A4 visuale» è stato fuso qui dentro
 |---|---|---|
 | **RC PB** | $1/(2\pi R C)$ | C verso massa |
 | **RC PA** | $1/(2\pi R C)$ | C in serie |
-| **RL PB** | $R/(2\pi L)$ | L verso massa |
-| **RL PA** | $R/(2\pi L)$ | L in serie |
+| **RL PB** | $R/(2\pi L)$ | L in serie (R a massa) |
+| **RL PA** | $R/(2\pi L)$ | L verso massa (R in serie) |
 
-**Regola**: reattivo in **serie** blocca le basse, verso **massa** blocca le alte. **−3 dB** = metà potenza.
+**Regola**: guarda cosa fa il reattivo **alle alte frequenze**. $C$: alle alte è un corto → $C$ a massa = PB, $C$ in serie = PA. $L$: alle alte è un aperto → $L$ in serie = PB, $L$ a massa = PA. **−3 dB** = metà potenza.
 
 ## A5. AC vs DC
 
@@ -92,9 +92,9 @@ nota_unione: "2026-08-27 — «Cheat Sheet A4 visuale» è stato fuso qui dentro
 
 ```
 AC 230V 50Hz → trafo (abbassa + isola) → AC es.12V
-→ ponte Graetz (4 diodi) → DC pulsante ~17V picco
+→ ponte Graetz (4 diodi) → DC pulsante ~15,6V picco (12·√2 = 17V, meno 2·0,7V dei diodi)
 → C filtro (livella, ripple ≈ I_carico/(f·C), f=100Hz dopo ponte)
-→ regolatore 78xx (dropout 2V, V_in ≥ V_out + 2V) → DC stabile
+→ regolatore 78xx (dropout 2,5V, V_in ≥ V_out + 2,5V) → DC stabile
 ```
 
 ## A7. Mnemonico 30s (visione d'insieme)
@@ -103,7 +103,7 @@ AC 230V 50Hz → trafo (abbassa + isola) → AC es.12V
 - **Impedenze**: R pura, L anticipa +90°, C ritarda −90°
 - **Potenze**: $P$ consumata, $Q$ rimbalzo, $S=\sqrt{P^2+Q^2}$ → **P+Q≠S**
 - **Risonanza**: $\omega_0^2=1/LC$ → $X_L=X_C$ → tutto resistivo
-- **Filtri**: ω alta → C verso massa; ω bassa → C in serie
+- **Filtri**: $C$ a massa = PB, $C$ in serie = PA; $L$ in serie = PB, $L$ a massa = PA
 - **Transistor**: BJT $I_C=\beta I_B$ (sat=ON); MOSFET/JFET $I_D=K(…)^2$ (sat=amplifica)
 - **Amplificatori**: CE amplif+inverte; CC buffer $A_v\approx 1$; CB alte freq
 - **Alimentatore**: AC → trafo → ponte → C filtro → regolatore → DC
@@ -123,7 +123,23 @@ AC 230V 50Hz → trafo (abbassa + isola) → AC es.12V
 
 $$\omega = 2\pi f \qquad X_L = \omega L \qquad X_C = \dfrac{1}{\omega C}$$
 
-> **Errata corrige libro**: $\tau = L/R$ per RL, NON $R/L$. ⚠️
+### 1.1 Costante di tempo $\tau$ (transitori)
+
+$$\boxed{\tau_{RC} = RC \qquad \tau_{RL} = L/R} \qquad [\tau] = \text{s}$$
+
+$$v(t) = V_\infty + (V_0 - V_\infty)\,e^{-t/\tau}$$
+
+| $t$ | % del transitorio completata |
+|---|---|
+| $1\tau$ | 63% (scarica: sceso al 37%) |
+| $2\tau$ | 86% |
+| $3\tau$ | 95% |
+| $5\tau$ | 99% → **a regime** |
+
+Legame coi filtri (§4): $f_t = \dfrac{1}{2\pi\tau}$ → RC: $1/(2\pi RC)$; RL: $R/(2\pi L)$.
+$\tau$ grande = circuito lento = taglio basso.
+
+> **Errata corrige libro**: $\tau = L/R$ per RL, NON $R/L$. ⚠️ (controllo dimensionale: $[L/R] = \text{H}/\Omega = \text{s}$)
 
 ---
 
@@ -343,9 +359,13 @@ $$A_v = +\frac{h_{fe} \cdot R_C \parallel R_L}{h_{ie}}$$
 
 ### 9.4 Risposta in frequenza (passa-banda)
 
-$$A_v(s) = \frac{A_{v,\text{mid}}}{\left(1 + \dfrac{s}{2\pi f_L}\right)\left(1 + \dfrac{s}{2\pi f_H}\right)}$$
+$$A_v(s) = A_{v,\text{mid}} \cdot \underbrace{\dfrac{s/(2\pi f_L)}{1 + s/(2\pi f_L)}}_{\text{passa-ALTO} \to f_L} \cdot \underbrace{\dfrac{1}{1 + s/(2\pi f_H)}}_{\text{passa-basso} \to f_H}$$
 
-$f_L$: taglio inferiore (da $C$ di accoppiamento). $f_H$: taglio superiore (parassiti).
+In modulo: $|A_v(f)| = \dfrac{A_{v,\text{mid}}}{\sqrt{1+(f_L/f)^2}\ \sqrt{1+(f/f_H)^2}}$
+
+$f_L$: taglio inferiore (da $C$ di accoppiamento). $f_H$: taglio superiore (parassiti). BW $= f_H - f_L$.
+
+> ⚠️ Il termine di $f_L$ è **passa-alto** ($\to 0$ in DC): se lo scrivi come $1/(1+s/2\pi f_L)$ il guadagno resterebbe pieno in continua, e i $C$ di accoppiamento non taglierebbero nulla.
 
 ---
 
@@ -363,7 +383,9 @@ $f_L$: taglio inferiore (da $C$ di accoppiamento). $f_H$: taglio superiore (para
 $$V_o = V_Z + I_Z \cdot r_D \qquad P_Z = V_Z \cdot I_Z < P_{Z,\max}$$
 
 **Range di $R_S$ per stabilizzazione**:
-$$R_{S,\min} = \frac{V_{in,\max} - V_Z}{I_{Z,\max}} \qquad R_{S,\max} = \frac{V_{in,\min} - V_Z}{I_{Z,\min} + I_{L,\max}}$$
+$$R_{S,\min} = \frac{V_{in,\max} - V_Z}{I_{Z,\max} + I_{L,\min}} \qquad R_{S,\max} = \frac{V_{in,\min} - V_Z}{I_{Z,\min} + I_{L,\max}}$$
+
+> Caso peggiore di $R_{S,\min}$: $V_{in}$ massima **e carico staccato** ($I_{L,\min}=0$) → tutta la corrente va nello Zener.
 
 ---
 
@@ -380,7 +402,9 @@ $$V_{r,pp} = \frac{I_L}{f_r \cdot C} \qquad I_L = V_L/R_L \qquad C = \frac{I_L}{
 
 **Fattore di ripple** (Mirandola form. **8.1**, Cap. 8 pp. 388-389) — è un valore **efficace**, non picco-picco:
 
-$$\boxed{r = \frac{V_{r,\text{eff}}}{V_{Lm}} = \frac{1}{2\sqrt{3}\, f R_L C}} \qquad\Rightarrow\qquad C = \frac{1}{2\sqrt{3}\, f R_L\, r}$$
+$$\boxed{r = \frac{V_{r,\text{eff}}}{V_{Lm}} = \frac{1}{2\sqrt{3}\, f_r R_L C}} \qquad\Rightarrow\qquad C = \frac{1}{2\sqrt{3}\, f_r R_L\, r}$$
+
+> ⚠️ La $f$ qui è $f_r$ (**ondulazione**: 100 Hz dopo il ponte), non i 50 Hz di rete. Con la $f$ di rete la costante diventa $4\sqrt{3}$.
 
 > [!danger] Le due formule rispondono a domande diverse — non scambiarle
 > Se il testo dà i **volt** di ondulazione ($V_{r,pp} = 2$ V) usi la **11.2**. Se dà una **percentuale** («ripple del 5%») quella percentuale è $r$, cioè un **rapporto fra valori efficaci**: usi la 8.1. Interpretare il 5% come picco-picco porta a una $C$ sbagliata di un fattore ~3,5 — è l'errore trovato e corretto nell'Es. A1 di [[Esercizi - Alimentatori]].
@@ -393,7 +417,7 @@ $$P_{BJT} = (V_{in} - V_o) I_L$$
 
 ### 11.4 Regolatori integrati 78xx / 79xx
 
-- $V_{dropout} \approx 2$ V → serve $V_{in} \ge V_{out} + 2$ V
+- $V_{dropout} = 2{,}5$ V (TABELLA 1 Mirandola) → serve $V_{in} \ge V_{out} + 2{,}5$ V **nel minimo del ripple**
 - 78xx = positivo, 79xx = negativo; xx = tensione (es. 7812 = +12 V)
 - $I_{out,\max}$: standard 1 A, suffix L=100 mA, M=500 mA
 - $C_{in} \approx 0{,}33\,\mu$F, $C_{out} \approx 0{,}1\,\mu$F (per stabilità)

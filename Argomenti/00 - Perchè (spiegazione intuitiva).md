@@ -582,9 +582,9 @@ libro_mirandola: "VERIFICATO ✔ (2026-07-25) per derivazione — file trasversa
 >
 > **Come funziona il regolatore serie a BJT?** Usa un transistor in zona attiva che "assorbe" la differenza tra tensione di ingresso e tensione di uscita. Più corrente di carico → più caduta sul BJT → $V_{out}$ stabile.
 >
-> **Cos'è il dropout?** La tensione **minima** differenza tra $V_{in}$ e $V_{out}$ perché il regolatore funzioni. Per i 78xx è ~2 V: serve $V_{in} \ge V_{out} + 2$ V.
+> **Cos'è il dropout?** La tensione **minima** differenza tra $V_{in}$ e $V_{out}$ perché il regolatore funzioni. Per la famiglia 78xx il libro dà $V_D = 2{,}5$ V (TABELLA 1, p. 408): serve $V_{in} \ge V_{out} + 2{,}5$ V, e va verificato **nel punto più basso del ripple**, non sul valor medio.
 >
-> **Perché il dropout serve, e perché è proprio 2 V per i 78xx e non 0,5 V?** Considera lo stabilizzatore come uno "stiratore a spruzzo" che deve tenere i piani di tessuto alla tensione di uscita che ti serve (es. 5 V). Per mantenere il tessuto sempre teso, tu devi dargli in ingresso un avanzo di tensione pari a $V_{out} + 2\,V$ (7 V nel caso 7805), così che lo stabilizzatore possa **finemente modulare** la differenza: "tira su" la tensione di uscita se il carico assorbe di più, "allenta" se sale. Quel "gioco di 2 V" (dropout) gli serve per restare in **zona attiva** del transistor di passaggio interno, dove può reagire con prontezza a variazioni di carico o di tensione di rete. Se l'ingresso scendesse sotto $V_{out} + 2\,V$, lo stabilizzatore "uscirebbe" dalla zona attiva → $V_{out}$ crolla a seguire l'ingresso → addio regolazione. Quindi i 2 V di dropout sono la "riserva operativa" che il regolatore si tiene per poter fare il suo lavoro di stabilizzazione in tutte le condizioni reali (rete ±10%, carico variabile).
+> **Perché il dropout serve, e perché è di qualche volt per i 78xx e non 0,5 V?** Considera lo stabilizzatore come uno "stiratore a spruzzo" che deve tenere i piani di tessuto alla tensione di uscita che ti serve (es. 5 V). Per mantenere il tessuto sempre teso, tu devi dargli in ingresso un avanzo di tensione pari a $V_{out} + 2{,}5\,V$ (7,5 V nel caso 7805), così che lo stabilizzatore possa **finemente modulare** la differenza: "tira su" la tensione di uscita se il carico assorbe di più, "allenta" se sale. Quel "gioco di 2 V" (dropout) gli serve per restare in **zona attiva** del transistor di passaggio interno, dove può reagire con prontezza a variazioni di carico o di tensione di rete. Se l'ingresso scendesse sotto $V_{out} + 2{,}5\,V$, lo stabilizzatore "uscirebbe" dalla zona attiva → $V_{out}$ crolla a seguire l'ingresso → addio regolazione. Quindi i 2,5 V di dropout sono la "riserva operativa" che il regolatore si tiene per poter fare il suo lavoro di stabilizzazione in tutte le condizioni reali (rete ±10%, carico variabile).
 >
 > **Perché i 78xx sono così comuni?** Perché sono **semplici da usare**, robusti, economici. Tre pin: $V_{in}$, GND, $V_{out}$. Aggiungi due condensatori di filtro e funzionano.
 >
@@ -644,7 +644,7 @@ libro_mirandola: "VERIFICATO ✔ (2026-07-25) per derivazione — file trasversa
 | Impedenze | $R$ non ha fase; $L$ anticipa di $+90°$; $C$ ritarda di $-90°$. |
 | Metodo simbolico | Tutti i teoremi (Kirchhoff, Thévenin, Millman) valgono identici, solo con numeri complessi. |
 | Potenze | $P$ = consumata; $Q$ = scambiata; $S = \sqrt{P^2 + Q^2}$; $P+Q \neq S$. |
-| Risonanza | $X_L + X_C = 0$: la tensione diventa parallela alla corrente. |
+| Risonanza | $X_L + X_C = 0$: il bipolo è puramente resistivo, tensione e corrente **in fase**. |
 | Filtri | RC: $\tau = RC$, $f_t = 1/(2\pi RC)$. RL: $\tau = L/R$, $f_t = R/(2\pi L)$. |
 | Diodi | Conduce quando $V > 0{,}7$ V (silicio). Zener conduce in inversa a $V_Z$. |
 | BJT | $I_C = \beta I_B$. Saturazione = ON. Interdizione = OFF. Attiva = amplifica. |
@@ -652,7 +652,7 @@ libro_mirandola: "VERIFICATO ✔ (2026-07-25) per derivazione — file trasversa
 | JFET | $I_D = I_{DSS} (1 - V_{GS}/V_P)^2$. $V_P < 0$ per JFET n. Gate in inversa. |
 | Amplificatori | CE: inversione di fase. CC: $A_v \approx 1$, buffer. CB: alte frequenze. |
 | Alimentatori | AC → trasformatore → ponte → filtro C → regolatore → DC stabile. |
-| Oscilloscopio | Misuri T e V sullo schermo, poi derivi $f = 1/T$, $\cos\varphi = \Delta\varphi/\Delta t$. |
+| Oscilloscopio | Misuri $T$ e $V$ sullo schermo, poi derivi $f = 1/T$ e lo sfasamento $\varphi = 360°\cdot\Delta t/T$. |
 
 > [!tip] Quando hai dubbi
 > 1. **Cos'è?**: definizione di 1 frase dalla prima riga.

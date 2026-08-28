@@ -939,3 +939,130 @@ puntavano a `/home/davide`, path di un'altra macchina.
 * **Allegati**: zero orfani, tutte le 70 immagini referenziate.
 * **Git**: `size-pack` 7,95 MiB prima e dopo — `Fonti/` non è entrata.
 * **Residui**: nessuna occorrenza di `90'` né di «18 giorni» in tutto il vault.
+
+---
+
+## Lotto 22 — Audit di **correttezza fisica** su Argomenti, Esercizi, Prove e Strumenti ✔ (2026-08-28)
+
+> [!important] Asse nuovo: non la fedeltà alla fonte, ma la correttezza in sé
+> I Lotti 1-21 hanno verificato che il vault dicesse quello che dice il libro (pagine, didascalie,
+> citazioni). Questo lotto verifica una cosa diversa e mai controllata prima: che **le formule
+> tornino** e che **i numeri escano**. Metodo, applicato a ogni file: (1) controllo dimensionale,
+> (2) riderivazione dai principi, (3) ricalcolo numerico da zero, (4) coerenza incrociata fra note.
+> Copertura: `Argomenti/` (13), `Esercizi/` (13), `Prove/` (6), `Strumenti/` (2). Fuori: Calendario,
+> Indice, questo registro, Allegati.
+
+**Innesco**: la revisione del [[Formulario rapido]] ha trovato **7 errori** nel file che va portato
+al compito. Poiché il Formulario è *derivato* dai file di argomento, gli errori dovevano stare a
+monte — ed era così.
+
+### Correzioni applicate
+
+**[[Formulario rapido]]** (7)
+1. §A4: righe **RL invertite** — il passa-basso RL ha $L$ **in serie** (non verso massa), il passa-alto
+   ha $L$ verso massa. La «regola» sotto la tabella valeva solo per la $C$: riscritta sul criterio
+   «cosa fa il reattivo alle alte frequenze».
+2. §9.4: la risposta in frequenza del CE era $A_{mid}/[(1+s/\omega_L)(1+s/\omega_H)]$ — con il polo
+   inferiore scritto come **passa-basso**, il guadagno restava pieno in continua. Il termine di $f_L$
+   è passa-alto: $\frac{s/\omega_L}{1+s/\omega_L}$.
+3. §11.2: il fattore di ripple $r = 1/(2\sqrt3\,f R_L C)$ non diceva **quale** $f$: è quella di
+   ondulazione ($f_r$). Con la $f$ di rete la costante è $4\sqrt3$ — fattore 2 sulla $C$.
+4. §A3b: lo Schottky non ha «bassa backward leakage»: ha $V_{BR}$ bassa e leakage inverso **alto**.
+5. §A6: il picco dopo il ponte era 17 V, contro il $V_{in,p}-2V_D$ della §11.1 dello stesso file.
+6. §10.2: $R_{S,\min}$ dello Zener senza $I_{L,\min}$ al denominatore.
+7. §A7 e §11.4: mnemonico filtri riallineato; dropout portato a 2,5 V (TABELLA 1).
+   Aggiunta §1.1 su $\tau$ (richiesta esplicita: formule, esponenziale, tabella 63/86/95/99 %).
+
+**[[JFET]] + [[Esercizi - JFET]]** (10) — il gruppo più grave
+8. Il callout «se $\Delta < 0$ la polarizzazione è FISICAMENTE IMPOSSIBILE» è **falso**:
+   nell'autopolarizzazione $\Delta = 1 + 4I_{DSS}R_S/|V_P| > 0$ **sempre**. Suggeriva anche di
+   scrivere all'esame «il JFET non può lavorare in saturazione»: avrebbe fatto perdere punti. Due
+   altri punti del vault (§5.1 e i «pattern di errore» degli esercizi) dicevano già il contrario:
+   contraddizione interna.
+9. Il «criterio» $R_S \le |V_P|/(2I_{DSS})$ non è una condizione di esistenza: quella quantità è la
+   $r_{DS(on)}$ in zona triodo. Rimosso da entrambi i file.
+10. **Es. 7 (source follower) interamente sbagliato per un segno**: scriveva $(1+0{,}75I_D)^2$ invece
+    di $(1-0{,}75I_D)^2$, otteneva $\Delta = -14$, dichiarava la polarizzazione impossibile e
+    inventava due «cambi di $R_S$», uno dei quali con l'algebra rotta ($0{,}05I_D^2 + 0 = 0$).
+    Riscritto: $I_D = 0{,}80$ mA, $V_{GS} = -1{,}2$ V, $V_{DS} = 10{,}8$ V, $g_m = 2$ mS, $A_v = 0{,}75$,
+    $R_{out} = 375\ \Omega$.
+11. $R_G$ va dal **gate a massa**: lo schema ASCII e una risposta orale dicevano «dal source al gate».
+12. Il partitore che stabilizza sta sul **gate**, non «al source» (§5.1 contraddiceva §4-bis).
+13. La degenerazione di source **migliora** la linearità: era scritto «si perde linearità».
+14. Es. 4: la radice $V_P = -0{,}6$ V si scarta perché darebbe $V_{GS} < V_P$ (cutoff), non perché
+    «JFET debole».
+15. Es. 9: la costante davanti alla parentesi di triodo è $I_{DSS}/V_P^2$, non il $K = 2I_{DSS}/V_P^2$
+    di §14.1 — due $K$ diversi con lo stesso nome.
+16. Es. J6: la $V_i = -5$ V di edutecnica spegnerebbe il JFET ($V_P = -2$ V); il valore corretto è
+    $-1{,}37$ V. La scala «$-2$ V → 25 mA» era falsa: a $V_{GS}=V_P$ la corrente è **zero**.
+17. Punto ZTC: $V_{GS} = V_P/2$ **non** è vicino allo ZTC (1,3 V di distanza, corrente 8 volte
+    maggiore). Corretto in entrambi i file.
+
+**[[Amplificatori a BJT]] + [[Esercizi - Amplificatori a BJT]]** (5)
+18. Il clipping «in alto» è **interdizione**, non saturazione: il Q&A chiamava saturazione entrambi
+    i lati, contraddicendo il §5 dello stesso file.
+19. La $V_{CE}$ a riposo con $R_E$ è $0{,}45V_{CC}$ (criterio 7.9), non «$V_{CC}/2$».
+20. Es. 3: la $R_{in}$ vista tra base e massa include il **partitore** ($R_B \parallel r_\pi$, formula
+    7.13): era data come sola $r_\pi$, e il «fattore ~20» del bypass è in realtà ~6.
+21. Es. A2: $I_C = 13$ mA era $h_{fe}I_B$ invece di $\beta I_B$ — e contraddiceva la $V_{CE} = 10$ V
+    dichiarata due parole dopo. Corretto a 10 mA; segnalato che l'$A_v = -8{,}96$ non è ricavabile
+    dai dati elencati (torna solo con una $R_E \approx 100\ \Omega$ non bypassata, assente dall'elenco).
+
+**[[Esercizi - Filtri passivi del primo ordine]]** (1)
+22. Es. F8: $x = f/f_L$ per $-6$ dB vale $1/\sqrt3 = 0{,}577$, non 0,509 → **1838 Hz**, non 1620. Lo
+    stesso file ricavava già 1837 Hz per altra via nell'Esercizio 8: erano in contraddizione.
+
+**[[MOSFET]] + [[Esercizi - MOSFET]]** (3)
+23. **Verso invertito**: per portare il MOSFET in triodo serve una $R_D$ **più grande**, non più
+    piccola ($V_{DS} = V_{DD}-I_D(R_D+R_S)$). Sbagliato in entrambi i file; aggiunta la soglia
+    numerica ($R_D \gtrsim 5{,}5$ k$\Omega$ per l'esercizio in questione).
+24. Frontmatter YAML rotto (`---tags:` e `prove: [...]---` sulla stessa riga) in `Esercizi - MOSFET`,
+    `Esercizi - JFET`, `Esercizi - Alimentatori`: Obsidian non leggeva le proprietà.
+
+**[[Alimentatori]] + [[Esercizi - Alimentatori]]** (6)
+25. §8 «alimentatore completo»: $C$ sbagliata di **100×** (1575 µF contro i 157 000 µF che il conto
+    dava), perché imponeva al condensatore d'ingresso la specifica di ripple **d'uscita**; e il
+    trasformatore scelto lasciava il 7812 **in dropout** mentre se ne calcolava la potenza dissipata.
+    Sezione riscritta partendo dal vincolo peggiore: $V_2 = 12$ V, $C = 10\,000$ µF, ripple d'uscita
+    2 mV (0,016 %), $P = 3$ W con dissipatore.
+26. Es. S1 (Zener): $R_{S,\min}$ e $R_{S,\max}$ **scambiati di nome**, e soprattutto con quei dati
+    l'intervallo è **vuoto** ($R_S \ge 188\ \Omega$ e $R_S \le 41{,}9\ \Omega$): la scelta «100 Ω, valore
+    commerciale tra 40 e 188» era impossibile. Aggiunte le due vie d'uscita reali.
+27. Es. S1: potenza su $R_S$ sbagliata di 10× (88 mW contro 0,88 W) → «1/4 W» non basta.
+28. Es. A2: i 580 µF vengono dalla costante $4\sqrt3$ (**ponte**), non da quella della semionda
+    dichiarata nel titolo. Segnalato con la verifica dei due conti.
+29. Dropout uniformato a **2,5 V** (TABELLA 1) in Formulario, Alimentatori, Esercizi e «Perchè»:
+    circolavano «2 V» e «1–2 V».
+30. Doppia convenzione delle lettere 78xx (C = 0,5 A nel libro, M = 500 mA nei cataloghi): erano due
+    tabelle contraddittorie a due riquadri di distanza, ora unificate.
+
+**[[Esercizi - Simulazione finale]]** (2)
+31. E4: il partitore è «molle» ($I_{part} = 133$ µA contro $I_B = 59$ µA), quindi il metodo rapido
+    sbaglia di 4,4 V: $V_{CE}$ vero $= 6{,}63$ V, non 2,21 V (Thévenin).
+32. E5: si fermava a «è in triodo» senza risolverlo — il risultato restava quello, invalido, della
+    parabolica. Aggiunta la soluzione in triodo ($I_D = 9{,}6$ mA, $V_{DS} = 2{,}5$ V) e corretto il
+    verso di $R_D$ nella «lezione didattica».
+
+**[[Esercizi - Diodi]], [[00 - Perchè (spiegazione intuitiva)]]** (3)
+33. «Con 2 diodi si rettifica solo una semionda»: con 2 diodi e presa centrale si fa la **doppia**
+    semionda; con 1 diodo la semionda.
+34. Tabella finale del «Perchè»: `cos φ = Δφ/Δt` (privo di senso) → $\varphi = 360°\cdot\Delta t/T$;
+    «la tensione diventa parallela alla corrente» → **in fase**.
+
+### Verificato corretto — nessuna modifica
+
+Ricalcolati da zero e confermati: tutti gli esempi di [[Le potenze in alternata]] (ESEMPI 6, 7, 8 e
+il rifasamento), [[Reti RLC e risonanza]] (ESEMPI 3-4, resistenza dinamica $L/RC$, $\omega_0$
+corretta), [[Filtri passivi del primo ordine]] (le quattro $G(s)$, l'errata corrige $R/L$, ESEMPI
+19-20), [[Impedenza dei bipoli R, L, C]] (ESEMPIO 2), [[Segnali sinusoidali e fasori]] e
+[[Il metodo simbolico]] (ESEMPIO 5 e i due esercizi di fine capitolo, incluso il segno della fase
+che il libro stampa sbagliato), [[BJT]] (ESEMPI 4-5, interfaccia relè), [[Esercizi - BJT]] (B1-B5,
+Darlington compreso), [[Esercizi - Reti RLC e risonanza]], [[Esercizi - Le potenze in alternata]],
+[[06 - Soluzioni complete verifiche FUSI]], [[05 - Verifiche FUSI (Carli)]].
+
+### Da ricontrollare (non bloccante)
+
+- **Es. A2 di [[Esercizi - Amplificatori a BJT]]**: manca un dato nell'elenco (probabile $R_E$ non
+  bypassata da ~100 Ω). Da confrontare con lo schema su edutecnica.
+- **Es. J6 di [[Esercizi - JFET]]** e **Es. Z3 di [[Esercizi - Diodi]]**: servono gli schemi originali.
+- **Es. M7 di [[Esercizi - MOSFET]]**: la formula di $R_D$ usa una $V_{DD}$ che non compare nei dati.

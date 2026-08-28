@@ -187,12 +187,25 @@ Questi sono i valori **veri della TABELLA 1**, «*caratteristiche principali deg
 > - **FIGURA 22** (p. 409): l'**alimentatore duale**, un solo trasformatore a presa centrale, un ponte di Graetz, due condensatori e due regolatori (78XX per la positiva, 79XX per la negativa). È qui che entrano i 7905/7912.
 > - **FIGURA 23** (p. 409): come aumentare la corrente d'uscita con un BJT esterno **T** in Darlington col regolatore — **A)** NPN, con $V_{out} = V_o - 0{,}7$ (TIP 110, $I_L = 4$ A); **B)** PNP, che mantiene la tensione nominale (TIP 115, $I_L = 4$ A).
 
-> [!tip] Codice identificativo
-> Le lettere **78** = regolatore positivo, **79** = regolatore negativo. Il numero finale = tensione di uscita. La lettera intermedia indica la corrente:
-> - **L** = 100 mA (es. 78L12)
-> - **M** = 500 mA (es. 78M12)
-> - **Senza lettera** = 1 A (es. 7812)
-> - **T** = 3 A (es. 78T12)
+> [!tip] Codice identificativo — attenzione, due convenzioni per la lettera
+> Le lettere **78** = regolatore positivo, **79** = regolatore negativo. Le due cifre finali = tensione
+> d'uscita. La lettera intermedia indica la corrente massima, ma **non tutti i costruttori usano le
+> stesse lettere**:
+>
+> | Lettera | Mirandola TABELLA 1 (p. 408) | Convenzione ST/National (78Lxx, 78Mxx) |
+> |---|---|---|
+> | L | 0,1 A | 100 mA |
+> | M | — | 500 mA |
+> | C | 0,5 A | — |
+> | (nessuna) | 1 A | 1 A |
+> | S | 2 A | 2 A |
+> | T | 3 A | 3 A |
+> | H / P | 5 A / 10 A | — |
+>
+> Le due colonne concordano su L (0,1 A), sul "senza lettera" (1 A) e su S/T. Divergono su chi indica
+> i 500 mA: **C** per il libro, **M** nei cataloghi commerciali (il 78M05 è il pezzo che trovi in
+> negozio). All'esame usa la tabella del libro e, se serve, cita l'altra: non è un errore, è un'altra
+> nomenclatura. La **G** individua i regolatori a tensione d'uscita variabile.
 
 ### Schema di applicazione tipico
 
@@ -224,19 +237,44 @@ Per circuiti con operazionali (che richiedono $\pm V_{CC}$):
 
 ## 8. Calcoli tipici per un alimentatore completo (esempio svolto)
 
-**Specifiche**: $V_{out} = 12$ V, $I_{load,\max} = 1$ A, ripple $\leq 0{,}5\%$, $V_{in} = 230$ V AC a 50 Hz.
+**Specifiche**: $V_{out} = 12$ V, $I_{load,\max} = 1$ A, ripple d'uscita $\le 0{,}5\%$, rete 230 V AC 50 Hz.
 
-**Soluzione**:
+> [!danger] Si parte dal **dropout**, non dal trasformatore
+> Il vincolo che comanda tutto il dimensionamento è: il 7812 vuole almeno $V_{out} + V_D = 12 + 2{,}5 = 14{,}5$ V
+> in ingresso **nel punto più basso del ripple**, non in media. Chi parte scegliendo il trasformatore
+> "quel tanto che basta" finisce fuori regolazione. Ordine giusto: dropout → trasformatore → $C$ → potenza.
 
-1. **Trasformatore**: $V_{2,\text{eff}} = V_{out}/(\sqrt{2} - 2V_D/V_{in,p}) \approx 10$ V (per avere $V_{out,p} \approx 12{,}7$ V prima della regolazione).
-2. **Ponte Graetz**: 4 diodi ($V_D = 0{,}7$ V ciascuno, due in serie → $1{,}4$ V di caduta).
-3. **Filtro C**: $C = I_{load}/(f_r \cdot V_{r,pp}) = 1\text{A}/(100\text{Hz} \cdot 0{,}5\% \cdot 12{,}7\text{V}) \approx 1575\,\mu\text{F}$.
-4. **Regolatore**: 7812 (12 V, 1 A). Dissipa $P = (V_{in} - 12) \cdot I = (12{,}7 - 12) \cdot 1 = 0{,}7$ W (accettabile senza diss.).
+**1. Trasformatore.** Serve $V_{in,\min} \ge 14{,}5$ V dopo il ponte, quindi al picco serve ancora
+più margine per l'ondulazione. Con $V_{2,\text{eff}} = 12$ V:
+$$V_{in,p} = V_{2,\text{eff}}\sqrt2 - 2V_D = 12 \cdot 1{,}414 - 1{,}4 = 15{,}6\text{ V}$$
 
-> [!warning] Tensione di dropout
-> Il 7812 ha una **dropout voltage** di $\approx 2{,}5$ V (TABELLA 1 del libro: $V_D = 2{,}5$ V per tutta la famiglia standard; l'ingresso deve stare **almeno 2,5 V** sopra l'uscita): $V_{in}$ deve essere $\geq 14{,}5$ V perché funzioni bene. Per $V_{in} = 12{,}7$ V il 7812 è **fuori regolazione**. Aumentare il trasformatore a $V_{2,\text{eff}} = 12$ V → $V_{in,p} \approx 17$ V → margine sufficiente.
+**2. Ponte di Graetz**: 4 diodi, due sempre in serie al carico → $2V_D = 1{,}4$ V; $f_r = 2f_{line} = 100$ Hz.
 
----
+**3. Condensatore di filtro.** Il ripple ammesso all'**ingresso** del regolatore è tutto il margine
+che resta sopra il dropout:
+$$V_{r,pp} \le V_{in,p} - 14{,}5 = 15{,}6 - 14{,}5 = 1{,}1\text{ V}$$
+$$C = \frac{I_{load}}{f_r \cdot V_{r,pp}} = \frac{1}{100 \cdot 1{,}1} = 9{,}1\cdot10^{-3}\text{ F} \;\Rightarrow\; \mathbf{10\,000\ \mu F}$$
+
+**4. Il ripple d'uscita lo garantisce il regolatore, non $C$.** Con $R_r = 55$ dB del 7812
+(TABELLA 1) il fattore di attenuazione è $10^{55/20} = 562$:
+$$V_{r,pp,out} = \frac{1{,}1}{562} = 2{,}0\text{ mV} \;\Rightarrow\; \frac{2{,}0\text{ mV}}{12\text{ V}} = 0{,}016\% \ll 0{,}5\% \quad ✅$$
+
+**5. Potenza dissipata dal regolatore** (sul valor medio d'ingresso, $15{,}6 - 1{,}1/2 = 15{,}05$ V):
+$$P = (V_{in,m} - V_{out}) \cdot I_{load} = (15{,}05 - 12) \cdot 1 = 3{,}0\text{ W} \;\Rightarrow\; \textbf{serve dissipatore}$$
+($\theta_{ja} = 65$ °C/W senza dissipatore darebbe $+195$ °C: impossibile. Con $\theta_{jc} = 5$ °C/W e un
+dissipatore adeguato si sta nei limiti.)
+
+> [!danger] Correzione — questa sezione conteneva due errori grossi
+> 1. **Fattore 100 sulla capacità.** Era scritto $C = 1/(100 \cdot 0{,}5\% \cdot 12{,}7) \approx 1575\ \mu$F.
+>    Rifacendo il conto: $0{,}5\%$ di 12,7 V è 0,0635 V, quindi $C = 1/(100 \cdot 0{,}0635) = 0{,}157$ F,
+>    cioè **157 000 µF**, non 1575. Un elettrolitico da 157 mF per 1 A non esiste in un alimentatore
+>    da banco: era il segnale che l'impostazione stessa era sbagliata — quel $0{,}5\%$ è la specifica
+>    **d'uscita**, che il regolatore ottiene da solo con la sua reiezione, e non va imposta al $C$ d'ingresso.
+> 2. **Trasformatore sottodimensionato.** Si sceglieva $V_2 = 10$ V ($V_{in,p} = 12{,}7$ V) e poi si
+>    calcolava la potenza dissipata come se il 7812 regolasse — ma a 12,7 V è **in dropout**: non regola
+>    affatto. Il vecchio testo se ne accorgeva solo in un riquadro finale, senza rifare i conti.
+>
+> Regola generale: **prima il vincolo peggiore** (qui il dropout al minimo del ripple), poi tutto il resto.
 
 ## Quesiti tipo — Guida rapida
 

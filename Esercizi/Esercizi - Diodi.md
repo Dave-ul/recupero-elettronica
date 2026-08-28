@@ -27,7 +27,8 @@ Teoria di riferimento: [[Diodi]]
 > Il diodo entra nella zona di **breakdown**. In un diodo normale questo è distruttivo (la corrente cresce illimitatamente fino a bruciare il componente). In un diodo **Zener** è il funzionamento normale: la tensione si stabilizza a $-V_Z$.
 
 > [!question]- 3 — Perché in un ponte di Graetz servono 4 diodi e non 2?
-> Per garantire che la corrente di carico scorra sempre nello stesso verso sul carico, **indipendentemente** dal segno di $v_{in}$. Con 2 diodi (semplice semionda) si rettifica solo una semisonde.
+> Per garantire che la corrente di carico scorra sempre nello stesso verso sul carico, **indipendentemente** dal segno di $v_{in}$: a ogni semionda conducono due diodi opposti, e il carico è sempre percorso nello stesso verso.
+> ⚠️ Precisazione sui conteggi: con **1** diodo si ha il raddrizzatore a **semionda** (metà delle semionde buttata via). Anche con **2** diodi si può fare un raddrizzatore a **doppia semionda**, ma serve un trasformatore a **presa centrale**. Il ponte di Graetz usa 4 diodi proprio per **non** richiedere la presa centrale: è il compromesso che si sceglie quasi sempre.
 
 > [!question]- 4 — Perché serve il condensatore di filtro in un alimentatore?
 > Per livellare la tensione pulsante del raddrizzatore. Il condensatore si carica al valore di picco, poi si scarica lentamente attraverso il carico. La tensione di uscita diventa quasi continua, con un piccolo ripple la cui ampiezza è $V_{ripple,pp} \approx I_{load}/(f_r \cdot C)$.
