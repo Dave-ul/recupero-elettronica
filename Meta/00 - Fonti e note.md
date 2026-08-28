@@ -386,17 +386,17 @@ elettronicaa/                    ← il vault Obsidian: tutto è qui dentro, tut
 
 | LETTERA | Argomenti vault | Esercizi svolti |
 |---|---|---|
-| Circuiti AC (impedenze, P/Q/S, fasori) | `[[Impedenza dei bipoli R, L, C]]`, `[[Il metodo simbolico]]`, `[[Le potenze in alternata]]` | `[[Esercizi - Impedenza dei bipoli R, L, C]]`, `[[Esercizi - Il metodo simbolico]]`, `[[Esercizi - Le potenze in alternata]]` |
-| Filtri passivi **1° ordine** (RC/RL) | `[[Filtri passivi del primo ordine]]` | `[[Esercizi - Filtri passivi del primo ordine]]` |
-| BJT (pilota in corrente) | `[[BJT]]` | `[[Esercizi - BJT]]` |
-| JFET **canale N** | `[[JFET]]` | `[[Esercizi - JFET]]` |
-| MOSFET **canale N enhancement** | `[[MOSFET]]` | `[[Esercizi - MOSFET]]` |
+| Circuiti AC (impedenze, P/Q/S, fasori) | [[Impedenza dei bipoli R, L, C]], [[Il metodo simbolico]], [[Le potenze in alternata]] | [[Esercizi - Impedenza dei bipoli R, L, C]], [[Esercizi - Il metodo simbolico]], [[Esercizi - Le potenze in alternata]] |
+| Filtri passivi **1° ordine** (RC/RL) | [[Filtri passivi del primo ordine]] | [[Esercizi - Filtri passivi del primo ordine]] |
+| BJT (pilota in corrente) | [[BJT]] | [[Esercizi - BJT]] |
+| JFET **canale N** | [[JFET]] | [[Esercizi - JFET]] |
+| MOSFET **canale N enhancement** | [[MOSFET]] | [[Esercizi - MOSFET]] |
 
 ### **Carli — prova orale** (domande)
 
 | LETTERA | Argomenti vault |
 |---|---|
-| Diodo (normale, Zener, Schottky) | `[[Diodi]]` |
+| Diodo (normale, Zener, Schottky) | [[Diodi]] |
 | Circuiti AC | vedi sopra |
 | Filtri 1° ordine | vedi sopra |
 
@@ -404,13 +404,13 @@ elettronicaa/                    ← il vault Obsidian: tutto è qui dentro, tut
 
 | LETTERA | Argomenti vault |
 |---|---|
-| Circuiti con diodi | `[[Diodi]]`, `[[Alimentatori]]` |
-| Segnali sinusoidali | `[[Segnali sinusoidali e fasori]]` |
-| Reti RLC in regime sinusoidale | `[[Reti RLC e risonanza]]`, `[[Impedenza dei bipoli R, L, C]]` |
-| Filtri passivi | `[[Filtri passivi del primo ordine]]` |
-| BJT | `[[BJT]]` |
-| Amplificatori con BJT | `[[Amplificatori a BJT]]` |
-| **Uso oscilloscopio** | `[[L'oscilloscopio]]` ← strumento trasversale a tutti i punti |
+| Circuiti con diodi | [[Diodi]], [[Alimentatori]] |
+| Segnali sinusoidali | [[Segnali sinusoidali e fasori]] |
+| Reti RLC in regime sinusoidale | [[Reti RLC e risonanza]], [[Impedenza dei bipoli R, L, C]] |
+| Filtri passivi | [[Filtri passivi del primo ordine]] |
+| BJT | [[BJT]] |
+| Amplificatori con BJT | [[Amplificatori a BJT]] |
+| **Uso oscilloscopio** | [[L'oscilloscopio]] ← strumento trasversale a tutti i punti |
 
 ### Argomenti presenti nel vault ma non nominati dalla LETTERA
 
@@ -420,19 +420,19 @@ tre verifiche FUSI.
 
 | Argomento | File | Stato |
 |---|---|---|
-| Sinusoidi e fasori | `[[Segnali sinusoidali e fasori]]` | ✅ **dentro** — propedeutico ai circuiti AC, e «segnali sinusoidali» è nella LETTERA per Protti |
-| Metodo simbolico | `[[Il metodo simbolico]]` | ✅ **dentro** — è *la* procedura per risolvere i circuiti AC della prova scritta |
-| Reti RLC in regime sinusoidale | `[[Reti RLC e risonanza]]` §1-2 | ✅ **dentro** — nominato dalla LETTERA per Protti. È l'analisi con le impedenze complesse |
-| Amplificatori a BJT | `[[Amplificatori a BJT]]` | ✅ **dentro** — nominato dalla LETTERA per Protti |
-| Potenze AC (P, Q, S, cos φ) | `[[Le potenze in alternata]]` §1-2 | 📖 **solo lettura per l'orale**, 20 min il 20 agosto. Non è in Poggi né in nessuna verifica, ma all'orale la LETTERA dice «circuiti in corrente alternata» senza restringere |
-| Risonanza (ω₀, Q, banda) | `[[Reti RLC e risonanza]]` §3+ | 📖 **solo la definizione**, stessi 20 minuti. Non fatta in classe: la parola «risonanza» non compare né in Poggi né in nessuna delle tre verifiche |
-| Alimentatori (raddrizzatori, Graetz, 78xx) | `[[Alimentatori]]` §1 e §4 | 📖 **solo lettura**, 25 min il 23 agosto. La LETTERA dice «circuiti con diodi» per Protti, e l'alimentatore è il circuito con diodi del banco di laboratorio |
-| Rifasamento **monofase** | `[[Le potenze in alternata]]` §5 | 📖 **dentro per l'orale** — è il rifasamento del libro (Mirandola §4.2, 220 V, una sola $C$ in parallelo al carico) |
+| Sinusoidi e fasori | [[Segnali sinusoidali e fasori]] | ✅ **dentro** — propedeutico ai circuiti AC, e «segnali sinusoidali» è nella LETTERA per Protti |
+| Metodo simbolico | [[Il metodo simbolico]] | ✅ **dentro** — è *la* procedura per risolvere i circuiti AC della prova scritta |
+| Reti RLC in regime sinusoidale | [[Reti RLC e risonanza]] §1-2 | ✅ **dentro** — nominato dalla LETTERA per Protti. È l'analisi con le impedenze complesse |
+| Amplificatori a BJT | [[Amplificatori a BJT]] | ✅ **dentro** — nominato dalla LETTERA per Protti |
+| Potenze AC (P, Q, S, cos φ) | [[Le potenze in alternata]] §1-2 | 📖 **solo lettura per l'orale**, 20 min il 20 agosto. Non è in Poggi né in nessuna verifica, ma all'orale la LETTERA dice «circuiti in corrente alternata» senza restringere |
+| Risonanza (ω₀, Q, banda) | [[Reti RLC e risonanza]] §3+ | 📖 **solo la definizione**, stessi 20 minuti. Non fatta in classe: la parola «risonanza» non compare né in Poggi né in nessuna delle tre verifiche |
+| Alimentatori (raddrizzatori, Graetz, 78xx) | [[Alimentatori]] §1 e §4 | 📖 **solo lettura**, 25 min il 23 agosto. La LETTERA dice «circuiti con diodi» per Protti, e l'alimentatore è il circuito con diodi del banco di laboratorio |
+| Rifasamento **monofase** | [[Le potenze in alternata]] §5 | 📖 **dentro per l'orale** — è il rifasamento del libro (Mirandola §4.2, 220 V, una sola $C$ in parallelo al carico) |
 | Rifasamento **trifase** (sistema a 3 fili, $V_{\text{conc}}$, $C$ per fase) | **rimosso dal vault il 2026-08-21** | ⛔ **fuori** — non nella LETTERA, non in Poggi, non in nessuna verifica |
-| Diagrammi di Bode, filtri 2° ordine, passa-banda | `[[Filtri passivi del primo ordine]]` | ⛔ **fuori** — la LETTERA dice «filtri passivi del **primo** ordine» |
+| Diagrammi di Bode, filtri 2° ordine, passa-banda | [[Filtri passivi del primo ordine]] | ⛔ **fuori** — la LETTERA dice «filtri passivi del **primo** ordine» |
 | Amplificatori operazionali | ❌ assente dal vault | ⛔ **fuori** — Cap. 6 del libro, mai richiesto |
-| MOSFET depletion | accenno di confronto in `[[MOSFET]]` §5 | ⛔ **fuori** — la LETTERA dice «ad arricchimento». Resta solo il quesito d'orale «differenza enhancement/depletion» |
-| JFET canale P | **rimosso dal vault il 2026-08-21** | ⛔ **fuori** — la LETTERA dice «canale N». Resta il warning anti-trabocchetto in `[[Formulario rapido]]` §8.1 |
+| MOSFET depletion | accenno di confronto in [[MOSFET]] §5 | ⛔ **fuori** — la LETTERA dice «ad arricchimento». Resta solo il quesito d'orale «differenza enhancement/depletion» |
+| JFET canale P | **rimosso dal vault il 2026-08-21** | ⛔ **fuori** — la LETTERA dice «canale N». Resta il warning anti-trabocchetto in [[Formulario rapido]] §8.1 |
 
 ## 📋 4. Note operative
 

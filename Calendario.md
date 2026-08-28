@@ -33,10 +33,10 @@ Questa sezione dice solo *quando* farli e *cosa saltare*.
 
 | Data | Recupera | Cosa | Ore |
 |---|---|---|---|
-| **mer 26** *(stasera)* | giorno 3 | **Filtri del 1° ordine** + 🔁 02-03 es. 4 e 5 | ~3h |
+| **mer 26** *(stasera)* | giorno 3 | **Filtri del 1° ordine** + 🔁 [[05 - Verifiche FUSI (Carli)|02-03]] es. 4 e 5 | ~3h |
 | **gio 27** | giorni 5+6 | BJT: zone di funzionamento **e** polarizzazione | ~6h |
-| **ven 28** | giorno 7 | Amplificatori a BJT + 🔁 **verifica 24-04** | ~5h30 |
-| **sab 29** | giorni 8+9 | JFET + 🔁 **verifica 29-05** (es. 1-5) | ~5h30 |
+| **ven 28** | giorno 7 | Amplificatori a BJT + 🔁 **[[05 - Verifiche FUSI (Carli)|verifica 24-04]]** | ~5h30 |
+| **sab 29** | giorni 8+9 | JFET + 🔁 **[[05 - Verifiche FUSI (Carli)|verifica 29-05]]** (es. 1-5) | ~5h30 |
 | **dom 30** | giorni 10+4 | MOSFET + 🔁 **29-05** (es. 6-8) + Zener · sera D1-D23 a voce | ~5h |
 | **lun 31** | giorno 11 ridotto | Orale e pratico a voce · FORMULE · cartellina | ~3h |
 
@@ -54,11 +54,11 @@ PER NULLA».
 - 📖 **Mirandola PDF 80-84 → libro 155-163** — filtro ideale e reale, banda passante e banda
   oscura, **frequenze di taglio dei filtri RC e RL del 1° ordine e come si ricavano**
 - 📖 **Mirandola PDF 94 → libro 182-183** — FORMULE del capitolo 4: **stampale**
-- 🧠 **vault**: `[[Filtri passivi del primo ordine]]` §3-4 · `[[Esercizi - Filtri passivi del
-  primo ordine]]` — leggi «Errori tipici» **prima** degli esercizi, non dopo
+- 🧠 **vault**: [[Filtri passivi del primo ordine]] §3-4 · [[Esercizi - Filtri passivi del primo ordine]] — leggi
+  «Errori tipici» **prima** degli esercizi, non dopo
 - ✏️ **Mirandola PDF 97-98 → libro 189-191** — esercizi **18 e 19** (tipo di filtro e f_t di
   quattro reti; progetto di un passa-alto a 300 Hz) ⛔ l'11 va al 31, dove serve per il pratico
-- 🔁 **FUSI 02-03, solo esercizi 4 e 5** — timer da 30 minuti, da zero
+- 🔁 **[[05 - Verifiche FUSI (Carli)|FUSI 02-03]], solo esercizi 4 e 5** — timer da 30 minuti, da zero
 
 > ⚠️ L'errore che il vault segna come il più frequente in assoluto: per un **RL**,
 > f_t = R/(2πL) — **non** L/R. Controllalo su ogni esercizio che fai stasera.
@@ -76,7 +76,7 @@ Mattina, la teoria:
 - 📖 **appunti Poggi pp. 3, 11, 13, 15** — le tre zone, h_FE e quando non vale,
   V_BE = 0,7 V, V_CEsat ≈ 0,2 V
 - 📖 **Mirandola PDF 159-162 → libro 312-319** ⛔ salta Ebers-Moll (libro 316)
-- 🧠 **vault**: `[[BJT]]` §1-3
+- 🧠 **vault**: [[BJT]] §1-3
 
 Pomeriggio, la polarizzazione — è la parte che finisce sullo scritto:
 
@@ -84,7 +84,7 @@ Pomeriggio, la polarizzazione — è la parte che finisce sullo scritto:
   polarizzazione con resistenza di base, stabilizzazione con partitore e R_E
   ⛔ salta potenza dissipata e derating (libro 320-321)
 - ✏️ **Edutecnica Elettronica pp. 56-61** — esercizi svolti 1-10: **falli tutti**
-- 🧠 **vault**: `[[BJT]]` §4, formule 7.8-7.11 · `[[Esercizi - BJT]]`
+- 🧠 **vault**: [[BJT]] §4, formule 7.8-7.11 · [[Esercizi - BJT]]
 
 ## Venerdì 28 · ~5h30 — giorno 7: amplificatori e checkpoint
 
@@ -93,11 +93,11 @@ Pomeriggio, la polarizzazione — è la parte che finisce sullo scritto:
 - 📖 **libro 371-375, solo la frequenza di taglio dovuta a C_E** — non tutta la risposta in
   frequenza: serve per l'Es. 5 della verifica, che è «NON SVOLTO PER NULLA»
 - ✏️ **Edutecnica Elettronica pp. 45-47** ⭐ — esercizi risolti 1-5, emitter-follower
-- 🔁 **FUSI 24-04, tutti e 7 gli esercizi** — da zero, timer da 90 minuti
+- 🔁 **[[05 - Verifiche FUSI (Carli)|FUSI 24-04]], tutti e 7 gli esercizi** — da zero, timer da 90 minuti
 - ✏️ **Mirandola PDF 195 → libro 385** — esercizi **8** (interfaccia TTL-relè) e **9** (C_E),
   i gemelli degli Es. 4 e 5 della verifica
 - 📖 **Mirandola PDF 193 → libro 380-381** — FORMULE del capitolo 7: **stampale**
-- 🧠 **vault**: `[[Amplificatori a BJT]]` · `[[Esercizi - Amplificatori a BJT]]`
+- 🧠 **vault**: [[Amplificatori a BJT]] · [[Esercizi - Amplificatori a BJT]]
 
 ## Sabato 29 · ~5h30 — giorni 8 e 9 fusi: JFET
 
@@ -107,11 +107,11 @@ Pomeriggio, la polarizzazione — è la parte che finisce sullo scritto:
   transconduttanza g_m, polarizzazione ⛔ salta il canale P
 - 📖 **Mirandola PDF 188 → libro 370** — amplificatore a source comune
 - ✏️ **Edutecnica Elettronica pp. 30-34** — esercizi 1-8
-- 🔁 **FUSI 29-05, esercizi 1-5** — da zero, timer da 60 minuti. Tre su cinque erano «NON
+- 🔁 **[[05 - Verifiche FUSI (Carli)|FUSI 29-05]], esercizi 1-5** — da zero, timer da 60 minuti. Tre su cinque erano «NON
   SVOLTO»: è l'argomento più scoperto del programma
 - ✏️ **Mirandola PDF 195 → libro 385** — esercizio **15**, stessi dati dell'Es. 1 della
   verifica: confronta i due svolgimenti riga per riga
-- 🧠 **vault**: `[[JFET]]` · `[[Esercizi - JFET]]`, sezione errori tipici
+- 🧠 **vault**: [[JFET]] · [[Esercizi - JFET]], sezione errori tipici
 
 ## Domenica 30 · ~5h — MOSFET, Zener, e si chiude lo scritto
 
@@ -119,10 +119,10 @@ Pomeriggio, la polarizzazione — è la parte che finisce sullo scritto:
   polarizzazione a partitore ⛔ salta i depletion
 - 📖 **Mirandola PDF 186-187 → libro 366-368** — V_GS0 = V_DD·R₂/(R₁+R₂), e perché non serve R_S
 - ✏️ **Edutecnica Elettronica pp. 1-4** — esercizi risolti 1-7: **falli tutti**
-- 🔁 **FUSI 29-05, esercizi 6, 7 e 8** — da zero, timer da 45 minuti
+- 🔁 **[[05 - Verifiche FUSI (Carli)|FUSI 29-05]], esercizi 6, 7 e 8** — da zero, timer da 45 minuti
 - ✏️ **Edutecnica Elettronica pp. 74-78** — diodo **Zener, esercizi 1-5** (è quel che resta
   del giorno 4: la teoria del diodo è già chiusa in [[diodi-risposte]])
-- 🧠 **vault**: `[[MOSFET]]` §3 · `[[Esercizi - MOSFET]]`
+- 🧠 **vault**: [[MOSFET]] §3 · [[Esercizi - MOSFET]]
 - 🗣️ **Sera, camminando**: [[diodi-risposte]], **D1-D23 a voce senza guardare**. Crocetta
   quelle su cui esiti
 
@@ -144,16 +144,16 @@ Mattina (~2h):
   giorno 3: qui serve due volte, per Carli a voce e per Protti al banco
 - ✏️ **Mirandola PDF 97 → libro 189** — esercizio **11**, quello sulla risposta in ampiezza e fase
 - 📖 **Mirandola PDF 72 → libro 138-139** — risposta al gradino con l'onda quadra
-- 🧠 **vault**: `[[L'oscilloscopio]]` · `[[03 - Prova Pratica Protti]]` — le cinque famiglie
+- 🧠 **vault**: [[L'oscilloscopio]] · [[03 - Prova Pratica Protti]] — le cinque famiglie
   di prove e i sei errori che costano il punto (sonda ×10, trigger, coupling AC/DC, canali invertiti)
 - 🗣️ **Le tre domande d'orale ad alta voce**, nell'ordine della lettera: diodo, circuiti in
-  alternata, filtri del 1° ordine. Traccia: 🧠 `[[02 - Prova Orale Carli]]`. **Dette, non rilette**
+  alternata, filtri del 1° ordine. Traccia: 🧠 [[02 - Prova Orale Carli]]. **Dette, non rilette**
 
 Pomeriggio (~40 min), poi basta:
 
 - 📖 **Le sole pagine FORMULE**: Mirandola PDF 42 → libro 79 · PDF 61 → libro 117 ·
   PDF 94 → libro 182-183 · PDF 193 → libro 380-381. Più **appunti Poggi p. 4** e
-  🧠 `[[Formulario rapido]]` Parte A (cheat sheet)
+  🧠 [[Formulario rapido]] Parte A (cheat sheet)
 - 📌 Gli errori segnati nei giorni scorsi, **riletti** — non rifatti
 - 🎒 **Cartellina stasera**: D1-D23 stampate, cheat sheet, le quattro pagine FORMULE,
   calcolatrice scientifica, formulario personale
@@ -166,7 +166,7 @@ Nell'ordine che il piano stesso indica in fondo, alla voce «Se resti indietro»
    parametri ibridi, 35-44 sul JFET. Aprili solo se la prima non ha funzionato
 2. **I 45 minuti di lettura per l'orale** del 20 e del 23 (alimentatori, ripple, 78xx) —
    erano un'assicurazione sul pratico di Protti, non una necessità. Se il 31 avanza mezz'ora
-   sono la prima cosa da rimettere: 🧠 `[[Alimentatori]]` §1 e §4
+   sono la prima cosa da rimettere: 🧠 [[Alimentatori]] §1 e §4
 3. **La risposta in frequenza degli amplificatori** oltre alla sola C_E
 4. **Gli esercizi doppioni** — Mirandola libro 384 es. 2-7, libro 385 es. 10-14, libro
    230-231 es. 1-12 sul diodo, libro 81-83 sull'alternata, Edutecnica 17-20 sul JFET,
@@ -218,17 +218,17 @@ finisce alle 17:00.
 | 1   | **gio 20** | ⚠️ **Recupero alternata**: metodo simbolico, reti RLC, e la 02-03 rifatta         | 3h45       |
 | 2   | ven 21     | Funzione di trasferimento, quadripoli e poli                                      | 3h30       |
 | 3   | sab 22     | Filtri del 1° ordine e frequenze di taglio                                        | 2h30       |
-| 4   | dom 23     | 🔁 **verifica 02-03 integrale** + esercizi diodo e Zener                          | 3h30       |
+| 4   | dom 23     | 🔁 **[[05 - Verifiche FUSI (Carli)|verifica 02-03 integrale]]** + esercizi diodo e Zener                          | 3h30       |
 | 5   | lun 24     | BJT · teoria e zone di funzionamento                                              | 3h         |
 | 6   | mar 25     | BJT · polarizzazione e punto di lavoro                                            | 3h30       |
-| 7   | mer 26     | BJT amplificatore + 🔁 **verifica 24-04**                                         | 4h         |
+| 7   | mer 26     | BJT amplificatore + 🔁 **[[05 - Verifiche FUSI (Carli)|verifica 24-04]]**                                         | 4h         |
 | 8   | gio 27     | JFET                                                                              | 3h30       |
-| 9   | ven 28     | 🔁 **verifica 29-05 · JFET**                                                      | 3h         |
-| 10  | sab 29     | MOSFET + 🔁 **verifica 29-05 · MOSFET**                                           | 3h         |
+| 9   | ven 28     | 🔁 **[[05 - Verifiche FUSI (Carli)|verifica 29-05 · JFET]]**                                                      | 3h         |
+| 10  | sab 29     | MOSFET + 🔁 **[[05 - Verifiche FUSI (Carli)|verifica 29-05 · MOSFET]]**                                           | 3h         |
 | 11  | **dom 30** | 🎯 **Prova generale**: mattina orale/pratico, pomeriggio le tre verifiche in fila | 4h30       |
 | 12  | **lun 31** | *vigilia: D1-D23 a voce + le pagine FORMULE*                                      | **40 min** |
 
-**Legenda:** 📖 leggere · ✏️ esercizi · 🔁 verifica del prof. da rifare · 🧠 nota del vault Obsidian
+**Legenda:** 📖 leggere · ✏️ esercizi · 🔁 verifica del prof. da rifare · 🧠 nota del vault Obsidian ([[00 - Indice Generale|indice]])
 
 ---
 
@@ -262,20 +262,21 @@ finisce alle 17:00.
 
 Sono cinque e non si sostituiscono a vicenda.
 
-**La lettera** (`Fonti/MAJORANA_lettera_giudizio_sospeso_recuperi_(Secondo_Periodo).pdf`)
+**La lettera** ([[MAJORANA_lettera_giudizio_sospeso_recuperi_(Secondo_Periodo).pdf|Fonti/MAJORANA_lettera…pdf]])
 dice cosa esce, e su questo non si discute. Vale la pena rileggerla una volta: sono nove
 righe.
 
-**Le tre verifiche del prof. Carli** (`Fonti/FUSI_02-03-26…`, `FUSI_24-04-26…`,
-`FUSI_29-05-26…`) sono la fonte più preziosa che hai, e sono **corrette a mano**: dicono
+**Le tre verifiche del prof. Carli** ([[FUSI_02-03-26_260616_183723.pdf|FUSI 02-03]], [[FUSI_24-04-26_260616_183749.pdf|FUSI 24-04]],
+[[FUSI_29-05-26_260616_183828.pdf|FUSI 29-05]]) sono la fonte più preziosa che hai, e sono **corrette a mano**: dicono
 come Carli formula gli esercizi, come li corregge e quanto li pesa. Sono i fogli di un
 compagno — **Alessio Fusi, 4BE** — non i tuoi: gli errori segnati in rosso sono un
 campionario di trappole, non la tua diagnosi. Il valore più alto sta nelle **soluzioni che
 il prof. ha scritto lui stesso sui retro di alcune pagine**: sono il procedimento che si
 aspetta di vedere sul foglio. Sono i checkpoint dei giorni 4, 7, 9, 10 e la sessione lunga
-del giorno 11.
+del giorno 11. Nel vault: 🧠 [[05 - Verifiche FUSI (Carli)]] — testi, correzioni e pesi —
+e 🧠 [[06 - Soluzioni complete verifiche FUSI]] per lo svolgimento completo.
 
-**Gli appunti Poggi** (`Fonti/appunti poggi.pdf`) sono il quaderno del corso: provano
+**Gli appunti Poggi** ([[appunti poggi.pdf|Fonti/appunti poggi.pdf]]) sono il quaderno del corso: provano
 cosa è stato fatto davvero in classe. Sono un riassunto, non una fonte a sé — mancano i
 passaggi intermedi, ed è lì che si perdono i punti allo scritto. Usali come indice e come
 ripasso veloce, **ma studia sempre anche le pagine del libro corrispondenti**: la mappa
@@ -288,7 +289,7 @@ sono formulate come le domande dell'orale, le pagine FORMULE sono il riassunto u
 forma `PDF nn → libro nn`: il primo numero è la pagina del PDF, il secondo è il numero
 stampato sulla pagina.
 
-**Edutecnica** (`Fonti/Edutecnica Elettronica.pdf` e `Fonti/Edutecnica Elettrotecnica.pdf`)
+**Edutecnica** ([[Edutecnica Elettronica.pdf]] e [[Edutecnica Elettrotecnica.pdf]])
 ha gli esercizi svolti passo-passo. Il Mirandola dà solo il risultato tra parentesi
 quadre; Edutecnica mostra lo svolgimento intero. **Per lo scritto è la fonte da usare.**
 Due eccezioni:
@@ -298,7 +299,7 @@ Due eccezioni:
 | **Filtri del 1° ordine e f.d.t.** (giorni 2-3) | Edutecnica **non tratta questo argomento**: i suoi «filtri di banda» (pp. 48-57) sono circuiti risonanti accoppiati per radiofrequenza, un'altra cosa. Qui il Mirandola e le pagine 9 e 18 di Poggi sono le uniche fonti |
 | **MOSFET** (giorno 10) | Il Mirandola gli dedica 5 pagine in tutto: la fonte vera è Edutecnica, il Mirandola serve solo per la formula del partitore di gate |
 
-**E poi c'è questo vault Obsidian**: teoria riscritta, esercizi con
+**E poi c'è questo vault Obsidian** ([[00 - Indice Generale]]): teoria riscritta, esercizi con
 soluzione passo-passo, errori tipici e quesiti d'orale già pronti. Ogni giornata qui sotto
 ha una riga 🧠 con le note da aprire. Quando una spiegazione del libro non scende, la nota
 del vault è la seconda spiegazione della stessa cosa.
@@ -324,16 +325,16 @@ sono chiusi non ha senso aprire i filtri.
 - 📖 **Mirandola PDF 42 → libro 79** — **FORMULE del capitolo 2: stampale oggi**, ti
   servono da qui alla fine
 - ✏️ **Edutecnica Elettrotecnica pp. 219-222** — esercizi 10-18, svolti passo-passo
-- 🔁 **FUSI 02-03, esercizi 1 e 6 — rifalli da zero**, senza guardare la correzione, timer
+- 🔁 **[[05 - Verifiche FUSI (Carli)|FUSI 02-03]], esercizi 1 e 6 — rifalli da zero**, senza guardare la correzione, timer
   da 30 minuti. Poi confronta con lo svolgimento alle pp. 9-15
-- 🧠 **vault**: `[[Il metodo simbolico]]` · `[[Impedenza dei bipoli R, L, C]]` ·
-  `[[Esercizi - Il metodo simbolico]]` · `[[Esercizi - Impedenza dei bipoli R, L, C]]`
+- 🧠 **vault**: [[Il metodo simbolico]] · [[Impedenza dei bipoli R, L, C]] ·
+  [[Esercizi - Il metodo simbolico]] · [[Esercizi - Impedenza dei bipoli R, L, C]]
 
 **+20 minuti di lettura per l'orale** — descrittiva, niente conti:
 
 - 📖 potenza attiva, reattiva e apparente, il triangolo delle potenze, il significato di
   cos φ · 📖 cos'è la risonanza e perché a quella frequenza la rete diventa puramente
-  resistiva. Fonte: 🧠 `[[Le potenze in alternata]]` §1-2 e `[[Reti RLC e risonanza]]` §1.
+  resistiva. Fonte: 🧠 [[Le potenze in alternata]] §1-2 e [[Reti RLC e risonanza]] §1.
   Serve solo a non restare muto se Carli lo chiede all'orale: **niente rifasamento
   numerico, niente Q-factor**
 
@@ -357,7 +358,7 @@ sono chiusi non ha senso aprire i filtri.
 - 📖 **Mirandola PDF 70-73 → libro 134-141** — risposta di un quadripolo, risposta al
   gradino, **f.d.t., zeri e poli**, ordine, stabilità
 - ✏️ **Mirandola PDF 97 → libro 189** — esercizi 9-10 (f.d.t. di quadripoli RL e RC)
-- 🧠 **vault**: `[[Filtri passivi del primo ordine]]` §1-2
+- 🧠 **vault**: [[Filtri passivi del primo ordine]] §1-2
 
 > ⛔ Salta il resto del §1 sui quadripoli (PDF 64-69) e i §4-5-6.
 
@@ -372,8 +373,8 @@ sono chiusi non ha senso aprire i filtri.
 - 📖 **Mirandola PDF 94 → libro 182-183** — **FORMULE del capitolo 4: stampale**
 - ✏️ **Mirandola PDF 97-98 → libro 189-191** — esercizi **11, 18 e 19** (risposta in
   ampiezza e fase; tipo di filtro e f_t di quattro reti; progetto di un passa-alto a 300 Hz)
-- 🧠 **vault**: `[[Filtri passivi del primo ordine]]` §3-4 ·
-  `[[Esercizi - Filtri passivi del primo ordine]]` — leggi la sezione «Errori tipici»
+- 🧠 **vault**: [[Filtri passivi del primo ordine]] §3-4 ·
+  [[Esercizi - Filtri passivi del primo ordine]] — leggi la sezione «Errori tipici»
   **prima** di fare gli esercizi, non dopo
 
 > ⛔ **Salta i diagrammi di Bode** (libro 144-154, esercizi 12-17) e **i filtri del 2°
@@ -390,19 +391,19 @@ sono chiusi non ha senso aprire i filtri.
 ## Giorno 4 · domenica 23 agosto — 🔁 Verifica 02-03 integrale + diodo
 ⏱️ ~3h30 · **checkpoint**
 
-- 🔁 **FUSI 02-03, esercizi 2, 3, 4 e 5** (pagine 3 e 5) — da zero, timer da 60 minuti
+- 🔁 **[[05 - Verifiche FUSI (Carli)|FUSI 02-03]], esercizi 2, 3, 4 e 5** (pagine 3 e 5) — da zero, timer da 60 minuti
 - Poi **rifai l'intera verifica 02-03 di seguito**, cronometrata
 - ✏️ **Mirandola PDF 43-44 → libro 81-83** — esercizi **4, 5, 6, 9 e 10**. ⛔ Salta il 7 e
   l'8 (risonanza) e dall'11 al 13 (potenze e rifasamento)
 - ✏️ **Edutecnica Elettronica pp. 74-78** — diodo Zener, esercizi 1-10
 - ✏️ **Mirandola PDF 118 → libro 230-231** — esercizi **1-12** sul diodo
-- 🧠 **vault**: `[[Esercizi - Diodi]]` · `[[Diodi]]` §4 (Zener) — la **teoria** del diodo
+- 🧠 **vault**: [[Esercizi - Diodi]] · [[Diodi]] §4 (Zener) — la **teoria** del diodo
   non va ristudiata, è già scritta in [[diodi-risposte]]
 
 **+25 minuti di lettura per l'orale** — alimentatori, descrittiva:
 
 - 📖 schema a blocchi (trasformatore → raddrizzatore → filtro → regolatore), cos'è il
-  ripple, cosa fa un 78xx. Fonte: 🧠 `[[Alimentatori]]` §1 e §4, oppure
+  ripple, cosa fa un 78xx. Fonte: 🧠 [[Alimentatori]] §1 e §4, oppure
   **Mirandola PDF 199 → libro 388-389**. La lettera mette «circuiti con diodi» alla prova
   pratica di Protti, e l'alimentatore è *il* circuito con diodi che sta sul banco di
   laboratorio
@@ -432,7 +433,7 @@ sono chiusi non ha senso aprire i filtri.
   struttura, verifica con l'ohmmetro, curve caratteristiche, e a libro 317 **le tre zone
   descritte una per una** con la formula 7.1. ⛔ Salta il modello di Ebers-Moll (libro 316)
 - 📖 **Edutecnica Elettronica pp. 62-73** — la trattazione più compatta, con altri esempi
-- 🧠 **vault**: `[[BJT]]` §1-3 · `[[Esercizi - BJT]]` (quesiti d'apertura)
+- 🧠 **vault**: [[BJT]] §1-3 · [[Esercizi - BJT]] (quesiti d'apertura)
 
 ## Giorno 6 · martedì 25 agosto — BJT · polarizzazione e punto di lavoro
 ⏱️ ~3h30
@@ -444,8 +445,8 @@ sono chiusi non ha senso aprire i filtri.
 - ✏️ **Edutecnica Elettronica pp. 56-61** — polarizzazione del transistor, esercizi svolti
   1-10: **falli tutti**
 - ✏️ **Mirandola PDF 195 → libro 384** — esercizi **2-7**. ⛔ Salta l'1 (derating)
-- 🧠 **vault**: `[[BJT]]` §4 (il dimensionamento completo, formule 7.8-7.11) ·
-  `[[Esercizi - BJT]]`
+- 🧠 **vault**: [[BJT]] §4 (il dimensionamento completo, formule 7.8-7.11) ·
+  [[Esercizi - BJT]]
 
 ## Giorno 7 · mercoledì 26 agosto — BJT amplificatore + 🔁 Verifica 24-04
 ⏱️ ~4h · **checkpoint · giornata piena**
@@ -460,10 +461,10 @@ sono chiusi non ha senso aprire i filtri.
   1-5: A_v, A_i, resistenza d'ingresso, punto di lavoro con h_ie e h_fe, **emitter-follower**
 - 📖 **Edutecnica Elettronica pp. 48-55** — modello a parametri h e modello π-ibrido.
   Leggilo **solo se** i parametri ibridi sul Mirandola non ti tornano
-- 🔁 **FUSI 24-04, tutti e 7 gli esercizi** — da zero, timer da 90 minuti
+- 🔁 **[[05 - Verifiche FUSI (Carli)|FUSI 24-04]], tutti e 7 gli esercizi** — da zero, timer da 90 minuti
 - ✏️ **Mirandola PDF 195 → libro 385** — esercizi **8-14**, in particolare l'**8**
   (interfaccia TTL-relè) e il **9** (C_E)
-- 🧠 **vault**: `[[Amplificatori a BJT]]` · `[[Esercizi - Amplificatori a BJT]]`
+- 🧠 **vault**: [[Amplificatori a BJT]] · [[Esercizi - Amplificatori a BJT]]
 
 > 📌 Sulla copia corretta gli **Es. 4 e 5 (interfaccia relè e capacità di by-pass) sono
 > «NON SVOLTO PER NULLA»** e l'**Es. 6 (saturazione) «errato»**. Gli esercizi 8 e 9 del
@@ -489,18 +490,18 @@ sono chiusi non ha senso aprire i filtri.
 - 📖 **Mirandola PDF 188 → libro 370** — circuito equivalente e **amplificatore a source
   comune** (R_i, G_v, R_o), con esempio svolto
 - ✏️ **Edutecnica Elettronica pp. 30-34** — esercizi sui JFET 1-8
-- 🧠 **vault**: `[[JFET]]` · `[[Esercizi - JFET]]` — è la nota più ricca del vault, 663
+- 🧠 **vault**: [[JFET]] · [[Esercizi - JFET]] — è la nota più ricca del vault, 663
   righe, e copre proprio gli esercizi di progetto
 
 ## Giorno 9 · venerdì 28 agosto — 🔁 Verifica 29-05 · JFET
 ⏱️ ~3h · **checkpoint**
 
-- 🔁 **FUSI 29-05, esercizi 1, 2, 3, 4 e 5** (pagine 1, 3, 5) — da zero, timer da 60 minuti
+- 🔁 **[[05 - Verifiche FUSI (Carli)|FUSI 29-05]], esercizi 1, 2, 3, 4 e 5** (pagine 1, 3, 5) — da zero, timer da 60 minuti
 - ✏️ **Edutecnica Elettronica pp. 17-20** — JFET amplificatore, esercizi 1-5
 - ✏️ **Mirandola PDF 195 → libro 385** — esercizio **15**: ha **gli stessi identici dati
   dell'Es. 1 della verifica** (I_D0 = 8 mA, V_GS0 = −1 V, V_DS0 = 7 V). Confronta i due
   svolgimenti riga per riga
-- 🧠 **vault**: `[[Esercizi - JFET]]`, sezione errori tipici
+- 🧠 **vault**: [[Esercizi - JFET]], sezione errori tipici
 
 > 📌 Sulla copia corretta gli **Es. 3, 4 e 5 sono «NON SVOLTO»** e nell'Es. 1 il calcolo di
 > **R_G è errato**. Tre esercizi su cinque non consegnati: è l'argomento più scoperto che
@@ -519,8 +520,8 @@ sono chiusi non ha senso aprire i filtri.
   invertitore e porte CMOS (libro 369)
 - ✏️ **Edutecnica Elettronica pp. 1-4** — MOSFET, esercizi risolti 1-7, tutti su NMOS ad
   arricchimento: **falli tutti**
-- 🔁 **FUSI 29-05, esercizi 6, 7 e 8** (pagine 7 e 9) — da zero, timer da 45 minuti
-- 🧠 **vault**: `[[MOSFET]]` §3 · `[[Esercizi - MOSFET]]`
+- 🔁 **[[05 - Verifiche FUSI (Carli)|FUSI 29-05]], esercizi 6, 7 e 8** (pagine 7 e 9) — da zero, timer da 45 minuti
+- 🧠 **vault**: [[MOSFET]] §3 · [[Esercizi - MOSFET]]
 
 > 📌 **Il punto critico sono le due strade per arrivare a V_GS**, e vanno tenute distinte:
 > - dal **partitore di gate**: V_GS0 = V_DD · R₂/(R₁+R₂)
@@ -552,12 +553,12 @@ Orale e pratico insieme, perché insieme saranno.
   frequenza. È **l'**esperienza di laboratorio sui filtri
 - ✏️ **Mirandola PDF 62 → libro 118-119** — esercizi **1, 4 e 5** sui parametri dei segnali.
   ⛔ Salta il 2 e il 3 (dBv) e il 6 e il 7 (spettro)
-- 🧠 **vault**: `[[L'oscilloscopio]]` e `[[03 - Prova Pratica Protti]]` — le cinque famiglie
+- 🧠 **vault**: [[L'oscilloscopio]] e [[03 - Prova Pratica Protti]] — le cinque famiglie
   di prove pratiche, la sequenza operativa, e i sei errori che costano il punto (sonda ×10,
   trigger, coupling AC/DC, canali invertiti)
 - 🗣️ **Le tre domande d'orale, a voce, nell'ordine della lettera**: il **diodo** (già
   coperto), i **circuiti in corrente alternata**, i **filtri passivi del 1° ordine**.
-  Traccia: 🧠 `[[02 - Prova Orale Carli]]`, che ha le domande già divise per livello.
+  Traccia: 🧠 [[02 - Prova Orale Carli]], che ha le domande già divise per livello.
   Le ultime due sono il punto che il piano vecchio non preparava a voce: falle davvero,
   ad alta voce, non rileggendole
 
@@ -565,7 +566,7 @@ Orale e pratico insieme, perché insieme saranno.
 
 L'unico blocco lungo del piano.
 
-- 🔁 **Le tre verifiche FUSI in fila, timer unico, senza appunti.** Non è per imparare
+- 🔁 **Le tre [[05 - Verifiche FUSI (Carli)|verifiche FUSI]] in fila, timer unico, senza appunti.** Non è per imparare
   qualcosa di nuovo — a questo punto non ce n'è — è per sapere **com'è stare cinque ore su
   dei conti**: quando cala l'attenzione, quando conviene saltare un esercizio e tornarci,
   quanto tempo serve davvero per un progetto di polarizzazione
@@ -591,7 +592,7 @@ L'unico blocco lungo del piano.
   | Mirandola PDF 94 → libro 182-183 | quadripoli e filtri |
   | Mirandola PDF 193 → libro 380-381 | BJT e FET |
 
-  Più **appunti Poggi p. 4** e 🧠 `[[Formulario rapido]]` Parte A (cheat sheet) del vault
+  Più **appunti Poggi p. 4** e 🧠 [[Formulario rapido]] Parte A (cheat sheet) del vault
 - 📌 **I due o tre errori segnati ieri sera**, riletti. Non rifatti: riletti
 - 🎒 **Prepara la cartellina stasera, non domattina**: D1-D23 stampate, il cheat sheet,
   le quattro pagine FORMULE, calcolatrice scientifica, il formulario personale
@@ -603,7 +604,7 @@ L'unico blocco lungo del piano.
 
 ## 🗓️ Il giorno della prova — martedì 1 settembre
 
-**8:00 – 13:00 · scritto (Carli).** Cinque ore, e sono tante: la lettera nomina cinque
+**8:00 – 13:00 · scritto (Carli)** — 🧠 [[01 - Prova Scritta Carli]]**.** Cinque ore, e sono tante: la lettera nomina cinque
 argomenti — alternata, filtri del 1° ordine, BJT, JFET canale N, MOSFET canale N ad
 arricchimento — e in cinque ore ci stanno tutti. Non contare su nessuno che non esca.
 Comincia da quello che ti viene meglio per prendere ritmo, e su ogni esercizio che non
@@ -611,10 +612,10 @@ chiudi **scrivi comunque la formula di partenza e il procedimento**: sulle verif
 prof. i «NON SVOLTO PER NULLA» pesano più degli «errato».
 
 **13:00 – 14:00 · pausa.** Un'ora, ed è tempo di studio. **Solo due cose**, decise adesso
-per non doverlo decidere allora: le risposte **D1-D23** e il **cheat sheet**. Niente
+per non doverlo decidere allora: le risposte **D1-D23** ([[diodi-risposte]]) e il **cheat sheet** ([[Formulario rapido]], Parte A). Niente
 esercizi, niente libro, niente cose nuove — il pomeriggio è orale, non scritto.
 
-**14:00 – 17:00 · orale e pratico insieme (Carli e Protti).** Tre ore in cui si passa dal
+**14:00 – 17:00 · orale e pratico insieme (Carli e Protti)** — 🧠 [[02 - Prova Orale Carli]] · [[03 - Prova Pratica Protti]]**.** Tre ore in cui si passa dal
 diodo a voce alle misure all'oscilloscopio. Per Carli: diodo, circuiti in alternata, filtri
 del 1° ordine. Per Protti: oscilloscopio su tutto il programma — circuiti con diodi,
 segnali sinusoidali, reti RLC in regime sinusoidale, filtri passivi, BJT, amplificatori con

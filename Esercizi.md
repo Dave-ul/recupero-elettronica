@@ -12,7 +12,7 @@ prove: [scritta, orale, pratica]
 > [!tip] Come usarlo
 > - In Obsidian: clicca sui link `[[...]]` per saltare al file.
 > - Per ogni macroarea: 1) rileggi la teoria in `Argomenti/` → 2) fai gli esercizi qui → 3) verifica con `Prove/01 - Prova Scritta Carli`.
-> - Per allenarti a batteria: `[[Esercizi - Simulazione finale]]` (75 min). ⚠️ Non è la
+> - Per allenarti a batteria: [[Esercizi - Simulazione finale]] (75 min). ⚠️ Non è la
 >   simulazione della prova reale, che dura **cinque ore**: quella è la sessione lunga del
 >   30 agosto, con le tre verifiche FUSI in fila — vedi [[Calendario]] e [[05 - Verifiche FUSI (Carli)]].
 
@@ -51,7 +51,7 @@ Ogni file di esercizi in `Esercizi/` segue la stessa struttura standard, per con
 7. **"Da qui in poi"** con link al resto del percorso (successive esercitazioni + prove).
 8. **Fonti** (libro + URL edutecnica).
 
-> Esempio: vedi `[[Esercizi - Diodi]]` per il pattern completo (esercita la consultazione scorrendo questo file).
+> Esempio: vedi [[Esercizi - Diodi]] per il pattern completo (esercita la consultazione scorrendo questo file).
 
 ---
 
@@ -62,19 +62,19 @@ cade nel [[Calendario]]: i due piani vanno letti insieme, e dove divergono coman
 
 | Step | File | Giorno | Tempo | Cosa impari |
 |---|---|---|---|---|
-| 1 | `[[Esercizi - Segnali sinusoidali e fasori]]` | **1** · 20 ago | 1h | Conversioni di forma, operazioni con vettori |
-| 2 | `[[Esercizi - Impedenza dei bipoli R, L, C]]` | **1** · 20 ago | 1h | Serie/parallelo, $X_L$/$X_C$ |
-| 3 | `[[Esercizi - Il metodo simbolico]]` | **1** · 20 ago ⭐ | 1h | Procedure standard 4 passi |
-| 4 | `[[Esercizi - Le potenze in alternata]]` | **1** · solo lettura | 20 min | P/Q/S e $\cos\varphi$ *(descrittivi, per l'orale — niente rifasamento numerico)* |
-| 5 | `[[Esercizi - Reti RLC e risonanza]]` | **1** · §1-2 | 1h | Risonanza; il Q-factor solo se avanza tempo |
-| 6 | `[[Esercizi - Filtri passivi del primo ordine]]` | **2-3** · 21-22 ago ⭐ | 1.5h | $f_t$ RC/RL (errata corrige libro!) |
-| 7 | `[[Esercizi - Diodi]]` | **4** · 23 ago | 1.5h | Spezzata, Zener, raddrizzatore, limitatore |
-| 8 | `[[Esercizi - BJT]]` | **5-6** · 24-25 ago | 2h | Polarizzazioni, commutazione, Darlington |
-| 9 | `[[Esercizi - MOSFET]]` | **10** · 29 ago ⭐ | 2h | Parabolica + verifica saturazione |
-| 10 | `[[Esercizi - JFET]]` | **8-9** · 27-28 ago ⭐ | 1.5h | Autopolarizzazione, discriminante |
-| 11 | `[[Esercizi - Amplificatori a BJT]]` | **7** · 26 ago | 2h | Parametri h CE/CC/CB |
-| 12 | `[[Esercizi - Alimentatori]]` | **4** · solo lettura | 25 min | Schema a blocchi, ripple, 78xx *(descrittivi, per la pratica Protti)* |
-| 13 | `[[Esercizi - Simulazione finale]]` | *libera* | 1h15 | Allenamento alla velocità. La prova di resistenza sulle 5 ore è il **giorno 11** |
+| 1 | [[Esercizi - Segnali sinusoidali e fasori]] | **1** · 20 ago | 1h | Conversioni di forma, operazioni con vettori |
+| 2 | [[Esercizi - Impedenza dei bipoli R, L, C]] | **1** · 20 ago | 1h | Serie/parallelo, $X_L$/$X_C$ |
+| 3 | [[Esercizi - Il metodo simbolico]] | **1** · 20 ago ⭐ | 1h | Procedure standard 4 passi |
+| 4 | [[Esercizi - Le potenze in alternata]] | **1** · solo lettura | 20 min | P/Q/S e $\cos\varphi$ *(descrittivi, per l'orale — niente rifasamento numerico)* |
+| 5 | [[Esercizi - Reti RLC e risonanza]] | **1** · §1-2 | 1h | Risonanza; il Q-factor solo se avanza tempo |
+| 6 | [[Esercizi - Filtri passivi del primo ordine]] | **2-3** · 21-22 ago ⭐ | 1.5h | $f_t$ RC/RL (errata corrige libro!) |
+| 7 | [[Esercizi - Diodi]] | **4** · 23 ago | 1.5h | Spezzata, Zener, raddrizzatore, limitatore |
+| 8 | [[Esercizi - BJT]] | **5-6** · 24-25 ago | 2h | Polarizzazioni, commutazione, Darlington |
+| 9 | [[Esercizi - MOSFET]] | **10** · 29 ago ⭐ | 2h | Parabolica + verifica saturazione |
+| 10 | [[Esercizi - JFET]] | **8-9** · 27-28 ago ⭐ | 1.5h | Autopolarizzazione, discriminante |
+| 11 | [[Esercizi - Amplificatori a BJT]] | **7** · 26 ago | 2h | Parametri h CE/CC/CB |
+| 12 | [[Esercizi - Alimentatori]] | **4** · solo lettura | 25 min | Schema a blocchi, ripple, 78xx *(descrittivi, per la pratica Protti)* |
+| 13 | [[Esercizi - Simulazione finale]] | *libera* | 1h15 | Allenamento alla velocità. La prova di resistenza sulle 5 ore è il **giorno 11** |
 
 **Tempo totale stimato**: ~20 ore. Non sono però 20 ore a sé stanti: sono **dentro** le
 circa 40 ore dei 12 giorni del [[Calendario]], che a ciascuna di queste voci assegna un
@@ -86,12 +86,12 @@ giorno preciso — vedi la colonna qui sopra. Se i due piani divergono, comanda 
 
 Per ogni `Esercizi - X.md`, c'è una sezione **"Pattern di errore frequenti (Carli scritta)"** con i 2-3 errori tipici. Riassunto dei 3 peggiori (da NON fare mai):
 
-1. **MOSFET/JFET senza verifica di saturazione**: applicare la parabolica $I_D = K(V_{GS}-V_{th})^2$ senza controllare $V_{DS} > V_{GS}-V_{th}$ è la causa #1 di errore alla Carli scritta. → Vedi `[[Esercizi - MOSFET]]`.
-2. **Filtri RL con $L/R$ invece di $R/L$**: errore del libro Mirandola (pag. 160), già corretto nel vault. Se uno studente "impara dal libro" di prendere l'abitudine, sbaglia alla Carli. → Vedi `[[Esercizi - Filtri passivi del primo ordine]]`.
+1. **MOSFET/JFET senza verifica di saturazione**: applicare la parabolica $I_D = K(V_{GS}-V_{th})^2$ senza controllare $V_{DS} > V_{GS}-V_{th}$ è la causa #1 di errore alla Carli scritta. → Vedi [[Esercizi - MOSFET]].
+2. **Filtri RL con $L/R$ invece di $R/L$**: errore del libro Mirandola (pag. 160), già corretto nel vault. Se uno studente "impara dal libro" di prendere l'abitudine, sbaglia alla Carli. → Vedi [[Esercizi - Filtri passivi del primo ordine]].
 3. **JFET, le due relazioni di progetto non sapute a memoria**: $V_{GS0} = -R_S I_{D0}$ e
    $V_{DD} = I_{D0}(R_S + R_D) + V_{DS0}$. Sulla verifica 29-05 del prof. **tre esercizi su cinque**
    sono segnati «NON SVOLTO»: è l'argomento più scoperto, e sono due formule.
-   → Vedi `[[Esercizi - JFET]]` e [[05 - Verifiche FUSI (Carli)]].
+   → Vedi [[Esercizi - JFET]] e [[05 - Verifiche FUSI (Carli)]].
 
 > *(Fino al 2026-08-20 il terzo posto era del rifasamento trifase, che il [[Calendario]]
 > mette fuori programma. Il 2026-08-21 le formule trifase sono state rimosse dal vault:
@@ -126,4 +126,4 @@ Il file [[Esercizi - Simulazione finale]] contiene **5 problemi misti** (E1–E5
 - **Prove d'esame (Carli + Protti)** → vedi [[00 - Indice Generale|Indice Generale]]
 - **Formulario rapido** per il compito → vedi [[Formulario rapido|Formulario rapido]]
 - **Trasparenza fonti** (LETTERA Majorana + edutecnica.it + libro Mirandola) → vedi [[00 - Fonti e note]]
-- **Tutorial su misure di laboratorio** → vedi `[[Diodi#6.b Misurazioni Pratiche]]` + `[[L'oscilloscopio]]`
+- **Tutorial su misure di laboratorio** → vedi [[Diodi#6.b Misurazioni Pratiche]] + [[L'oscilloscopio]]

@@ -128,12 +128,12 @@ La lettera ne nomina **tre**, non uno solo:
 
 ## ❌ Errori comuni (consultazione rapida)
 
-Gli errori "trappola" della [[01 - Prova Scritta Carli|prova scritta Carli]] sono documentati alla fine di ogni nota di teoria nella sezione **"Pattern di errore frequenti"** (vedi `[[Esercizi - Filtri passivi del primo ordine#Errori tipici]]`, `[[Esercizi - Diodi#Errori tipici]]`, ecc.).
+Gli errori "trappola" della [[01 - Prova Scritta Carli|prova scritta Carli]] sono documentati alla fine di ogni nota di teoria nella sezione **"Pattern di errore frequenti"** (vedi [[Esercizi - Filtri passivi del primo ordine#Errori tipici]], [[Esercizi - Diodi#Errori tipici]], ecc.).
 
 I tre più critici in assoluto (da memorizzare):
 
-1. **Filtri**: RL → $f_t = R/(2\pi L)$ (NON $L/R$). Vedi `[[Filtri passivi del primo ordine]]` §4.
-2. **MOSFET**: parabolica $I_D = K(V_{GS}-V_{th})^2$ vale SOLO in saturazione. **Verifica sempre** $V_{DS} > V_{GS} - V_{th}$. Vedi `[[MOSFET]]` §3.
+1. **Filtri**: RL → $f_t = R/(2\pi L)$ (NON $L/R$). Vedi [[Filtri passivi del primo ordine]] §4.
+2. **MOSFET**: parabolica $I_D = K(V_{GS}-V_{th})^2$ vale SOLO in saturazione. **Verifica sempre** $V_{DS} > V_{GS} - V_{th}$. Vedi [[MOSFET]] §3.
 3. **JFET**: tutti gli esercizi di progetto escono da due sole relazioni — $V_{GS0} = -R_S I_{D0}$ e $V_{DD} = I_{D0}(R_S + R_D) + V_{DS0}$. Sulla verifica 29-05 tre esercizi su cinque sono «NON SVOLTO»: vedi [[05 - Verifiche FUSI (Carli)]].
 
 ---

@@ -7,8 +7,8 @@ tipologia: Orale
 # 02 — Prova Orale (Prof. Carli)
 
 > [!abstract] 📅 Quando · 1 settembre, **14:00 – 17:00** — insieme alla pratica di Protti
-> Non è una prova a sé: è **mezza sessione**, l'altra mezza è [[03 - Prova Pratica Protti|il
-> laboratorio di Protti]], con i due docenti presenti insieme.
+> Non è una prova a sé: è **mezza sessione**, l'altra mezza è
+> [[03 - Prova Pratica Protti|il laboratorio di Protti]], con i due docenti presenti insieme.
 >
 > La preparano: il **diodo** già dal 19 agosto (risposte D1-D23 in
 > [[diodi-risposte]]), **alternata** e **filtri** dai giorni 1-4 di
