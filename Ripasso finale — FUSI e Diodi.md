@@ -1,6 +1,6 @@
 ---
 tags: [recupero, elettronica, ripasso, carli, soluzioni, diodi, zener, fonte-derivata]
-fonte: "condensazione di [[06 - Soluzioni complete verifiche FUSI]] e [[diodi-risposte]] in un'unica nota di ripasso"
+fonte: "condensazione di Prove/06 - Soluzioni complete verifiche FUSI e Strumenti/diodi-risposte in un'unica nota di ripasso"
 file: "Fonti/FUSI_02-03-26_260616_183723.pdf · Fonti/FUSI_24-04-26_260616_183749.pdf · Fonti/FUSI_29-05-26_260616_183828.pdf"
 aggiunto: 2026-08-30
 verificato: "2026-08-30 — testi ricontrollati sulle scansioni (ritagli a 300 dpi per V3 es. 5 e 6); risultati ripresi dalla nota 06, già ricalcolati da zero il 2026-08-28"
@@ -15,8 +15,9 @@ verifiche del Prof. Carli risolti in forma compatta, più le **risposte sui diod
 > [!info] Come si legge
 > Ogni esercizio è ridotto all'osso: **dati → formula → calcolo → risultato**, più una riga di
 > *trappola* con l'errore che Carli ha segnato in rosso sul fascicolo di Fusi.
-> Sopra ogni gruppo di esercizi c'è la **scansione della pagina originale**, così leggi il testo
-> del prof. con i suoi disegni e le sue correzioni in rosso senza aprire il PDF.
+> Sotto ogni gruppo di esercizi c'è un blocco **«Testo originale del prof.»**: cliccalo e si apre
+> la **scansione della pagina**, coi disegni e le correzioni in rosso, senza aprire il PDF.
+> Sta chiuso di default, così la nota resta compatta da scorrere.
 > Serve il ragionamento esteso, il perché di ogni passaggio? È in
 > [[06 - Soluzioni complete verifiche FUSI]]. Come corregge e valuta:
 > [[05 - Verifiche FUSI (Carli)]]. Versione stampabile dei diodi:
@@ -41,8 +42,8 @@ verifiche del Prof. Carli risolti in forma compatta, più le **risposte sui diod
 
 ## Es. 1 — Modulo e argomento dell'impedenza equivalente
 
-![[fusi-02-03-p1-es1.png]]
-*Verifica 1, p. 1 — intestazione e **es. 1** (bipoli 1A e 1B).*
+> [!example]- 📄 Testo originale del prof. — Verifica 1, p. 1 — intestazione e **es. 1** (bipoli 1A e 1B).
+> ![[fusi-02-03-p1-es1.png]]
 
 I due componenti sono **in serie** (maglia unica: il disegno verticale inganna, ma nessun ramo
 scavalca il secondo componente) → `Z̄_eq = Z̄₁ + Z̄₂`.
@@ -83,8 +84,8 @@ Z̄_eq = 330 + j754 Ω
 
 ## Es. 2 — Poli delle funzioni di trasferimento
 
-![[fusi-02-03-p3-es2-3.png]]
-*Verifica 1, p. 3 — **es. 2** (poli) ed **es. 3** (risposta in ampiezza e fase).*
+> [!example]- 📄 Testo originale del prof. — Verifica 1, p. 3 — **es. 2** (poli) ed **es. 3** (risposta in ampiezza e fase).
+> ![[fusi-02-03-p3-es2-3.png]]
 
 I **poli** sono le radici del **denominatore**; gli zeri quelle del numeratore. Nessun limite,
 nessun guadagno: si annulla `D(s)` e si risolve.
@@ -157,8 +158,8 @@ f = 20 MHz : ωL = 1,2566·10⁵ Ω · num = 7,037·10⁸ · den ≈ 9,803·10�
 
 ## Es. 4 — Funzione di trasferimento dei quadripoli
 
-![[fusi-02-03-p5-es4-5.png]]
-*Verifica 1, p. 5 — **es. 4** (funzioni di trasferimento) ed **es. 5** (frequenze di taglio).*
+> [!example]- 📄 Testo originale del prof. — Verifica 1, p. 5 — **es. 4** (funzioni di trasferimento) ed **es. 5** (frequenze di taglio).
+> ![[fusi-02-03-p5-es4-5.png]]
 
 Partitore: `Ḡ(s) = Z̄_uscita/(Z̄_serie + Z̄_uscita)`. Il tipo di filtro dipende da **su quale
 componente si preleva l'uscita**. `Ḡ(s)` è sempre **adimensionale**: se viene in ohm, è sbagliata.
@@ -216,8 +217,8 @@ f_t = 1/(2π · 2,2·10⁻³) = 72,3 Hz
 
 ## Es. 6 — Impedenza equivalente della rete
 
-![[fusi-02-03-p7-es6.png]]
-*Verifica 1, p. 7 — **es. 6**, la rete di quattro impedenze.*
+> [!example]- 📄 Testo originale del prof. — Verifica 1, p. 7 — **es. 6**, la rete di quattro impedenze.
+> ![[fusi-02-03-p7-es6.png]]
 
 `Z̄₁ = 2 + j6` · `Z̄₂ = 2 − j2` · `Z̄₃ = j10` · `Z̄₄ = 2 + j4` (Ω)
 
@@ -260,8 +261,8 @@ Z̄_eq = Z̄₁Z̄₂₃₄/(Z̄₁+Z̄₂₃₄): num (2+j6)(2,8+j0,4) = 3,2 + 
 
 ## Es. 1 — Determinare V_CE, I_C, I_B
 
-![[fusi-24-04-p1-es1.png]]
-*Verifica 2, p. 1 — intestazione e **es. 1**.*
+> [!example]- 📄 Testo originale del prof. — Verifica 2, p. 1 — intestazione e **es. 1**.
+> ![[fusi-24-04-p1-es1.png]]
 
 `V_CC = 12 V` · `R_C = 820 Ω` · `V_BB = 5 V` · `R_B = 56 kΩ` · `h_FE = 100` · `V_BE = 0,7 V`
 (due alimentazioni, emettitore a massa)
@@ -284,8 +285,8 @@ Verifica zona attiva: I_C(sat) = (12 − 0,2)/820 = 14,4 mA > 7,68 mA  ✓
 
 ## Es. 2 — Progetto di R_C e R_B per il punto di lavoro assegnato
 
-![[fusi-24-04-p3-es2-3.png]]
-*Verifica 2, p. 3 — **es. 2** (progetto R_C e R_B) ed **es. 3** (partitore + R_E).*
+> [!example]- 📄 Testo originale del prof. — Verifica 2, p. 3 — **es. 2** (progetto R_C e R_B) ed **es. 3** (partitore + R_E).
+> ![[fusi-24-04-p3-es2-3.png]]
 
 `V_CEO = 4,8 V` · `I_CO = 14 mA` · `h_FE = 100` · `V_CC = 10 V` · base fissa, emettitore a massa
 
@@ -335,8 +336,8 @@ I_E = I_C + I_B = 10,13 mA
 
 ## Es. 4 — Interfaccia porta TTL → bobina di relè
 
-![[fusi-24-04-p5-es4-5.png]]
-*Verifica 2, p. 5 — **es. 4** (interfaccia TTL-relè) ed **es. 5** (condensatore di by-pass).*
+> [!example]- 📄 Testo originale del prof. — Verifica 2, p. 5 — **es. 4** (interfaccia TTL-relè) ed **es. 5** (condensatore di by-pass).
+> ![[fusi-24-04-p5-es4-5.png]]
 
 Uscita TTL `0 V / 5 V` · relè **12 V, 70 mA** · `h_FEmin = 75`
 
@@ -391,8 +392,8 @@ Verifica a 50 Hz con 33 µF: X_CE = 1/(2π·50·33·10⁻⁶) = 96,5 Ω ≪ 1000
 
 ## Es. 6 — Verifica del funzionamento in saturazione
 
-![[fusi-24-04-p7-es6-7.png]]
-*Verifica 2, p. 7 — **es. 6** (verifica di saturazione) ed **es. 7** (punto di lavoro con R_E).*
+> [!example]- 📄 Testo originale del prof. — Verifica 2, p. 7 — **es. 6** (verifica di saturazione) ed **es. 7** (punto di lavoro con R_E).
+> ![[fusi-24-04-p7-es6-7.png]]
 
 `V_CC = 10 V` · `h_FE = 50` · `R_B = 5,2 kΩ` · `R_C = 0,33 kΩ` · `V_BE = 0,8 V` ·
 `V_CEsat = 0,2 V` · base fissa, emettitore a massa
@@ -465,8 +466,8 @@ Verifica: V_CE ≫ 0,2 V ✓ · I_C(sat) = 19,8/500 = 39,6 mA > 23,1 mA ✓
 
 ## Es. 1 — Progetto dell'autopolarizzazione di un JFET
 
-![[fusi-29-05-p1-es1.png]]
-*Verifica 3, p. 1 — intestazione e **es. 1** (autopolarizzazione JFET).*
+> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 1 — intestazione e **es. 1** (autopolarizzazione JFET).
+> ![[fusi-29-05-p1-es1.png]]
 
 `V_DD = 12 V` · `I_DO = 8 mA` · `V_GSO = −1 V` · `V_DSO = 7 V` · incognite `R_D, R_S, R_G`
 
@@ -491,8 +492,8 @@ R_G = si sceglie: 1 MΩ  (il prof. indica 5 MΩ)
 
 ## Es. 2 — Progetto con l'equazione di Shockley
 
-![[fusi-29-05-p3-es2-3.png]]
-*Verifica 3, p. 3 — **es. 2** (Shockley) ed **es. 3** (V_GG e V_DD).*
+> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 3 — **es. 2** (Shockley) ed **es. 3** (V_GG e V_DD).
+> ![[fusi-29-05-p3-es2-3.png]]
 
 `V_DD = 18 V` · `I_DO = 5 mA` · `V_DSO = 10 V` · `I_DSS = 12 mA` · `V_P = −5 V`
 
@@ -540,8 +541,8 @@ V_DD = R_D·I_DO + V_DSO = 6·10³·5·10⁻³ + 10 = 30 + 10 = 40 V
 
 ## Es. 4 — Punto di lavoro e tensione di alimentazione
 
-![[fusi-29-05-p5-es4-5.png]]
-*Verifica 3, p. 5 — **es. 4** (punto di lavoro) ed **es. 5** (partitore JFET).*
+> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 5 — **es. 4** (punto di lavoro) ed **es. 5** (partitore JFET).
+> ![[fusi-29-05-p5-es4-5.png]]
 
 `I_DSS = 12 mA` · `V_P = −4,5 V` · `V_DSO = 10 V` · `V_GSO = −2 V` · `R_D = 2,7 kΩ`
 
@@ -590,8 +591,8 @@ Verifica: V_G = 25·160k/2M = 2 V  ✓
 
 ## Es. 6 — MOSFET: determinare il punto di lavoro
 
-![[fusi-29-05-p7-es6-7.png]]
-*Verifica 3, p. 7 — **es. 6** ed **es. 7**, i due MOSFET, con le due `V_DD` diverse (vedi l'avviso nell'es. 7).*
+> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 7 — **es. 6** ed **es. 7**, i due MOSFET, con le due `V_DD` diverse (vedi l'avviso nell'es. 7).
+> ![[fusi-29-05-p7-es6-7.png]]
 
 `V_DD = 15 V` · `R₁ = 1,27 kΩ` · `R₂ = 825 kΩ` · `R_D = 1,8 kΩ` · `K = 0,6 mA/V²` · `V_t = 3 V`
 · ipotesi del testo: **MOS saturo** · partitore sul gate, source a massa
@@ -683,8 +684,8 @@ Verifica: V_G = 25·2,86/10 = 7,16 V ✓ · I_D = 0,3·10⁻³·(3,162)² = 3,0 
 
 ## Es. 8 — Progetto della polarizzazione di un MOSFET con R_S
 
-![[fusi-29-05-p9-es8.png]]
-*Verifica 3, p. 9 — **es. 8**, MOSFET con R_S.*
+> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 9 — **es. 8**, MOSFET con R_S.
+> ![[fusi-29-05-p9-es8.png]]
 
 `I_DO = 8 mA` · `V_GSO = 6 V` · `V_DSO = 10 V` · `V_DD = 15 V` · `V_S = 3 V` · `R₁ + R₂ = 2 MΩ`
 · incognite `R_D, R_S, R₁, R₂`
