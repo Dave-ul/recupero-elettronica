@@ -90,10 +90,10 @@ quella della griglia firmata dal prof.
 | Es. | Cosa chiede | Giudizio | Punti | Nota del prof. |
 |---|---|---|---|---|
 | **1** | progetto $R_D$, $R_S$, $R_G$ · JFET, $V_{DD}=12$ V, $I_{D0}=8$ mA, $V_{GS0}=-1$ V, $V_{DS0}=7$ V | ~OK | 0,75/1,00 | $R_D$ e $R_S$ OK; **$R_G$ errato** — la correzione è il punto più istruttivo dei tre fascicoli |
-| **2** | progetto $R_S$, $R_D$, $R_G$ con Shockley: $V_{DD}=18$ V, $I_{D0}=5$ mA, $V_{DS0}=10$ V, $V_P=5$ V, $I_{DSS}=12$ mA | ~OK | 0,75/1,50 | «relazioni usate corrette ma errati tutti i calcoli» |
+| **2** | progetto $R_S$, $R_D$, $R_G$ con Shockley: $V_{DD}=18$ V, $I_{D0}=5$ mA, $V_{DS0}=10$ V, $V_P=5$ V (il testo **omette il segno**: per un JFET a canale N vale $V_P=-5$ V), $I_{DSS}=12$ mA | ~OK | 0,75/1,50 | «relazioni usate corrette ma errati tutti i calcoli» |
 | **3** | $V_{GG}$ e $V_{DD}$ dati $I_{D0}=5$ mA, $V_{DS0}=10$ V, $V_{GS0}=-2$ V, $R_D=6$ k$\Omega$ (polarizzazione a due alimentazioni) | ⛔ **NON SVOLTO** | 0,00/1,00 | — |
 | **4** | punto di lavoro e $V_{DD}$: $I_{DSS}=12$ mA, $V_P=-4{,}5$ V, $V_{DS0}=10$ V, $V_{GS0}=-2$ V, $R_D=2{,}7$ k$\Omega$ | ⛔ **NON SVOLTO** | 0,00/1,00 | — |
-| **5** | progetto $R_S$, $R_1$, $R_2$ con partitore di gate: $I_{D0}=35$ mA, $V_{GS0}=-1{,}5$ V, $V_{DS0}=11$ V, $V_{DD}=25$ V, $R_1+R_2=2$ M$\Omega$, $R_D=3$ k$\Omega$ | ⛔ **NON SVOLTO** | 0,00/1,50 | — |
+| **5** | progetto $R_S$, $R_1$, $R_2$ con partitore di gate: $I_{D0}=3{,}5$ mA, $V_{GS0}=-1{,}5$ V, $V_{DS0}=11$ V, $V_{DD}=25$ V, $R_1+R_2=2$ M$\Omega$, $R_D=3$ k$\Omega$ | ⛔ **NON SVOLTO** | 0,00/1,50 | — |
 | **6** | punto di lavoro MOSFET: $V_{DD}=15$ V, $R_1=1{,}27$ k$\Omega$, $R_2=825$ k$\Omega$, $R_D=1{,}8$ k$\Omega$, $K=0{,}6$ mA/V², $V_t=3$ V | ~OK | 0,75/1,50 | il prof. rifà tutto il calcolo sul retro: vedi sotto |
 | **7** | **progetto** MOSFET: $V_{DD}=25$ V, $I_D=3$ mA, $K=0{,}3$ mA/V², $V_t=4$ V, $R_1+R_2=10$ M$\Omega$ | ~OK | 0,75/1,50 | «**errata relazione che fornisce $V_{GS}$** e ragionamento per stimare $V_{DS}$» |
 | **8** | progetto con $R_S$: $I_{D0}=8$ mA, $V_{GS0}=6$ V, $V_{DS0}=10$ V, $V_{DD}=15$ V, $V_S=3$ V, $R_1+R_2=2$ M$\Omega$ | **ERRATO** | 0,00/1,00 | dimenticato che **il source non è a massa**: vedi sotto |

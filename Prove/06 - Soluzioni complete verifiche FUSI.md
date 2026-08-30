@@ -10,7 +10,7 @@ verificato: "2026-08-28 — testi riletti pagina per pagina dai tre PDF (scansio
 
 Companion di [[05 - Verifiche FUSI (Carli)]]. Quella nota racconta **come Carli corregge e
 valuta**; questa contiene lo **svolgimento completo di tutti e 21 gli esercizi**, compresi i
-sette che Fusi non ha svolto per niente e i sei che ha sbagliato.
+sei che Fusi non ha svolto per niente e i sei che ha sbagliato.
 
 > [!info] Come leggere questa nota
 > Per ogni esercizio trovi: **Testo** (dati come li ha scritti il prof.) → **Ragionamento**
@@ -1301,7 +1301,7 @@ I_D = K·(V_GS − V_t)² = 0,6·10⁻³ · (14,98 − 3)²
 **Passo 3 — verifica dell'ipotesi (il passaggio decisivo)**
 
 ```
-V_DS = V_DD − R_D·I_D = 15 − 1800 · 0,085 = 15 − 153 = −138 V
+V_DS = V_DD − R_D·I_D = 15 − 1800 · 0,0861 = 15 − 155 = −140 V
 ```
 
 **Impossibile**: `V_DS` non può essere negativa in questo circuito. **L'ipotesi di
@@ -1531,8 +1531,8 @@ fascicoli.
 | 6 | **Ipotesi non verificata a fine esercizio** (saturo/attivo) | V3 es. 6, V2 es. 6 | Ogni esercizio con un'ipotesi (`MOS saturo`, `BJT in zona attiva`) si **chiude** con la verifica. Se non regge, dillo e rifai con l'altra zona. |
 
 > [!tip] La differenza fra 3/10 e 7/10
-> Sui tre fascicoli, **7 esercizi su 21 sono stati lasciati completamente in bianco** — e
-> valgono 8,00 punti su 30. Sono, in ordine: V1 es. 5 (due divisioni), V2 es. 4 e 5, V3
+> Sui tre fascicoli, **6 esercizi su 21 sono stati lasciati completamente in bianco** — e
+> valgono 7,50 punti su 30. Sono, in ordine: V1 es. 5 (due divisioni), V2 es. 4 e 5, V3
 > es. 3, 4 e 5. Nessuno di questi richiede più di dieci minuti.
 > Il messaggio dei fascicoli non è «gli esercizi sono difficili»: è **«va svolto tutto»**.
 

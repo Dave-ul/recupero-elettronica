@@ -603,7 +603,7 @@ Source a massa → `V_GS = V_G`, imposta dal partitore a vuoto (`I_G = 0`).
 ```
 V_GS = V_DD·R₂/(R₁+R₂) = 15 · 825/826,27 = 14,98 V
 I_D  = K·(V_GS − V_t)² = 0,6·10⁻³·(11,98)² = 86,1 mA        ← in ipotesi di saturazione
-V_DS = V_DD − R_D·I_D = 15 − 1800·0,086 = −140 V            ← IMPOSSIBILE
+V_DS = V_DD − R_D·I_D = 15 − 1800·0,0861 = −140 V            ← IMPOSSIBILE
 
 L'ipotesi è falsa: il MOS lavora in ZONA OHMICA. Si risolve il sistema
 
@@ -1296,8 +1296,8 @@ Zener          V_o = V_Z · I_S = (V_i − V_Z)/R_S · I_L = V_Z/R_L · I_Z = I_
 | 6 | **Ipotesi non verificata alla fine** (saturo / zona attiva) | C es. 6, B es. 6 | Ogni esercizio con un'ipotesi si **chiude** con la verifica. Se non regge, **dillo per iscritto** e rifai con l'altra zona. |
 
 > [!tip] La differenza fra 3/10 e 7/10
-> Sui tre fascicoli **7 esercizi su 21 sono stati lasciati completamente in bianco**, e valgono
-> **8,00 punti su 30**: A es. 5 (due divisioni), B es. 4 e 5, C es. 3, 4 e 5. Nessuno richiede più
+> Sui tre fascicoli **6 esercizi su 21 sono stati lasciati completamente in bianco**, e valgono
+> **7,50 punti su 30**: A es. 5 (due divisioni), B es. 4 e 5, C es. 3, 4 e 5. Nessuno richiede più
 > di dieci minuti. Il messaggio dei fascicoli non è «gli esercizi sono difficili»: è
 > **«va svolto tutto»**.
 

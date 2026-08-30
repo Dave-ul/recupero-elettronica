@@ -1237,3 +1237,107 @@ ricalcolati da zero (Verifica 1 es. 6 · Verifica 2 es. 3 · Verifica 3 es. 6 e 
     tabella. Riformattazione annullata e barre scritte come `\|A_v\|`, così non può ricapitare.
     Scansione di tutto il vault: era **l'unica** riga di tabella con questo difetto.
 
+
+---
+
+## Lotto 25 — Controllo generale finale: tre errori di dato e i ritagli rifatti dai PDF ✔ (2026-08-30)
+
+> **Contesto**: ultimo controllo prima della prova del 1 settembre. Due passate: la prima sul
+> testo (struttura, aritmetica, coerenza incrociata), la seconda sulle immagini — aperte e
+> guardate **tutte e 90 le immagini raster** di `Allegati/` più i 12 SVG.
+
+### 🟢 Cosa è risultato già a posto
+
+- **Link ed embed**: 0 rotti su tutto il vault. Gli unici match del checker sono falsi positivi:
+  `[[...]]` letterali nei template, pipe escapate `\|` dentro le tabelle, e il noto
+  `![[oscilloscopio-schema.png]]` che vive solo dentro backtick in questo stesso registro
+  (chiuso nel Lotto 17).
+- **Frontmatter**: YAML valido in tutte e 44 le note. **LaTeX e code fence**: delimitatori
+  `$`, `$$` e backtick tripli bilanciati ovunque; nessuna pipe non protetta in math (il difetto del
+  Lotto 24 punto 10 non si è ripresentato). **Asset**: 0 orfani su 102.
+- **Aritmetica**: ricalcolati da zero **tutti** i risultati di [[06 - Soluzioni complete verifiche FUSI]]
+  (impedenze complesse, poli, funzioni di trasferimento, frequenze di taglio, i 7 esercizi BJT,
+  gli 8 JFET/MOSFET comprese le due radici dell'equazione in zona ohmica) e le Parti A/B/C del
+  [[Ripasso finale — FUSI e Diodi]]: **tutti corretti**.
+- **Fisica dei diodi D1–D23**: [[Ripasso finale — FUSI e Diodi]] Parte D e [[diodi-risposte]]
+  coerenti fra loro e corretti (soglie, `I_S`, Shockley, modelli A/B/C, `0,318`/`0,637 V_max`,
+  valanga vs tunnel coi segni giusti dei coefficienti di temperatura, formule dello Zener).
+- **`Strumenti/diodi-risposte.html`**: allineato al `.md` (l'unica modifica successiva al `.md`
+  è stata un cambio di wikilink).
+- **Le 13 scansioni `fusi-*.png`** e i **2 ritagli a 300 dpi** del Lotto 24: pagine intere,
+  complete, leggibili. I due ritagli restano dirimenti — es. 6 «15 V» (tratto dritto),
+  es. 7 «25 V» (ricciolo e base): **la correzione della `V_DD` del Lotto 24 regge**.
+
+### 🔴 Errori trovati e corretti
+
+1. **[[05 - Verifiche FUSI (Carli)]] es. 5 della 29-05 — `I_D0 = 35 mA` → `3,5 mA`.** Con
+   `R_D = 3 kΩ` i 35 mA darebbero una caduta di 105 V contro una `V_DD` di 25 V: impossibile.
+   Il valore giusto era già in `06` e nel `Ripasso`, e la scansione
+   `fusi-29-05-p5-es4-5.png` lo conferma (con 3,5 mA tornano `V_RD = 10,5 V`, `V_S = 3,5 V`,
+   `R_S = 1 kΩ` esatto). Era un refuso di trascrizione della sola nota `05`.
+2. **Il conteggio degli esercizi lasciati in bianco era sbagliato in due note.** Sono **6**,
+   non 7 — V1 es. 5 · V2 es. 4, 5 · V3 es. 3, 4, 5, ed è la lista che le note stesse
+   elencavano — e valgono **7,50 punti su 30** (2,00+1,00+1,00+1,00+1,00+1,50), non 8,00.
+   Verificato contro le griglie di `05` e le righe «Esiti di Fusi» di `06`:
+   6 non svolti + 6 errati + 9 OK/~OK = 21 ✓. Corretto in `06` (due punti) e nel `Ripasso`.
+3. **[[INDEX]] disallineato**: dichiarava 90 immagini quando in `Allegati/` ce ne sono **102**
+   — mancavano i 12 `diodi-fig-*.svg` — e la nota di testa diceva che il join copriva i soli
+   `Argomenti/`, `Esercizi/`, `Prove/` mentre la tabella conteneva già i 15 `fusi-*.png`
+   referenziati solo dalla nota di root. Rigenerato con lo scope corretto
+   (root + `Argomenti/` + `Esercizi/` + `Prove/` + `Strumenti/`): **102 allegati, 0 orfani**.
+
+### 🟡 Allineamenti minori
+
+4. `06` ed il `Ripasso` scrivevano due numeri diversi per lo stesso passaggio della V3 es. 6
+   (`V_DS = −138 V` con `I_D ≈ 0,085 A` contro `−140 V` con `0,086 A`). Allineati entrambi a
+   `I_D = 86,1 mA` → **−140 V**.
+5. `05` riportava `V_P = 5 V` senza il segno, fedele al testo del prof. ma senza l'avvertenza
+   che `06` e il `Ripasso` hanno. Aggiunta la nota inline: per un JFET a canale N vale `−5 V`.
+
+### 🖼️ I ritagli rifatti — 56 immagini rigenerate dai PDF
+
+**La causa.** I PDF Mirandola in `Fonti/` non sono scansioni del libro: sono **cattura dello
+schermo del lettore PDF a tutto schermo**, con la barra «Tieni premuto ESC per uscire dalla
+modalità a schermo intero», le icone segnalibro e — su alcune pagine — il **puntatore del
+mouse** impressi dentro la pagina. Ritagliando a occhio quella cattura, quei pezzi d'interfaccia
+finivano dentro le immagini, e in diversi casi il taglio mangiava dati veri.
+
+**La correzione.** Tutti i ritagli sono stati **rigenerati dal PDF** con `pdftoppm` a 200 dpi
+(150 dpi per le doppie pagine) e ritaglio su coordinate, escludendo per costruzione la fascia
+dei segnalibri in alto e quella della barra in basso. I nomi file sono rimasti **identici**,
+quindi nessun wikilink è cambiato.
+
+- **Ritagli che avevano perso dati** — `libro-cap7-p326-fig13` (mancavano `R_B` e `V_CC`, cioè
+  proprio ciò che la figura mostra), `fig-2-03` (restavano 2 dei 5 riquadri), `fig-2-49`
+  (testo e risultato tagliati a destra), `libro-cap8-pp408-409` (la TABELLA 1 partiva dal 7808:
+  mancavano intestazione e riga del **7805**, che è il regolatore usato nell'ESEMPIO 7 sullo
+  stesso ritaglio), `libro-cap7-p326-fig12` (etichette degli assi tagliate a metà),
+  `fig-2-20`, `fig-2-21`, `fig-2-24` (una colonna adiacente tagliata in verticale a metà parola),
+  `libro-cap7-p327-fig14`, `fig-2-18`, `fig-2-19`, `libro-cap7-p346-tabella1` (mancava la metà
+  alta della tabella), `libro-cap7-p347-fig30`, `libro-cap7-p336-fig21`.
+- **Artefatti d'interfaccia rimossi** — la barra completa del lettore era sovrapposta alla pagina
+  in `libro-cap8-pp406-407`; la sola striscia in `libro-cap5-p197-fig7`, `p221-fig34` e
+  `p196-fig6`; icone segnalibro in `fig-2-09`, `fig-2-t1`, `fig-2-proc`, `fig-2-45`,
+  `libro-cap5-p212-fig25`, `libro-cap8-pp388-389`.
+- **Le 9 doppie pagine** (`pp180-181`, `pp208-209`, `pp228-229`, `pp328-329`, `pp348-349`,
+  `pp368-369`, `pp388-389`, `pp406-407`, `pp408-409`) sono ora ritagliate tutte allo stesso modo
+  sull'area di contenuto delle **due** pagine: `pp180-181` e `pp368-369` prima ne mostravano una
+  sola, in disaccordo col proprio nome.
+- **Righe di testo estraneo e didascalie mozzate** ripulite su una ventina di altri ritagli.
+
+> [!warning] Quello che non si può togliere
+> Il **puntatore del mouse** è impresso dentro le pagine del PDF sorgente: dove cade sul margine
+> resta visibile anche nel ritaglio nuovo (`libro-cap5-pp208-209`, `libro-cap7-pp328-329`,
+> `pp348-349`, `libro-cap8-pp408-409`). Non è un difetto del ritaglio e non copre contenuto.
+
+> [!note] `circuito-edutecnica-es4.png` resta com'è
+> Il bordo destro taglia la colonna dei valori, ma l'immagine viene dal **sito** Edutecnica, non
+> dai due PDF in `Fonti/` (che non contengono quell'esercizio): non è rigenerabile in locale.
+> Nessun dato è comunque perso per chi legge — `R₁ = 9 kΩ`, `R₂ = 1 kΩ`, `C = 10 nF` sono nella
+> didascalia di [[Esercizi - Filtri passivi del primo ordine]].
+
+### ✅ Post-condizioni raggiunte
+
+- 102 allegati, **0 orfani**, 0 mancanti da [[INDEX]]; nessun file immagine corrotto.
+- 0 link rotti, 0 embed rotti, frontmatter valido, LaTeX e code fence bilanciati.
+- I 12 `diodi-fig-*.svg` validati come XML, con `viewBox` e `width="100%"`.
