@@ -95,7 +95,7 @@ quella della griglia firmata dal prof.
 | **4** | punto di lavoro e $V_{DD}$: $I_{DSS}=12$ mA, $V_P=-4{,}5$ V, $V_{DS0}=10$ V, $V_{GS0}=-2$ V, $R_D=2{,}7$ k$\Omega$ | ⛔ **NON SVOLTO** | 0,00/1,00 | — |
 | **5** | progetto $R_S$, $R_1$, $R_2$ con partitore di gate: $I_{D0}=35$ mA, $V_{GS0}=-1{,}5$ V, $V_{DS0}=11$ V, $V_{DD}=25$ V, $R_1+R_2=2$ M$\Omega$, $R_D=3$ k$\Omega$ | ⛔ **NON SVOLTO** | 0,00/1,50 | — |
 | **6** | punto di lavoro MOSFET: $V_{DD}=15$ V, $R_1=1{,}27$ k$\Omega$, $R_2=825$ k$\Omega$, $R_D=1{,}8$ k$\Omega$, $K=0{,}6$ mA/V², $V_t=3$ V | ~OK | 0,75/1,50 | il prof. rifà tutto il calcolo sul retro: vedi sotto |
-| **7** | **progetto** MOSFET: $V_{DD}=15$ V, $I_D=3$ mA, $K=0{,}3$ mA/V², $V_t=4$ V, $R_1+R_2=10$ M$\Omega$ | ~OK | 0,75/1,50 | «**errata relazione che fornisce $V_{GS}$** e ragionamento per stimare $V_{DS}$» |
+| **7** | **progetto** MOSFET: $V_{DD}=25$ V, $I_D=3$ mA, $K=0{,}3$ mA/V², $V_t=4$ V, $R_1+R_2=10$ M$\Omega$ | ~OK | 0,75/1,50 | «**errata relazione che fornisce $V_{GS}$** e ragionamento per stimare $V_{DS}$» |
 | **8** | progetto con $R_S$: $I_{D0}=8$ mA, $V_{GS0}=6$ V, $V_{DS0}=10$ V, $V_{DD}=15$ V, $V_S=3$ V, $R_1+R_2=2$ M$\Omega$ | **ERRATO** | 0,00/1,00 | dimenticato che **il source non è a massa**: vedi sotto |
 
 ---

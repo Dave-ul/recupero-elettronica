@@ -1145,3 +1145,95 @@ quadretti a spirale, stessa mano, titoli in rosso, data in alto a destra — lì
 > (pp. 313-317) e p. 326: il vault non diceva niente di sbagliato, diceva **meno**. Il
 > valore della pagina è che dice **con quali parole l'argomento è stato fatto in classe** —
 > ed è quella la formulazione che conviene usare all'orale.
+
+---
+
+## Lotto 24 — Nota unica di ripasso «FUSI + Diodi», e una V_DD sbagliata ✔ (2026-08-30)
+
+**Richiesta**: una nota sola, in radice, con la risoluzione di tutti gli esercizi delle tre
+verifiche FUSI e, integrate dentro, le risposte di [[diodi-risposte]]. Taglio **compatto da
+ripasso** (formula → calcolo → risultato), non discorsivo.
+
+**Metodo**: il materiale esisteva già ed è stato **condensato, non riderivato**:
+[[06 - Soluzioni complete verifiche FUSI]] (21 esercizi, verificati il 2026-08-28) e
+[[diodi-risposte]] (D1-D23 + D6★). L'inventario degli esercizi è stato però ricontrollato
+leggendo di nuovo i tre PDF pagina per pagina, e quattro risultati campione sono stati
+ricalcolati da zero (Verifica 1 es. 6 · Verifica 2 es. 3 · Verifica 3 es. 6 e 7).
+
+### ➕ Espansioni
+
+1. **[[Ripasso finale — FUSI e Diodi]], nuova** (radice, ~60 K) — Parte A (AC e filtri, 6 es.),
+   Parte B (BJT, 7 es.), Parte C (JFET e MOSFET, 8 es.), Parte D (diodi D1-D23 + D6★ + tabella
+   di corrispondenza con la scheda «Verifica»), più **Formule chiave** per parte e le **sei
+   trappole**. Le due note sorgente restano intatte: questa è la versione da rileggere il 31
+   agosto, quelle restano la versione da studiare.
+2. **[[00 - Indice Generale]]** — riga nella mappa argomenti, riga «*(radice)*» nella mappa
+   cartelle, e `Prove/06` citata nella riga di `Prove/`.
+3. **[[Calendario]]** — la nuova nota entra nel blocco «Poi (~40 min)» di **lunedì 31** e nel
+   paragrafo che presenta i fascicoli FUSI.
+
+### ❌ Correzioni di contenuto
+
+4. **Verifica 3, es. 7 — `V_DD` era 15 V, è 25 V.** [[06 - Soluzioni complete verifiche FUSI]]
+   e [[05 - Verifiche FUSI (Carli)]] riportavano `V_DD = 15 V`, che è invece la `V_DD`
+   dell'**es. 6**, stampata subito sopra sulla stessa pagina 7 del fascicolo. Anche Fusi aveva
+   lavorato con 15 V, il che spiega da dove veniva l'errore.
+   **Come è stato accertato**: ritaglio della sola riga a **300 dpi** (`pdftoppm -r 300 -x -y -W -H`)
+   e confronto dei glifi con la `V_DD` dell'es. 6 sulla stessa pagina — l'«1» dell'es. 6 è un
+   tratto dritto, il «2» dell'es. 7 è tondo, e a piena risoluzione si distinguono.
+   **Conseguenze sui risultati** (`V_GS = 7,16 V` resta, perché dipende solo da `I_D`, `K`, `V_t`):
+
+   | | prima (V_DD = 15 V) | ora (V_DD = 25 V) |
+   |---|---|---|
+   | `V_DS` scelta | 9 V | `V_DD/2` = 12,5 V |
+   | `R_D` | 2 kΩ | ≈ 4,17 kΩ |
+   | `R₂` | 4,78 MΩ | ≈ 2,86 MΩ |
+   | `R₁` | 5,22 MΩ | ≈ 7,14 MΩ |
+
+   Corretto in tutti e tre i file (`Prove/05`, `Prove/06`, la nuova nota), con un callout di
+   trasparenza in `Prove/06` e un avviso nella nuova nota. Aggiornato il campo `verificato:`
+   del frontmatter di `Prove/06`.
+
+### ⚠️ Da ricontrollare
+
+5. **Verifica 3, es. 6 — `R₁ = 1,27 kΩ`.** Riletto anche questo a 300 dpi: sul foglio c'è
+   scritto **proprio «1,27 KΩ»**, non MΩ. Con quel valore l'ipotesi «MOS saturo» del testo
+   **non regge** e il MOSFET finisce in zona ohmica (`V_DS ≈ 0,57 V`, `I_D ≈ 8,0 mA`); con
+   `1,27 MΩ` tornerebbe saturo e pulito (`V_DS = 5,87 V`, `I_D = 5,07 mA`). Resta trattato
+   come **probabile refuso del docente**, con entrambe le soluzioni riportate — non è stato
+   cambiato nulla, perché la scansione dice kΩ.
+
+### ✅ Post-condizioni raggiunte
+
+- 21 esercizi presenti nella nuova nota (6 + 7 + 8), nessuno saltato; D1-D23 e D6★ tutte presenti.
+- Nessun wikilink fra backtick; tutti i target risolvono, comprese le 12 `diodi-fig-*.svg`.
+- Code fence bilanciate (30 blocchi in prosa + 3 dentro callout).
+- Spot-check numerici ricalcolati in Python: `Z̄_eq = 2 + j1` (V1 es. 6) · `|G| = 0,265`
+  e `0,718` alle due frequenze (V1 es. 3) · `R_E = 100 Ω`, `R_C = 450 Ω` (V2 es. 3) ·
+  entrambe le soluzioni di V3 es. 6 · V3 es. 7 con la `V_DD` corretta. Tutti tornano.
+
+### ➕ Lotto 24 (Addendum) — le scansioni degli esercizi dentro la nota (2026-08-30)
+
+6. **13 nuove immagini in `Allegati/`**, `fusi-<data>-p<N>-es<M>.png`: le pagine dei tre
+   fascicoli che contengono i **testi degli esercizi**, rese a **120 dpi a colori** con
+   `pdftoppm -png -r 120` (il colore serve: le annotazioni del prof. sono in rosso).
+   Sono le pagine **dispari** — 1, 3, 5, 7 per le prime due verifiche, 1, 3, 5, 7, 9 per la
+   terza; le pari sono bianche e le successive contengono lo svolgimento di Fusi.
+7. **[[Ripasso finale — FUSI e Diodi]]** — ogni immagine è incorporata sopra il primo degli
+   esercizi che contiene, con didascalia che dice quali esercizi ci sono su quella pagina.
+   La p. 7 della terza verifica porta la didascalia che segnala a colpo d'occhio la `V_DD`
+   dell'es. 7 (25 V) contro quella dell'es. 6 (15 V) — vedi il punto 4 qui sopra.
+8. **[[INDEX]]** — 13 righe nuove, totale aggiornato da 75 a **88 immagini**, 0 orfane.
+9. **Due ritagli a 300 dpi come prova** — `fusi-29-05-vdd-es6-300dpi.png` e
+   `fusi-29-05-vdd-es7-300dpi.png`, le due sole righe `V_DD =` della p. 7, incorporate nel
+   callout di correzione dell'es. 7: chi rilegge la nota può giudicare da sé i due glifi senza
+   riaprire il PDF. Totale immagini in `Allegati/`: **90**.
+### 🧹 Correzioni formali
+
+10. **[[Amplificatori a BJT]] §3** — la riga `$f_L$, $f_H$` della tabella dei parametri conteneva
+    `$|A_v|$` con le barre **non protette**. In una tabella markdown la `|` è il separatore di
+    colonna: il formattatore di tabelle di Obsidian, riformattando la nota, ha letto quelle due
+    barre come confini di cella e ha spezzato la riga in due colonne fantasma, sfasando tutta la
+    tabella. Riformattazione annullata e barre scritte come `\|A_v\|`, così non può ricapitare.
+    Scansione di tutto il vault: era **l'unica** riga di tabella con questo difetto.
+

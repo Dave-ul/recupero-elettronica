@@ -3,7 +3,7 @@ tags: [recupero, elettronica, verifiche, carli, soluzioni, fonte-derivata]
 fonte: "risoluzione integrale dei 21 esercizi contenuti nelle tre verifiche del Prof. Carlo Carli"
 file: "Fonti/FUSI_02-03-26_260616_183723.pdf · Fonti/FUSI_24-04-26_260616_183749.pdf · Fonti/FUSI_29-05-26_260616_183828.pdf"
 aggiunto: 2026-08-28
-verificato: "2026-08-28 — testi riletti pagina per pagina dai tre PDF (scansioni senza strato di testo); ogni risultato ricalcolato da zero"
+verificato: "2026-08-28 — testi riletti pagina per pagina dai tre PDF (scansioni senza strato di testo); ogni risultato ricalcolato da zero · 2026-08-30 — corretta la V_DD della Verifica 3 es. 7 (25 V, non 15 V) su ritaglio a 300 dpi"
 ---
 
 # 06 — Soluzioni complete delle verifiche FUSI
@@ -1361,7 +1361,7 @@ Verifica: `V_DS = 0,574 V < V_GS − V_t = 11,98 V` ✓ → zona ohmica conferma
 
 ## Es. 7 — Progetto della polarizzazione di un MOSFET (senza R_S)
 
-**Dati:** `V_DD = 15 V`, `I_D = 3 mA`, `K = 0,3 mA/V²`, `V_t = 4 V`, `R₁ + R₂ = 10 MΩ`.
+**Dati:** `V_DD = 25 V`, `I_D = 3 mA`, `K = 0,3 mA/V²`, `V_t = 4 V`, `R₁ + R₂ = 10 MΩ`.
 Ipotesi: MOS saturo. **Incognite:** `R_D`, `R₁`, `R₂`.
 **Circuito:** partitore sul gate, source a massa, `R_D` sul drain.
 
@@ -1387,13 +1387,13 @@ V_GS = 4 + 3,162 = 7,16 V
 ```
 Vincolo di saturazione:  V_DS ≥ V_GS − V_t = 7,16 − 4 = 3,16 V
 
-Si sceglie  V_DS = 9 V   (ampiamente > 3,16 V e < V_DD)
+Si sceglie  V_DS = V_DD/2 = 12,5 V   (ampiamente > 3,16 V e < V_DD, escursione simmetrica)
 ```
 
 **Passo 3 — R_D dalla maglia d'uscita**
 
 ```
-R_D = (V_DD − V_DS)/I_D = (15 − 9)/3·10⁻³ = 6/0,003 = 2000 Ω = 2 kΩ
+R_D = (V_DD − V_DS)/I_D = (25 − 12,5)/3·10⁻³ = 12,5/0,003 = 4167 Ω ≈ 4,17 kΩ
 ```
 
 **Passo 4 — partitore di gate** (source a massa → `V_G = V_GS`)
@@ -1401,29 +1401,39 @@ R_D = (V_DD − V_DS)/I_D = (15 − 9)/3·10⁻³ = 6/0,003 = 2000 Ω = 2 kΩ
 ```
 V_GS = V_DD · R₂/(R₁ + R₂)
 
-R₂ = (V_GS/V_DD)·(R₁ + R₂) = (7,16/15) · 10·10⁶
-   = 0,4775 · 10⁷ = 4,78·10⁶ Ω = 4,78 MΩ
+R₂ = (V_GS/V_DD)·(R₁ + R₂) = (7,16/25) · 10·10⁶
+   = 0,2865 · 10⁷ = 2,86·10⁶ Ω = 2,86 MΩ
 
-R₁ = 10·10⁶ − 4,78·10⁶ = 5,22·10⁶ Ω = 5,22 MΩ
+R₁ = 10·10⁶ − 2,86·10⁶ = 7,14·10⁶ Ω = 7,14 MΩ
 ```
 
 **Verifica finale**
 
 ```
-V_G = 15 · 4,78/10 = 7,17 V ≈ V_GS  ✓
+V_G = 25 · 2,86/10 = 7,16 V ≈ V_GS  ✓
 I_D = 0,3·10⁻³·(7,16 − 4)² = 0,3·10⁻³·9,99 = 3,0 mA  ✓
-V_DS = 9 V ≥ 3,16 V  ✓  saturo
+V_DS = 12,5 V ≥ 3,16 V  ✓  saturo
 ```
 
 > [!success] Risultato Es. 7
-> **R_D = 2 kΩ · R₂ = 4,78 MΩ (verso massa) · R₁ = 5,22 MΩ (verso V_DD)**
-> con `V_GS = 7,16 V`, `V_DS = 9 V` (scelta di progetto).
+> **R_D ≈ 4,17 kΩ (comm. 3,9 kΩ) · R₂ ≈ 2,86 MΩ (verso massa) · R₁ ≈ 7,14 MΩ (verso V_DD)**
+> con `V_GS = 7,16 V`, `V_DS = 12,5 V` (scelta di progetto).
+>
+> Una `V_DS` diversa dà `R_D`, `R₁` e `R₂` diversi ma ugualmente validi, purché resti
+> `V_DS ≥ 3,16 V` e la scelta sia dichiarata. Solo `V_GS = 7,16 V` è imposta dai dati.
+
+> [!warning] Correzione di una versione precedente di questa nota (2026-08-30)
+> Qui era riportato `V_DD = 15 V`, con `R_D = 2 kΩ`, `R₂ = 4,78 MΩ`, `R₁ = 5,22 MΩ`. Rileggendo
+> la scansione a 300 dpi il testo dell'es. 7 dice **`V_DD = 25 V`**: i 15 V sono la `V_DD`
+> dell'**es. 6**, che sta subito sopra sulla stessa pagina. Anche Fusi aveva lavorato con 15 V.
+> Il «2» dell'es. 7 è tondo, l'«1» dell'es. 6 è un tratto dritto: alla risoluzione piena si
+> distinguono.
 
 > [!danger] Trappola
-> Fusi ha calcolato `R_D = 2 kΩ` correttamente, ma poi ha scritto
+> Fusi ha poi scritto
 > `V_GS = V_t + √(I_D/R_D) = 4 + √(3·10⁻³/2·10³) = 4,1 V` — **la stessa relazione
 > dimensionalmente impossibile dell'es. 6**: sotto radice va `I_D/K`, non `I_D/R_D`.
-> Con `V_GS = 4,1 V` gli è uscito `R₂ = 2,73 MΩ` invece di 4,78 MΩ.
+> Con `V_GS = 4,1 V` e `V_DD = 15 V` gli è uscito `R₂ = 2,73 MΩ`.
 > Il prof. ha cerchiato la formula e scritto **«relazione errata»**, poi ha ricalcolato lui
 > `V_GS = √(I_D/K) + V_t = 7,16 V`.
 

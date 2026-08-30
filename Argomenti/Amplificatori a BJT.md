@@ -207,7 +207,7 @@ In questa configurazione «il terminale di riferimento è la **base** del BJT; i
 | $A_i$ | Guadagno di corrente | $I_{out} / I_{in}$ |
 | $R_{in}$ | Resistenza di ingresso | $V_{in} / I_{in}$ |
 | $R_{out}$ | Resistenza di uscita | $V_{out,\text{open}} / V_{out,\text{loaded}}$ |
-| $f_L$, $f_H$ | Frequenze di taglio inferiore/superiore | Dove $|A_v|$ cala di 3 dB |
+| $f_L$, $f_H$ | Frequenze di taglio inferiore/superiore | Dove $\|A_v\|$ cala di 3 dB |
 | $BW$ | Banda passante | $f_H - f_L$ |
 | $A_{v,\text{max}}$ | Escursione massima senza clipping | $V_{out,\text{clippato}} / V_{in}$ |
 | THD | Distorsione armonica totale | % di armoniche spurie su $V_{out}$ |

@@ -65,6 +65,7 @@ La lettera del consiglio di classe (09/06/2026) indica gli argomenti da recupera
 | Oscilloscopio e misure | [[L'oscilloscopio]] | — | 03 |
 | **Batteria di allenamento** | [[Esercizi - Simulazione finale]] | — | 01 (5 esercizi in 75 min — **non** la prova reale, che dura 5 ore) |
 | **Le tre verifiche vere del prof.** | **[[05 - Verifiche FUSI (Carli)]]** | — | **01** — sono i checkpoint del [[Calendario]] |
+| **Ripasso finale (tutto in un file)** | **[[Ripasso finale — FUSI e Diodi]]** | — | **l'ultimo giro**: i 21 esercizi FUSI risolti in forma compatta + le risposte D1-D23 sui diodi |
 | **Audit delle note contro le fonti del docente** | [[06 - Audit delle note contro le fonti del docente]] | — | — (trasparenza: cosa delle note regge il confronto con Poggi e Carli) |
 
 ---
@@ -116,9 +117,10 @@ Niente esercizi, niente libro: il pomeriggio è orale, non scritto.
 |---|---|---|
 | `Argomenti/` | 13 note di teoria + l'hub [[00 - Perchè (spiegazione intuitiva)\|«Perchè»]] | quando studi un argomento nuovo |
 | `Esercizi/` | 13 note di esercizi svolti passo-passo | subito dopo la teoria |
-| `Prove/` | `01`-`03` le tre prove · `04`-`05` il materiale vero del docente | quando prepari una prova specifica |
+| `Prove/` | `01`-`03` le tre prove · `04`-`05` il materiale vero del docente · `06` le soluzioni FUSI complete | quando prepari una prova specifica |
 | `Strumenti/` | [[Formulario rapido]] (Parte A cheat sheet + Parte B formule) · [[diodi-risposte]] | **il 1 settembre**: è quello che va in cartellina |
 | `Meta/` | [[00 - Fonti e note]] · [[00 - Audit e correzioni]] · [[06 - Audit delle note contro le fonti del docente]] | quando vuoi sapere da dove viene un contenuto |
+| *(radice)* | [[Calendario]] · [[Ripasso finale — FUSI e Diodi]] | il ripasso finale, il 31 agosto e la mattina del 1 settembre |
 | `Allegati/` | 74 immagini indicizzate in [[INDEX]] | mai direttamente: le richiamano le note |
 | `Fonti/` | i 25 PDF sorgente — libro, appunti, verifiche, LETTERA | quando il [[Calendario]] ti manda su una pagina precisa |
 

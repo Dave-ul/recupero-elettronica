@@ -1,13 +1,15 @@
 ---
 tags: [recupero, elettronica, allegati, indice]
-aggiornato: 2026-08-28
+aggiornato: 2026-08-30
 ---
 
 # Indice delle immagini in Allegati/
 
 > Elenco generato automaticamente (join `grep` fra i nomi file in `Allegati/` e i wikilink `![[...]]` nei file di `Argomenti/`, `Esercizi/`, `Prove/`). Raccomandato nel Lotto 17 di [[00 - Audit e correzioni]], mai creato fino ad ora. Rigenerare con lo stesso script se si aggiungono nuove immagini.
 
-**Totale**: 75 immagini, 0 orfane (nessun file le referenzia).
+**Totale**: 90 immagini, 0 orfane (nessun file le referenzia). Le 13 `fusi-<data>-p<N>-*.png` sono
+le scansioni delle pagine con i testi degli esercizi delle tre verifiche, aggiunte il 2026-08-30
+(Lotto 24), più due ritagli a 300 dpi che documentano la correzione della `V_DD` dell'es. 7.
 
 | Immagine | Referenziata da |
 |---|---|
@@ -86,3 +88,18 @@ aggiornato: 2026-08-28
 | `verifica-carli-4E-diodi-parte1.jpeg` | `Meta/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md`, `Meta/00 - Fonti e note.md` |
 | `verifica-carli-4E-diodi-parte2.jpeg` | `Meta/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md`, `Meta/00 - Fonti e note.md` |
 | `verifica-carli-diodi-16dom.jpeg` | `Meta/00 - Audit e correzioni.md`, `Prove/04 - Verifica tipo Carli — Diodi.md`, `Meta/00 - Fonti e note.md` |
+| `fusi-02-03-p1-es1.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-02-03-p3-es2-3.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-02-03-p5-es4-5.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-02-03-p7-es6.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-24-04-p1-es1.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-24-04-p3-es2-3.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-24-04-p5-es4-5.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-24-04-p7-es6-7.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-29-05-p1-es1.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-29-05-p3-es2-3.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-29-05-p5-es4-5.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-29-05-p7-es6-7.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-29-05-p9-es8.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-29-05-vdd-es6-300dpi.png` | `Ripasso finale — FUSI e Diodi.md` |
+| `fusi-29-05-vdd-es7-300dpi.png` | `Ripasso finale — FUSI e Diodi.md` |
