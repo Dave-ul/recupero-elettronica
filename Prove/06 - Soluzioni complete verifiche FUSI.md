@@ -3,7 +3,7 @@ tags: [recupero, elettronica, verifiche, carli, soluzioni, fonte-derivata]
 fonte: "risoluzione integrale dei 21 esercizi contenuti nelle tre verifiche del Prof. Carlo Carli"
 file: "Fonti/FUSI_02-03-26_260616_183723.pdf · Fonti/FUSI_24-04-26_260616_183749.pdf · Fonti/FUSI_29-05-26_260616_183828.pdf"
 aggiunto: 2026-08-28
-verificato: "2026-08-28 — testi riletti pagina per pagina dai tre PDF (scansioni senza strato di testo); ogni risultato ricalcolato da zero · 2026-08-30 — corretta la V_DD della Verifica 3 es. 7 (25 V, non 15 V) su ritaglio a 300 dpi"
+verificato: "2026-08-28 — testi riletti pagina per pagina dai tre PDF (scansioni senza strato di testo); ogni risultato ricalcolato da zero · 2026-08-30 — corretta la V_DD della Verifica 3 es. 7 (25 V, non 15 V) su ritaglio a 300 dpi · 2026-08-31 — aggiunti gli schemi circuitali ASCII a 20 esercizi su 21"
 ---
 
 # 06 — Soluzioni complete delle verifiche FUSI
@@ -13,8 +13,10 @@ valuta**; questa contiene lo **svolgimento completo di tutti e 21 gli esercizi**
 sei che Fusi non ha svolto per niente e i sei che ha sbagliato.
 
 > [!info] Come leggere questa nota
-> Per ogni esercizio trovi: **Testo** (dati come li ha scritti il prof.) → **Ragionamento**
-> (quale legge si applica e perché) → **Calcoli** → **Risultato**. Dove Fusi ha sbagliato,
+> Per ogni esercizio trovi: **Testo** (dati come li ha scritti il prof.) → **Circuito**
+> (schema ASCII della topologia, con sopra i dati e sotto le maglie che servono) →
+> **Ragionamento** (quale legge si applica e perché) → **Calcoli** → **Risultato**.
+> L'unico senza schema è il 2 della Verifica 1: è puro calcolo di poli, non c'è circuito. Dove Fusi ha sbagliato,
 > un blocco *Trappola* isola l'errore preciso, perché è quello il valore didattico dei
 > fascicoli.
 
@@ -34,6 +36,31 @@ Esiti di Fusi: 1 ~OK · 2 errato · 3 ~OK · 4 errato · 5 non svolto · 6 OK �
 ---
 
 ## Es. 1 — Modulo e argomento dell'impedenza equivalente
+
+### Circuito
+
+```
+                       Ī →
+ 1A)   A ●───[ R = 1 kΩ ]───┐
+                            │
+                           ───    C = 10 nF
+                           ───
+                            │
+       B ●──────────────────┘        Z̄_eq = R − jX_C     f = 10 kHz
+
+
+                       Ī →
+ 1B)   A ●───[ R = 330 Ω ]──┐
+                            │
+                            ∩
+                            ∩     L = 12 mH
+                            ∩
+                            │
+       B ●──────────────────┘        Z̄_eq = R + jX_L     f = 10 kHz
+
+ Il secondo componente è disegnato in verticale ma nessun ramo lo scavalca:
+ maglia unica → i due bipoli sono in SERIE, le impedenze si sommano.
+```
 
 ### Ragionamento comune ai due bipoli
 In entrambi i casi la corrente `Ī` entra da un morsetto, attraversa il primo componente e
@@ -165,6 +192,21 @@ verso massa; `v_o(t)` presa ai capi del parallelo.
 **Dati:** `R₁ = 2,2 kΩ`, `R₂ = 5,6 kΩ`, `L = 1 mH`.
 Frequenze richieste: `f₁ = 0 Hz`, `f₂ = 100 kHz`, `f₃ = 20 MHz`.
 
+### Circuito
+
+```
+        ●───[ R₁ = 2,2 kΩ ]───┬──────────┬───●
+        │                     │          │
+        │                    ┌┴┐         ∩
+  v_i   │                    │ │ R₂      ∩    L = 1 mH      v_o
+        │                    │ │ 5,6 kΩ  ∩
+        │                    └┬┘         │
+        ●─────────────────────┴──────────┴───●
+
+ Partitore fra R₁ e il parallelo (R₂ ∥ Z̄_L); l'uscita è sul parallelo.
+ In continua L è un corto → v_o = 0; ad alta frequenza L è aperto → v_o = v_i·R₂/(R₁+R₂).
+```
+
 ### Ragionamento
 È un **partitore di tensione fra impedenze**. Prima si riduce il parallelo `R₂ ∥ Z_L`, poi
 si applica la formula del partitore:
@@ -264,6 +306,31 @@ Denominatore : √[(1,232·10⁷)² + (9,802·10⁸)²] ≈ 9,803·10⁸
 
 ## Es. 4 — Funzione di trasferimento dei quadripoli
 
+### Circuito
+
+```
+ 4A)  R in serie, L verso massa, uscita su L  →  passa-ALTO
+
+        ●───[ R = 560 Ω ]───┬───●
+        │                   │
+        │                   ∩
+  v_i   │                   ∩    L = 3 mH        v_o
+        │                   ∩
+        ●───────────────────┴───●
+
+
+ 4B)  L in serie, R verso massa, uscita su R  →  passa-BASSO
+
+        ●───[ L = 0,3 mH ]───┬───●
+        │                    │
+        │                   ┌┴┐
+  v_i   │                   │ │  R = 1,2 kΩ      v_o
+        │                   └┬┘
+        ●────────────────────┴───●
+
+ Stessa coppia di componenti, filtro opposto: conta SU QUALE si preleva l'uscita.
+```
+
 ### Ragionamento comune
 Entrambi sono **partitori di tensione** fra due impedenze in serie, con l'uscita presa ai
 capi della seconda:
@@ -337,6 +404,31 @@ f_t = 636,6 kHz
 
 ## Es. 5 — Frequenza di taglio dei filtri
 
+### Circuito
+
+```
+ 5A)  C in serie, R verso massa, uscita su R  →  passa-ALTO
+
+        ●───[ C = 150 nF ]───┬───●
+        │                    │
+        │                   ┌┴┐
+  v_i   │                   │ │  R = 6,8 kΩ      v_o
+        │                   └┬┘
+        ●────────────────────┴───●
+
+
+ 5B)  R in serie, C verso massa, uscita su C  →  passa-BASSO
+
+        ●───[ R = 1 kΩ ]───┬───●
+        │                  │
+        │                 ───
+  v_i   │                 ───   C = 2,2 µF       v_o
+        │                  │
+        ●──────────────────┴───●
+
+ In tutti e due  f_t = 1/(2πRC): il taglio non dipende dal tipo di filtro.
+```
+
 ### Ragionamento
 Per un filtro RC del primo ordine la frequenza di taglio è quella in cui **la reattanza
 eguaglia la resistenza** (`X_C = R`), cioè dove il modulo scende di 3 dB:
@@ -386,6 +478,26 @@ f_t  = 1/(2π · 2,2·10⁻³) = 1/(1,382·10⁻²) = 72,3 Hz
 
 **Dati:**
 `Z̄₁ = (2 + j6) Ω` · `Z̄₂ = (2 − j2) Ω` · `Z̄₃ = (j10) Ω` · `Z̄₄ = (2 + j4) Ω`
+
+### Circuito
+
+```
+ Sul foglio Z̄₁, Z̄₃ e Z̄₄ convergono su un nodo centrale che un filo collega al
+ morsetto ALTO: stesso nodo elettrico, chiamalo A. Il morsetto BASSO, il filo di
+ fondo e il nodo di destra sono anch'essi un solo nodo, chiamalo B.
+
+ Ridisegnato ai due SOLI nodi elettrici (A = morsetto alto + nodo centrale,
+ B = morsetto basso + filo di fondo + nodo di destra):
+
+   A ●────┬────────┬────────┬────────┬────
+          │        │        │        │
+        [ Z̄₁ ]   [ Z̄₂ ]   [ Z̄₃ ]   [ Z̄₄ ]
+        2+j6     2−j2      j10     2+j4
+          │        │        │        │
+   B ●────┴────────┴────────┴────────┴────
+
+ Tutte e quattro fra A e B  →  quattro impedenze in PARALLELO.
+```
 
 ### Ragionamento — riconoscere la topologia
 Questo è il passaggio che vale l'esercizio. Guardando il disegno:
@@ -497,6 +609,29 @@ Esiti di Fusi: 1 ~OK · 2 ~OK · 3 errato · 4 non svolto · 5 non svolto · 6 e
 **Circuito:** polarizzazione a **due alimentazioni**, `V_BB` in serie a `R_B` sulla base,
 emettitore a massa, `R_C` fra `V_CC` e collettore.
 
+### Circuito
+
+```
+                   V_CC = 12 V
+                       ●
+                       │
+                      ┌┴┐
+                      │ │  R_C = 820 Ω
+                      └┬┘
+                       │
+                       ├───── V_C
+                       │ C
+                     ┌─┴─┐
+ V_BB ──[ R_B ]──────┤ Q │   NPN   h_FE = 100
+  5 V    56 kΩ     B └─┬─┘         V_BE = 0,7 V
+                       │ E
+                      ─┴─   massa comune a V_BB e V_CC
+
+ Maglia d'INGRESSO (a sinistra, percorsa da I_B):  V_BB = R_B·I_B + V_BE
+ Maglia d'USCITA   (a destra,  percorsa da I_C):   V_CC = R_C·I_C + V_CE
+ Le due maglie sono separate: condividono solo il ramo di emettitore.
+```
+
 ### Calcoli
 
 **1) Maglia d'ingresso:** `V_BB = R_B·I_B + V_BE`
@@ -546,6 +681,26 @@ l'ipotesi regge.
 **Dati:** `V_CEO = 4,8 V`, `I_CO = 14 mA`, `h_FE = 100`, `V_CC = 10 V`, `V_BE = 0,7 V`.
 **Circuito:** polarizzazione **a base fissa** (`R_B` fra `V_CC` e base, `R_C` fra `V_CC` e
 collettore, emettitore a massa).
+
+### Circuito
+
+```
+                V_CC = 10 V
+        ●───────────────────●
+        │                   │
+       ┌┴┐                 ┌┴┐
+       │ │  R_B = ?        │ │  R_C = ?
+       └┬┘                 └┬┘
+        │                   │ C
+        │                 ┌─┴─┐
+        └─────────────────┤ Q │   h_FE = 100
+                        B └─┬─┘   V_BE = 0,7 V
+                            │ E
+                           ─┴─
+
+ Polarizzazione a BASE FISSA: R_B parte da V_CC, non da un'alimentazione a parte.
+ Qui il punto di lavoro Q(V_CEO = 4,8 V ; I_CO = 14 mA) è il dato, le R sono l'incognita.
+```
 
 ### Ragionamento
 È l'esercizio 1 letto al contrario: il punto di lavoro è il **dato**, le resistenze sono
@@ -598,6 +753,31 @@ R_B = (V_CC − V_BE)/I_B = (10 − 0,7)/140·10⁻⁶
 
 **Dati:** `V_CC = 10 V`, `I_CO = 10 mA`, `h_FEmin = 75`, `V_BE = 0,7 V`.
 **Incognite:** `I_B`, `I_E`, `R_C`, `R_E`, `R₁`, `R₂`.
+
+### Circuito
+
+```
+                     V_CC = 10 V
+        ●─────────────────────────●
+        │                         │
+       ┌┴┐                       ┌┴┐
+       │ │  R₁ = ?               │ │  R_C = ?
+       └┬┘                       └┬┘
+        │                         │ C
+        │                       ┌─┴─┐
+        ├───────────────────────┤ Q │   h_FEmin = 75
+        │  V_BO = 1,7 V       B └─┬─┘
+       ┌┴┐                        │ E
+       │ │  R₂ = ?               ┌┴┐
+       └┬┘                       │ │  R_E = ?
+        │                        └┬┘
+        │                         │
+       ─┴─────────────────────────┴─   massa
+
+ I = corrente nel partitore (R₁, R₂);  I_B esce dal nodo di base;  nodo: I_R1 = I_B + I_R2.
+ Criteri di progetto: V_E = V_CC/10 · V_RC = V_CE = 9·V_CC/20 · I = 10·I_B (con h_FEmin).
+ Maglia d'uscita COMPLETA:  V_CC = R_C·I_C + V_CE + R_E·I_E   (tre termini, non due).
+```
 
 ### Ragionamento — perché servono criteri di progetto
 Qui le incognite (4 resistenze) sono più delle equazioni indipendenti: il problema è
@@ -678,6 +858,30 @@ I_E = I_C + I_B = 10 + 0,133 = 10,13 mA  ≈ 10,1 mA
 
 **Dati:** porta TTL con uscita `0 V` (livello basso) o `5 V` (livello alto); relè con
 **tensione di bobina 12 V** e **corrente 70 mA**; `h_FEmin = 75`.
+
+### Circuito
+
+```
+                      +12 V
+                        ●
+                ┌───────┴───────┐
+                │               │
+               ───              ∩
+                ▲  D 1N4007     ∩    bobina relè
+                │  (catodo in   ∩    12 V · 70 mA
+                │   alto)       │
+                └───────┬───────┘
+                        │ C
+                      ┌─┴─┐
+ TTL ──[ R_B ]────────┤ Q │   NPN  BC337 / 2N2222
+ 0/5 V   2,2 kΩ     B └─┬─┘   h_FEmin = 75
+                        │ E
+                       ─┴─   massa comune TTL / alimentazione 12 V
+
+ TTL a 0 V → BJT interdetto, relè diseccitato.  TTL a 5 V → BJT saturo, relè eccitato.
+ Il diodo in ANTIPARALLELO alla bobina scarica la sovratensione L·di/dt allo spegnimento:
+ senza di lui il progetto è incompleto anche con tutti i conti giusti.
+```
 
 ### Ragionamento
 La porta TTL non può pilotare il relè per due motivi indipendenti:
@@ -761,6 +965,33 @@ Transistor adatto: **BC337** (`I_Cmax = 800 mA`, `V_CEO = 45 V`) o **2N2222**.
 **Dati:** amplificatore BJT a **emettitore comune**, `R_E = 1 kΩ`, banda del segnale
 `50 Hz ÷ 8 kHz`.
 
+### Circuito
+
+```
+                     V_CC
+        ●─────────────────────────●
+        │                         │
+       ┌┴┐                       ┌┴┐
+       │ │  R₁                   │ │  R_C
+       └┬┘                       └┬┘
+        │                         │ C
+        │                       ┌─┴─┐
+        ├───────────────────────┤ Q │────── v_o
+        │                     B └─┬─┘
+       ┌┴┐                        │ E
+       │ │  R₂                    ├────────┐
+       └┬┘                       ┌┴┐      ───
+        │                        │ │ R_E  ───  C_E
+        │                        │ │ 1 kΩ  │   = 33 µF
+        │                        └┬┘       │
+        │                         ├────────┘
+       ─┴─────────────────────────┴─   massa
+
+ In CONTINUA C_E è un aperto: R_E lavora e stabilizza il punto di lavoro.
+ In ALTERNATA C_E deve essere un corto: l'emettitore va a massa e il guadagno torna pieno.
+ Condizione critica alla f più bassa della banda (50 Hz):  X_CE ≤ R_E/10.
+```
+
 ### Ragionamento
 `R_E` serve alla **stabilizzazione del punto di lavoro in continua**, ma introduce
 **controreazione in alternata** che abbatte il guadagno (`A_v ≈ −R_C/R_E`). Il condensatore
@@ -815,6 +1046,27 @@ A 8 kHz `X_CE` scende a 0,6 Ω: la condizione è ancora più che soddisfatta, co
 **Dati:** `V_CC = 10 V`, `h_FE = 50`, `R_B = 5,2 kΩ`, `R_C = 0,33 kΩ`, `V_BE = 0,8 V`,
 `V_CEsat = 0,2 V`.
 **Circuito:** base fissa (`R_B` fra `V_CC` e base), emettitore a massa.
+
+### Circuito
+
+```
+                V_CC = 10 V
+        ●───────────────────●
+        │                   │
+       ┌┴┐                 ┌┴┐
+       │ │  R_B = 5,2 kΩ   │ │  R_C = 0,33 kΩ
+       └┬┘                 └┬┘
+        │                   │ C
+        │                 ┌─┴─┐
+        └─────────────────┤ Q │   h_FE = 50
+                        B └─┬─┘   V_BE = 0,8 V · V_CEsat = 0,2 V
+                            │ E
+                           ─┴─
+
+ Verifica in tre passi:  1) maglia d'ingresso → I_B reale
+                         2) maglia d'uscita con V_CE = V_CEsat → I_C(sat)
+                         3) confronto: I_B > I_C(sat)/h_FE  ⇒  saturo.
+```
 
 ### Ragionamento — la procedura in tre passi
 Carli l'ha scritta lui stesso in rosso sul foglio di Fusi:
@@ -878,6 +1130,31 @@ Fattore di saturazione (overdrive):  1,77/0,594 = 2,98 ≈ 3
 
 **Dati:** `V_CC = 20 V`, `V_BB = 10 V`, `R_C = 300 Ω`, `R_E = 200 Ω`, `R_B = 20 kΩ`,
 `h_FE = 100`, `V_BE = 0,7 V` (zona attiva per ipotesi).
+
+### Circuito
+
+```
+                   V_CC = 20 V
+                       ●
+                       │
+                      ┌┴┐
+                      │ │  R_C = 300 Ω
+                      └┬┘
+                       │ C
+                     ┌─┴─┐
+ V_BB ──[ R_B ]──────┤ Q │   h_FE = 100
+ 10 V    20 kΩ     B └─┬─┘   V_BE = 0,7 V
+                       │ E
+                      ┌┴┐
+                      │ │  R_E = 200 Ω     ← percorsa da I_E,
+                      └┬┘                    non da I_B né da I_C
+                       │
+                      ─┴─   massa comune
+
+ R_E appartiene a ENTRAMBE le maglie:
+   ingresso:  V_BB = R_B·I_B + V_BE + R_E·I_E ,  con I_E = (h_FE+1)·I_B
+   uscita  :  V_CC = R_C·I_C + V_CE + R_E·I_E
+```
 
 ### Ragionamento
 Rispetto all'es. 1 c'è `R_E`, che appartiene a **entrambe** le maglie: è attraversata da
@@ -981,6 +1258,33 @@ Esiti di Fusi: 1 ~OK · 2 ~OK · 3 non svolto · 4 non svolto · 5 non svolto ·
 **Circuito:** **autopolarizzazione** — gate a massa tramite `R_G`, `R_S` sul source, `R_D`
 sul drain.
 
+### Circuito
+
+```
+                 V_DD = 12 V
+                     ●
+                     │
+                    ┌┴┐
+                    │ │  R_D = ?
+                    └┬┘
+                     │
+                     ├────── v_o (drain)
+                     │ D
+                   ┌─┴─┐
+        ┌──────────┤ J │   JFET canale N
+        │        G └─┬─┘   I_G = 0
+       ┌┴┐           │ S
+       │ │  R_G     ┌┴┐
+       │ │  (si     │ │  R_S = ?
+       └┬┘  sceglie)└┬┘
+        │            │
+       ─┴────────────┴─   massa
+
+ AUTOPOLARIZZAZIONE: I_G = 0 → nessuna caduta su R_G → V_G = 0,
+ quindi  V_GS = V_G − V_S = −R_S·I_D  (negativa, come vuole il JFET-N).
+ R_G sta su un ramo percorso da corrente nulla: NON si calcola, si sceglie (1÷10 MΩ).
+```
+
 ### Ragionamento
 Il gate è a potenziale zero (`I_G = 0` → nessuna caduta su `R_G` → `V_G = 0`). La tensione
 `V_GS` negativa che serve al JFET viene creata **dalla caduta su R_S**:
@@ -1048,6 +1352,30 @@ Valore tipico **1 MΩ**; il prof. indica **5 MΩ**.
 > **negativa**: `V_P = −5 V`. Va corretto, altrimenti la formula di Shockley dà risultati
 > senza senso (`V_GS` positiva porterebbe il JFET in conduzione diretta della giunzione).
 
+### Circuito
+
+```
+                 V_DD = 18 V
+                     ●
+                     │
+                    ┌┴┐
+                    │ │  R_D = ?
+                    └┬┘
+                     │ D
+                   ┌─┴─┐
+        ┌──────────┤ J │   JFET-N   I_DSS = 12 mA
+        │        G └─┬─┘            V_P = −5 V
+       ┌┴┐           │ S
+       │ │  R_G     ┌┴┐
+       │ │  1 MΩ    │ │  R_S = ?
+       └┬┘          └┬┘
+        │            │
+       ─┴────────────┴─   massa
+
+ Stessa topologia dell'es. 1, ma manca V_GSO: prima si ricava dalla Shockley invertita
+ V_GS = V_P·(1 − √(I_D/I_DSS)), poi si procede identici.  V_GS deve stare fra V_P e 0.
+```
+
 ### Ragionamento
 Rispetto all'es. 1 manca `V_GSO`, quindi bisogna **prima ricavarlo** dall'equazione di
 Shockley invertita, e solo dopo si procede identici all'es. 1.
@@ -1112,6 +1440,30 @@ V_DS = 10 V  ≥  3,23 V   ✓  JFET in zona attiva
 **Circuito:** polarizzazione **con batteria di gate separata** — `V_GG` in serie al gate,
 source direttamente a massa, `R_D` fra drain e `V_DD`.
 
+### Circuito
+
+```
+                 V_DD = ?
+                     ●
+                     │
+                    ┌┴┐
+                    │ │  R_D = 6 kΩ
+                    └┬┘
+                     │ D
+                   ┌─┴─┐
+        ┌──────────┤ J │   JFET-N
+        │        G └─┬─┘
+       ───           │ S
+        ─   V_GG = ? │      (source direttamente a massa → V_GS = V_G)
+        │  + verso   │
+        │    massa   │
+       ─┴────────────┴─   massa
+
+ Batteria di gate separata, niente R_S: I_G = 0 → nessuna caduta nel ramo di gate,
+ quindi V_G è esattamente la tensione della batteria, col segno dato dalla polarità.
+ Maglia d'uscita con due soli termini:  V_DD = R_D·I_D + V_DS.
+```
+
 ### Ragionamento
 È il circuito più semplice di tutti, ed è per questo che l'esercizio vale poco tempo:
 - il source è a massa → `V_S = 0` → `V_GS = V_G`;
@@ -1152,6 +1504,28 @@ V_DD = R_D·I_DO + V_DSO = 6·10³ · 5·10⁻³ + 10
 ## Es. 4 — Determinare il punto di lavoro e la tensione di alimentazione
 
 **Dati:** `I_DSS = 12 mA`, `V_P = −4,5 V`, `V_DSO = 10 V`, `V_GSO = −2 V`, `R_D = 2,7 kΩ`.
+
+### Circuito
+
+```
+                 V_DD = ?
+                     ●
+                     │
+                    ┌┴┐
+                    │ │  R_D = 2,7 kΩ
+                    └┬┘
+                     │ D
+                   ┌─┴─┐
+        ┌──────────┤ J │   JFET-N   I_DSS = 12 mA · V_P = −4,5 V
+        │        G └─┬─┘
+       ───           │ S
+        ─   V_GG     │      V_GSO = −2 V (dato)
+        │            │      V_DSO = 10 V (dato)
+       ─┴────────────┴─   massa
+
+ Qui V_GS è DATA: Shockley si usa in verso diretto, I_D = I_DSS·(1 − V_GS/V_P)²,
+ poi la maglia d'uscita dà V_DD = V_DS + R_D·I_D.  È l'inverso dell'es. 2.
+```
 
 ### Ragionamento
 Qui `V_GS` è **dato**, quindi Shockley si usa in **verso diretto** per ricavare `I_D`. Poi
@@ -1202,6 +1576,31 @@ V_DD = V_DS + R_D·I_D = 10 + 2700 · 3,70·10⁻³
 **Dati:** `I_DO = 3,5 mA`, `V_GSO = −1,5 V`, `V_DSO = 11 V`, `V_DD = 25 V`,
 `R₁ + R₂ = 2 MΩ`, `R_D = 3 kΩ`.
 **Incognite:** `R_S`, `R₁`, `R₂`.
+
+### Circuito
+
+```
+                     V_DD = 25 V
+        ●─────────────────────────●
+        │                         │
+       ┌┴┐                       ┌┴┐
+       │ │  R₁ = ?               │ │  R_D = 3 kΩ
+       └┬┘                       └┬┘
+        │                         │ D
+        │                       ┌─┴─┐
+        ├───────────────────────┤ J │   JFET-N
+        │  V_G = 2 V          G └─┬─┘   I_G = 0
+       ┌┴┐                        │ S
+       │ │  R₂ = ?               ┌┴┐
+       └┬┘                       │ │  R_S = ?
+        │   R₁ + R₂ = 2 MΩ       └┬┘   V_S = 3,5 V
+        │                         │
+       ─┴─────────────────────────┴─   massa
+
+ Partitore + autopolarizzazione: il gate NON è a massa, sta a V_G positiva,
+ ma il source sta più in alto ancora  →  V_GS = V_G − V_S < 0.
+ Il vincolo R₁ + R₂ = 2 MΩ chiude il problema e tiene alta l'impedenza d'ingresso.
+```
 
 ### Ragionamento
 È la polarizzazione **a partitore con autopolarizzazione** (la più stabile). A differenza
@@ -1274,6 +1673,30 @@ R₁ = (R₁ + R₂) − R₂ = 2·10⁶ − 160·10³ = 1,84·10⁶ Ω = 1,84 M
 `V_t = 3 V`. Ipotesi del testo: **MOS saturo**.
 **Circuito:** partitore `R₁`(verso V_DD)–`R₂`(verso massa) sul gate, source a massa,
 `R_D` sul drain.
+
+### Circuito
+
+```
+                     V_DD = 15 V
+        ●─────────────────────────●
+        │                         │
+       ┌┴┐                       ┌┴┐
+       │ │  R₁ = 1,27 kΩ         │ │  R_D = 1,8 kΩ
+       └┬┘                       └┬┘
+        │                         │ D
+        │                       ┌─┴─┐
+        ├───────────────────────┤ M │   MOSFET enh. canale N
+        │  V_G = V_GS         G └─┬─┘   K = 0,6 mA/V² · V_t = 3 V
+       ┌┴┐                        │ S
+       │ │  R₂ = 825 kΩ           │
+       └┬┘                        │      (source a massa: niente R_S)
+        │                         │
+       ─┴─────────────────────────┴─   massa
+
+ Source a massa → V_GS = V_G, imposta SOLO dal partitore (I_G = 0, partitore a vuoto).
+ L'ipotesi «MOS saturo» del testo va verificata alla fine: se V_DS risulta assurda,
+ il MOS lavora in zona ohmica e si rifà il conto con I_D = K·[2(V_GS−V_t)V_DS − V_DS²].
+```
 
 ### Ragionamento
 Source a massa → `V_GS = V_G = V_R2`, imposta direttamente dal partitore (`I_G = 0`, il
@@ -1365,6 +1788,29 @@ Verifica: `V_DS = 0,574 V < V_GS − V_t = 11,98 V` ✓ → zona ohmica conferma
 Ipotesi: MOS saturo. **Incognite:** `R_D`, `R₁`, `R₂`.
 **Circuito:** partitore sul gate, source a massa, `R_D` sul drain.
 
+### Circuito
+
+```
+                     V_DD = 25 V
+        ●─────────────────────────●
+        │                         │
+       ┌┴┐                       ┌┴┐
+       │ │  R₁ = ?               │ │  R_D = ?
+       └┬┘                       └┬┘
+        │                         │ D
+        │                       ┌─┴─┐
+        ├───────────────────────┤ M │   MOSFET enh. canale N
+        │  V_G = V_GS         G └─┬─┘   K = 0,3 mA/V² · V_t = 4 V
+       ┌┴┐                        │ S
+       │ │  R₂ = ?                │
+       └┬┘                        │      (source a massa: niente R_S)
+        │   R₁ + R₂ = 10 MΩ       │
+       ─┴─────────────────────────┴─   massa
+
+ Stessa topologia dell'es. 6, ma è un PROGETTO: I_D è data, V_GS esce da
+ V_GS = V_t + √(I_D/K), mentre V_DS è una scelta libera purché V_DS ≥ V_GS − V_t.
+```
+
 ### Ragionamento
 Corrente e transistor sono dati, quindi `V_GS` è **determinata**. `V_DS` invece è **libera**:
 è una scelta di progetto, vincolata solo dalla condizione di saturazione
@@ -1444,6 +1890,32 @@ V_DS = 12,5 V ≥ 3,16 V  ✓  saturo
 **Dati:** `I_DO = 8 mA`, `V_GSO = 6 V`, `V_DSO = 10 V`, `V_DD = 15 V`, `V_S = 3 V`,
 `R₁ + R₂ = 2 MΩ`.
 **Incognite:** `R_D`, `R_S`, `R₁`, `R₂`.
+
+### Circuito
+
+```
+                     V_DD = 15 V
+        ●─────────────────────────●
+        │                         │
+       ┌┴┐                       ┌┴┐
+       │ │  R₁ = ?               │ │  R_D = ?
+       └┬┘                       └┬┘
+        │                         │ D
+        │                       ┌─┴─┐
+        ├───────────────────────┤ M │   MOSFET enh. canale N
+        │  V_G = V_GS + V_S   G └─┬─┘   V_GSO = 6 V · I_DO = 8 mA
+       ┌┴┐     = 9 V              │ S
+       │ │  R₂ = ?               ┌┴┐
+       └┬┘                       │ │  R_S = ?
+        │   R₁ + R₂ = 2 MΩ       └┬┘   V_S = 3 V
+        │                         │
+       ─┴─────────────────────────┴─   massa
+
+ Rispetto all'es. 7 c'è R_S, e cambia DUE cose (le due trappole di questo esercizio):
+   1) maglia d'uscita con tre cadute:  V_DD = R_D·I_D + V_DS + V_S
+   2) il partitore impone V_G = V_GS + V_S, non V_GS: il source è sollevato da massa.
+ R_D e R_S non sono in serie fra loro — in mezzo c'è il transistor. Vale I_S = I_D.
+```
 
 ### Ragionamento
 Rispetto all'es. 7 c'è `R_S`, che introduce **due differenze**, ed entrambe sono le trappole
