@@ -479,7 +479,7 @@ $\bar{Z}_{1} = (2 + j6)\,\Omega$ · $\bar{Z}_{2} = (2 - j2)\,\Omega$ · $\bar{Z}
 Questo è il passaggio che vale l'esercizio. Guardando il disegno:
 
 - il morsetto **superiore** e il nodo centrale (dove convergono $\bar{Z}_{1}$, $\bar{Z}_{3}$, $\bar{Z}_{4}$) sono
-  **collegati da un filo**: sono lo **stesso nodo elettrico**, chiamiamolo $A$;
+  **collegati da un filo**: sono lo **stesso nodo elettrico**, chiamiamolo $A$
 - il morsetto **inferiore**, il filo di fondo e il nodo di destra sono anch'essi **un unico
   nodo**, chiamiamolo **B**.
 
@@ -849,7 +849,7 @@ I_E &= I_C + I_B = 10 + 0{,}133 = 10{,}13\ \text{mA} \approx 10{,}1\ \text{mA}
 
 ### Ragionamento
 La porta TTL non può pilotare il relè per due motivi indipendenti:
-- **tensione**: fornisce 5 V, la bobina ne vuole 12;
+- **tensione**: fornisce 5 V, la bobina ne vuole 12
 - **corrente**: un'uscita TTL eroga tipicamente ~0,4÷16 mA, la bobina ne chiede 70.
 
 Serve quindi un **BJT NPN in commutazione** (interruttore comandato): la bobina va sul
@@ -1201,8 +1201,8 @@ Esiti di Fusi: 1 ~OK · 2 ~OK · 3 non svolto · 4 non svolto · 5 non svolto ·
 >
 > **La regola d'oro che vale per entrambi: $I_G = 0$.** Il gate è isolato (MOSFET) o è una
 > giunzione polarizzata inversamente (JFET). Conseguenze:
-> - nessuna caduta di tensione su $R_G$ → $V_G$ = potenziale imposto dal circuito;
-> - $I_S = I_D$ (tutta la corrente di drain esce dal source);
+> - nessuna caduta di tensione su $R_G$ → $V_G$ = potenziale imposto dal circuito
+> - $I_S = I_D$ (tutta la corrente di drain esce dal source)
 > - **$R_G$ non si calcola mai da una legge: si sceglie** (tipicamente 1÷10 MΩ).
 
 ---
@@ -1272,7 +1272,7 @@ R_D &= (V_{DD} - V_{DSO} - R_S\cdot I_{DO})/I_{DO} \\[2pt]
 $R_G$ **non è determinabile da nessuna equazione**: qualunque valore dà $V_G = 0$, perché
 la corrente che la attraversa è nulla. Si sceglie in base a due criteri opposti:
 - **grande**, per non caricare la sorgente di segnale collegata al gate (l'impedenza
-  d'ingresso dello stadio è praticamente $R_G$);
+  d'ingresso dello stadio è praticamente $R_G$)
 - **non enorme**, perché la corrente di dispersione del gate (nA) su una $R_G$ troppo grande
   produrrebbe uno sbilanciamento della polarizzazione.
 
@@ -1417,9 +1417,9 @@ source direttamente a massa, $R_D$ fra drain e $V_{DD}$.
 
 ### Ragionamento
 È il circuito più semplice di tutti, ed è per questo che l'esercizio vale poco tempo:
-- il source è a massa → $V_S = 0$ → $V_{GS} = V_G$;
+- il source è a massa → $V_S = 0$ → $V_{GS} = V_G$
 - $I_G = 0$ → nessuna caduta nel ramo di gate → $V_G$ è **esattamente** la tensione della
-  batteria (col segno imposto dalla polarità con cui è inserita);
+  batteria (col segno imposto dalla polarità con cui è inserita)
 - la maglia d'uscita ha solo $R_D$ e il transistor, perché non c'è $R_S$.
 
 ### Calcoli
@@ -1858,7 +1858,7 @@ $R_{1} + R_{2} = 2\ \text{M}\Omega$.
 Rispetto all'es. 7 c'è $R_S$, che introduce **due differenze**, ed entrambe sono le trappole
 che Fusi ha centrato:
 
-1. la maglia d'uscita ha $tre$ cadute: $V_{DD} = V_{RD} + V_{DS} + V_S$;
+1. la maglia d'uscita ha $tre$ cadute: $V_{DD} = V_{RD} + V_{DS} + V_S$
 2. il gate non è più a $V_{GS}$ ma a $V_G = V_{GS} + V_S$, perché il source è sollevato da massa.
 
 $R_S$ serve a stabilizzare il punto di lavoro: se $I_D$ tende a crescere, $V_S$ sale, $V_{GS}$

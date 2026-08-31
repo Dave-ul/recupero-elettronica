@@ -9,7 +9,7 @@ prove: [scritta, orale]
 
 # Ripasso finale — Verifiche FUSI e Diodi
 
-Tutto quello che serve il **1° settembre** in un file solo: i **21 esercizi** delle tre
+Tutto quello che serve il $1^\circ settembre$ in un file solo: i $21 esercizi$ delle tre
 verifiche del Prof. Carli risolti in forma compatta, più le **risposte sui diodi** per l'orale.
 
 > [!info] Come si legge
@@ -21,12 +21,12 @@ verifiche del Prof. Carli risolti in forma compatta, più le **risposte sui diod
 > Serve il ragionamento esteso, il perché di ogni passaggio? È in
 > [[06 - Soluzioni complete verifiche FUSI]]. Come corregge e valuta:
 > [[05 - Verifiche FUSI (Carli)]]. Versione stampabile dei diodi:
-> [[diodi-risposte]] (e `Strumenti/diodi-risposte.html` per la cartellina).
+> [[diodi-risposte]] (e $Strumenti/diodi-risposte.html$ per la cartellina).
 
 > [!warning] Convenzioni valide ovunque
-> `ω = 2πf` · `X_L = ωL` · `X_C = 1/(ωC)` · `Z̄_L = jωL` · `Z̄_C = 1/(jωC) = −j/(ωC)`.
-> Per `Z̄ = a + jb`: `|Z| = √(a²+b²)`, `arg Z̄ = arctan(b/a)` (correggi il quadrante se `a < 0`).
-> BJT in zona attiva: `V_BE = 0,7 V`. JFET/MOSFET: **`I_G = 0`** sempre.
+> $\omega = 2\pi f$ · $X_L = \omega L$ · $X_C = 1/(\omega C)$ · $\bar{Z}_L = j\omega L$ · $\bar{Z}_C = 1/(j\omega C) = -j/(\omega C)$.
+> Per $\bar{Z} = a + jb$: $|Z| = \sqrt{a^{2}+b^{2}}$, $\arg \bar{Z} = \arctan (b/a)$ (correggi il quadrante se $a < 0$).
+> BJT in zona attiva: $V_{BE} = 0{,}7\ \text{V}$. JFET/MOSFET: **$I_G = 0$** sempre.
 
 **Indice** — [[#Parte A — Verifica 1 · AC e filtri del primo ordine|A · AC e filtri]] ·
 [[#Parte B — Verifica 2 · BJT|B · BJT]] ·
@@ -42,70 +42,70 @@ verifiche del Prof. Carli risolti in forma compatta, più le **risposte sui diod
 
 ## Es. 1 — Modulo e argomento dell'impedenza equivalente
 
-> [!example]- 📄 Testo originale del prof. — Verifica 1, p. 1 — intestazione e **es. 1** (bipoli 1A e 1B).
+> [!example]- 📄 Testo originale del prof. — Verifica 1, p. 1 — intestazione e $es. 1$ (bipoli 1A e 1B).
 > ![[fusi-02-03-p1-es1.png]]
 
 I due componenti sono **in serie** (maglia unica: il disegno verticale inganna, ma nessun ramo
-scavalca il secondo componente) → `Z̄_eq = Z̄₁ + Z̄₂`.
+scavalca il secondo componente) → $\bar{Z}_{eq} = \bar{Z}_{1} + \bar{Z}_{2}$.
 
-**1A · serie R–C** — `C = 10 nF`, `R = 1 kΩ`, `f = 10 kHz`
+$1A \cdot serie R-C$ — $C = 10\ \text{nF}$, $R = 1\ \text{k}\Omega$, $f = 10\ \text{kHz}$
 
-```
-ω    = 2π·10⁴ = 6,2832·10⁴ rad/s
-X_C  = 1/(ωC) = 1/(6,2832·10⁴ · 10·10⁻⁹) = 1591,5 Ω
-Z̄_eq = 1000 − j1591,5 Ω
-|Z|  = √(1000² + 1591,5²) = 1879,6 Ω
-φ    = arctan(−1591,5/1000) = −57,86°
-```
+$$\begin{aligned}
+\omega &= 2\pi \cdot 10^{4} = 6{,}2832\cdot 10^{4}\ \text{rad/s} \\[2pt]
+X_C &= 1/(\omega C) = 1/(6{,}2832\cdot 10^{4} \cdot 10\cdot 10^{-9}) = 1591{,}5\,\Omega \\[2pt]
+\bar{Z}_{eq} &= 1000 - j1591{,}5\,\Omega \\[2pt]
+|Z| &= \sqrt{1000^{2} + 1591{,}5^{2}} = 1879{,}6\,\Omega \\[2pt]
+\varphi &= \arctan (-1591{,}5/1000) = -57{,}86^\circ
+\end{aligned}$$
 
-> [!success] **|Z_eq| ≈ 1,88 kΩ · φ ≈ −57,9°** → bipolo **ohmico-capacitivo** (corrente in anticipo).
+> [!success] $|Z_{eq}| \approx 1{,}88\ \text{k}\Omega \cdot \varphi \approx -57{,}9^\circ$ → bipolo **ohmico-capacitivo** (corrente in anticipo).
 
 > [!danger] Trappola
-> Fusi ha usato `f = 1 kHz` invece di 10 kHz, e ha scritto `Z̄_C = −1/(jωC)`: un meno di troppo,
-> perché `1/(jωC)` vale **già** `−j/(ωC)` (dato che `1/j = −j`). Con quel segno la capacità
+> Fusi ha usato $f = 1\ \text{kHz}$ invece di 10 kHz, e ha scritto $\bar{Z}_C = -1/(j\omega C)$: un meno di troppo,
+> perché $1/(j\omega C)$ vale $già$ $-j/(\omega C)$ (dato che $1/j = -j$). Con quel segno la capacità
 > diventa un'induttanza.
 
-**1B · serie R–L** — `R = 330 Ω`, `L = 12 mH`, `f = 10 kHz`
+$1B \cdot serie R-L$ — $R = 330\,\Omega$, $L = 12\ \text{mH}$, $f = 10\ \text{kHz}$
 
-```
-X_L  = ωL = 6,2832·10⁴ · 12·10⁻³ = 753,98 Ω
-Z̄_eq = 330 + j754 Ω
-|Z|  = √(330² + 753,98²) = 823,0 Ω
-φ    = arctan(753,98/330) = +66,36°
-```
+$$\begin{aligned}
+X_L &= \omega L = 6{,}2832\cdot 10^{4} \cdot 12\cdot 10^{-3} = 753{,}98\,\Omega \\[2pt]
+\bar{Z}_{eq} &= 330 + j754\,\Omega \\[2pt]
+|Z| &= \sqrt{330^{2} + 753{,}98^{2}} = 823{,}0\,\Omega \\[2pt]
+\varphi &= \arctan (753{,}98/330) = +66{,}36^\circ
+\end{aligned}$$
 
-> [!success] **|Z_eq| ≈ 823 Ω · φ ≈ +66,4°** → bipolo **ohmico-induttivo** (corrente in ritardo).
+> [!success] $|Z_{eq}| \approx 823\,\Omega \cdot \varphi \approx +66{,}4^\circ$ → bipolo **ohmico-induttivo** (corrente in ritardo).
 
 > [!danger] Trappola
-> Ha scritto `√(330² + 75²)` (ordine di grandezza perso su `X_L`) e `arctan(1/328,9)`.
-> **L'argomento non è mai `arctan(1/|Z|)`**: è sempre `arctan(Im/Re)`.
+> Ha scritto $\sqrt{330^{2} + 75^{2}}$ (ordine di grandezza perso su $X_L$) e $\arctan (1/328{,}9)$.
+> **L'argomento non è mai $\arctan (1/|Z|)$**: è sempre $\arctan (Im/Re)$.
 
 ---
 
 ## Es. 2 — Poli delle funzioni di trasferimento
 
-> [!example]- 📄 Testo originale del prof. — Verifica 1, p. 3 — **es. 2** (poli) ed **es. 3** (risposta in ampiezza e fase).
+> [!example]- 📄 Testo originale del prof. — Verifica 1, p. 3 — $es. 2$ (poli) ed $es. 3$ (risposta in ampiezza e fase).
 > ![[fusi-02-03-p3-es2-3.png]]
 
 I **poli** sono le radici del **denominatore**; gli zeri quelle del numeratore. Nessun limite,
-nessun guadagno: si annulla `D(s)` e si risolve.
+nessun guadagno: si annulla $D(s)$ e si risolve.
 
-**2A** — `G(s) = 3/(s² + 5s + 6)`
+$2A$ — $G(s) = 3/(s^{2} + 5s + 6)$
 
-```
-s² + 5s + 6 = 0   →   Δ = 25 − 24 = 1
-s = (−5 ± 1)/2    →   s₁ = −2 ,  s₂ = −3     [ (s+2)(s+3) ]
-```
+$$\begin{aligned}
+s^{2} + 5s + 6 &= 0 \;\Rightarrow\; \Delta = 25 - 24 = 1 \\[2pt]
+s &= (-5 \pm 1)/2 \;\Rightarrow\; s_{1} = -2 , s_{2} = -3 [ (s+2)(s+3) ]
+\end{aligned}$$
 
 > [!success] **Poli: s₁ = −2 rad/s, s₂ = −3 rad/s** — reali, negativi, distinti → **stabile**,
 > secondo ordine sovrasmorzato, nessuno zero.
 
-**2B** — `G(s) = (s + 1)/[3s(s + 5)]`
+$2B$ — $G(s) = (s + 1)/[3s(s + 5)]$
 
-```
-D(s) = 3s(s+5) = 0  →  s₁ = 0 ,  s₂ = −5
-N(s) = s + 1  = 0  →  z₁ = −1
-```
+$$\begin{aligned}
+D(s) &= 3s(s+5) = 0 \;\Rightarrow\; s_{1} = 0 , s_{2} = -5 \\[2pt]
+N(s) &= s + 1 = 0 \;\Rightarrow\; z_{1} = -1
+\end{aligned}$$
 
 > [!success] **Poli: s₁ = 0 (nell'origine), s₂ = −5 rad/s · Zero: z₁ = −1 rad/s.**
 > Il polo nell'origine = comportamento **integratore** → **marginalmente stabile**.
@@ -118,32 +118,31 @@ N(s) = s + 1  = 0  →  z₁ = −1
 
 ## Es. 3 — Risposta in ampiezza e in fase del quadripolo
 
-`R₁` in serie; `R₂ ∥ L` verso massa; uscita sul parallelo.
-**Dati:** `R₁ = 2,2 kΩ`, `R₂ = 5,6 kΩ`, `L = 1 mH` · `f = 0 / 100 kHz / 20 MHz`
+$R_{1}$ in serie; $R_{2} ∥ L$ verso massa; uscita sul parallelo.
+**Dati:** $R_{1} = 2{,}2\ \text{k}\Omega$, $R_{2} = 5{,}6\ \text{k}\Omega$, $L = 1\ \text{mH}$ · $f = 0 / 100\ \text{kHz} / 20\ \text{MHz}$
 
 Partitore fra impedenze, $\bar{G}(j\omega) = \bar{Z}_p/(R_1 + \bar{Z}_p)$ con
 $\bar{Z}_p = R_2 \parallel j\omega L$. Semplificando:
 
-```
-                jωL·R₂                                    ωL·R₂
-Ḡ(jω) = ───────────────────────      |G| = ──────────────────────────────
-          R₁R₂ + jωL(R₁+R₂)                 √[(R₁R₂)² + (ωL(R₁+R₂))²]
+$$\bar{G}(j\omega) = \frac{j\omega L\cdot R_2}{R_1R_2 + j\omega L(R_1+R_2)}
+  \qquad
+  |G| = \frac{\omega L\cdot R_2}{\sqrt{(R_1R_2)^2 + \big(\omega L(R_1+R_2)\big)^2}}$$
 
-φ(ω) = 90° − arctan[ ωL(R₁+R₂)/(R₁R₂) ]        ← +90° dalla j (zero nell'origine)
-```
+$$\varphi(\omega) = 90^\circ - \arctan\!\left[\frac{\omega L(R_1+R_2)}{R_1R_2}\right]$$
+
+Il $+90^\circ$ viene dalla $j$ al numeratore (uno zero nell'origine).
 
 **È un passa-alto del primo ordine.**
 
-```
-ω_t = R₁R₂/[L(R₁+R₂)] = 12,32·10⁶/7,8 = 1,5795·10⁶ rad/s  →  f_t = 251,4 kHz
-Guadagno asintotico (ω→∞) = R₂/(R₁+R₂) = 5600/7800 = 0,718
-
-f = 0      : Z̄_L = 0 → L cortocircuita l'uscita → |G| = 0 , φ = +90°
-f = 100 kHz: ωL = 628,3 Ω · num = 3,519·10⁶ · den = √[(12,32·10⁶)²+(4,901·10⁶)²] = 1,326·10⁷
-             |G| = 0,265 (−11,5 dB) · φ = 90° − 21,7° = +68,3°
-f = 20 MHz : ωL = 1,2566·10⁵ Ω · num = 7,037·10⁸ · den ≈ 9,803·10⁸
-             |G| = 0,718 (−2,9 dB) · φ = 90° − 89,3° = +0,7°
-```
+$$\begin{aligned}
+\omega _t &= R_{1}R_{2}/[L(R_{1}+R_{2})] = 12{,}32\cdot 10^{6}/7{,}8 = 1{,}5795\cdot 10^{6}\ \text{rad/s} \;\Rightarrow\; f_t = 251{,}4\ \text{kHz} \\[2pt]
+\;\text{Guadagno asintotico}\; (\omega \;\Rightarrow\;\infty ) &= R_{2}/(R_{1}+R_{2}) = 5600/7800 = 0{,}718 \\[8pt]
+f &= 0 : \bar{Z}_L = 0 \;\Rightarrow\; L \;\text{cortocircuita l'uscita}\; \;\Rightarrow\; |G| = 0 , \varphi = +90^\circ \\[2pt]
+f &= 100\ \text{kHz}: \omega L = 628{,}3\,\Omega \cdot num = 3{,}519\cdot 10^{6} \cdot den = \sqrt{(12{,}32\cdot 10^{6})^{2}+(4{,}901\cdot 10^{6})^{2}} = 1{,}326\cdot 10^{7} \\[2pt]
+|G| &= 0{,}265 (-11{,}5\ \text{dB}) \cdot \varphi = 90^\circ - 21{,}7^\circ = +68{,}3^\circ \\[2pt]
+f &= 20\ \text{MHz} : \omega L = 1{,}2566\cdot 10^{5}\,\Omega \cdot num = 7{,}037\cdot 10^{8} \cdot den \approx 9{,}803\cdot 10^{8} \\[2pt]
+|G| &= 0{,}718 (-2{,}9\ \text{dB}) \cdot \varphi = 90^\circ - 89{,}3^\circ = +0{,}7^\circ
+\end{aligned}$$
 
 > [!success] Risultato
 > | f | \|G\| | dB | φ |
@@ -152,62 +151,62 @@ f = 20 MHz : ωL = 1,2566·10⁵ Ω · num = 7,037·10⁸ · den ≈ 9,803·10�
 > | 100 kHz | 0,265 | −11,5 | +68,3° |
 > | 20 MHz | 0,718 | −2,9 | +0,7° |
 >
-> Passa-alto, `f_t ≈ 251 kHz`, guadagno in banda `0,718`.
+> Passa-alto, $f_t \approx 251\ \text{kHz}$, guadagno in banda $0{,}718$.
 
 ---
 
 ## Es. 4 — Funzione di trasferimento dei quadripoli
 
-> [!example]- 📄 Testo originale del prof. — Verifica 1, p. 5 — **es. 4** (funzioni di trasferimento) ed **es. 5** (frequenze di taglio).
+> [!example]- 📄 Testo originale del prof. — Verifica 1, p. 5 — $es. 4$ (funzioni di trasferimento) ed $es. 5$ (frequenze di taglio).
 > ![[fusi-02-03-p5-es4-5.png]]
 
-Partitore: `Ḡ(s) = Z̄_uscita/(Z̄_serie + Z̄_uscita)`. Il tipo di filtro dipende da **su quale
-componente si preleva l'uscita**. `Ḡ(s)` è sempre **adimensionale**: se viene in ohm, è sbagliata.
+Partitore: $Ḡ(s) = \bar{Z}_{uscita}/(\bar{Z}_{serie} + \bar{Z}_{uscita})$. Il tipo di filtro dipende da **su quale
+componente si preleva l'uscita**. $Ḡ(s)$ è sempre **adimensionale**: se viene in ohm, è sbagliata.
 
-**4A · R in serie, L verso massa, uscita su L** — `R = 560 Ω`, `L = 3 mH`
+**4A · R in serie, L verso massa, uscita su L** — $R = 560\,\Omega$, $L = 3\ \text{mH}$
 
-```
-G(s) = sL/(R + sL) = s/(s + R/L)
-ω_t  = R/L = 560/3·10⁻³ = 1,867·10⁵ rad/s  →  f_t = 29,7 kHz
-```
+$$\begin{aligned}
+G(s) &= sL/(R + sL) = s/(s + R/L) \\[2pt]
+\omega _t &= R/L = 560/3\cdot 10^{-3} = 1{,}867\cdot 10^{5}\ \text{rad/s} \;\Rightarrow\; f_t = 29{,}7\ \text{kHz}
+\end{aligned}$$
 
-> [!success] **G(s) = s/(s + 1,867·10⁵)** — **passa-alto**, `f_t ≈ 29,7 kHz`, guadagno unitario in
-> banda, **zero nell'origine**, polo in `−1,867·10⁵ rad/s`.
+> [!success] $G(s) = s/(s + 1{,}867\cdot 10^{5})$ — **passa-alto**, $f_t \approx 29{,}7\ \text{kHz}$, guadagno unitario in
+> banda, **zero nell'origine**, polo in $-1{,}867\cdot 10^{5}\ \text{rad/s}$.
 
-**4B · L in serie, R verso massa, uscita su R** — `L = 0,3 mH`, `R = 1,2 kΩ`
+**4B · L in serie, R verso massa, uscita su R** — $L = 0{,}3\ \text{mH}$, $R = 1{,}2\ \text{k}\Omega$
 
-```
-G(s) = R/(R + sL) = 1/(1 + sL/R)
-τ    = L/R = 2,5·10⁻⁷ s   ·   ω_t = R/L = 4·10⁶ rad/s  →  f_t = 636,6 kHz
-```
+$$\begin{aligned}
+G(s) &= R/(R + sL) = 1/(1 + sL/R) \\[2pt]
+\tau &= L/R = 2{,}5\cdot 10^{-7}\ \text{s} \cdot \omega _t = R/L = 4\cdot 10^{6}\ \text{rad/s} \;\Rightarrow\; f_t = 636{,}6\ \text{kHz}
+\end{aligned}$$
 
-> [!success] **G(s) = 1/(1 + 2,5·10⁻⁷·s)** — **passa-basso**, `f_t ≈ 637 kHz`, guadagno unitario in
-> continua, polo in `−4·10⁶ rad/s`, nessuno zero.
+> [!success] $G(s) = 1/(1 + 2{,}5\cdot 10^{-7}\cdot s)$ — **passa-basso**, $f_t \approx 637\ \text{kHz}$, guadagno unitario in
+> continua, polo in $-4\cdot 10^{6}\ \text{rad/s}$, nessuno zero.
 
 > [!danger] Trappola
-> Fusi ha **sommato** le impedenze (`V_o = V_i·(Z_R + Z_C)`) invece di fare il rapporto del
+> Fusi ha **sommato** le impedenze ($V_o = V_i\cdot (Z_R + Z_C)$) invece di fare il rapporto del
 > partitore, e in 4A ha messo un condensatore dove c'è un'**induttanza**.
 
 ---
 
 ## Es. 5 — Frequenza di taglio dei filtri
 
-Il taglio è dove **la reattanza eguaglia la resistenza** (`X_C = R`, −3 dB):
-`f_t = 1/(2πRC)`. **Stessa formula** per passa-alto e passa-basso.
+Il taglio è dove **la reattanza eguaglia la resistenza** ($X_C = R$, −3 dB):
+$f_t = 1/(2\pi RC)$. **Stessa formula** per passa-alto e passa-basso.
 
-**5A · C in serie, R verso massa → passa-alto** — `C = 150 nF`, `R = 6,8 kΩ`
+**5A · C in serie, R verso massa → passa-alto** — $C = 150\ \text{nF}$, $R = 6{,}8\ \text{k}\Omega$
 
-```
-RC  = 6800 · 150·10⁻⁹ = 1,02·10⁻³ s
-f_t = 1/(2π · 1,02·10⁻³) = 156,0 Hz
-```
+$$\begin{aligned}
+RC &= 6800 \cdot 150\cdot 10^{-9} = 1{,}02\cdot 10^{-3}\ \text{s} \\[2pt]
+f_t &= 1/(2\pi \cdot 1{,}02\cdot 10^{-3}) = 156{,}0\ \text{Hz}
+\end{aligned}$$
 
-**5B · R in serie, C verso massa → passa-basso** — `R = 1 kΩ`, `C = 2,2 µF`
+**5B · R in serie, C verso massa → passa-basso** — $R = 1\ \text{k}\Omega$, $C = 2{,}2\ \mu\text{F}$
 
-```
-RC  = 1000 · 2,2·10⁻⁶ = 2,2·10⁻³ s
-f_t = 1/(2π · 2,2·10⁻³) = 72,3 Hz
-```
+$$\begin{aligned}
+RC &= 1000 \cdot 2{,}2\cdot 10^{-6} = 2{,}2\cdot 10^{-3}\ \text{s} \\[2pt]
+f_t &= 1/(2\pi \cdot 2{,}2\cdot 10^{-3}) = 72{,}3\ \text{Hz}
+\end{aligned}$$
 
 > [!success] **5A: f_t ≈ 156 Hz (passa-alto) · 5B: f_t ≈ 72,3 Hz (passa-basso).**
 
@@ -217,33 +216,31 @@ f_t = 1/(2π · 2,2·10⁻³) = 72,3 Hz
 
 ## Es. 6 — Impedenza equivalente della rete
 
-> [!example]- 📄 Testo originale del prof. — Verifica 1, p. 7 — **es. 6**, la rete di quattro impedenze.
+> [!example]- 📄 Testo originale del prof. — Verifica 1, p. 7 — $es. 6$, la rete di quattro impedenze.
 > ![[fusi-02-03-p7-es6.png]]
 
-`Z̄₁ = 2 + j6` · `Z̄₂ = 2 − j2` · `Z̄₃ = j10` · `Z̄₄ = 2 + j4` (Ω)
+$\bar{Z}_{1} = 2 + j6$ · $\bar{Z}_{2} = 2 - j2$ · $\bar{Z}_{3} = j10$ · $\bar{Z}_{4} = 2 + j4$ (Ω)
 
-**Topologia**: il morsetto superiore e il nodo centrale sono lo stesso nodo **A**; il morsetto
-inferiore, il filo di fondo e il nodo di destra sono lo stesso nodo **B**. Quindi **tutte e
+**Topologia**: il morsetto superiore e il nodo centrale sono lo stesso nodo $A$; il morsetto
+inferiore, il filo di fondo e il nodo di destra sono lo stesso nodo $B$. Quindi **tutte e
 quattro sono in parallelo** fra A e B. Si risolve a coppie.
 
-```
-Z̄₂₄  = Z̄₂Z̄₄/(Z̄₂+Z̄₄):  num (2−j2)(2+j4) = 12 + j4 ;  den = 4 + j2
-                        (12+j4)(4−j2)/20 = (56 − j8)/20  →  Z̄₂₄ = 2,8 − j0,4 Ω
+$$\begin{aligned}
+\bar{Z}_{24} &= \bar{Z}_{2}\bar{Z}_{4}/(\bar{Z}_{2}+\bar{Z}_{4}): num (2-j2)(2+j4) = 12 + j4 ; den = 4 + j2 \\[2pt]
+(12+j4)(4-j2)/20 &= (56 - j8)/20 \;\Rightarrow\; \bar{Z}_{24} = 2{,}8 - j0{,}4\,\Omega \\[8pt]
+\bar{Z}_{234} &= \bar{Z}_{24}\bar{Z}_{3}/(\bar{Z}_{24}+\bar{Z}_{3}): num (2{,}8-j0{,}4)(j10) = 4 + j28 ; den = 2{,}8 + j9{,}6 \\[2pt]
+(4+j28)(2{,}8-j9{,}6)/100 &= (280 + j40)/100 \;\Rightarrow\; \bar{Z}_{234} = 2{,}8 + j0{,}4\,\Omega \\[8pt]
+\bar{Z}_{eq} &= \bar{Z}_{1}\bar{Z}_{234}/(\bar{Z}_{1}+\bar{Z}_{234}): num (2+j6)(2{,}8+j0{,}4) = 3{,}2 + j17{,}6 ; den = 4{,}8 + j6{,}4 \\[2pt]
+(3{,}2+j17{,}6)(4{,}8-j6{,}4)/64 &= (128 + j64)/64 \;\Rightarrow\; \bar{Z}_{eq} = 2 + j1\,\Omega
+\end{aligned}$$
 
-Z̄₂₃₄ = Z̄₂₄Z̄₃/(Z̄₂₄+Z̄₃): num (2,8−j0,4)(j10) = 4 + j28 ; den = 2,8 + j9,6
-                        (4+j28)(2,8−j9,6)/100 = (280 + j40)/100  →  Z̄₂₃₄ = 2,8 + j0,4 Ω
-
-Z̄_eq = Z̄₁Z̄₂₃₄/(Z̄₁+Z̄₂₃₄): num (2+j6)(2,8+j0,4) = 3,2 + j17,6 ; den = 4,8 + j6,4
-                        (3,2+j17,6)(4,8−j6,4)/64 = (128 + j64)/64  →  Z̄_eq = 2 + j1 Ω
-```
-
-> [!success] **Z̄_eq = (2 + j1) Ω · |Z_eq| = √5 = 2,24 Ω · arg = +26,6°** → ohmico-induttivo.
+> [!success] $\bar{Z}_{eq} = (2 + j1)\,\Omega \cdot |Z_{eq}| = \sqrt{5} = 2{,}24\,\Omega \cdot \arg = +26{,}6^\circ$ → ohmico-induttivo.
 > I numeri escono esatti: è la conferma che la topologia è stata letta bene.
 
 > [!danger] Trappola
-> Fusi ha impostato bene i paralleli ma nel passo 1 ha scritto `3 + j2` invece di `2,8 − j0,4`.
-> **Controllo veloce: i moduli si dividono.** `|12+j4|/|4+j2| = 12,65/4,47 = 2,83`;
-> `|3+j2| = 3,61` ✗ · `|2,8−j0,4| = 2,83` ✓.
+> Fusi ha impostato bene i paralleli ma nel passo 1 ha scritto $3 + j2$ invece di $2{,}8 - j0{,}4$.
+> **Controllo veloce: i moduli si dividono.** $|12+j4|/|4+j2| = 12{,}65/4{,}47 = 2{,}83$
+> $|3+j2| = 3{,}61$ ✗ · $|2{,}8-j0{,}4| = 2{,}83$ ✓.
 
 ---
 
@@ -252,139 +249,136 @@ Z̄_eq = Z̄₁Z̄₂₃₄/(Z̄₁+Z̄₂₃₄): num (2+j6)(2,8+j0,4) = 3,2 + 
 
 > [!abstract] Le tre relazioni che risolvono cinque esercizi su sette
 > **In quest'ordine, sempre:**
-> 1. **Maglia d'ingresso** (Kirchhoff base–emettitore) → `I_B`
-> 2. **Transistor**: `I_C = h_FE·I_B` · `I_E = (h_FE + 1)·I_B`
-> 3. **Maglia d'uscita** (Kirchhoff collettore–emettitore) → `V_CE`
+> 1. **Maglia d'ingresso** (Kirchhoff base–emettitore) → $I_B$
+> 2. **Transistor**: $I_C = h_{FE}\cdot I_B$ · $I_E = (h_{FE} + 1)\cdot I_B$
+> 3. **Maglia d'uscita** (Kirchhoff collettore–emettitore) → $V_{CE}$
 >
-> **L'errore capitale**, segnato in rosso tre volte: `R_B` nella maglia d'uscita o `R_C` in
+> **L'errore capitale**, segnato in rosso tre volte: $R_B$ nella maglia d'uscita o $R_C$ in
 > quella d'ingresso. **Le due maglie sono separate** e condividono solo il ramo di emettitore.
 
 ## Es. 1 — Determinare V_CE, I_C, I_B
 
-> [!example]- 📄 Testo originale del prof. — Verifica 2, p. 1 — intestazione e **es. 1**.
+> [!example]- 📄 Testo originale del prof. — Verifica 2, p. 1 — intestazione e $es. 1$.
 > ![[fusi-24-04-p1-es1.png]]
 
-`V_CC = 12 V` · `R_C = 820 Ω` · `V_BB = 5 V` · `R_B = 56 kΩ` · `h_FE = 100` · `V_BE = 0,7 V`
+$V_{CC} = 12\ \text{V}$ · $R_C = 820\,\Omega$ · $V_{BB} = 5\ \text{V}$ · $R_B = 56\ \text{k}\Omega$ · $h_{FE} = 100$ · $V_{BE} = 0{,}7\ \text{V}$
 (due alimentazioni, emettitore a massa)
 
-```
-I_B  = (V_BB − V_BE)/R_B = 4,3/56·10³ = 76,8 µA
-I_C  = h_FE·I_B = 7,68 mA
-V_CE = V_CC − R_C·I_C = 12 − 820·7,68·10⁻³ = 12 − 6,30 = 5,70 V
+$$\begin{aligned}
+I_B &= (V_{BB} - V_{BE})/R_B = 4{,}3/56\cdot 10^{3} = 76{,}8\ \mu\text{A} \\[2pt]
+I_C &= h_{FE}\cdot I_B = 7{,}68\ \text{mA} \\[2pt]
+V_{CE} &= V_{CC} - R_C\cdot I_C = 12 - 820\cdot 7{,}68\cdot 10^{-3} = 12 - 6{,}30 = 5{,}70\ \text{V} \\[8pt]
+\;\text{Verifica zona attiva:}\; I_C(sat) &= (12 - 0{,}2)/820 = 14{,}4\ \text{mA} > 7{,}68\ \text{mA} \;\checkmark
+\end{aligned}$$
 
-Verifica zona attiva: I_C(sat) = (12 − 0,2)/820 = 14,4 mA > 7,68 mA  ✓
-```
-
-> [!success] **I_B = 76,8 µA · I_C = 7,68 mA · V_CE = 5,70 V** — Q a metà retta di carico.
+> [!success] $I_B = 76{,}8\ \mu\text{A} \cdot I_C = 7{,}68\ \text{mA} \cdot V_{CE} = 5{,}70\ \text{V}$ — Q a metà retta di carico.
 
 > [!danger] Trappola
-> Ultimo passaggio con `10 V` al posto di `12 V` → `V_CE = 3,7 V`. Mezzo punto per una cifra.
+> Ultimo passaggio con $10\ \text{V}$ al posto di $12\ \text{V}$ → $V_{CE} = 3{,}7\ \text{V}$. Mezzo punto per una cifra.
 > *«errato a sostituire il valore, in quanto V_CC = 12 V»*.
 
 ---
 
 ## Es. 2 — Progetto di R_C e R_B per il punto di lavoro assegnato
 
-> [!example]- 📄 Testo originale del prof. — Verifica 2, p. 3 — **es. 2** (progetto R_C e R_B) ed **es. 3** (partitore + R_E).
+> [!example]- 📄 Testo originale del prof. — Verifica 2, p. 3 — $es. 2$ (progetto R_C e R_B) ed $es. 3$ (partitore + R_E).
 > ![[fusi-24-04-p3-es2-3.png]]
 
-`V_CEO = 4,8 V` · `I_CO = 14 mA` · `h_FE = 100` · `V_CC = 10 V` · base fissa, emettitore a massa
+$V_{CEO} = 4{,}8\ \text{V}$ · $I_{CO} = 14\ \text{mA}$ · $h_{FE} = 100$ · $V_{CC} = 10\ \text{V}$ · base fissa, emettitore a massa
 
-```
-R_C = (V_CC − V_CEO)/I_CO = 5,2/14·10⁻³ = 371,4 Ω
-I_B = I_CO/h_FE = 140 µA
-R_B = (V_CC − V_BE)/I_B = 9,3/140·10⁻⁶ = 66,4 kΩ
-```
+$$\begin{aligned}
+R_C &= (V_{CC} - V_{CEO})/I_{CO} = 5{,}2/14\cdot 10^{-3} = 371{,}4\,\Omega \\[2pt]
+I_B &= I_{CO}/h_{FE} = 140\ \mu\text{A} \\[2pt]
+R_B &= (V_{CC} - V_{BE})/I_B = 9{,}3/140\cdot 10^{-6} = 66{,}4\ \text{k}\Omega
+\end{aligned}$$
 
 > [!success] **R_C ≈ 371 Ω (comm. 390 Ω) · R_B ≈ 66,4 kΩ (comm. 68 kΩ).**
-> Con i commerciali: `I_B = 137 µA`, `I_C = 13,7 mA`, `V_CE = 4,66 V` — accettabile.
+> Con i commerciali: $I_B = 137\ \mu\text{A}$, $I_C = 13{,}7\ \text{mA}$, $V_{CE} = 4{,}66\ \text{V}$ — accettabile.
 
 > [!danger] Trappola
-> Numeri giusti da una relazione falsa: `V_CE = R_B·I_B + R_C·I_C` mescola le due maglie.
+> Numeri giusti da una relazione falsa: $V_{CE} = R_B\cdot I_B + R_C\cdot I_C$ mescola le due maglie.
 > **Risultati giusti da una relazione sbagliata non prendono il punteggio pieno.**
 
 ---
 
 ## Es. 3 — Progetto polarizzazione e stabilizzazione (partitore + R_E)
 
-`V_CC = 10 V` · `I_CO = 10 mA` · `h_FEmin = 75` · incognite `R_C, R_E, R₁, R₂`
+$V_{CC} = 10\ \text{V}$ · $I_{CO} = 10\ \text{mA}$ · $h_{FEmin} = 75$ · incognite $R_C, R_E, R_{1}, R_{2}$
 
 Quattro incognite, meno equazioni: si chiude con i **criteri di progetto** che Carli ha scritto
 di suo pugno sul retro (p. 12 del PDF) — **impara questa sequenza**:
 
-```
-1)  V_E = V_CC/10 = 1 V            →  R_E = V_E/I_CO = 100 Ω
-2)  V_RC = V_CE = 9·V_CC/20 = 4,5 V →  R_C = 4,5/10·10⁻³ = 450 Ω
-       (verifica maglia: 4,5 + 4,5 + 1 = 10 V = V_CC ✓)
-3)  V_BO = V_BE + R_E·I_CO = 0,7 + 1 = 1,7 V
-4)  I_B  = I_CO/h_FEmin = 133,3 µA   →   I = 10·I_B = 1,3 mA
-5)  R₂ = V_BO/I = 1,7/1,3·10⁻³ = 1,31 kΩ
-    R₁ = (V_CC − V_BO)/I = 8,3/1,3·10⁻³ = 6,38 kΩ
-I_E = I_C + I_B = 10,13 mA
-```
+$$\begin{aligned}
+1)\ \text{V}_E &= V_{CC}/10 = 1\ \text{V} \;\Rightarrow\; R_E = V_E/I_{CO} = 100\,\Omega \\[2pt]
+2)\ \text{V}_{RC} &= V_{CE} = 9\cdot V_{CC}/20 = 4{,}5\ \text{V} \;\Rightarrow\; R_C = 4{,}5/10\cdot 10^{-3} = 450\,\Omega \\[2pt]
+&\quad\text{(verifica maglia: 4,5 + 4,5 + 1 = 10 V = V\_CC \;\checkmark)} \\[2pt]
+3)\ \text{V}_{BO} &= V_{BE} + R_E\cdot I_{CO} = 0{,}7 + 1 = 1{,}7\ \text{V} \\[2pt]
+4) I_B &= I_{CO}/h_{FEmin} = 133{,}3\ \mu\text{A} \;\Rightarrow\; I = 10\cdot I_B = 1{,}3\ \text{mA} \\[2pt]
+5) R_{2} &= V_{BO}/I = 1{,}7/1{,}3\cdot 10^{-3} = 1{,}31\ \text{k}\Omega \\[2pt]
+R_{1} &= (V_{CC} - V_{BO})/I = 8{,}3/1{,}3\cdot 10^{-3} = 6{,}38\ \text{k}\Omega \\[2pt]
+I_E &= I_C + I_B = 10{,}13\ \text{mA}
+\end{aligned}$$
 
-> [!success] **R_E = 100 Ω · R_C = 450 Ω · R₂ = 1,3 kΩ · R₁ = 6,4 kΩ**
-> `I_B = 133 µA · I_E = 10,1 mA · V_BO = 1,7 V · V_CE = 4,5 V`
+> [!success] $R_E = 100\,\Omega \cdot R_C = 450\,\Omega \cdot R_{2} = 1{,}3\ \text{k}\Omega \cdot R_{1} = 6{,}4\ \text{k}\Omega$
+> $I_B = 133\ \mu\text{A} \cdot I_E = 10{,}1\ \text{mA} \cdot V_{BO} = 1{,}7\ \text{V} \cdot V_{CE} = 4{,}5\ \text{V}$
 > Commerciali: 100 Ω · 470 Ω · 1,3 kΩ · 6,2 kΩ.
 
 > [!danger] Trappola
-> Ha scritto `R_C = (V_CC − V_CE)/I_CO` **dimenticando la caduta su R_E**: con emettitore
-> resistivo la maglia d'uscita è `V_CC = R_C·I_C + V_CE + R_E·I_E`. E non ha imposto il criterio
-> `I = 10·I_B`, senza il quale il sistema resta indeterminato.
+> Ha scritto $R_C = (V_{CC} - V_{CE})/I_{CO}$ **dimenticando la caduta su R_E**: con emettitore
+> resistivo la maglia d'uscita è $V_{CC} = R_C\cdot I_C + V_{CE} + R_E\cdot I_E$. E non ha imposto il criterio
+> $I = 10\cdot I_B$, senza il quale il sistema resta indeterminato.
 
 ---
 
 ## Es. 4 — Interfaccia porta TTL → bobina di relè
 
-> [!example]- 📄 Testo originale del prof. — Verifica 2, p. 5 — **es. 4** (interfaccia TTL-relè) ed **es. 5** (condensatore di by-pass).
+> [!example]- 📄 Testo originale del prof. — Verifica 2, p. 5 — $es. 4$ (interfaccia TTL-relè) ed $es. 5$ (condensatore di by-pass).
 > ![[fusi-24-04-p5-es4-5.png]]
 
-Uscita TTL `0 V / 5 V` · relè **12 V, 70 mA** · `h_FEmin = 75`
+Uscita TTL $0\ \text{V} / 5\ \text{V}$ · relè $12\ \text{V}, 70\ \text{mA}$ · $h_{FEmin} = 75$
 
 La TTL non basta né in tensione (5 V contro 12) né in corrente (~mA contro 70 mA). Serve un
 **BJT NPN in commutazione**: bobina sul collettore a 12 V, emettitore a massa, base pilotata
-dalla TTL tramite `R_B`. Lavora fra **interdizione** e **saturazione**, mai in zona attiva.
+dalla TTL tramite $R_B$. Lavora fra **interdizione** e **saturazione**, mai in zona attiva.
 
-```
-I_C     = 70 mA
-I_Bmin  = I_C/h_FEmin = 0,933 mA
-I_B     = 2 · I_Bmin = 1,87 mA          (sovrapilotaggio ×2, margine su esemplare e temperatura)
-R_B     = (V_OH − V_BEsat)/I_B = 4,3/1,87·10⁻³ = 2,30 kΩ   →  commerciale 2,2 kΩ
+$$\begin{aligned}
+I_C &= 70\ \text{mA} \\[2pt]
+I_{Bmin} &= I_C/h_{FEmin} = 0{,}933\ \text{mA} \\[2pt]
+I_B &= 2 \cdot I_{Bmin} = 1{,}87\ \text{mA}\quad\text{(sovrapilotaggio ×2, margine su esemplare e temperatura)} \\[2pt]
+R_B &= (V_{OH} - V_{BEsat})/I_B = 4{,}3/1{,}87\cdot 10^{-3} = 2{,}30\ \text{k}\Omega \;\Rightarrow\; \;\text{commerciale}\; 2{,}2\ \text{k}\Omega \\[8pt]
+\text{verifica: }I_B &= 4{,}3/2200 = 1{,}95\ \text{mA} \;\Rightarrow\; h_{FE} \;\text{richiesto}\; = 70/1{,}95 = 36 < 75 \;\checkmark \;\text{saturo}\\[2pt]
+P_{diss} &= V_{CEsat}\cdot I_C = 0{,}2 \cdot 0{,}07 = 14\ \text{mW}\quad\text{(niente dissipatore)}
+\end{aligned}$$
 
-Verifica: I_B = 4,3/2200 = 1,95 mA  →  h_FE richiesto = 70/1,95 = 36 < 75  ✓ saturo
-P_diss  = V_CEsat·I_C = 0,2 · 0,07 = 14 mW  (niente dissipatore)
-```
-
-> [!success] **`R_B = 2,2 kΩ` + BJT NPN (BC337 o 2N2222) + `diodo 1N4007 in antiparallelo alla
+> [!success] **$R_B = 2{,}2\ \text{k}\Omega$ + BJT NPN (BC337 o 2N2222) + `diodo 1N4007 in antiparallelo alla
 > bobina`**, catodo verso +12 V. Masse TTL e 12 V **in comune**.
 
 > [!important] Il diodo di libera circolazione è la parte che Carli cerca
 > La bobina è un'induttanza: all'interdizione la corrente non può annullarsi di colpo e genera
-> `v = L·di/dt` che distrugge il transistor. Senza quel diodo il progetto è **incompleto** anche
+> $v = L\cdot di/dt$ che distrugge il transistor. Senza quel diodo il progetto è **incompleto** anche
 > con tutto il resto giusto. «NON SVOLTO PER NULLA» — 0,00/1,00.
 
 ---
 
 ## Es. 5 — Condensatore di by-pass C_E
 
-Amplificatore a emettitore comune · `R_E = 1 kΩ` · banda `50 Hz ÷ 8 kHz`
+Amplificatore a emettitore comune · $R_E = 1\ \text{k}\Omega$ · banda $50\ \text{Hz} \div 8\ \text{kHz}$
 
-`R_E` stabilizza in continua ma controreaziona in alternata (`A_v ≈ −R_C/R_E`). `C_E` in
+$R_E$ stabilizza in continua ma controreaziona in alternata ($A_v \approx -R_C/R_E$). $C_E$ in
 parallelo la cortocircuita in alternata. Condizione critica alla **f minima**, criterio
-`X_CE ≤ R_E/10`:
+$X_{CE} \le R_E/10$:
 
-```
-C_E ≥ 10/(2π·f_min·R_E) = 10/(2π·50·1000) = 31,8 µF   →  commerciale 33 µF
+$$\begin{aligned}
+C_E \ge 10/(2\pi \cdot f_{\min}\cdot R_E) &= 10/(2\pi \cdot 50\cdot 1000) = 31{,}8\ \mu\text{F} \;\Rightarrow\; \;\text{commerciale}\; 33\ \mu\text{F} \\[8pt]
+\text{verifica a } 50\ \text{Hz} \;\text{con}\; 33\ \mu\text{F}: X_{CE} &= 1/(2\pi \cdot 50\cdot 33\cdot 10^{-6}) = 96{,}5\,\Omega \ll 1000\,\Omega \;\checkmark
+\end{aligned}$$
 
-Verifica a 50 Hz con 33 µF: X_CE = 1/(2π·50·33·10⁻⁶) = 96,5 Ω ≪ 1000 Ω  ✓
-```
-
-> [!success] **C_E ≥ 31,8 µF → C_E = 33 µF elettrolitico**, tensione di lavoro ≥ 2·V_E, positivo
+> [!success] $C_E \ge 31{,}8\ \mu\text{F} \;\Rightarrow\; C_E = 33\ \mu\text{F} elettrolitico$, tensione di lavoro ≥ 2·V_E, positivo
 > verso l'emettitore.
 >
-> *Col criterio minimo `f_min = 1/(2πR_E C_E)` verrebbe 3,18 µF: è la frequenza a cui
-> `X_CE = R_E`, cioè dove il by-pass comincia appena — a 50 Hz saresti già a −3 dB. Per un
-> progetto vale il criterio **×10**.*
+> *Col criterio minimo $f_{\min} = 1/(2\pi R_E C_E)$ verrebbe 3,18 µF: è la frequenza a cui
+> $X_{CE} = R_E$, cioè dove il by-pass comincia appena — a 50 Hz saresti già a −3 dB. Per un
+> progetto vale il criterio $\times 10$.*
 
 > [!note] «NON SVOLTO PER NULLA» — 0,00/1,00. Una formula sola.
 
@@ -392,56 +386,54 @@ Verifica a 50 Hz con 33 µF: X_CE = 1/(2π·50·33·10⁻⁶) = 96,5 Ω ≪ 1000
 
 ## Es. 6 — Verifica del funzionamento in saturazione
 
-> [!example]- 📄 Testo originale del prof. — Verifica 2, p. 7 — **es. 6** (verifica di saturazione) ed **es. 7** (punto di lavoro con R_E).
+> [!example]- 📄 Testo originale del prof. — Verifica 2, p. 7 — $es. 6$ (verifica di saturazione) ed $es. 7$ (punto di lavoro con R_E).
 > ![[fusi-24-04-p7-es6-7.png]]
 
-`V_CC = 10 V` · `h_FE = 50` · `R_B = 5,2 kΩ` · `R_C = 0,33 kΩ` · `V_BE = 0,8 V` ·
-`V_CEsat = 0,2 V` · base fissa, emettitore a massa
+$V_{CC} = 10\ \text{V}$ · $h_{FE} = 50$ · $R_B = 5{,}2\ \text{k}\Omega$ · $R_C = 0{,}33\ \text{k}\Omega$ · $V_{BE} = 0{,}8\ \text{V}$ ·
+$V_{CEsat} = 0{,}2\ \text{V}$ · base fissa, emettitore a massa
 
 **La procedura in tre passi, scritta in rosso dal prof.:**
 
-```
-1) maglia d'ingresso        I_B      = (V_CC − V_BE)/R_B = 9,2/5200 = 1,77 mA
-2) maglia d'uscita, V_CE = V_CEsat   I_C(sat) = (10 − 0,2)/330 = 29,7 mA
-3) confronto                I_B necessaria = I_C(sat)/h_FE = 29,7/50 = 0,594 mA
-                            I_B disponibile 1,77 mA > 0,594 mA  ✓
-                            fattore di sovrapilotaggio = 1,77/0,594 ≈ 3
-```
+$$\begin{aligned}
+1) \;\text{maglia d'ingresso}\; I_B &= (V_{CC} - V_{BE})/R_B = 9{,}2/5200 = 1{,}77\ \text{mA} \\[2pt]
+2) \;\text{maglia d'uscita,}\; V_{CE} &= V_{CEsat} I_C(sat) = (10 - 0{,}2)/330 = 29{,}7\ \text{mA} \\[2pt]
+&3) \;\text{confronto}\; I_B \;\text{necessaria}\; = I_C(sat)/h_{FE} = 29{,}7/50 = 0{,}594\ \text{mA} \\[2pt]
+&I_B \;\text{disponibile}\; 1{,}77\ \text{mA} > 0{,}594\ \text{mA} \;\checkmark \\[2pt]
+\;\text{fattore di sovrapilotaggio}\; &= 1{,}77/0{,}594 \approx 3
+\end{aligned}$$
 
-> [!success] **Il BJT è in saturazione** (overdrive ≈ 3): `V_CE = 0,2 V`, `I_C = 29,7 mA`,
-> `I_B = 1,77 mA`.
-> Controprova: in zona attiva sarebbe `I_C = 50·1,77 = 88,5 mA` → `V_CE = −19,2 V`, impossibile.
+> [!success] **Il BJT è in saturazione** (overdrive ≈ 3): $V_{CE} = 0{,}2\ \text{V}$, $I_C = 29{,}7\ \text{mA}$,
+> $I_B = 1{,}77\ \text{mA}$.
+> Controprova: in zona attiva sarebbe $I_C = 50\cdot 1{,}77 = 88{,}5\ \text{mA}$ → $V_{CE} = -19{,}2\ \text{V}$, impossibile.
 > È proprio l'assurdo che **dimostra** la saturazione.
 
 > [!danger] Trappola
-> Di nuovo `V_CC = R_B·I_B + R_C·I_C`, maglie mescolate. **Stesso errore dell'es. 2: 2,00 punti.**
+> Di nuovo $V_{CC} = R_B\cdot I_B + R_C\cdot I_C$, maglie mescolate. **Stesso errore dell'es. 2: 2,00 punti.**
 
 ---
 
 ## Es. 7 — Punto di lavoro con resistenza di emettitore
 
-`V_CC = 20 V` · `V_BB = 10 V` · `R_C = 300 Ω` · `R_E = 200 Ω` · `R_B = 20 kΩ` · `h_FE = 100`
+$V_{CC} = 20\ \text{V}$ · $V_{BB} = 10\ \text{V}$ · $R_C = 300\,\Omega$ · $R_E = 200\,\Omega$ · $R_B = 20\ \text{k}\Omega$ · $h_{FE} = 100$
 
-`R_E` sta in **entrambe** le maglie ed è percorsa da `I_E`, non da `I_B` né da `I_C`:
+$R_E$ sta in **entrambe** le maglie ed è percorsa da $I_E$, non da $I_B$ né da $I_C$:
 
-```
-V_BB = R_B·I_B + V_BE + R_E·(h_FE + 1)·I_B
-9,3  = I_B·(20 000 + 200·101) = 40 200·I_B     →   I_B = 231 µA
+$$\begin{aligned}
+V_{BB} &= R_B\cdot I_B + V_{BE} + R_E\cdot (h_{FE} + 1)\cdot I_B \\[2pt]
+9{,}3 &= I_B\cdot (20\,000 + 200\cdot 101) = 40\,200\cdot I_B \;\Rightarrow\; I_B = 231\ \mu\text{A} \\[8pt]
+I_C &= 100\cdot I_B = 23{,}1\ \text{mA} I_E = 101\cdot I_B = 23{,}4\ \text{mA} \\[2pt]
+V_E &= 200\cdot 23{,}37\cdot 10^{-3} = 4{,}67\ \text{V} V_{RC} = 300\cdot 23{,}13\cdot 10^{-3} = 6{,}94\ \text{V} \\[2pt]
+V_{CE} &= 20 - 6{,}94 - 4{,}67 = 8{,}39\ \text{V} \\[8pt]
+\text{verifica: }V_{CE} \gg 0{,}2\ \text{V} \;\checkmark \cdot I_C(sat) &= 19{,}8/500 = 39{,}6\ \text{mA} > 23{,}1\ \text{mA} \;\checkmark
+\end{aligned}$$
 
-I_C  = 100·I_B = 23,1 mA        I_E = 101·I_B = 23,4 mA
-V_E  = 200·23,37·10⁻³ = 4,67 V  V_RC = 300·23,13·10⁻³ = 6,94 V
-V_CE = 20 − 6,94 − 4,67 = 8,39 V
-
-Verifica: V_CE ≫ 0,2 V ✓ · I_C(sat) = 19,8/500 = 39,6 mA > 23,1 mA ✓
-```
-
-> [!success] **Q: V_CE = 8,39 V ; I_C = 23,1 mA** (`I_B = 231 µA`, `I_E = 23,4 mA`, `V_E = 4,67 V`)
-> *Approssimando `I_E ≈ I_C` viene `V_CE = 8,38 V`: differenza < 1%, lecita ma va dichiarata.*
+> [!success] $Q: V_{CE} = 8{,}39\ \text{V} ; I_C = 23{,}1\ \text{mA}$ ($I_B = 231\ \mu\text{A}$, $I_E = 23{,}4\ \text{mA}$, $V_E = 4{,}67\ \text{V}$)
+> *Approssimando $I_E \approx I_C$ viene $V_{CE} = 8{,}38\ \text{V}$: differenza < 1%, lecita ma va dichiarata.*
 
 > [!danger] Trappola
-> Ha scritto `V_CC = R_C·I_CO + I_E·R_E` **dimenticando V_CE**, che è proprio l'incognita, e si è
+> Ha scritto $V_{CC} = R_C\cdot I_{CO} + I_E\cdot R_E$ $dimenticando V_{CE}$, che è proprio l'incognita, e si è
 > fermato lì. *«perché non ha continuato lo svolgimento dell'esercizio?»*
-> La maglia completa è `V_CC = R_C·I_C + V_CE + R_E·I_E`.
+> La maglia completa è $V_{CC} = R_C\cdot I_C + V_{CE} + R_E\cdot I_E$.
 
 ---
 
@@ -449,89 +441,90 @@ Verifica: V_CE ≫ 0,2 V ✓ · I_C(sat) = 19,8/500 = 39,6 mA > 23,1 mA ✓
 **29/05/2026, valutata 03/06 · 8 esercizi (JFET 1–5, MOSFET 6–8) · Fusi 3,00/10**
 
 > [!abstract] Le leggi che servono per tutti e otto
-> **JFET canale N** (`V_P < 0`, lavora a `V_GS` negativa):
+> **JFET canale N** ($V_P < 0$, lavora a $V_{GS}$ negativa):
 > ```
 > Shockley:    I_D = I_DSS·(1 − V_GS/V_P)²
 > invertita:   V_GS = V_P·(1 − √(I_D/I_DSS))
 > saturazione: V_DS ≥ V_GS − V_P
 > ```
-> **MOSFET enhancement canale N** (`V_t > 0`, lavora a `V_GS > V_t`):
+> **MOSFET enhancement canale N** ($V_t > 0$, lavora a $V_{GS} > V_t$):
 > ```
 > saturazione: I_D = K·(V_GS − V_t)²          se V_DS ≥ V_GS − V_t
 > invertita:   V_GS = V_t + √(I_D/K)
 > zona ohmica: I_D = K·[2(V_GS − V_t)·V_DS − V_DS²]   se V_DS < V_GS − V_t
 > ```
-> **Regola d'oro: `I_G = 0`.** Quindi nessuna caduta su `R_G`, `I_S = I_D`, e soprattutto
-> **`R_G` non si calcola mai: si sceglie** (1 ÷ 10 MΩ).
+> **Regola d'oro: $I_G = 0$.** Quindi nessuna caduta su $R_G$, $I_S = I_D$, e soprattutto
+> **$R_G$ non si calcola mai: si sceglie** (1 ÷ 10 MΩ).
 
 ## Es. 1 — Progetto dell'autopolarizzazione di un JFET
 
-> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 1 — intestazione e **es. 1** (autopolarizzazione JFET).
+> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 1 — intestazione e $es. 1$ (autopolarizzazione JFET).
 > ![[fusi-29-05-p1-es1.png]]
 
-`V_DD = 12 V` · `I_DO = 8 mA` · `V_GSO = −1 V` · `V_DSO = 7 V` · incognite `R_D, R_S, R_G`
+$V_{DD} = 12\ \text{V}$ · $I_{DO} = 8\ \text{mA}$ · $V_{GSO} = -1\ \text{V}$ · $V_{DSO} = 7\ \text{V}$ · incognite $R_D, R_S, R_G$
 
-Gate a massa tramite `R_G` → `V_G = 0`; la `V_GS` negativa nasce dalla caduta su `R_S`:
-`V_GS = 0 − R_S·I_D`.
+Gate a massa tramite $R_G$ → $V_G = 0$; la $V_{GS}$ negativa nasce dalla caduta su $R_S$:
+$V_{GS} = 0 - R_S\cdot I_D$.
 
-```
-R_S = −V_GSO/I_DO = 1/8·10⁻³ = 125 Ω
-R_D = (V_DD − V_DSO − R_S·I_DO)/I_DO = (12 − 7 − 1)/8·10⁻³ = 500 Ω
-R_G = si sceglie: 1 MΩ  (il prof. indica 5 MΩ)
-```
+$$\begin{aligned}
+R_S &= -V_{GSO}/I_{DO} = 1/8\cdot 10^{-3} = 125\,\Omega \\[2pt]
+R_D &= (V_{DD} - V_{DSO} - R_S\cdot I_{DO})/I_{DO} = (12 - 7 - 1)/8\cdot 10^{-3} = 500\,\Omega \\[2pt]
+R_G &= \;\text{si sceglie:}\; 1\ \text{M}\Omega\quad\text{(il prof. indica 5 MΩ)}
+\end{aligned}$$
 
-> [!success] **R_S = 125 Ω · R_D = 500 Ω · R_G = 1 MΩ (scelta).**
+> [!success] $R_S = 125\,\Omega \cdot R_D = 500\,\Omega \cdot R_G = 1\ \text{M}\Omega (scelta).$
 
 > [!danger] Trappola — l'errore concettuale più grave della verifica
-> Fusi ha scritto `R_G = V_GS/I_G` con `I_G = V_GS/(R_S + R_D) = −1,6 mA`, ottenendo 625 Ω.
-> Due errori: **`I_G ≈ 0`** (giunzione gate-canale polarizzata inversamente, nanoampere), e
-> `R_G` **non è in serie** a `R_S` e `R_D`. Il prof. ha cancellato tutto: **«si fissa: R_G = 5 MΩ»**.
+> Fusi ha scritto $R_G = V_{GS}/I_G$ con $I_G = V_{GS}/(R_S + R_D) = -1{,}6\ \text{mA}$, ottenendo 625 Ω.
+> Due errori: **$I_G \approx 0$** (giunzione gate-canale polarizzata inversamente, nanoampere), e
+> $R_G$ **non è in serie** a $R_S$ e $R_D$. Il prof. ha cancellato tutto: $«si fissa: R_G = 5\ \text{M}\Omega»$.
 > Lo stesso errore ritorna identico nell'es. 2.
 
 ---
 
 ## Es. 2 — Progetto con l'equazione di Shockley
 
-> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 3 — **es. 2** (Shockley) ed **es. 3** (V_GG e V_DD).
+> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 3 — $es. 2$ (Shockley) ed $es. 3$ (V_GG e V_DD).
 > ![[fusi-29-05-p3-es2-3.png]]
 
-`V_DD = 18 V` · `I_DO = 5 mA` · `V_DSO = 10 V` · `I_DSS = 12 mA` · `V_P = −5 V`
+$V_{DD} = 18\ \text{V}$ · $I_{DO} = 5\ \text{mA}$ · $V_{DSO} = 10\ \text{V}$ · $I_{DSS} = 12\ \text{mA}$ · $V_P = -5\ \text{V}$
 
 > [!warning] Sul segno di V_P
-> Il testo scrive `V_P = 5 V`, ma per un **JFET a canale N** il pinch-off è **negativo**:
-> `V_P = −5 V`. Senza correggerlo Shockley dà risultati privi di senso.
+> Il testo scrive $V_P = 5\ \text{V}$, ma per un **JFET a canale N** il pinch-off è **negativo**:
+> $V_P = -5\ \text{V}$. Senza correggerlo Shockley dà risultati privi di senso.
 
-Manca `V_GSO`: si ricava prima da Shockley invertita, poi si procede come nell'es. 1.
+Manca $V_{GSO}$: si ricava prima da Shockley invertita, poi si procede come nell'es. 1.
 
-```
-√(I_D/I_DSS) = √(5/12) = 0,6455
-V_GS = V_P·(1 − 0,6455) = −5 · 0,3545 = −1,77 V
-R_S  = −V_GS/I_D = 1,77/5·10⁻³ = 354,5 Ω
-R_D  = (18 − 10 − 1,77)/5·10⁻³ = 6,23/0,005 = 1245 Ω
-R_G  = si sceglie: 1 MΩ
-
-Verifica saturazione: V_GS − V_P = −1,77 + 5 = 3,23 V ≤ V_DS = 10 V  ✓
-```
+$$\begin{aligned}
+\sqrt{I_D/I_{DSS}} &= \sqrt{5/12} = 0{,}6455 \\[2pt]
+V_{GS} &= V_P\cdot (1 - 0{,}6455) = -5 \cdot 0{,}3545 = -1{,}77\ \text{V} \\[2pt]
+R_S &= -V_{GS}/I_D = 1{,}77/5\cdot 10^{-3} = 354{,}5\,\Omega \\[2pt]
+R_D &= (18 - 10 - 1{,}77)/5\cdot 10^{-3} = 6{,}23/0{,}005 = 1245\,\Omega \\[2pt]
+R_G &= \;\text{si sceglie:}\; 1\ \text{M}\Omega \\[8pt]
+\;\text{Verifica saturazione:}\; V_{GS} - V_P &= -1{,}77 + 5 = 3{,}23\ \text{V} \le V_{DS} = 10\ \text{V} \;\checkmark
+\end{aligned}$$
 
 > [!success] **V_GSO = −1,77 V · R_S ≈ 355 Ω (comm. 360) · R_D ≈ 1,25 kΩ (comm. 1,2 k) · R_G = 1 MΩ.**
 
 > [!danger] Trappola
 > Impostazione giusta (tre «OK» del prof.) ma aritmetica sbagliata dentro Shockley: da
-> `−5·(1 − 0,6455)` gli è uscito prima −1,85, poi −4,9, poi **−24 V**, e quindi `R_S = 4,8 kΩ`.
-> **Controllo di sanità: `V_GS` sta sempre fra `V_P` e 0.** Fuori da lì è certamente sbagliato.
+> $-5\cdot (1 - 0{,}6455)$ gli è uscito prima −1,85, poi −4,9, poi $-24\ \text{V}$, e quindi $R_S = 4{,}8\ \text{k}\Omega$.
+> **Controllo di sanità: $V_{GS}$ sta sempre fra $V_P$ e 0.** Fuori da lì è certamente sbagliato.
 
 ---
 
 ## Es. 3 — Determinare V_GG e V_DD
 
-`I_DO = 5 mA` · `V_DSO = 10 V` · `V_GSO = −2 V` · `R_D = 6 kΩ` · batteria di gate separata,
-source a massa (niente `R_S`)
+$I_{DO} = 5\ \text{mA}$ · $V_{DSO} = 10\ \text{V}$ · $V_{GSO} = -2\ \text{V}$ · $R_D = 6\ \text{k}\Omega$ · batteria di gate separata,
+source a massa (niente $R_S$)
 
-```
-V_S = 0  →  V_GS = V_G  →  V_GG = 2 V, col morsetto POSITIVO verso massa
-                            (gate negativo rispetto al source)
-V_DD = R_D·I_DO + V_DSO = 6·10³·5·10⁻³ + 10 = 30 + 10 = 40 V
-```
+$$\begin{aligned}
+V_S &= 0 \;\Rightarrow\; V_{GS} = V_G \;\Rightarrow\; V_{GG} = 2\ \text{V}, \;\text{col morsetto POSITIVO verso massa}
+\end{aligned}$$
+(gate negativo rispetto al source)
+$$\begin{aligned}
+V_{DD} &= R_D\cdot I_{DO} + V_{DSO} = 6\cdot 10^{3}\cdot 5\cdot 10^{-3} + 10 = 30 + 10 = 40\ \text{V}
+\end{aligned}$$
 
 > [!success] **V_GG = 2 V (polarità che rende il gate negativo) · V_DD = 40 V.**
 
@@ -541,23 +534,22 @@ V_DD = R_D·I_DO + V_DSO = 6·10³·5·10⁻³ + 10 = 30 + 10 = 40 V
 
 ## Es. 4 — Punto di lavoro e tensione di alimentazione
 
-> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 5 — **es. 4** (punto di lavoro) ed **es. 5** (partitore JFET).
+> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 5 — $es. 4$ (punto di lavoro) ed $es. 5$ (partitore JFET).
 > ![[fusi-29-05-p5-es4-5.png]]
 
-`I_DSS = 12 mA` · `V_P = −4,5 V` · `V_DSO = 10 V` · `V_GSO = −2 V` · `R_D = 2,7 kΩ`
+$I_{DSS} = 12\ \text{mA}$ · $V_P = -4{,}5\ \text{V}$ · $V_{DSO} = 10\ \text{V}$ · $V_{GSO} = -2\ \text{V}$ · $R_D = 2{,}7\ \text{k}\Omega$
 
-Qui `V_GS` è **dato** → Shockley in verso diretto.
+Qui $V_{GS}$ è **dato** → Shockley in verso diretto.
 
-```
-V_GS/V_P = (−2)/(−4,5) = 0,4444
-I_D = 12·10⁻³·(1 − 0,4444)² = 12·10⁻³·0,3086 = 3,70 mA
-
-Verifica: V_GS − V_P = 2,5 V ≤ V_DS = 10 V  ✓  zona attiva
-V_DD = V_DS + R_D·I_D = 10 + 2700·3,70·10⁻³ = 10 + 10,0 = 20 V
-```
+$$\begin{aligned}
+V_{GS}/V_P &= (-2)/(-4{,}5) = 0{,}4444 \\[2pt]
+I_D &= 12\cdot 10^{-3}\cdot (1 - 0{,}4444)^{2} = 12\cdot 10^{-3}\cdot 0{,}3086 = 3{,}70\ \text{mA} \\[8pt]
+\text{verifica: }V_{GS} - V_P &= 2{,}5\ \text{V} \le V_{DS} = 10\ \text{V} \;\checkmark \;\text{zona attiva}\\[2pt]
+V_{DD} &= V_{DS} + R_D\cdot I_D = 10 + 2700\cdot 3{,}70\cdot 10^{-3} = 10 + 10{,}0 = 20\ \text{V}
+\end{aligned}$$
 
 > [!success] **Q: V_GSO = −2 V ; I_DO = 3,70 mA ; V_DSO = 10 V · V_DD = 20 V.**
-> `R_D·I_D = 10,0 V` esattamente metà di `V_DD`: l'esercizio è costruito così, è la conferma.
+> $R_D\cdot I_D = 10{,}0\ \text{V}$ esattamente metà di $V_{DD}$: l'esercizio è costruito così, è la conferma.
 
 > [!note] «NON SVOLTO» — 0,00/1,00.
 
@@ -565,25 +557,24 @@ V_DD = V_DS + R_D·I_D = 10 + 2700·3,70·10⁻³ = 10 + 10,0 = 20 V
 
 ## Es. 5 — Progetto della polarizzazione a partitore di un JFET
 
-`I_DO = 3,5 mA` · `V_GSO = −1,5 V` · `V_DSO = 11 V` · `V_DD = 25 V` · `R₁ + R₂ = 2 MΩ` ·
-`R_D = 3 kΩ` · incognite `R_S, R₁, R₂`
+$I_{DO} = 3{,}5\ \text{mA}$ · $V_{GSO} = -1{,}5\ \text{V}$ · $V_{DSO} = 11\ \text{V}$ · $V_{DD} = 25\ \text{V}$ · $R_{1} + R_{2} = 2\ \text{M}\Omega$ ·
+$R_D = 3\ \text{k}\Omega$ · incognite $R_S, R_{1}, R_{2}$
 
-Il gate **non** è a massa: sta a `V_G` positiva fissata dal partitore, e la `V_GS` negativa si
-ottiene tenendo il **source più in alto del gate** (`V_GS = V_G − V_S`).
+Il gate $non$ è a massa: sta a $V_G$ positiva fissata dal partitore, e la $V_{GS}$ negativa si
+ottiene tenendo il **source più in alto del gate** ($V_{GS} = V_G - V_S$).
 
-```
-V_RD = R_D·I_DO = 3·10³·3,5·10⁻³ = 10,5 V
-V_S  = V_DD − V_DSO − V_RD = 25 − 11 − 10,5 = 3,5 V
-R_S  = V_S/I_DO = 3,5/3,5·10⁻³ = 1 kΩ
-V_G  = V_GS + V_S = −1,5 + 3,5 = 2 V
-R₂   = V_G·(R₁+R₂)/V_DD = 2·2·10⁶/25 = 160 kΩ      (verso massa)
-R₁   = 2·10⁶ − 160·10³ = 1,84 MΩ                    (verso V_DD)
+$$\begin{aligned}
+V_{RD} &= R_D\cdot I_{DO} = 3\cdot 10^{3}\cdot 3{,}5\cdot 10^{-3} = 10{,}5\ \text{V} \\[2pt]
+V_S &= V_{DD} - V_{DSO} - V_{RD} = 25 - 11 - 10{,}5 = 3{,}5\ \text{V} \\[2pt]
+R_S &= V_S/I_{DO} = 3{,}5/3{,}5\cdot 10^{-3} = 1\ \text{k}\Omega \\[2pt]
+V_G &= V_{GS} + V_S = -1{,}5 + 3{,}5 = 2\ \text{V} \\[2pt]
+R_{2} &= V_G\cdot (R_{1}+R_{2})/V_{DD} = 2\cdot 2\cdot 10^{6}/25 = 160\ \text{k}\Omega\quad\text{(verso massa)} \\[2pt]
+R_{1} &= 2\cdot 10^{6} - 160\cdot 10^{3} = 1{,}84\ \text{M}\Omega (\;\text{verso}\; V_{DD}) \\[8pt]
+\text{verifica: }V_G &= 25\cdot 160k/2M = 2\ \text{V} \;\checkmark
+\end{aligned}$$
 
-Verifica: V_G = 25·160k/2M = 2 V  ✓
-```
-
-> [!success] **R_S = 1 kΩ · R₂ = 160 kΩ · R₁ = 1,84 MΩ**, con `V_S = 3,5 V`, `V_G = 2 V`.
-> `R₁ ∥ R₂ ≈ 147 kΩ` = impedenza d'ingresso, alta come serve a uno stadio a JFET.
+> [!success] $R_S = 1\ \text{k}\Omega \cdot R_{2} = 160\ \text{k}\Omega \cdot R_{1} = 1{,}84\ \text{M}\Omega$, con $V_S = 3{,}5\ \text{V}$, $V_G = 2\ \text{V}$.
+> $R_{1} ∥ R_{2} \approx 147\ \text{k}\Omega$ = impedenza d'ingresso, alta come serve a uno stadio a JFET.
 
 > [!note] «NON SVOLTO» — 0,00/1,50. È l'esercizio da 1,50 punti più meccanico dei tre fascicoli.
 
@@ -591,82 +582,80 @@ Verifica: V_G = 25·160k/2M = 2 V  ✓
 
 ## Es. 6 — MOSFET: determinare il punto di lavoro
 
-> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 7 — **es. 6** ed **es. 7**, i due MOSFET, con le due `V_DD` diverse (vedi l'avviso nell'es. 7).
+> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 7 — $es. 6$ ed $es. 7$, i due MOSFET, con le due $V_{DD}$ diverse (vedi l'avviso nell'es. 7).
 > ![[fusi-29-05-p7-es6-7.png]]
 
-`V_DD = 15 V` · `R₁ = 1,27 kΩ` · `R₂ = 825 kΩ` · `R_D = 1,8 kΩ` · `K = 0,6 mA/V²` · `V_t = 3 V`
+$V_{DD} = 15\ \text{V}$ · $R_{1} = 1{,}27\ \text{k}\Omega$ · $R_{2} = 825\ \text{k}\Omega$ · $R_D = 1{,}8\ \text{k}\Omega$ · $K = 0{,}6\ \text{mA}/V^{2}$ · $V_t = 3\ \text{V}$
 · ipotesi del testo: **MOS saturo** · partitore sul gate, source a massa
 
-Source a massa → `V_GS = V_G`, imposta dal partitore a vuoto (`I_G = 0`).
+Source a massa → $V_{GS} = V_G$, imposta dal partitore a vuoto ($I_G = 0$).
 **Ma l'ipotesi va verificata alla fine** — ed è tutto il punto dell'esercizio.
 
-```
-V_GS = V_DD·R₂/(R₁+R₂) = 15 · 825/826,27 = 14,98 V
-I_D  = K·(V_GS − V_t)² = 0,6·10⁻³·(11,98)² = 86,1 mA        ← in ipotesi di saturazione
-V_DS = V_DD − R_D·I_D = 15 − 1800·0,0861 = −140 V            ← IMPOSSIBILE
+$$\begin{aligned}
+V_{GS} &= V_{DD}\cdot R_{2}/(R_{1}+R_{2}) = 15 \cdot 825/826{,}27 = 14{,}98\ \text{V} \\[2pt]
+I_D &= K\cdot (V_{GS} - V_t)^{2} = 0{,}6\cdot 10^{-3}\cdot (11{,}98)^{2} = 86{,}1\ \text{mA}\quad\text{(in ipotesi di saturazione)} \\[2pt]
+V_{DS} &= V_{DD} - R_D\cdot I_D = 15 - 1800\cdot 0{,}0861 = -140\ \text{V}\quad\text{IMPOSSIBILE} \\[2pt]
 
+\end{aligned}$$
 L'ipotesi è falsa: il MOS lavora in ZONA OHMICA. Si risolve il sistema
-
-  I_D = K·[2(V_GS − V_t)·V_DS − V_DS²]   e   I_D = (V_DD − V_DS)/R_D
-
-  (15 − V_DS)/1800 = 0,6·10⁻³·[2·11,98·V_DS − V_DS²]
-  1,08·V_DS² − 26,88·V_DS + 15 = 0    →  Δ = 657,7 , √Δ = 25,64
-  V_DS = (26,88 ± 25,64)/2,16  →  V_DS = 0,574 V   (l'altra, 24,3 V, è > V_DD: scartata)
-  I_D  = (15 − 0,574)/1800 = 8,0 mA
-
-Verifica: V_DS = 0,574 V < V_GS − V_t = 11,98 V  ✓  ohmica confermata
-```
+$$\begin{aligned}
+I_D &= K\cdot [2(V_{GS} - V_t)\cdot V_{DS} - V_{DS}^{2}] e I_D = (V_{DD} - V_{DS})/R_D \\[8pt]
+(15 - V_{DS})/1800 &= 0{,}6\cdot 10^{-3}\cdot [2\cdot 11{,}98\cdot V_{DS} - V_{DS}^{2}] \\[2pt]
+1{,}08\cdot V_{DS}^{2} - 26{,}88\cdot V_{DS} + 15 &= 0 \;\Rightarrow\; \Delta = 657{,}7 , \sqrt{\Delta } = 25{,}64 \\[2pt]
+V_{DS} &= (26{,}88 \pm 25{,}64)/2{,}16 \;\Rightarrow\; V_{DS} = 0{,}574\ \text{V}\quad\text{(l'altra, 24,3 V, è > V\_DD: scartata)} \\[2pt]
+I_D &= (15 - 0{,}574)/1800 = 8{,}0\ \text{mA} \\[8pt]
+\text{verifica: }V_{DS} &= 0{,}574\ \text{V} < V_{GS} - V_t = 11{,}98\ \text{V} \;\checkmark\quad\text{(ohmica confermata)}
+\end{aligned}$$
 
 > [!success] **L'ipotesi «MOS saturo» NON è verificata: il MOSFET è in zona ohmica.**
-> **Q reale: V_DS ≈ 0,57 V ; I_D ≈ 8,0 mA** (`V_GS = 14,98 V`). Si comporta da interruttore
-> chiuso, `R_DSon ≈ 72 Ω`.
+> $Q reale: V_{DS} \approx 0{,}57\ \text{V} ; I_D \approx 8{,}0\ \text{mA}$ ($V_{GS} = 14{,}98\ \text{V}$). Si comporta da interruttore
+> chiuso, $R_{DSon} \approx 72\,\Omega$.
 
-> [!warning] Il dato è probabilmente un refuso: `R₁ = 1,27 MΩ`, non kΩ
+> [!warning] Il dato è probabilmente un refuso: $R_{1} = 1{,}27\ \text{M}\Omega$, non kΩ
 > *(verificato sulla scansione a 300 dpi: sul foglio c'è scritto proprio «1,27 KΩ»)*. Con 1,27 MΩ
 > l'esercizio torna pulito:
 > ```
 > V_GS = 15·825/(1270 + 825) = 5,91 V
 > I_D  = 0,6·10⁻³·(5,91 − 3)² = 5,07 mA
 > V_DS = 15 − 1800·5,07·10⁻³ = 5,87 V
-> Verifica: 5,87 ≥ V_GS − V_t = 2,91  ✓  MOS SATURO
+> \text{verifica: }5,87 ≥ V_GS − V_t = 2,91  ✓  MOS SATURO
 > ```
 > **All'esame:** svolgi coi dati letterali, accorgiti che l'ipotesi non regge, **scrivilo**, e
 > aggiungi la soluzione coerente col refuso. Carli premia il controllo, non il numero.
 
 > [!danger] Trappola
-> Fusi ha scritto `I_D = 84,9 A` (ampere invece di milliampere) e ha usato
-> `V_GS = V_t + √(I_D/R_D)`, cancellata dal prof. con «NON SERVE»: corrente diviso resistenza
-> sotto radice è **dimensionalmente impossibile**. `V_GS` viene **solo** dal partitore.
+> Fusi ha scritto $I_D = 84{,}9\ \text{A}$ (ampere invece di milliampere) e ha usato
+> $V_{GS} = V_t + \sqrt{I_D/R_D}$, cancellata dal prof. con «NON SERVE»: corrente diviso resistenza
+> sotto radice è **dimensionalmente impossibile**. $V_{GS}$ viene **solo** dal partitore.
 
 ---
 
 ## Es. 7 — Progetto della polarizzazione di un MOSFET (senza R_S)
 
-`V_DD = 25 V` · `I_D = 3 mA` · `K = 0,3 mA/V²` · `V_t = 4 V` · `R₁ + R₂ = 10 MΩ` ·
-partitore sul gate, source a massa · incognite `R_D, R₁, R₂`
+$V_{DD} = 25\ \text{V}$ · $I_D = 3\ \text{mA}$ · $K = 0{,}3\ \text{mA}/V^{2}$ · $V_t = 4\ \text{V}$ · $R_{1} + R_{2} = 10\ \text{M}\Omega$ ·
+partitore sul gate, source a massa · incognite $R_D, R_{1}, R_{2}$
 
-`V_GS` è determinata dai dati; `V_DS` invece è **una scelta di progetto**, vincolata solo da
-`V_DS ≥ V_GS − V_t`. Si prende `V_DS = V_DD/2`, che dà l'escursione di segnale più simmetrica.
+$V_{GS}$ è determinata dai dati; $V_{DS}$ invece è **una scelta di progetto**, vincolata solo da
+$V_{DS} \ge V_{GS} - V_t$. Si prende $V_{DS} = V_{DD}/2$, che dà l'escursione di segnale più simmetrica.
 
-```
-V_GS = V_t + √(I_D/K) = 4 + √(3/0,3) = 4 + 3,162 = 7,16 V
-Vincolo di saturazione: V_DS ≥ 7,16 − 4 = 3,16 V   →   si sceglie V_DS = V_DD/2 = 12,5 V
-R_D  = (V_DD − V_DS)/I_D = 12,5/3·10⁻³ = 4,17 kΩ
-R₂   = (V_GS/V_DD)·(R₁+R₂) = (7,16/25)·10·10⁶ = 2,86 MΩ     (verso massa)
-R₁   = 10·10⁶ − 2,86·10⁶ = 7,14 MΩ                           (verso V_DD)
+$$\begin{aligned}
+V_{GS} &= V_t + \sqrt{I_D/K} = 4 + \sqrt{3/0{,}3} = 4 + 3{,}162 = 7{,}16\ \text{V} \\[2pt]
+\;\text{Vincolo di saturazione:}\; V_{DS} \ge 7{,}16 - 4 &= 3{,}16\ \text{V} \;\Rightarrow\; \;\text{si sceglie}\; V_{DS} = V_{DD}/2 = 12{,}5\ \text{V} \\[2pt]
+R_D &= (V_{DD} - V_{DS})/I_D = 12{,}5/3\cdot 10^{-3} = 4{,}17\ \text{k}\Omega \\[2pt]
+R_{2} &= (V_{GS}/V_{DD})\cdot (R_{1}+R_{2}) = (7{,}16/25)\cdot 10\cdot 10^{6} = 2{,}86\ \text{M}\Omega\quad\text{(verso massa)} \\[2pt]
+R_{1} &= 10\cdot 10^{6} - 2{,}86\cdot 10^{6} = 7{,}14\ \text{M}\Omega (\;\text{verso}\; V_{DD}) \\[8pt]
+\text{verifica: }V_G &= 25\cdot 2{,}86/10 = 7{,}16\ \text{V} \;\checkmark \cdot I_D = 0{,}3\cdot 10^{-3}\cdot (3{,}162)^{2} = 3{,}0\ \text{mA} \;\checkmark \cdot 12{,}5 \ge 3{,}16 \;\checkmark
+\end{aligned}$$
 
-Verifica: V_G = 25·2,86/10 = 7,16 V ✓ · I_D = 0,3·10⁻³·(3,162)² = 3,0 mA ✓ · 12,5 ≥ 3,16 ✓
-```
+> [!success] $R_D \approx 4{,}17\ \text{k}\Omega (comm. 3{,}9\ \text{k}\Omega) \cdot R_{2} \approx 2{,}86\ \text{M}\Omega \cdot R_{1} \approx 7{,}14\ \text{M}\Omega$, con $V_{GS} = 7{,}16\ \text{V}$,
+> $V_{DS} = 12{,}5\ \text{V}$ (scelta di progetto).
+> *$V_{DS}$ diversa → risultati diversi ma ugualmente validi, purché resti $\ge 3{,}16\ \text{V}$ e tu dichiari
+> la scelta. Solo $V_{GS} = 7{,}16\ \text{V}$ è obbligata dai dati.*
 
-> [!success] **R_D ≈ 4,17 kΩ (comm. 3,9 kΩ) · R₂ ≈ 2,86 MΩ · R₁ ≈ 7,14 MΩ**, con `V_GS = 7,16 V`,
-> `V_DS = 12,5 V` (scelta di progetto).
-> *`V_DS` diversa → risultati diversi ma ugualmente validi, purché resti `≥ 3,16 V` e tu dichiari
-> la scelta. Solo `V_GS = 7,16 V` è obbligata dai dati.*
-
-> [!warning] Attenzione al dato: `V_DD = 25 V`, non 15 V
+> [!warning] Attenzione al dato: $V_{DD} = 25\ \text{V}$, non 15 V
 > Sul foglio Fusi ha lavorato con 15 V, e con 15 V la vecchia versione di
-> [[06 - Soluzioni complete verifiche FUSI]] dava `R_D = 2 kΩ`, `R₂ = 4,78 MΩ`, `R₁ = 5,22 MΩ`.
-> Ricontrollata la scansione a 300 dpi: il testo dell'es. 7 dice **25 V** (i 15 V sono la `V_DD`
+> [[06 - Soluzioni complete verifiche FUSI]] dava $R_D = 2\ \text{k}\Omega$, $R_{2} = 4{,}78\ \text{M}\Omega$, $R_{1} = 5{,}22\ \text{M}\Omega$.
+> Ricontrollata la scansione a 300 dpi: il testo dell'es. 7 dice $25\ \text{V}$ (i 15 V sono la $V_{DD}$
 > dell'es. 6, subito sopra sulla stessa pagina). Le due righe, ritagliate dalla stessa pagina:
 >
 > ![[fusi-29-05-vdd-es6-300dpi.png]]
@@ -676,50 +665,49 @@ Verifica: V_G = 25·2,86/10 = 7,16 V ✓ · I_D = 0,3·10⁻³·(3,162)² = 3,0 
 > *Es. 7 — il «2» ha il ricciolo in alto e la base orizzontale.*
 
 > [!danger] Trappola
-> `R_D` a parte, Fusi ha scritto `V_GS = V_t + √(I_D/R_D) = 4,1 V` — **la stessa formula
-> dimensionalmente impossibile dell'es. 6**: sotto radice va `I_D/K`, non `I_D/R_D`.
-> Il prof.: **«relazione errata»**, e ha ricalcolato lui `V_GS = √(I_D/K) + V_t = 7,16 V`.
+> $R_D$ a parte, Fusi ha scritto $V_{GS} = V_t + \sqrt{I_D/R_D} = 4{,}1\ \text{V}$ — **la stessa formula
+> dimensionalmente impossibile dell'es. 6**: sotto radice va $I_D/K$, non $I_D/R_D$.
+> Il prof.: **«relazione errata»**, e ha ricalcolato lui $V_{GS} = \sqrt{I_D/K} + V_t = 7{,}16\ \text{V}$.
 
 ---
 
 ## Es. 8 — Progetto della polarizzazione di un MOSFET con R_S
 
-> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 9 — **es. 8**, MOSFET con R_S.
+> [!example]- 📄 Testo originale del prof. — Verifica 3, p. 9 — $es. 8$, MOSFET con R_S.
 > ![[fusi-29-05-p9-es8.png]]
 
-`I_DO = 8 mA` · `V_GSO = 6 V` · `V_DSO = 10 V` · `V_DD = 15 V` · `V_S = 3 V` · `R₁ + R₂ = 2 MΩ`
-· incognite `R_D, R_S, R₁, R₂`
+$I_{DO} = 8\ \text{mA}$ · $V_{GSO} = 6\ \text{V}$ · $V_{DSO} = 10\ \text{V}$ · $V_{DD} = 15\ \text{V}$ · $V_S = 3\ \text{V}$ · $R_{1} + R_{2} = 2\ \text{M}\Omega$
+· incognite $R_D, R_S, R_{1}, R_{2}$
 
-Con `R_S` cambiano **due cose**, ed entrambe sono le trappole: la maglia d'uscita ha **tre**
-cadute, e il gate sta a `V_G = V_GS + V_S`, non a `V_GS`.
+Con $R_S$ cambiano **due cose**, ed entrambe sono le trappole: la maglia d'uscita ha $tre$
+cadute, e il gate sta a $V_G = V_{GS} + V_S$, non a $V_{GS}$.
 
-```
-R_S = V_S/I_DO = 3/8·10⁻³ = 375 Ω
-R_D = (V_DD − V_DSO − V_S)/I_DO = (15 − 10 − 3)/8·10⁻³ = 250 Ω
-V_G = V_GS + V_S = 6 + 3 = 9 V
-R₂  = (V_G/V_DD)·(R₁+R₂) = (9/15)·2·10⁶ = 1,2 MΩ     (verso massa)
-R₁  = 2·10⁶ − 1,2·10⁶ = 800 kΩ                        (verso V_DD)
+$$\begin{aligned}
+R_S &= V_S/I_{DO} = 3/8\cdot 10^{-3} = 375\,\Omega \\[2pt]
+R_D &= (V_{DD} - V_{DSO} - V_S)/I_{DO} = (15 - 10 - 3)/8\cdot 10^{-3} = 250\,\Omega \\[2pt]
+V_G &= V_{GS} + V_S = 6 + 3 = 9\ \text{V} \\[2pt]
+R_{2} &= (V_G/V_{DD})\cdot (R_{1}+R_{2}) = (9/15)\cdot 2\cdot 10^{6} = 1{,}2\ \text{M}\Omega\quad\text{(verso massa)} \\[2pt]
+R_{1} &= 2\cdot 10^{6} - 1{,}2\cdot 10^{6} = 800\ \text{k}\Omega (\;\text{verso}\; V_{DD}) \\[8pt]
+\text{verifica: }V_{GS} &= 9 - 3 = 6\ \text{V} \;\checkmark \cdot \;\text{maglia:}\; 250\cdot 0{,}008 + 10 + 3 = 15\ \text{V} = V_{DD} \;\checkmark
+\end{aligned}$$
 
-Verifica: V_GS = 9 − 3 = 6 V ✓ · maglia: 250·0,008 + 10 + 3 = 15 V = V_DD ✓
-```
-
-> [!success] **R_S = 375 Ω · R_D = 250 Ω · R₂ = 1,2 MΩ · R₁ = 800 kΩ**
+> [!success] $R_S = 375\,\Omega \cdot R_D = 250\,\Omega \cdot R_{2} = 1{,}2\ \text{M}\Omega \cdot R_{1} = 800\ \text{k}\Omega$
 > Commerciali: 390 Ω · 240 Ω · 1,2 MΩ · 820 kΩ.
 
 > [!danger] Trappola — l'unico «ERRATO» pieno della verifica
-> 1. `R_D = (15−10)/8m = 625 Ω`: **V_S dimenticata**. Il prof. ha aggiunto in rosso `− V_S`.
-> 2. `R₂` calcolata con `V_R2 = 6 V` invece di 9 V: **ha usato V_GS al posto di V_G**. Il prof.
->    ha aggiunto `+ V_S`, scrivendo `V_R2 = V_GS + V_S`.
+> 1. $R_D = (15-10)/8m = 625\,\Omega$: $V_S dimenticata$. Il prof. ha aggiunto in rosso $- V_S$.
+> 2. $R_{2}$ calcolata con $V_{R2} = 6\ \text{V}$ invece di 9 V: **ha usato V_GS al posto di V_G**. Il prof.
+>    ha aggiunto $+ V_S$, scrivendo $V_{R2} = V_{GS} + V_S$.
 >
-> Ha anche applicato formule da partitore fra `R_D` e `R_S`, che **non sono in serie fra loro**:
-> in mezzo c'è il transistor. Vale sempre `I_S = I_D` e `V_S = R_S·I_D`.
+> Ha anche applicato formule da partitore fra $R_D$ e $R_S$, che **non sono in serie fra loro**:
+> in mezzo c'è il transistor. Vale sempre $I_S = I_D$ e $V_S = R_S\cdot I_D$.
 
 ---
 
 # Parte D — Diodi · le risposte per l'orale
 
 Nessuna delle tre verifiche FUSI tocca i diodi: sono **materia d'orale**, dalla scheda
-«Verifica di elettronica» di Carli (Mirandola Vol. 2, cap. 5, pp. 192–224). Qui le **D1–D23**
+«Verifica di elettronica» di Carli (Mirandola Vol. 2, cap. 5, pp. 192–224). Qui le $D1-D23$
 in forma condensata; la versione distesa da leggere ad alta voce è [[diodi-risposte]].
 
 **Indice** — D1 struttura · D2 simbolo · D3 polarizzazione · D4 diretta · D5 inversa ·
@@ -739,7 +727,7 @@ D22 stabilizzatore · D23 regolatore Zener
 Componente **a due terminali**, **un unico cristallo** di silicio (raro il germanio) drogato in
 modo **non uniforme**:
 - metà con impurità **trivalenti** (accettori: boro, gallio, indio) → **regione P**, maggioritari
-  le **lacune**;
+  le **lacune**
 - metà con impurità **pentavalenti** (donatori: fosforo, arsenico, antimonio) → **regione N**,
   maggioritari gli **elettroni**.
 
@@ -754,8 +742,8 @@ verso P, cui corrisponde una **barriera di potenziale** $V_0 \approx 0{,}6 \div 
 silicio ($0{,}2 \div 0{,}3$ V nel germanio). La barriera si oppone a un'ulteriore diffusione:
 all'equilibrio, senza tensioni esterne, **la corrente complessiva è nulla**.
 
-I terminali sono saldati con **contatti ohmici** (non raddrizzanti): **anodo (A)** sulla P,
-**catodo (K)** sulla N. Sul contenitore reale il catodo è marcato da un **anello**.
+I terminali sono saldati con **contatti ohmici** (non raddrizzanti): $anodo (A)$ sulla P,
+$catodo (K)$ sulla N. Sul contenitore reale il catodo è marcato da un **anello**.
 
 ### D2 — Simbolo circuitale
 
@@ -781,13 +769,13 @@ corrente. Due modi, con comportamenti opposti: **diretta** (potenziale maggiore 
 *Fig. 3 — Le due polarizzazioni a confronto.*
 
 Generatore col **+ sull'anodo (P)** e **− sul catodo (N)**: $V_A > V_K$, quindi $V_D > 0$.
-- il campo esterno è **opposto** a quello interno → la **barriera si abbassa** ($V_0 - V$);
-- la **regione di svuotamento si restringe**;
+- il campo esterno è **opposto** a quello interno → la **barriera si abbassa** ($V_0 - V$)
+- la **regione di svuotamento si restringe**
 - i **maggioritari** attraversano la giunzione → **corrente diretta $I_D$ elevata** (mA ÷ A).
 
 Sotto la **soglia $V_\gamma$** ($\approx 0{,}7$ V nel silicio) la corrente è trascurabile; oltre
 $V_\gamma$ cresce **esponenzialmente** mentre $V_D$ resta inchiodata attorno a 0,7 V: il diodo è
-**ON**, quasi un **interruttore chiuso**.
+$ON$, quasi un **interruttore chiuso**.
 
 > [!warning] In conduzione il diodo **non limita la corrente**: serve **sempre una resistenza R
 > in serie**, altrimenti si distrugge per effetto Joule.
@@ -795,15 +783,15 @@ $V_\gamma$ cresce **esponenzialmente** mentre $V_D$ resta inchiodata attorno a 0
 ### D5 — Polarizzazione inversa
 
 Generatore col **+ sul catodo (N)** e **− sull'anodo (P)**: $V_A < V_K$, quindi $V_D < 0$.
-- campo esterno **concorde** con quello interno → la **barriera si innalza** ($V_0 + V$);
-- la **regione di svuotamento si allarga**;
+- campo esterno **concorde** con quello interno → la **barriera si innalza** ($V_0 + V$)
+- la **regione di svuotamento si allarga**
 - i maggioritari **non passano più**.
 
 Resta la **corrente inversa di saturazione $I_S$**, dovuta ai **portatori minoritari** generati
-termicamente: ordine dei **nA** (Si) o µA (Ge), **indipendente dalla tensione inversa** ma
+termicamente: ordine dei $nA$ (Si) o µA (Ge), **indipendente dalla tensione inversa** ma
 **fortemente dipendente dalla temperatura** (raddoppia ogni ≈10 °C).
 
-Il diodo è **OFF**, un **interruttore aperto** — ma solo fino alla **tensione di breakdown
+Il diodo è $OFF$, un **interruttore aperto** — ma solo fino alla **tensione di breakdown
 $V_{BR}$**, oltre la quale la corrente inversa cresce bruscamente e, se non limitata, distrugge
 il componente.
 
@@ -817,7 +805,7 @@ a potenziale maggiore.
 - **$I_D$** positiva quando **entra dall'anodo ed esce dal catodo** (verso del triangolo).
 - **$V_D$** positiva col **+ sull'anodo**: $V_D = V_A - V_K$.
 
-Il segno diventa così coerente con lo stato: **diretta** → $V_D>0, I_D>0$ → **I quadrante**;
+Il segno diventa così coerente con lo stato: **diretta** → $V_D>0, I_D>0$ → **I quadrante**
 **inversa** → $V_D<0, I_D<0$ (pari a $-I_S$) → **III quadrante**.
 
 > [!tip] Se dai calcoli esce $I_D$ **negativa** dove avevi ipotizzato conduzione, **l'ipotesi era
@@ -843,7 +831,7 @@ piena conduzione**.
 
 ### D7 — Con quale rappresentazione grafica si descrive il funzionamento ai morsetti
 
-Con la **curva caratteristica tensione–corrente** (caratteristica **statica** o **V–I**), cioè il
+Con la **curva caratteristica tensione–corrente** (caratteristica **statica** o $V-I$), cioè il
 grafico di $I_D = f(V_D)$ sul piano cartesiano, $V_D$ in ascissa e $I_D$ in ordinata.
 
 Il vantaggio: descrive **completamente il comportamento esterno** senza dover sapere che cosa
@@ -910,9 +898,9 @@ $$I_D = I_S\left(e^{\frac{V_D}{\eta\,V_T}} - 1\right) \qquad V_T = \frac{kT}{q} 
 - $V_D$ — tensione ai morsetti [V], positiva in diretta.
 - $I_S$ — **corrente inversa di saturazione** [A]: dipende da materiale, drogaggio, area della
   giunzione e fortemente dalla temperatura; nA nel silicio.
-- $\eta$ (o $n$) — **coefficiente di emissione**, numero puro **fra 1 e 2**; ≈2 nel silicio a
+- $\eta$ (o $n$) — **coefficiente di emissione**, numero puro $fra 1 e 2$; ≈2 nel silicio a
   basse correnti, → 1 ad alte correnti e nel germanio.
-- $V_T$ — **tensione termica** [V], $kT/q$, ≈**26 mV** a temperatura ambiente.
+- $V_T$ — **tensione termica** [V], $kT/q$, ≈$26\ \text{mV}$ a temperatura ambiente.
 - $k = 1{,}38\cdot10^{-23}$ J/K · $T$ temperatura **assoluta** [K] · $q = 1{,}602\cdot10^{-19}$ C.
 
 **Verifica nei due casi:** in diretta con $V_D \gg V_T$ l'esponenziale domina →
@@ -928,7 +916,7 @@ l'esponenziale → 0 e resta $I_D \approx -I_S$ (costante — da qui «di satura
 
 1. **Difficoltà matematica**: Shockley è **trascendente**; nelle equazioni di Kirchhoff dà un
    sistema **non risolvibile algebricamente** (l'incognita è dentro e fuori l'esponenziale).
-2. **Impossibile usare i teoremi delle reti lineari** finché c'è un elemento non lineare;
+2. **Impossibile usare i teoremi delle reti lineari** finché c'è un elemento non lineare
    **linearizzando a tratti** tornano tutti applicabili.
 3. **Parametri incerti**: $I_S$ e $\eta$ variano con temperatura, invecchiamento e **da esemplare
    a esemplare**. Un calcolo «esatto» su dati incerti è precisione finta.
@@ -951,23 +939,23 @@ resistore): calcolo rapido, a mano, abbastanza accurato.
 
 | Modello | Conduzione | Interdizione | $V_D$ in conduzione | Precisione |
 |---|---|---|---|---|
-| **A** | interruttore + $V_\gamma$ + $r_D$ | aperto | $V_\gamma + r_D I_D$ | alta |
-| **B** | interruttore + $V_\gamma$ | aperto | $V_\gamma \approx 0{,}7$ V | media — **la più usata** |
-| **C** | interruttore | aperto | 0 V | bassa (qualitativa) |
+| $A$ | interruttore + $V_\gamma$ + $r_D$ | aperto | $V_\gamma + r_D I_D$ | alta |
+| $B$ | interruttore + $V_\gamma$ | aperto | $V_\gamma \approx 0{,}7$ V | media — **la più usata** |
+| $C$ | interruttore | aperto | 0 V | bassa (qualitativa) |
 
-- **A** — il più completo: caratteristica = **semiretta inclinata** da $V_\gamma$ con pendenza
+- $A$ — il più completo: caratteristica = **semiretta inclinata** da $V_\gamma$ con pendenza
   $1/r_D$ ($r_D$ tipicamente 1÷20 Ω). Riproduce meglio il diodo reale.
-- **B** — si trascura $r_D$: $V_D = V_\gamma$ costante, caratteristica = **semiretta verticale**.
+- $B$ — si trascura $r_D$: $V_D = V_\gamma$ costante, caratteristica = **semiretta verticale**.
   Miglior compromesso, quello normalmente adottato.
-- **C** — diodo **ideale**: puro interruttore, corto in diretta ($V_D=0$), aperto in inversa. La
+- $C$ — diodo **ideale**: puro interruttore, corto in diretta ($V_D=0$), aperto in inversa. La
   caratteristica **coincide coi due semiassi**. Per l'analisi qualitativa rapida.
 
 **Da cosa dipende la scelta:**
-- **rapporto fra le tensioni in gioco e $V_\gamma$** — con 24 V i 0,7 V sono < 3% → basta **C**;
-  con segnali di pochi volt serve almeno **B**;
+- **rapporto fra le tensioni in gioco e $V_\gamma$** — con 24 V i 0,7 V sono < 3% → basta $C$
+  con segnali di pochi volt serve almeno $B$
 - **rapporto fra $r_D$ e le resistenze del circuito** — resistenze in kΩ → $r_D$ trascurabile
-  (**B**); circuiti a bassa impedenza e forti correnti → serve **A**;
-- **precisione richiesta e scopo** — dimensionamento di massima vs. calcolo di potenza dissipata;
+  ($B$); circuiti a bassa impedenza e forti correnti → serve $A$
+- **precisione richiesta e scopo** — dimensionamento di massima vs. calcolo di potenza dissipata
 - **dati disponibili** — se il data sheet non dà $r_D$, il modello A è **falsa precisione**.
 
 > [!tip] Si sceglie sempre il **modello più semplice che garantisce l'accuratezza richiesta**.
@@ -994,9 +982,9 @@ servono filtro e stabilizzatore.
 *Fig. 7 — Singola semionda e ponte di Graetz, con le forme d'onda.*
 
 **1) Singola semionda** — un solo diodo in serie al carico $R_L$.
-- semionda **positiva**: diodo in conduzione, $v_o = v_i - V_\gamma$;
+- semionda **positiva**: diodo in conduzione, $v_o = v_i - V_\gamma$
 - semionda **negativa**: diodo interdetto, $v_o = 0$; tutta la tensione d'ingresso cade sul diodo
-  → deve sopportare un **PIV** (*Peak Inverse Voltage*) pari a $V_{max}$.
+  → deve sopportare un $PIV$ (*Peak Inverse Voltage*) pari a $V_{max}$.
 
 $$V_{o,med} = \frac{V_{max}}{\pi} \approx 0{,}318\,V_{max} \qquad f_{ripple} = f_{rete} = 50\ \text{Hz}$$
 
@@ -1037,17 +1025,17 @@ di segnale entro le soglie. Può essere **unilaterale** o **bilaterale/simmetric
 *Fig. 8 — Limitatore a bassa soglia con un diodo verso massa, e forme d'onda.*
 
 Sono i limitatori in cui **la soglia è fissata solo da $V_\gamma$**, senza generatori di
-polarizzazione ausiliari: soglia ≈ **0,7 V** (o un suo multiplo con più diodi in serie).
+polarizzazione ausiliari: soglia ≈ $0{,}7\ \text{V}$ (o un suo multiplo con più diodi in serie).
 
 **Struttura:** una **R in serie** fra ingresso e uscita (limita la corrente nel diodo e assorbe
 l'eccesso di tensione) e un **diodo in parallelo all'uscita, verso massa**.
 
 **Funzionamento:**
 - **$v_i < V_\gamma$** → diodo interdetto, nessuna corrente, nessuna caduta su R → $v_o = v_i$,
-  segnale **inalterato**;
+  segnale **inalterato**
 - **$v_i$ oltre $V_\gamma$** → diodo in conduzione, si comporta da generatore costante: l'uscita
   resta **clampata a $v_o \approx V_\gamma \approx 0{,}7$ V** comunque cresca l'ingresso; tutta
-  l'eccedenza $(v_i - V_\gamma)$ cade su R, percorsa da $I = (v_i - V_\gamma)/R$;
+  l'eccedenza $(v_i - V_\gamma)$ cade su R, percorsa da $I = (v_i - V_\gamma)/R$
 - **semionde negative** → diodo interdetto, l'uscita segue l'ingresso.
 
 Con un solo diodo la limitazione è **unilaterale** (creste positive tosate a un livello piatto,
@@ -1089,11 +1077,11 @@ $\pm n V_\gamma$ (es. ±1,4 V con due diodi per ramo).
 *Fig. 11 — Simbolo dello Zener, polarizzazione di lavoro e curva caratteristica.*
 
 **Simbolo:** come il diodo normale ma con la **barretta del catodo ripiegata alle due estremità**
-a ricordare una **Z**.
+a ricordare una $Z$.
 
 **Curva:**
 - **in diretta** si comporta **esattamente come un diodo normale** (conduce oltre 0,7 V), ma
-  **non viene mai usato così**;
+  **non viene mai usato così**
 - **in inversa** ha un **ginocchio molto netto** alla tensione $V_Z$, oltre il quale la
   caratteristica è **quasi verticale**.
 
@@ -1103,7 +1091,7 @@ dissipazione adeguata) per **lavorarci stabilmente**, purché la corrente sia **
 dall'esterno**. Lì la tensione ai suoi capi **resta praticamente costante a $V_Z$** anche se la
 corrente varia moltissimo, entro due limiti:
 - $I_{ZK}$ (*knee*) — corrente **minima** per stare oltre il ginocchio: sotto, esce dalla
-  regolazione;
+  regolazione
 - $I_{ZM} = P_{Zmax}/V_Z$ — corrente **massima**, oltre la quale si distrugge per
   surriscaldamento.
 
@@ -1111,7 +1099,7 @@ La pendenza residua è la **resistenza differenziale $r_Z$** (pochi ohm): $\Delt
 I_Z$. Più piccola è $r_Z$, migliore è lo Zener.
 
 **Impieghi:** **stabilizzatore/regolatore di tensione** (principale, D22–D23) · **riferimento di
-tensione** di precisione · **limitatore e protezione da sovratensioni** (due in antiparallelo →
+tensione$di precisione \cdot$limitatore e protezione da sovratensioni** (due in antiparallelo →
 taglio simmetrico a valori scelti) · **traslatore di livello** (sposta il continuo di $V_Z$) ·
 **sagomatura** a soglie alte (gli Zener coprono da ≈2,4 V a oltre 100 V, i diodi comuni solo
 multipli di 0,7 V).
@@ -1125,21 +1113,21 @@ Due meccanismi fisici distinti:
 portatori minoritari, che urtando gli atomi del reticolo **rompono legami covalenti** e liberano
 nuove **coppie elettrone–lacuna** (ionizzazione per urto); queste ne liberano altre, in un
 **processo a catena**.
-- prevale nei diodi a **drogaggio basso** (regione di svuotamento larga, spazio per accelerare);
-- dominante per $V_{BR}$ **oltre ≈ 6 V**;
+- prevale nei diodi a **drogaggio basso** (regione di svuotamento larga, spazio per accelerare)
+- dominante per $V_{BR}$ $oltre \approx 6\ \text{V}$
 - **coefficiente di temperatura positivo**: $V_{BR}$ **aumenta** con la temperatura.
 
 **2) Effetto Zener / tunnel** (*Zener breakdown*). Con **drogaggi molto pesanti** la regione di
 svuotamento è **sottilissima** e già a tensioni modeste il campo supera $10^8$ V/m: **strappa
 direttamente gli elettroni dai legami covalenti**, che passano per **effetto tunnel** dalla banda
 di valenza della P alla banda di conduzione della N, senza urti né accelerazione.
-- prevale nei diodi **fortemente drogati**;
-- dominante per $V_{BR}$ **sotto ≈ 5 V**;
+- prevale nei diodi **fortemente drogati**
+- dominante per $V_{BR}$ $sotto \approx 5\ \text{V}$
 - **coefficiente di temperatura negativo**: $V_Z$ **diminuisce** con la temperatura.
 
 > [!important]
 > - **Fra 5 e 6 V i due meccanismi coesistono** e i coefficienti di temperatura, di segno opposto,
->   **si compensano**: gli Zener attorno a **5,6 V** sono i più **stabili in temperatura** e si
+>   **si compensano**: gli Zener attorno a $5{,}6\ \text{V}$ sono i più **stabili in temperatura** e si
 >   preferiscono come riferimenti di precisione.
 > - Il fenomeno è **reversibile e non distruttivo** di per sé: il diodo si rovina solo se la
 >   **potenza dissipata** supera il massimo, cioè se la corrente non è limitata dall'esterno.
@@ -1151,8 +1139,8 @@ di valenza della P alla banda di conduzione della N, senza urti né accelerazion
 **Definizione.** Circuito posto fra sorgente e carico che **mantiene la tensione d'uscita costante
 al valore voluto**, indipendentemente dalle grandezze che tenderebbero a farla variare:
 - **variazioni della tensione d'ingresso** (fluttuazioni di rete, ripple residuo) →
-  **regolazione di linea** $S_V = \Delta V_o/\Delta V_i$;
-- **variazioni della corrente di carico** → **regolazione di carico** $R_o = \Delta V_o/\Delta I_L$;
+  **regolazione di linea** $S_V = \Delta V_o/\Delta V_i$
+- **variazioni della corrente di carico** → **regolazione di carico** $R_o = \Delta V_o/\Delta I_L$
 - **variazioni di temperatura** → coefficiente termico $S_T = \Delta V_o/\Delta T$.
 
 **Idealmente tutti e tre valgono zero.**
@@ -1182,7 +1170,7 @@ $$R_{S,max} = \frac{V_{i,min} - V_Z}{I_{ZK} + I_{L,max}} \qquad R_{S,min} = \fra
 **Perché stabilizza.** Lo Zener, nel tratto quasi verticale, **impone la propria $V_Z$** al nodo
 d'uscita:
 - **se aumenta $V_i$** → aumenta $I_S$, ma l'uscita è bloccata a $V_Z$ quindi $I_L$ non cambia:
-  **tutto l'incremento va nello Zener**; cresce la caduta su $R_S$, che **assorbe l'eccesso**;
+  **tutto l'incremento va nello Zener**; cresce la caduta su $R_S$, che **assorbe l'eccesso**
 - **se aumenta $I_L$** (cioè cala $R_L$) → lo Zener **cede corrente al carico**, $I_Z$ diminuisce
   esattamente di quanto $I_L$ aumenta; $I_S$ resta invariata, la caduta su $R_S$ pure, l'uscita
   resta $V_Z$.
@@ -1190,10 +1178,10 @@ d'uscita:
 Lo Zener è un **serbatoio di corrente in parallelo al carico**: assorbe ciò che al carico non
 serve, restituisce ciò che gli occorre in più.
 
-**Limiti:** la stabilizzazione non è perfetta perché $r_Z \ne 0$ ($\Delta V_o = r_Z \Delta I_Z$);
+**Limiti:** la stabilizzazione non è perfetta perché $r_Z \ne 0$ ($\Delta V_o = r_Z \Delta I_Z$)
 il **rendimento è basso** (la potenza su $R_S$ e sullo Zener c'è sempre, anche a vuoto); va bene
 solo per **correnti di carico modeste e poco variabili**. Per prestazioni migliori: regolatori
-**serie a transistor** con controreazione, o **integrati 78xx/79xx** — che comunque usano uno
+**serie a transistor** con controreazione, o $integrati 78xx/79xx$ — che comunque usano uno
 Zener interno come riferimento.
 
 ### Corrispondenza fra la scheda «Verifica» (D1–D16) e queste risposte
@@ -1223,64 +1211,88 @@ Zener interno come riferimento.
 
 **A · Corrente alternata e filtri del primo ordine**
 
-```
-ω = 2πf          X_L = ωL          X_C = 1/(ωC)
-Z̄_L = jωL        Z̄_C = 1/(jωC) = −j/(ωC)
-serie:  Z̄ = Z̄₁ + Z̄₂        parallelo:  Z̄ = Z̄₁Z̄₂/(Z̄₁+Z̄₂)
-|Z| = √(a²+b²)   arg Z̄ = arctan(b/a)
-partitore:  Ḡ(s) = Z̄_uscita/(Z̄_serie + Z̄_uscita)      (adimensionale!)
-taglio RC:  f_t = 1/(2πRC)        taglio RL:  f_t = R/(2πL)
-poli = radici del denominatore     zeri = radici del numeratore
-```
+$$\begin{aligned}
+&\omega = 2\pi f
+  &&X_L = \omega L
+  &&X_C = \dfrac{1}{\omega C} \\[4pt]
+&\bar{Z}_L = j\omega L
+  &&\bar{Z}_C = \dfrac{1}{j\omega C} = -\dfrac{j}{\omega C} && \\[4pt]
+&\text{serie: } \bar{Z} = \bar{Z}_1 + \bar{Z}_2
+  &&\text{parallelo: } \bar{Z} = \dfrac{\bar{Z}_1\bar{Z}_2}{\bar{Z}_1+\bar{Z}_2} && \\[4pt]
+&|Z| = \sqrt{a^2+b^2}
+  &&\arg \bar{Z} = \arctan\dfrac{b}{a} && \\[4pt]
+&\text{partitore: } \bar{G}(s) = \dfrac{\bar{Z}_{\text{uscita}}}{\bar{Z}_{\text{serie}} + \bar{Z}_{\text{uscita}}}
+  &&\text{(adimensionale!)} && \\[4pt]
+&\text{taglio RC: } f_t = \dfrac{1}{2\pi RC}
+  &&\text{taglio RL: } f_t = \dfrac{R}{2\pi L} && \\[4pt]
+&\text{poli} = \text{radici del denominatore}
+  &&\text{zeri} = \text{radici del numeratore} &&
+\end{aligned}$$
 
 **B · BJT**
 
-```
-maglia d'ingresso   V_BB = R_B·I_B + V_BE [+ R_E·I_E]     →  I_B
-transistor          I_C = h_FE·I_B      I_E = (h_FE+1)·I_B
-maglia d'uscita     V_CC = R_C·I_C + V_CE [+ R_E·I_E]     →  V_CE
-saturazione         I_C(sat) = (V_CC − V_CEsat)/(R_C [+ R_E])
-                    saturo se  I_B > I_C(sat)/h_FE
-progetto partitore  V_E = V_CC/10 · V_RC = V_CE = 9V_CC/20
-                    V_BO = V_BE + R_E·I_CO · I = 10·I_B  (con h_FEmin)
-                    R₂ = V_BO/I · R₁ = (V_CC − V_BO)/I
-by-pass             C_E ≥ 10/(2π·f_min·R_E)
-commutazione        I_Bmin = I_C/h_FEmin, poi ×2÷5 di overdrive
-                    + DIODO DI RICIRCOLO su ogni carico induttivo
-```
+$$\begin{aligned}
+\text{maglia d'ingresso} \;\; & V_{BB} = R_B I_B + V_{BE} \,[+\,R_E I_E] \;\Rightarrow\; I_B \\[2pt]
+\text{transistor} \;\; & I_C = h_{FE} I_B, \qquad I_E = (h_{FE}+1)\,I_B \\[2pt]
+\text{maglia d'uscita} \;\; & V_{CC} = R_C I_C + V_{CE} \,[+\,R_E I_E] \;\Rightarrow\; V_{CE} \\[2pt]
+\text{saturazione} \;\; & I_{C(sat)} = \dfrac{V_{CC} - V_{CE,sat}}{R_C\,[+\,R_E]},
+   \qquad \text{saturo se } I_B > \dfrac{I_{C(sat)}}{h_{FE}} \\[6pt]
+\text{progetto partitore} \;\; & V_E = \dfrac{V_{CC}}{10}, \qquad V_{RC} = V_{CE} = \dfrac{9V_{CC}}{20} \\[2pt]
+ & V_{BO} = V_{BE} + R_E I_{CO}, \qquad I = 10\,I_B \;\;\text{(con } h_{FE,\min}) \\[2pt]
+ & R_2 = \dfrac{V_{BO}}{I}, \qquad R_1 = \dfrac{V_{CC} - V_{BO}}{I} \\[6pt]
+\text{by-pass} \;\; & C_E \ge \dfrac{10}{2\pi f_{\min} R_E} \\[2pt]
+\text{commutazione} \;\; & I_{B,\min} = \dfrac{I_C}{h_{FE,\min}},
+   \quad\text{poi } \times\,2\div 5 \text{ di overdrive}
+\end{aligned}$$
+
+**+ DIODO DI RICIRCOLO su ogni carico induttivo.**
 
 **C · JFET e MOSFET**
 
-```
-I_G = 0  →  V_G imposta dal circuito · I_S = I_D · R_G si SCEGLIE (1÷10 MΩ)
+$$I_G = 0 \;\Rightarrow\; V_G \text{ imposta dal circuito}
+  \qquad I_S = I_D
+  \qquad R_G \text{ si SCEGLIE } (1\div 10\ \text{M}\Omega)$$
 
-JFET canale N (V_P < 0)
-  I_D  = I_DSS·(1 − V_GS/V_P)²        V_GS = V_P·(1 − √(I_D/I_DSS))
-  saturazione:  V_DS ≥ V_GS − V_P     V_GS sta sempre fra V_P e 0
+$$\begin{aligned}
+\textbf{JFET canale N } (V_P < 0) \;\; & I_D = I_{DSS}\left(1 - \dfrac{V_{GS}}{V_P}\right)^{2},
+   \qquad V_{GS} = V_P\left(1 - \sqrt{\dfrac{I_D}{I_{DSS}}}\right) \\[2pt]
+ & \text{saturazione: } V_{DS} \ge V_{GS} - V_P
+   \quad V_{GS} \text{ sta sempre fra } V_P \text{ e } 0 \\[8pt]
+\textbf{MOSFET enh. canale N } (V_t > 0) \;\; & \text{saturazione: } I_D = K (V_{GS} - V_t)^{2},
+   \qquad V_{GS} = V_t + \sqrt{\dfrac{I_D}{K}} \\[2pt]
+ & \text{ohmica: } I_D = K\left[2(V_{GS} - V_t)V_{DS} - V_{DS}^{2}\right]
+   \;\;\text{se } V_{DS} < V_{GS} - V_t
+\end{aligned}$$
 
-MOSFET enhancement canale N (V_t > 0)
-  saturazione:  I_D = K·(V_GS − V_t)²       V_GS = V_t + √(I_D/K)
-  ohmica:       I_D = K·[2(V_GS − V_t)V_DS − V_DS²]   se V_DS < V_GS − V_t
-
-autopolarizzazione   V_GS = −R_S·I_D             R_S = −V_GS/I_D
-maglia d'uscita      V_DD = R_D·I_D + V_DS + R_S·I_D        (tre termini se c'è R_S!)
-partitore di gate    V_G = V_GS + V_S            R₂ = (V_G/V_DD)·(R₁+R₂)
-```
+$$\begin{aligned}
+\text{autopolarizzazione} \;\; & V_{GS} = -R_S I_D \;\Rightarrow\; R_S = -\dfrac{V_{GS}}{I_D} \\[2pt]
+\text{maglia d'uscita} \;\; & V_{DD} = R_D I_D + V_{DS} + R_S I_D
+   \quad\text{(tre termini se c'è } R_S\text{!)} \\[2pt]
+\text{partitore di gate} \;\; & V_G = V_{GS} + V_S, \qquad R_2 = \dfrac{V_G}{V_{DD}}(R_1+R_2)
+\end{aligned}$$
 
 **D · Diodi**
 
-```
-Shockley       I_D = I_S·(e^(V_D/(ηV_T)) − 1)        V_T = kT/q ≈ 26 mV
-soglia         V_γ ≈ 0,7 V (Si) · 0,2÷0,3 V (Ge)
-modelli        A: V_γ + r_D    B: V_γ    C: ideale (0 V)
-raddrizzatore  1 semionda: V_med = V_max/π ≈ 0,318·V_max   f_ripple = 50 Hz
-               2 semionde: V_med = 2V_max/π ≈ 0,637·V_max  f_ripple = 100 Hz
-limitatore     n diodi in serie → soglia n·V_γ  ·  antiparallelo → ±V_γ
-Zener          V_o = V_Z · I_S = (V_i − V_Z)/R_S · I_L = V_Z/R_L · I_Z = I_S − I_L
-               I_ZK ≤ I_Z ≤ I_ZM = P_Zmax/V_Z
-               R_S,max = (V_i,min − V_Z)/(I_ZK + I_L,max)
-               R_S,min = (V_i,max − V_Z)/(I_ZM + I_L,min)
-```
+$$\begin{aligned}
+\text{Shockley} \;\; & I_D = I_S\left(e^{V_D/(\eta V_T)} - 1\right),
+   \qquad V_T = \dfrac{kT}{q} \approx 26\ \text{mV} \\[2pt]
+\text{soglia} \;\; & V_\gamma \approx 0{,}7\ \text{V (Si)}
+   \quad\cdot\quad 0{,}2\div 0{,}3\ \text{V (Ge)} \\[2pt]
+\text{modelli} \;\; & \text{A: } V_\gamma + r_D
+   \quad\cdot\quad \text{B: } V_\gamma
+   \quad\cdot\quad \text{C: ideale } (0\ \text{V}) \\[6pt]
+\text{raddrizzatore} \;\; & \text{1 semionda: } V_{med} = \dfrac{V_{\max}}{\pi} \approx 0{,}318\,V_{\max},
+   \quad f_{ripple} = 50\ \text{Hz} \\[2pt]
+ & \text{2 semionde: } V_{med} = \dfrac{2V_{\max}}{\pi} \approx 0{,}637\,V_{\max},
+   \quad f_{ripple} = 100\ \text{Hz} \\[6pt]
+\text{limitatore} \;\; & n \text{ diodi in serie} \;\Rightarrow\; \text{soglia } n\,V_\gamma
+   \quad\cdot\quad \text{antiparallelo} \;\Rightarrow\; \pm V_\gamma \\[6pt]
+\text{Zener} \;\; & V_o = V_Z, \quad I_S = \dfrac{V_i - V_Z}{R_S},
+   \quad I_L = \dfrac{V_Z}{R_L}, \quad I_Z = I_S - I_L \\[2pt]
+ & I_{ZK} \le I_Z \le I_{ZM} = \dfrac{P_{Z,\max}}{V_Z} \\[2pt]
+ & R_{S,\max} = \dfrac{V_{i,\min} - V_Z}{I_{ZK} + I_{L,\max}},
+   \qquad R_{S,\min} = \dfrac{V_{i,\max} - V_Z}{I_{ZM} + I_{L,\min}}
+\end{aligned}$$
 
 ---
 
@@ -1288,16 +1300,16 @@ Zener          V_o = V_Z · I_S = (V_i − V_Z)/R_S · I_L = V_Z/R_L · I_Z = I_
 
 | # | Trappola | Dove | Come non caderci |
 |---|---|---|---|
-| 1 | **Maglie d'ingresso e d'uscita mescolate** (`R_B` con `R_C`) | B es. 2, 6, 7 | Prima di scrivere l'equazione chiediti: *questa resistenza è percorsa da I_B, I_C o I_E?* Le due maglie condividono solo il ramo di emettitore. |
-| 2 | **`I_G ≈ 0` dimenticato** → `R_G` calcolata da una legge | C es. 1, 2 | Nel JFET/MOSFET il gate non assorbe corrente. **`R_G` si sceglie (1÷10 MΩ), non si calcola.** |
-| 3 | **`V_S`/`V_E` dimenticata** nella maglia d'uscita o nel partitore | B es. 3, C es. 8 | Se c'è `R_S`/`R_E`: `V_DD = V_RD + V_DS + V_S` e `V_G = V_GS + V_S`. **Tre** termini, non due. |
-| 4 | **Formule dimensionalmente impossibili** (`√(I_D/R_D)`, `arctan(1/\|Z\|)`) | A es. 1B, C es. 6, 7 | Controlla le unità del risultato: se non sono V/A/Ω come devono, la formula è sbagliata a prescindere dai numeri. |
+| 1 | **Maglie d'ingresso e d'uscita mescolate** ($R_B$ con $R_C$) | B es. 2, 6, 7 | Prima di scrivere l'equazione chiediti: *questa resistenza è percorsa da I_B, I_C o I_E?* Le due maglie condividono solo il ramo di emettitore. |
+| 2 | **$I_G \approx 0$ dimenticato** → $R_G$ calcolata da una legge | C es. 1, 2 | Nel JFET/MOSFET il gate non assorbe corrente. **$R_G$ si sceglie (1÷10 MΩ), non si calcola.** |
+| 3 | **$V_S$/$V_E$ dimenticata** nella maglia d'uscita o nel partitore | B es. 3, C es. 8 | Se c'è $R_S$/$R_E$: $V_{DD} = V_{RD} + V_{DS} + V_S$ e $V_G = V_{GS} + V_S$. $Tre$ termini, non due. |
+| 4 | **Formule dimensionalmente impossibili** ($\sqrt{I_D/R_D}$, $\arctan (1/\|Z\|)$) | A es. 1B, C es. 6, 7 | Controlla le unità del risultato: se non sono V/A/Ω come devono, la formula è sbagliata a prescindere dai numeri. |
 | 5 | **Valori sostituiti male** (10 al posto di 12, f errata) | A es. 1A, B es. 1 | Riscrivi i dati in colonna prima di iniziare e spuntali man mano che li usi. |
 | 6 | **Ipotesi non verificata alla fine** (saturo / zona attiva) | C es. 6, B es. 6 | Ogni esercizio con un'ipotesi si **chiude** con la verifica. Se non regge, **dillo per iscritto** e rifai con l'altra zona. |
 
 > [!tip] La differenza fra 3/10 e 7/10
 > Sui tre fascicoli **6 esercizi su 21 sono stati lasciati completamente in bianco**, e valgono
-> **7,50 punti su 30**: A es. 5 (due divisioni), B es. 4 e 5, C es. 3, 4 e 5. Nessuno richiede più
+> $7{,}50 punti su 30$: A es. 5 (due divisioni), B es. 4 e 5, C es. 3, 4 e 5. Nessuno richiede più
 > di dieci minuti. Il messaggio dei fascicoli non è «gli esercizi sono difficili»: è
 > **«va svolto tutto»**.
 
