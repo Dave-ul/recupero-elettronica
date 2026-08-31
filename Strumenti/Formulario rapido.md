@@ -1,20 +1,244 @@
 ---
-tags: [recupero, elettronica, formulario, cheat-sheet, comparazione, compito, rapido]
+tags: [recupero, elettronica, formulario, cheat-sheet, criteri-progetto, comparazione, compito, rapido]
 fonte_secondaria: "edutecnica.it — verificato coerente su 8/8 topic chiave (BJT, MOSFET, JFET, Amplificatori, Diodi/Zener, Filtri RC/RL, Alimentatori, Trifase)"
 fonte_ufficiale: "MAJORANA lettera giudizio sospeso 09/06/2026 — IIS San Lazzaro di Savena (BO), studente Davide Rocca, classe 4BEM"
+criteri_progetto: "Parte 0 §0.2 — ricette R1-R9 estratte dalle verifiche vere di Carli (Prove/05, Prove/06) e dalle procedure di dimensionamento del Mirandola (BJT 7.8-7.11 p. 328-329; JFET §4-bis; MOSFET §3-bis; Zener p. 228; alimentatori Cap. 8)"
 libro_mirandola: "VERIFICATO ✔ (2026-07-25) per derivazione — file trasversale: non cita direttamente il libro, ma raccoglie le formule dei file di argomento, ciascuno verificato pagina per pagina sul Mirandola nei Lotti 1-13 della bonifica. Per il riferimento di libro di ogni formula si va alla nota dell'argomento corrispondente. Vedi «00 - Fonti e note» e «00 - Audit e correzioni»."
 prove: [scritta]
-nota_unione: "2026-08-27 — «Cheat Sheet A4 visuale» è stato fuso qui dentro come Parte A. Le vecchie sezioni §1-§7 del Cheat Sheet sono ora §A1-§A7; la numerazione §1-§13 del Formulario è invariata."
+nota_unione: "2026-08-27 — «Cheat Sheet A4 visuale» fuso qui come Parte A (§A1-§A7); §1-§13 del Formulario invariate. 2026-08-31 — aggiunta la Parte 0 «I 5 minuti prima di entrare»: criteri di progetto (ricette R1-R9), numeri da scegliere, trappole e regole di chiusura. Parte A e Parte B non toccate nei contenuti, solo rimandi."
 ---
 
-# 📋 Formulario + Cheat Sheet — da portare al compito Carli (1 set., 8:00-13:00)
+# 📋 Formulario + Criteri di progetto — compito Carli (1 set., 8:00-13:00)
 
-> [!warning] USO
-> Questo file è **SOLO formule e tabelle**. Nessuna spiegazione: per i perché vedi [[Argomenti]] e [[Esercizi]]. Stampalo (A4 fronte-retro) o tienilo aperto su un telefono durante lo scritto.
-> - **[Parte A](#parte-a--tabelle-comparative-lookup-5-secondi)** = tabelle comparative, lookup da 5 secondi (§A1-§A7)
-> - **[Parte B](#parte-b--formule-per-macroarea)** = formulario per macroarea (§1-§13)
+> [!danger] USO — questo file NON entra in aula
+> Sul foglio firmato della verifica il prof. scrive: **niente libro, niente quaderno, niente telefono; chi li usa viene ritirato con 2/10**. Quindi questo file è materiale da **memorizzare**, non da consultare.
+> - **[Parte 0](#parte-0--i-5-minuti-prima-di-entrare)** = i **5 minuti prima di entrare**. I criteri di progetto e le formule chiave, in forma di ricette. Se leggi una cosa sola, leggi questa.
+> - **[Parte A](#parte-a--tabelle-comparative-lookup-5-secondi)** = tabelle comparative (§A1-§A7) — per lo studio.
+> - **[Parte B](#parte-b--formule-per-macroarea)** = formulario per macroarea (§1-§13) — per lo studio.
 
-> **Lookup 5s** → §A1 transistor · §A2 amplif · §A3 risonante · §A3b diodi · §A4 filtri · §A5 AC/DC · §A6 alimentatore · §A7 visione 30s
+---
+
+# Parte 0 — I 5 minuti prima di entrare
+
+> [!important] Perché i **criteri di progetto** e non le formule
+> Le verifiche vere di Carli ([[05 - Verifiche FUSI (Carli)]], [[06 - Soluzioni complete verifiche FUSI]]) sono in maggioranza esercizi di **progetto**, non di analisi: 5 su 8 nella verifica JFET/MOSFET, 2 su 3 nella parte MOSFET. Nel progetto le formule non bastano — servono le **scelte** che il testo non dà e che devi imporre tu ($V_E = V_{CC}/10$, $R_G$ si sceglie, $I = 10I_B$, $V_{DS}$ si fissa). Sono quelle qui sotto.
+>
+> **Scope della LETTERA per lo scritto**: AC · filtri passivi del 1° ordine · BJT · JFET a canale N · MOSFET a canale N ad arricchimento → ricette **R1-R7**.
+> Diodi, Zener e alimentatori sono **orale (Carli) e pratica (Protti)** → ricette **R8-R9**.
+
+## 0.0 Se hai davvero solo 5 minuti, leggi **solo questo**
+
+```
+LE SCELTE DI PROGETTO (quelle che il testo non ti dà e che devi imporre tu)
+  R_G          si SCEGLIE, 1÷10 MΩ  — non si calcola mai (I_G = 0)
+  V_E          = V_CC/10                                        → R_E = V_E/I_C0
+  V_RC = V_CE  = 9·V_CC/20                                      → R_C = V_RC/I_C0
+  I partitore  = 10·I_B , con h_FE,MIN                          → R_2=V_B0/I, R_1=(V_CC−V_B0)/I
+  V_DS         si SCEGLIE entro V_DS ≥ V_GS − V_t  (tipico V_DD/2)
+  overdrive    I_B = (2÷5)·I_B,min   + DIODO DI RICIRCOLO se il carico è induttivo
+  Zener        dimensiona su I_ZT ≈ 5 mA, e verifica i DUE casi peggiori OPPOSTI
+               (R: V_in,min + carico max) · (potenza: V_in,max + carico staccato)
+  alimentatore l'ordine è DROPOUT → trafo → C → potenze. Mai partire dal trafo.
+
+LE TRE COSE CHE FANNO PERDERE PIÙ PUNTI
+  1. mescolare maglia d'ingresso e maglia d'uscita in un'unica equazione
+  2. dimenticare V_S / V_E : V_DD = V_RD + V_DS + V_S  ·  V_G = V_GS + V_S   (TRE termini)
+  3. non chiudere con la verifica dell'ipotesi (saturo? zona attiva? V_DS > V_GS−V_t?)
+
+E COMUNQUE: mai un foglio in bianco. La sola relazione di partenza vale punti.
+```
+
+> Il resto della Parte 0 (§0.1-§0.4) è la versione da 15 minuti: le stesse cose con i passaggi completi e il perché.
+
+## 0.1 Le sette trappole che costano il 70% dei punti
+
+| # | Trappola | Come non caderci |
+|---|---|---|
+| 1 | **Maglie d'ingresso e d'uscita mescolate** ($R_B$ con $R_C$) | Prima di scrivere l'equazione chiediti: *questa resistenza è percorsa da $I_B$, $I_C$ o $I_E$?* Le due maglie condividono **solo** il ramo di emettitore/source. |
+| 2 | **$I_G \approx 0$ dimenticato** → $R_G$ calcolata da una legge | Nel JFET/MOSFET il gate non assorbe corrente. **$R_G$ si sceglie (1÷10 MΩ), non si calcola.** |
+| 3 | **$V_S$ / $V_E$ dimenticata** nella maglia d'uscita o nel partitore | Se c'è $R_S$/$R_E$: $V_{DD} = V_{RD} + V_{DS} + V_S$ e $V_G = V_{GS} + V_S$. **Tre** termini, non due. |
+| 4 | **Formule dimensionalmente impossibili** ($\sqrt{I_D/R_D}$, $\arctan(1/\|Z\|)$) | Controlla le unità del risultato: se non sono V/A/Ω come devono, la formula è sbagliata **a prescindere dai numeri**. |
+| 5 | **Valori sostituiti male** (10 al posto di 12, $f$ errata) | Riscrivi i dati in colonna prima di iniziare e spuntali man mano che li usi. |
+| 6 | **Ipotesi non verificata alla fine** (saturo / zona attiva) | Ogni esercizio con un'ipotesi si **chiude** con la verifica. Se non regge, **dillo per iscritto** e rifai con l'altra zona. |
+| 7 | **Esercizio lasciato in bianco** | Sui tre fascicoli 6 esercizi su 21 sono vuoti = **7,50 punti su 30**. Carli dà punti a «relazioni usate corrette» anche coi conti sbagliati: **scrivi sempre almeno la relazione di partenza**. |
+
+## 0.2 Le ricette di progetto
+
+> Formato fisso: **DATI → passi → VERIFICA**. La verifica finale non è facoltativa: è l'unica riga che il prof. cerca per ultima.
+
+### R1 · AC — impedenza, modulo e argomento, funzione di trasferimento
+
+```
+ω = 2πf        X_L = ωL        X_C = 1/(ωC)
+Z̄_L = +jωL     Z̄_C = 1/(jωC) = −j/(ωC)      ← 1/j vale GIÀ −j: niente meno davanti
+serie  Z̄ = Z̄₁ + Z̄₂        parallelo  Z̄ = Z̄₁Z̄₂/(Z̄₁+Z̄₂)
+|Z| = √(Re² + Im²)        φ = arctan(Im/Re)   ← MAI arctan(1/|Z|)
+f.d.t.  Ḡ(s) = Z̄_uscita / (Z̄_serie + Z̄_uscita)     ← è un PARTITORE, adimensionale
+                                                      mai V_i · Z̄_eq
+```
+**VERIFICA** — segno di φ coerente col bipolo: `+` = ohmico-induttivo (I in ritardo), `−` = ohmico-capacitivo (I in anticipo). Correggi $\arctan$ per il quadrante (→ §2).
+
+### R2 · Filtri del primo ordine — taglio, poli, zeri
+
+```
+RC:  f_t = 1/(2πRC)        RL:  f_t = R/(2πL)      ← NON L/R;  τ_RL = L/R
+poli = radici del DENOMINATORE      zeri = radici del NUMERATORE
+riconoscere la topologia:  C a massa = PB · C in serie = PA
+                           L in serie = PB · L a massa = PA
+```
+**VERIFICA** — controllo dimensionale su $\tau$: $[RC] = \Omega\!\cdot\!$F $=$ s, $[L/R] = $ H/Ω $=$ s. Un polo positivo = errore di segno.
+
+### R3 · BJT — progetto polarizzazione a partitore + $R_E$ *(la procedura che Carli chiede)*
+
+```
+DATI  V_CC, I_C0, h_FE,min (dal data sheet: il MINIMO, non il tipico)
+
+1. V_E  = V_CC/10                 →  R_E = V_E / I_C0                (7.8)
+2. V_RC = V_CE = 9·V_CC/20        →  R_C = V_RC / I_C0               (7.9)
+      (cioè: metà di quel che resta dopo V_E)
+3. I_B  = I_C0 / h_FE,min    ·    I = 10·I_B      ← partitore "scarico"
+4. V_B0 = V_BE + V_E = 0,7 + R_E·I_C0
+5. R_2  = V_B0 / I           ·    R_1 = (V_CC − V_B0) / I      (7.10-7.11)
+```
+**VERIFICA** — $V_{CE} > V_{CE,sat} = 0{,}2$ V; la corrente di partitore è davvero $10 I_B$.
+**PERCHÉ** — $V_{RC} = V_{CE}$ massimizza l'escursione simmetrica **e** evita la fuga termica (Mirandola p. 329). $I = 10I_B$ è ciò che rende $V_B$ un riferimento fisso: senza, $R_E$ non stabilizza più nulla.
+
+### R4 · BJT — progetto con sola $R_B$ / $R_C$ dal punto di lavoro
+
+```
+DATI  V_CC, punto di lavoro voluto (I_C0, V_CE0), h_FE
+
+1. I_B0 = I_C0 / h_FE
+2. V_BE = 0,7 V   (Carli su una verifica scrive 0,8 V: usa il valore del TESTO)
+3. R_B  = (V_CC − V_BE) / I_B0                                        (7.5)
+4. R_C  = (V_CC − V_CE0) / I_C0                                       (7.6)
+```
+**VERIFICA** — zona attiva: $V_{CE0} > 0{,}2$ V.
+**PERCHÉ** — schema instabile: tutto il punto di lavoro è appeso a $h_{FE}$, che ha tolleranza larga e deriva con $I_C$ e $T$. Se il testo chiede *stabilità*, la risposta è R3, non R4.
+
+### R5 · BJT — verifica di saturazione e commutazione
+
+```
+VERIFICA SATURAZIONE (3 passi, le maglie NON si mescolano)
+1. maglia d'ingresso:  I_B = (V_CC − V_BE) / R_B          [+ R_E·I_E se c'è]
+2. maglia d'uscita con V_CE = V_CEsat = 0,2 V:
+      I_C,sat = (V_CC − 0,2) / R_C                        [+ R_E se c'è]
+3. saturo  ⟺  I_B > I_C,sat / h_FE                        ← la conclusione, scritta
+
+COMMUTAZIONE / pilotaggio carico
+   I_B,min = I_C / h_FE,min        poi  I_B = k · I_B,min   con k = 2÷5 (overdrive)
+   CARICO INDUTTIVO (relè, bobina) → DIODO DI RICIRCOLO in antiparallelo, obbligatorio
+   by-pass di emettitore:  X_CE ≤ R_E/10  →  C_E ≥ 10 / (2π·f_min·R_E)
+```
+**VERIFICA** — scrivi la disuguaglianza finale per esteso: senza quella riga l'esercizio non è chiuso. Il diodo di ricircolo va **disegnato**: senza, il progetto è incompleto anche con tutti i conti giusti.
+
+### R6 · JFET canale N — progetto dell'autopolarizzazione
+
+```
+DATI  V_DD, I_D0, V_DS0, e V_GS0  (oppure V_P e I_DSS)
+      V_P < 0 per il canale N. Se il testo lo dà positivo sta usando |V_P|:
+      scegli il segno che rende R_S POSITIVA.
+
+0. se V_GS0 non è dato, inverti Shockley:  V_GS = V_P·(1 − √(I_D/I_DSS))
+1. maglia d'ingresso:  V_GS0 = −R_S·I_D0    →   R_S = −V_GS0 / I_D0
+2. maglia d'uscita:    V_DD = I_D0(R_S + R_D) + V_DS0
+                       →   R_D = (V_DD − V_DS0 − R_S·I_D0) / I_D0
+3. R_G NON SI CALCOLA: si sceglie, es. R_G = 5 MΩ (campo 1÷10 MΩ)
+
+VARIANTE a PARTITORE DI GATE (R_1-R_2 invece del solo R_G a massa)
+   V_G = V_GS + V_S      con V_S = R_S·I_D     ← TRE termini, non due
+   V_G = V_DD·R_2/(R_1+R_2)   →   R_2 = (V_G/V_DD)·(R_1+R_2) ,  R_1 = (R_1+R_2) − R_2
+   qui V_GS può restare negativa anche con V_G > 0: è V_S che la tira giù
+```
+**VERIFICA** — pinch-off $V_{DS} \ge V_{GS} - V_P$; $V_{GS}$ compresa fra $V_P$ e 0; $R_S > 0$.
+**PERCHÉ** — la giunzione di gate è polarizzata **inversamente**, quindi $I_G \approx 0$ e in $R_G$ non scorre corrente: non esiste equazione da cui ricavarla. Serve solo a dare al gate il riferimento di massa, e si prende grande per non abbassare la $Z_{in}$. **All'esame scrivi il valore *e* la frase che lo giustifica** — il prof. ha barrato con un doppio «NO» chi ha provato a calcolarla.
+
+### R7 · MOSFET canale N ad arricchimento — progetto della polarizzazione
+
+```
+Le DUE STRADE per V_GS, da non scambiare mai:
+   ANALISI  (partitore dato)  →  V_GS = V_DD·R_2/(R_1+R_2) − V_S
+   PROGETTO (I_D dato)        →  V_GS = √(I_D/K) + V_t      ← non √(I_D/R_D)!
+
+DATI  V_DD, I_D, K, V_t, (R_1+R_2)
+
+1. V_GS = √(I_D/K) + V_t
+2. SI SCEGLIE V_DS, rispettando  V_DS ≥ V_GS − V_t   (tipico V_DD/2)
+   — non è un calcolo, è una scelta di progetto: dichiarala e motivala
+3. R_D = (V_DD − V_DS − V_S) / I_D           con V_S = R_S·I_D  (0 se non c'è R_S)
+4. V_R2 = V_GS + V_S
+5. R_2 = (V_R2 / V_DD)·(R_1+R_2)      ·      R_1 = (R_1+R_2) − R_2
+6. R_G / partitore di gate: I_G = 0, I_S = I_D  (non partitori di corrente)
+```
+**VERIFICA** — saturazione $V_{DS} > V_{GS} - V_t$; se non regge sei in **ohmica/triodo** e la parabolica non vale ($I_D = K[2(V_{GS}-V_t)V_{DS} - V_{DS}^2]$).
+**CONTROLLO UNITÀ che salva l'esercizio** — $K$ si dà in **mA/V²**: con $K = 0{,}6$ mA/V² e $V_{GS}-V_t = 11{,}9$ V viene $I_D = 0{,}6\cdot10^{-3}\cdot141{,}6 = 84{,}9$ **mA**, non 84,9 A.
+
+### R8 · Zener — dimensionamento di $R_S$ e le due verifiche di potenza *(orale/pratica)*
+
+```
+LE TRE CORRENTI, in ordine:  I_ZK (ginocchio, ~1 mA) < I_ZT (test, ~5 mA) < I_ZM = P_max/V_Z
+   in PROGETTO ci si dimensiona su I_ZT, non su I_ZK.
+Al nodo:  I_R = I_Z + I_L        V_o = V_Z + I_Z·r_D   (r_D è interna, ≠ R esterna)
+
+DUE CASI PEGGIORI OPPOSTI — è il cuore dell'esercizio
+1. scelta di R_S → V_in,MIN + carico MASSIMO
+      R_S,max = (V_in,min − V_Z) / (I_ZT + I_L,max)      → scegli R_S ≤ R_S,max
+2. potenza sullo Zener → V_in,MAX + carico STACCATO (I_L = 0: tutto va nello Zener)
+      R_S,min = (V_in,max − V_Z) / (I_ZM + I_L,min)
+      P_Z = V_Z · I_Z,max < P_Z,max   → arrotonda alla potenza commerciale SUPERIORE
+3. potenza su R_S:  P_R = (V_in,max − V_Z)² / R_S   → idem, potenza commerciale superiore
+```
+**VERIFICA** — deve valere $R_{S,min} \le R_S \le R_{S,max}$. **Se l'intervallo è vuoto** (caso reale in [[Esercizi - Alimentatori]] Es. S1: 188 Ω > 41,9 Ω) il progetto a solo Zener è **impossibile**: cambia Zener o passa al regolatore serie a BJT. Dirlo vale punti.
+**Zener in INVERSA** — catodo verso il nodo alto. Disegnarlo in diretta è errore da zero.
+
+### R9 · Alimentatore completo — l'ordine dei vincoli *(orale/pratica)*
+
+```
+IL VINCOLO CHE COMANDA È IL DROPOUT, non il trasformatore. Ordine obbligato:
+
+1. DROPOUT   78xx: V_D = 2,5 V  →  V_in ≥ V_out + 2,5 V
+             e va verificato NEL MINIMO DEL RIPPLE, non in media
+2. TRAFO     V_in,p = V_2·√2 − 2·0,7  (ponte)   oppure  − 0,7 (semionda)
+             scegli V_2 lasciando margine per l'ondulazione
+3. FILTRO C  quale formula? guarda COSA DÀ IL TESTO:
+               volt di ondulazione (V_r,pp)  →  C = I_L / (f_r · V_r,pp)
+               percentuale ("ripple 5%")     →  è r, rapporto fra EFFICACI:
+                                                r = 1/(2√3 · f_r · R_L · C)
+             scambiarle sbaglia C di un fattore ~3,5
+             f_r = 100 Hz dopo il ponte, 50 Hz dopo la semionda  ← conta i diodi
+             arrotonda C al valore commerciale SUPERIORE (909 µF → 1000 µF)
+4. POTENZE   P_BJT = (V_in − V_out)·I_L   → serve dissipatore sopra ~1 W
+             regolatore serie a BJT:  V_o = V_Z − 0,7  ·  V_in ≥ V_o + 1 V
+```
+**VERIFICA** — $V_{in}$ nel punto più basso del ripple è ancora $\ge V_{out} + 2{,}5$ V.
+**Ponte vs semionda** — il ponte usa **metà** avvolgimento secondario a parità di $V_o$: si preferisce sempre, il rame costa più di due diodi.
+
+## 0.3 I numeri che si scelgono (non si calcolano)
+
+| Grandezza | Valore da imporre | Perché |
+|---|---|---|
+| $R_G$ (JFET/MOSFET) | **1÷10 MΩ**, es. 5 MΩ | $I_G \approx 0$: nessuna equazione la vincola. Grande per non abbassare $Z_{in}$ |
+| $V_E$ (BJT partitore) | $V_{CC}/10$ | caduta piccola ma sufficiente alla retroazione |
+| $V_{RC} = V_{CE}$ (BJT) | $9V_{CC}/20$ | escursione simmetrica + niente fuga termica |
+| $I$ nel partitore di base | $10\,I_B$, con $h_{FE,\min}$ | rende $V_B$ un riferimento fisso |
+| Overdrive in commutazione | $k = 2\div5$ | garantisce saturazione col transistor peggiore |
+| $V_{DS}$ (progetto MOS/JFET) | libera entro $V_{DS} \ge V_{GS}-V_t$; tipico $V_{DD}/2$ | massima escursione simmetrica |
+| $C_E$ di by-pass | $X_{CE} \le R_E/10$ | "molto minore" = rapporto almeno 10 |
+| $I_Z$ di progetto | $I_{ZT} \approx 5$ mA | sopra il ginocchio in ogni condizione |
+| $V_{r,pp}$ ammesso | ≈ **5%** di $V_{DC}$ | regola pratica |
+| Dropout 78xx/79xx | **2,5 V** | TABELLA 1 Mirandola |
+| $C_{in}$ / $C_{out}$ regolatore | 0,33 µF / 0,1 µF | stabilità |
+| Arrotondamenti | $C$ e potenze → commerciale **superiore**; una $R_{max}$ → commerciale **inferiore** | si arrotonda sempre dalla parte sicura |
+
+**Costanti**: $V_\gamma$(Si) $= 0{,}7$ V · $V_\gamma$(Ge/Schottky) $= 0{,}2\div0{,}3$ V · $V_{BE} = 0{,}7$ V *(Carli su una verifica impone 0,8 V: usa il valore del testo)* · $V_{CE,sat} = 0{,}2$ V · $V_T = 26$ mV · $V_P < 0$ (JFET n) · $V_{th} > 0$ (MOSFET n arricchimento) · $\beta = 100\div300$.
+
+## 0.4 Le cinque regole di chiusura
+
+1. **Dati in colonna** prima di iniziare, e spuntali man mano che li usi.
+2. **Una maglia per volta**: ingresso e uscita non si mescolano mai in un'unica equazione.
+3. **Controllo dimensionale prima del numero**: se le unità non tornano, la formula è sbagliata comunque.
+4. **Ogni ipotesi si chiude con la sua verifica**. Se non regge, scrivilo e rifai con l'altra zona.
+5. **Mai un esercizio in bianco**: la relazione di partenza, anche senza conti, vale punti. Carli scrive *«perché non ha continuato lo svolgimento?»* — e toglie punti a un risultato giusto ottenuto da una relazione sbagliata, quindi **fai vedere i passaggi**.
 
 ---
 
@@ -218,6 +442,8 @@ A risonanza: $Z$ = max, $V = $ max, $I_L = I_C = Q \cdot I_{\text{totale}}$.
 
 ## 6. BJT — struttura, regioni, polarizzazione
 
+> **Progetto** (dato il punto di lavoro, dimensiona le resistenze) → **§0.2 R3** (partitore) e **R4** (sola $R_B$). Verifica di saturazione → **R5**.
+
 ### 6.1 Tre regioni
 
 | Regione | B-E | B-C | $V_{CE}$ | $I_C$ |
@@ -251,6 +477,8 @@ Verifica: serve $I_B > I_{B,\text{sat}} = I_C/\beta$.
 > Se la verifica fallisce il MOSFET è in **zona ohmica (triodo)**, che è l'**opposto** della saturazione,
 > e la parabolica non vale più: vedi l'Es. 4 di [[Esercizi - BJT]], risolto in triodo.
 
+> **Progetto** (dato $I_D$, dimensiona $R_D$, $R_1$, $R_2$) → **§0.2 R7**. Le due strade per $V_{GS}$ non vanno scambiate.
+
 ### 7.1 Equazione parabolica
 
 $$\boxed{I_D = K (V_{GS} - V_{th})^2} \qquad \text{in saturazione}$$
@@ -275,6 +503,8 @@ $$V_{DS} = V_{DD} - I_D (R_D + R_S)$$
 ---
 
 ## 8. JFET n-channel (design in saturazione)
+
+> **Progetto** (dato il punto di lavoro, dimensiona $R_S$, $R_D$, $R_G$) → **§0.2 R6**. $R_G$ si sceglie, non si calcola.
 
 ### 8.1 Equazione parabolica (paradossale: $I_D$ MAX a $V_{GS}=0$)
 
@@ -396,6 +626,8 @@ $$R_{S,\min} = \frac{V_{in,\max} - V_Z}{I_{Z,\max} + I_{L,\min}} \qquad R_{S,\ma
 - **Semionda**: $V_{out,p} = V_{in,p} - V_D$; ripple con $f_r = f_{\text{rete}}$.
 - **Ponte Graetz**: $V_{out,p} = V_{in,p} - 2V_D$; ripple con $f_r = 2 f_{\text{rete}}$.
 
+> **Ordine dei vincoli nel progetto di un alimentatore completo** (dropout → trafo → $C$ → potenze) → **§0.2 R9**.
+
 ### 11.2 Ripple a frequenza $f_r$ e corrente di carico $I_L$
 
 $$V_{r,pp} = \frac{I_L}{f_r \cdot C} \qquad I_L = V_L/R_L \qquad C = \frac{I_L}{f_r V_{r,pp}}$$
@@ -441,6 +673,8 @@ $$P_{BJT} = (V_{in} - V_o) I_L$$
 ---
 
 ## 13. Mnemonico finale (le 5 cose che DEVI ricordare)
+
+> Se hai poco tempo, il punto di ingresso non è questo elenco ma la **Parte 0**: lì ci sono i **criteri di progetto**, che è ciò che Carli chiede davvero.
 
 1. **Filtri**: RC → $f_t = 1/(2\pi RC)$. RL → $f_t = R/(2\pi L)$ (NON $L/R$).
 2. **Fasori**: cartesiano per somma/diff, polare per prod/quot. **Attenzione ai quadranti di $\arctan$**.
