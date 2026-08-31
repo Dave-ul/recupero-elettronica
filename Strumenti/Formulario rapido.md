@@ -28,25 +28,34 @@ nota_unione: "2026-08-27 — «Cheat Sheet A4 visuale» fuso qui come Parte A (�
 
 ## 0.0 Se hai davvero solo 5 minuti, leggi **solo questo**
 
-```
-LE SCELTE DI PROGETTO (quelle che il testo non ti dà e che devi imporre tu)
-  R_G          si SCEGLIE, 1÷10 MΩ  — non si calcola mai (I_G = 0)
-  V_E          = V_CC/10                                        → R_E = V_E/I_C0
-  V_RC = V_CE  = 9·V_CC/20                                      → R_C = V_RC/I_C0
-  I partitore  = 10·I_B , con h_FE,MIN                          → R_2=V_B0/I, R_1=(V_CC−V_B0)/I
-  V_DS         si SCEGLIE entro V_DS ≥ V_GS − V_t  (tipico V_DD/2)
-  overdrive    I_B = (2÷5)·I_B,min   + DIODO DI RICIRCOLO se il carico è induttivo
-  Zener        dimensiona su I_ZT ≈ 5 mA, e verifica i DUE casi peggiori OPPOSTI
-               (R: V_in,min + carico max) · (potenza: V_in,max + carico staccato)
-  alimentatore l'ordine è DROPOUT → trafo → C → potenze. Mai partire dal trafo.
+**Le scelte di progetto** — quelle che il testo non ti dà e che devi imporre tu:
 
-LE TRE COSE CHE FANNO PERDERE PIÙ PUNTI
-  1. mescolare maglia d'ingresso e maglia d'uscita in un'unica equazione
-  2. dimenticare V_S / V_E : V_DD = V_RD + V_DS + V_S  ·  V_G = V_GS + V_S   (TRE termini)
-  3. non chiudere con la verifica dell'ipotesi (saturo? zona attiva? V_DS > V_GS−V_t?)
+$$\begin{aligned}
+R_G &\;\longrightarrow\; \text{si sceglie},\ 1\div 10\ \text{M}\Omega
+    && \text{mai calcolata: } I_G = 0 \\[2pt]
+V_E &= \frac{V_{CC}}{10}
+    && \Rightarrow\ R_E = \frac{V_E}{I_{C0}} \\[2pt]
+V_{RC} = V_{CE} &= \frac{9\,V_{CC}}{20}
+    && \Rightarrow\ R_C = \frac{V_{RC}}{I_{C0}} \\[2pt]
+I_{\text{partitore}} &= 10\,I_B \quad (\text{con } h_{FE,\min})
+    && \Rightarrow\ R_2 = \frac{V_{B0}}{I},\quad R_1 = \frac{V_{CC}-V_{B0}}{I} \\[2pt]
+V_{DS} &\;\longrightarrow\; \text{si sceglie, entro } V_{DS} \ge V_{GS}-V_t
+    && \text{tipico } V_{DD}/2 \\[2pt]
+I_B &= (2 \div 5)\cdot I_{B,\min}
+    && \text{+ diodo di ricircolo se il carico è induttivo} \\[2pt]
+I_Z &\approx I_{ZT} = 5\ \text{mA}
+    && \text{poi i due casi peggiori opposti} \\[2pt]
+\text{alimentatore} &\;\longrightarrow\; \text{dropout} \to \text{trafo} \to C \to \text{potenze}
+    && \text{mai partire dal trafo}
+\end{aligned}$$
 
-E COMUNQUE: mai un foglio in bianco. La sola relazione di partenza vale punti.
-```
+**Le tre cose che fanno perdere più punti:**
+
+1. Mescolare maglia d'ingresso e maglia d'uscita in un'unica equazione.
+2. Dimenticare $V_S$ / $V_E$: $\;V_{DD} = V_{RD} + V_{DS} + V_S\;$ e $\;V_G = V_{GS} + V_S\;$ — **tre** termini.
+3. Non chiudere con la verifica dell'ipotesi (saturo? zona attiva? $V_{DS} > V_{GS}-V_t$?).
+
+E comunque: **mai un foglio in bianco**. La sola relazione di partenza vale punti.
 
 > Il resto della Parte 0 (§0.1-§0.4) è la versione da 15 minuti: le stesse cose con i passaggi completi e il perché.
 
@@ -55,7 +64,7 @@ E COMUNQUE: mai un foglio in bianco. La sola relazione di partenza vale punti.
 | # | Trappola | Come non caderci |
 |---|---|---|
 | 1 | **Maglie d'ingresso e d'uscita mescolate** ($R_B$ con $R_C$) | Prima di scrivere l'equazione chiediti: *questa resistenza è percorsa da $I_B$, $I_C$ o $I_E$?* Le due maglie condividono **solo** il ramo di emettitore/source. |
-| 2 | **$I_G \approx 0$ dimenticato** → $R_G$ calcolata da una legge | Nel JFET/MOSFET il gate non assorbe corrente. **$R_G$ si sceglie (1÷10 MΩ), non si calcola.** |
+| 2 | **$I_G \approx 0$ dimenticato** → $R_G$ calcolata da una legge | Nel JFET/MOSFET il gate non assorbe corrente. **$R_G$ si sceglie ($1\div10$ MΩ), non si calcola.** |
 | 3 | **$V_S$ / $V_E$ dimenticata** nella maglia d'uscita o nel partitore | Se c'è $R_S$/$R_E$: $V_{DD} = V_{RD} + V_{DS} + V_S$ e $V_G = V_{GS} + V_S$. **Tre** termini, non due. |
 | 4 | **Formule dimensionalmente impossibili** ($\sqrt{I_D/R_D}$, $\arctan(1/\|Z\|)$) | Controlla le unità del risultato: se non sono V/A/Ω come devono, la formula è sbagliata **a prescindere dai numeri**. |
 | 5 | **Valori sostituiti male** (10 al posto di 12, $f$ errata) | Riscrivi i dati in colonna prima di iniziare e spuntali man mano che li usi. |
@@ -68,148 +77,194 @@ E COMUNQUE: mai un foglio in bianco. La sola relazione di partenza vale punti.
 
 ### R1 · AC — impedenza, modulo e argomento, funzione di trasferimento
 
-```
-ω = 2πf        X_L = ωL        X_C = 1/(ωC)
-Z̄_L = +jωL     Z̄_C = 1/(jωC) = −j/(ωC)      ← 1/j vale GIÀ −j: niente meno davanti
-serie  Z̄ = Z̄₁ + Z̄₂        parallelo  Z̄ = Z̄₁Z̄₂/(Z̄₁+Z̄₂)
-|Z| = √(Re² + Im²)        φ = arctan(Im/Re)   ← MAI arctan(1/|Z|)
-f.d.t.  Ḡ(s) = Z̄_uscita / (Z̄_serie + Z̄_uscita)     ← è un PARTITORE, adimensionale
-                                                      mai V_i · Z̄_eq
-```
-**VERIFICA** — segno di φ coerente col bipolo: `+` = ohmico-induttivo (I in ritardo), `−` = ohmico-capacitivo (I in anticipo). Correggi $\arctan$ per il quadrante (→ §2).
+$$\begin{aligned}
+\omega &= 2\pi f, \qquad X_L = \omega L, \qquad X_C = \frac{1}{\omega C} \\[2pt]
+\bar{Z}_L &= +j\omega L, \qquad
+\bar{Z}_C = \frac{1}{j\omega C} = -\frac{j}{\omega C} \\[2pt]
+\text{serie:}\;\; \bar{Z} &= \bar{Z}_1 + \bar{Z}_2
+   \qquad\qquad
+\text{parallelo:}\;\; \bar{Z} = \frac{\bar{Z}_1\bar{Z}_2}{\bar{Z}_1+\bar{Z}_2} \\[2pt]
+|Z| &= \sqrt{\text{Re}^2 + \text{Im}^2}, \qquad
+\varphi = \arctan\frac{\text{Im}}{\text{Re}} \\[2pt]
+\bar{G}(s) &= \frac{\bar{Z}_{\text{uscita}}}{\bar{Z}_{\text{serie}} + \bar{Z}_{\text{uscita}}}
+   \qquad \text{(partitore, adimensionale)}
+\end{aligned}$$
+
+Tre trappole in tre righe: $1/j$ vale **già** $-j$, niente meno davanti a $\bar{Z}_C$; l'argomento è $\arctan(\text{Im}/\text{Re})$, **mai** $\arctan(1/|Z|)$; la f.d.t. è un **partitore**, mai $V_i \cdot \bar{Z}_{eq}$.
+
+**VERIFICA** — segno di $\varphi$ coerente col bipolo: $+$ = ohmico-induttivo (I in ritardo), $-$ = ohmico-capacitivo (I in anticipo). Correggi $\arctan$ per il quadrante (→ §2).
 
 ### R2 · Filtri del primo ordine — taglio, poli, zeri
 
-```
-RC:  f_t = 1/(2πRC)        RL:  f_t = R/(2πL)      ← NON L/R;  τ_RL = L/R
-poli = radici del DENOMINATORE      zeri = radici del NUMERATORE
-riconoscere la topologia:  C a massa = PB · C in serie = PA
-                           L in serie = PB · L a massa = PA
-```
+$$f_t^{RC} = \frac{1}{2\pi RC} \qquad\qquad
+  f_t^{RL} = \frac{R}{2\pi L} \quad (\text{non } L/R;\ \ \tau_{RL} = L/R)$$
+
+Poli = radici del **denominatore**; zeri = radici del **numeratore**.
+
+| Reattivo | in serie | verso massa |
+|---|---|---|
+| $C$ | passa-alto | passa-basso |
+| $L$ | passa-basso | passa-alto |
+
 **VERIFICA** — controllo dimensionale su $\tau$: $[RC] = \Omega\!\cdot\!$F $=$ s, $[L/R] = $ H/Ω $=$ s. Un polo positivo = errore di segno.
 
 ### R3 · BJT — progetto polarizzazione a partitore + $R_E$ *(la procedura che Carli chiede)*
 
-```
-DATI  V_CC, I_C0, h_FE,min (dal data sheet: il MINIMO, non il tipico)
+**DATI** — $V_{CC}$, $I_{C0}$, $h_{FE,\min}$ *(dal data sheet il **minimo**, non il tipico)*
 
-1. V_E  = V_CC/10                 →  R_E = V_E / I_C0                (7.8)
-2. V_RC = V_CE = 9·V_CC/20        →  R_C = V_RC / I_C0               (7.9)
-      (cioè: metà di quel che resta dopo V_E)
-3. I_B  = I_C0 / h_FE,min    ·    I = 10·I_B      ← partitore "scarico"
-4. V_B0 = V_BE + V_E = 0,7 + R_E·I_C0
-5. R_2  = V_B0 / I           ·    R_1 = (V_CC − V_B0) / I      (7.10-7.11)
-```
+$$\begin{aligned}
+1.\;\; & V_E = \frac{V_{CC}}{10}
+   && \Rightarrow\;\; R_E = \frac{V_E}{I_{C0}} && \text{(7.8)} \\[2pt]
+2.\;\; & V_{RC} = V_{CE} = \frac{9\,V_{CC}}{20}
+   && \Rightarrow\;\; R_C = \frac{V_{RC}}{I_{C0}} && \text{(7.9)} \\[2pt]
+3.\;\; & I_B = \frac{I_{C0}}{h_{FE,\min}}
+   && \Rightarrow\;\; I = 10\,I_B && \\[2pt]
+4.\;\; & V_{B0} = V_{BE} + V_E = 0{,}7 + R_E\,I_{C0} && && \\[2pt]
+5.\;\; & R_2 = \frac{V_{B0}}{I}
+   && \Rightarrow\;\; R_1 = \frac{V_{CC} - V_{B0}}{I} && \text{(7.10-7.11)}
+\end{aligned}$$
+
+Il passo 2 è «metà di quel che resta dopo $V_E$». Il passo 3 è il criterio del **partitore scarico**.
+
 **VERIFICA** — $V_{CE} > V_{CE,sat} = 0{,}2$ V; la corrente di partitore è davvero $10 I_B$.
 **PERCHÉ** — $V_{RC} = V_{CE}$ massimizza l'escursione simmetrica **e** evita la fuga termica (Mirandola p. 329). $I = 10I_B$ è ciò che rende $V_B$ un riferimento fisso: senza, $R_E$ non stabilizza più nulla.
 
 ### R4 · BJT — progetto con sola $R_B$ / $R_C$ dal punto di lavoro
 
-```
-DATI  V_CC, punto di lavoro voluto (I_C0, V_CE0), h_FE
+**DATI** — $V_{CC}$, il punto di lavoro voluto $(I_{C0},\,V_{CE0})$, $h_{FE}$
 
-1. I_B0 = I_C0 / h_FE
-2. V_BE = 0,7 V   (Carli su una verifica scrive 0,8 V: usa il valore del TESTO)
-3. R_B  = (V_CC − V_BE) / I_B0                                        (7.5)
-4. R_C  = (V_CC − V_CE0) / I_C0                                       (7.6)
-```
+$$\begin{aligned}
+1.\;\; & I_{B0} = \frac{I_{C0}}{h_{FE}} \\[2pt]
+2.\;\; & V_{BE} = 0{,}7\ \text{V}
+   && \text{(Carli su una verifica scrive } 0{,}8\ \text{V: usa il valore del testo)} \\[2pt]
+3.\;\; & R_B = \frac{V_{CC} - V_{BE}}{I_{B0}} && \text{(7.5)} \\[2pt]
+4.\;\; & R_C = \frac{V_{CC} - V_{CE0}}{I_{C0}} && \text{(7.6)}
+\end{aligned}$$
+
 **VERIFICA** — zona attiva: $V_{CE0} > 0{,}2$ V.
 **PERCHÉ** — schema instabile: tutto il punto di lavoro è appeso a $h_{FE}$, che ha tolleranza larga e deriva con $I_C$ e $T$. Se il testo chiede *stabilità*, la risposta è R3, non R4.
 
 ### R5 · BJT — verifica di saturazione e commutazione
 
-```
-VERIFICA SATURAZIONE (3 passi, le maglie NON si mescolano)
-1. maglia d'ingresso:  I_B = (V_CC − V_BE) / R_B          [+ R_E·I_E se c'è]
-2. maglia d'uscita con V_CE = V_CEsat = 0,2 V:
-      I_C,sat = (V_CC − 0,2) / R_C                        [+ R_E se c'è]
-3. saturo  ⟺  I_B > I_C,sat / h_FE                        ← la conclusione, scritta
+**Verifica di saturazione, tre passi** — le maglie **non** si mescolano:
 
-COMMUTAZIONE / pilotaggio carico
-   I_B,min = I_C / h_FE,min        poi  I_B = k · I_B,min   con k = 2÷5 (overdrive)
-   CARICO INDUTTIVO (relè, bobina) → DIODO DI RICIRCOLO in antiparallelo, obbligatorio
-   by-pass di emettitore:  X_CE ≤ R_E/10  →  C_E ≥ 10 / (2π·f_min·R_E)
-```
-**VERIFICA** — scrivi la disuguaglianza finale per esteso: senza quella riga l'esercizio non è chiuso. Il diodo di ricircolo va **disegnato**: senza, il progetto è incompleto anche con tutti i conti giusti.
+$$\begin{aligned}
+1.\;\; \text{maglia d'ingresso:}\;\;
+   & I_B = \frac{V_{CC} - V_{BE}}{R_B}
+   && [\,+\,R_E I_E \text{ se c'è}\,] \\[2pt]
+2.\;\; \text{maglia d'uscita, } V_{CE} = V_{CE,sat} = 0{,}2\ \text{V:}\;\;
+   & I_{C,sat} = \frac{V_{CC} - 0{,}2}{R_C}
+   && [\,+\,R_E \text{ se c'è}\,] \\[2pt]
+3.\;\; \text{conclusione:}\;\;
+   & \text{saturo} \iff I_B > \frac{I_{C,sat}}{h_{FE}} && \text{— scrivila}
+\end{aligned}$$
+
+**Commutazione / pilotaggio di un carico:**
+
+$$I_{B,\min} = \frac{I_C}{h_{FE,\min}}
+  \qquad\Rightarrow\qquad
+  I_B = k\,I_{B,\min},\quad k = 2\div 5 \ \text{(overdrive)}
+  \qquad\qquad
+  X_{CE} \le \frac{R_E}{10} \;\Rightarrow\; C_E \ge \frac{10}{2\pi f_{\min} R_E}$$
+
+**Carico induttivo** (relè, bobina) → **diodo di ricircolo in antiparallelo, obbligatorio e disegnato**: senza, il progetto è incompleto anche con tutti i conti giusti.
+
+**VERIFICA** — scrivi la disuguaglianza finale per esteso: senza quella riga l'esercizio non è chiuso.
 
 ### R6 · JFET canale N — progetto dell'autopolarizzazione
 
-```
-DATI  V_DD, I_D0, V_DS0, e V_GS0  (oppure V_P e I_DSS)
-      V_P < 0 per il canale N. Se il testo lo dà positivo sta usando |V_P|:
-      scegli il segno che rende R_S POSITIVA.
+**DATI** — $V_{DD}$, $I_{D0}$, $V_{DS0}$, e $V_{GS0}$ *(oppure $V_P$ e $I_{DSS}$)*.
+$V_P < 0$ per il canale N: se il testo lo dà positivo sta usando $|V_P|$, e allora **scegli il segno che rende $R_S$ positiva**.
 
-0. se V_GS0 non è dato, inverti Shockley:  V_GS = V_P·(1 − √(I_D/I_DSS))
-1. maglia d'ingresso:  V_GS0 = −R_S·I_D0    →   R_S = −V_GS0 / I_D0
-2. maglia d'uscita:    V_DD = I_D0(R_S + R_D) + V_DS0
-                       →   R_D = (V_DD − V_DS0 − R_S·I_D0) / I_D0
-3. R_G NON SI CALCOLA: si sceglie, es. R_G = 5 MΩ (campo 1÷10 MΩ)
+$$\begin{aligned}
+0.\;\; & \text{se } V_{GS0} \text{ non è dato, inverti Shockley:}
+   && V_{GS} = V_P\left(1 - \sqrt{\frac{I_D}{I_{DSS}}}\right) \\[2pt]
+1.\;\; & \text{maglia d'ingresso: } V_{GS0} = -R_S I_{D0}
+   && \Rightarrow\;\; R_S = -\frac{V_{GS0}}{I_{D0}} \\[2pt]
+2.\;\; & \text{maglia d'uscita: } V_{DD} = I_{D0}(R_S + R_D) + V_{DS0}
+   && \Rightarrow\;\; R_D = \frac{V_{DD} - V_{DS0} - R_S I_{D0}}{I_{D0}} \\[2pt]
+3.\;\; & R_G \text{ non si calcola: si sceglie}
+   && R_G = 5\ \text{M}\Omega \quad (\text{campo } 1\div 10\ \text{M}\Omega)
+\end{aligned}$$
 
-VARIANTE a PARTITORE DI GATE (R_1-R_2 invece del solo R_G a massa)
-   V_G = V_GS + V_S      con V_S = R_S·I_D     ← TRE termini, non due
-   V_G = V_DD·R_2/(R_1+R_2)   →   R_2 = (V_G/V_DD)·(R_1+R_2) ,  R_1 = (R_1+R_2) − R_2
-   qui V_GS può restare negativa anche con V_G > 0: è V_S che la tira giù
-```
+**Variante a partitore di gate** ($R_1$-$R_2$ invece del solo $R_G$ a massa):
+
+$$V_G = V_{GS} + V_S,\quad V_S = R_S I_D
+  \qquad\Rightarrow\qquad
+  R_2 = \frac{V_G}{V_{DD}}\,(R_1+R_2),\quad R_1 = (R_1+R_2) - R_2$$
+
+Tre termini, non due. Qui $V_{GS}$ può restare negativa anche con $V_G > 0$: è $V_S$ che la tira giù.
+
 **VERIFICA** — pinch-off $V_{DS} \ge V_{GS} - V_P$; $V_{GS}$ compresa fra $V_P$ e 0; $R_S > 0$.
 **PERCHÉ** — la giunzione di gate è polarizzata **inversamente**, quindi $I_G \approx 0$ e in $R_G$ non scorre corrente: non esiste equazione da cui ricavarla. Serve solo a dare al gate il riferimento di massa, e si prende grande per non abbassare la $Z_{in}$. **All'esame scrivi il valore *e* la frase che lo giustifica** — il prof. ha barrato con un doppio «NO» chi ha provato a calcolarla.
 
 ### R7 · MOSFET canale N ad arricchimento — progetto della polarizzazione
 
-```
-Le DUE STRADE per V_GS, da non scambiare mai:
-   ANALISI  (partitore dato)  →  V_GS = V_DD·R_2/(R_1+R_2) − V_S
-   PROGETTO (I_D dato)        →  V_GS = √(I_D/K) + V_t      ← non √(I_D/R_D)!
+Le **due strade** per $V_{GS}$, da non scambiare mai:
 
-DATI  V_DD, I_D, K, V_t, (R_1+R_2)
+| Situazione | Da dove viene $V_{GS}$ |
+|---|---|
+| **Analisi** — il partitore è dato | $V_{GS} = V_{DD}\dfrac{R_2}{R_1+R_2} - V_S$ |
+| **Progetto** — $I_D$ è dato | $V_{GS} = \sqrt{\dfrac{I_D}{K}} + V_t$ — **non** $\sqrt{I_D/R_D}$ |
 
-1. V_GS = √(I_D/K) + V_t
-2. SI SCEGLIE V_DS, rispettando  V_DS ≥ V_GS − V_t   (tipico V_DD/2)
-   — non è un calcolo, è una scelta di progetto: dichiarala e motivala
-3. R_D = (V_DD − V_DS − V_S) / I_D           con V_S = R_S·I_D  (0 se non c'è R_S)
-4. V_R2 = V_GS + V_S
-5. R_2 = (V_R2 / V_DD)·(R_1+R_2)      ·      R_1 = (R_1+R_2) − R_2
-6. R_G / partitore di gate: I_G = 0, I_S = I_D  (non partitori di corrente)
-```
-**VERIFICA** — saturazione $V_{DS} > V_{GS} - V_t$; se non regge sei in **ohmica/triodo** e la parabolica non vale ($I_D = K[2(V_{GS}-V_t)V_{DS} - V_{DS}^2]$).
-**CONTROLLO UNITÀ che salva l'esercizio** — $K$ si dà in **mA/V²**: con $K = 0{,}6$ mA/V² e $V_{GS}-V_t = 11{,}9$ V viene $I_D = 0{,}6\cdot10^{-3}\cdot141{,}6 = 84{,}9$ **mA**, non 84,9 A.
+**DATI** — $V_{DD}$, $I_D$, $K$, $V_t$, $(R_1+R_2)$
+
+$$\begin{aligned}
+1.\;\; & V_{GS} = \sqrt{\frac{I_D}{K}} + V_t \\[2pt]
+2.\;\; & \text{si sceglie} \;\; V_{DS} \ge V_{GS} - V_t
+   && \text{(tipico } V_{DD}/2\text{) — dichiarala e motivala} \\[2pt]
+3.\;\; & R_D = \frac{V_{DD} - V_{DS} - V_S}{I_D}
+   && V_S = R_S I_D \;(=0 \text{ se non c'è } R_S) \\[2pt]
+4.\;\; & V_{R2} = V_{GS} + V_S \\[2pt]
+5.\;\; & R_2 = \frac{V_{R2}}{V_{DD}}(R_1+R_2)
+   && \Rightarrow\;\; R_1 = (R_1+R_2) - R_2 \\[2pt]
+6.\;\; & I_G = 0, \quad I_S = I_D
+   && \text{(non partitori di corrente)}
+\end{aligned}$$
+
+**VERIFICA** — saturazione $V_{DS} > V_{GS} - V_t$; se non regge sei in **ohmica/triodo** e la parabolica non vale: $I_D = K\left[2(V_{GS}-V_t)V_{DS} - V_{DS}^2\right]$.
+**CONTROLLO UNITÀ che salva l'esercizio** — $K$ si dà in **mA/V²**: con $K = 0{,}6$ mA/V² e $V_{GS}-V_t = 11{,}9$ V viene $I_D = 0{,}6\cdot10^{-3}\cdot 141{,}6 = 84{,}9$ **mA**, non 84,9 A.
 
 ### R8 · Zener — dimensionamento di $R_S$ e le due verifiche di potenza *(orale/pratica)*
 
-```
-LE TRE CORRENTI, in ordine:  I_ZK (ginocchio, ~1 mA) < I_ZT (test, ~5 mA) < I_ZM = P_max/V_Z
-   in PROGETTO ci si dimensiona su I_ZT, non su I_ZK.
-Al nodo:  I_R = I_Z + I_L        V_o = V_Z + I_Z·r_D   (r_D è interna, ≠ R esterna)
+Le tre correnti, in ordine: $\;I_{ZK}$ (ginocchio, $\approx 1$ mA) $< I_{ZT}$ (test, $\approx 5$ mA) $< I_{ZM} = P_{\max}/V_Z$. **In progetto ci si dimensiona su $I_{ZT}$**, non su $I_{ZK}$.
 
-DUE CASI PEGGIORI OPPOSTI — è il cuore dell'esercizio
-1. scelta di R_S → V_in,MIN + carico MASSIMO
-      R_S,max = (V_in,min − V_Z) / (I_ZT + I_L,max)      → scegli R_S ≤ R_S,max
-2. potenza sullo Zener → V_in,MAX + carico STACCATO (I_L = 0: tutto va nello Zener)
-      R_S,min = (V_in,max − V_Z) / (I_ZM + I_L,min)
-      P_Z = V_Z · I_Z,max < P_Z,max   → arrotonda alla potenza commerciale SUPERIORE
-3. potenza su R_S:  P_R = (V_in,max − V_Z)² / R_S   → idem, potenza commerciale superiore
-```
-**VERIFICA** — deve valere $R_{S,min} \le R_S \le R_{S,max}$. **Se l'intervallo è vuoto** (caso reale in [[Esercizi - Alimentatori]] Es. S1: 188 Ω > 41,9 Ω) il progetto a solo Zener è **impossibile**: cambia Zener o passa al regolatore serie a BJT. Dirlo vale punti.
+$$I_R = I_Z + I_L \qquad\qquad V_o = V_Z + I_Z\,r_D \quad (r_D \text{ è interna}, \ne R \text{ esterna})$$
+
+**Due casi peggiori opposti** — è il cuore dell'esercizio:
+
+$$\begin{aligned}
+1.\;\; \text{scelta di } R_S: \;\; & V_{in,\min} + \text{carico massimo}
+   && R_{S,\max} = \frac{V_{in,\min} - V_Z}{I_{ZT} + I_{L,\max}}
+   && \Rightarrow\; R_S \le R_{S,\max} \\[2pt]
+2.\;\; \text{potenza Zener:} \;\; & V_{in,\max} + \text{carico staccato } (I_L = 0)
+   && R_{S,\min} = \frac{V_{in,\max} - V_Z}{I_{ZM} + I_{L,\min}}
+   && P_Z = V_Z I_{Z,\max} < P_{Z,\max} \\[2pt]
+3.\;\; \text{potenza su } R_S: \;\; &
+   && P_R = \frac{(V_{in,\max} - V_Z)^2}{R_S}
+   &&
+\end{aligned}$$
+
+Entrambe le potenze si arrotondano alla **potenza commerciale superiore**.
+
+**VERIFICA** — deve valere $R_{S,\min} \le R_S \le R_{S,\max}$. **Se l'intervallo è vuoto** (caso reale in [[Esercizi - Alimentatori]] Es. S1: 188 Ω > 41,9 Ω) il progetto a solo Zener è **impossibile**: cambia Zener o passa al regolatore serie a BJT. Dirlo vale punti.
 **Zener in INVERSA** — catodo verso il nodo alto. Disegnarlo in diretta è errore da zero.
 
 ### R9 · Alimentatore completo — l'ordine dei vincoli *(orale/pratica)*
 
-```
-IL VINCOLO CHE COMANDA È IL DROPOUT, non il trasformatore. Ordine obbligato:
+Il vincolo che comanda è il **dropout**, non il trasformatore. Ordine obbligato:
 
-1. DROPOUT   78xx: V_D = 2,5 V  →  V_in ≥ V_out + 2,5 V
-             e va verificato NEL MINIMO DEL RIPPLE, non in media
-2. TRAFO     V_in,p = V_2·√2 − 2·0,7  (ponte)   oppure  − 0,7 (semionda)
-             scegli V_2 lasciando margine per l'ondulazione
-3. FILTRO C  quale formula? guarda COSA DÀ IL TESTO:
-               volt di ondulazione (V_r,pp)  →  C = I_L / (f_r · V_r,pp)
-               percentuale ("ripple 5%")     →  è r, rapporto fra EFFICACI:
-                                                r = 1/(2√3 · f_r · R_L · C)
-             scambiarle sbaglia C di un fattore ~3,5
-             f_r = 100 Hz dopo il ponte, 50 Hz dopo la semionda  ← conta i diodi
-             arrotonda C al valore commerciale SUPERIORE (909 µF → 1000 µF)
-4. POTENZE   P_BJT = (V_in − V_out)·I_L   → serve dissipatore sopra ~1 W
-             regolatore serie a BJT:  V_o = V_Z − 0,7  ·  V_in ≥ V_o + 1 V
-```
+1. **Dropout** — 78xx: $V_D = 2{,}5$ V $\Rightarrow V_{in} \ge V_{out} + 2{,}5$ V, verificato **nel minimo del ripple**, non in media.
+2. **Trasformatore** — $V_{in,p} = V_2\sqrt{2} - 2\cdot 0{,}7$ (ponte) oppure $-\,0{,}7$ (semionda); scegli $V_2$ lasciando margine per l'ondulazione.
+3. **Filtro $C$** — quale formula? guarda **cosa dà il testo**:
+
+$$V_{r,pp}\ \text{in volt} \;\Rightarrow\; C = \frac{I_L}{f_r\,V_{r,pp}}
+  \qquad\qquad
+  \text{percentuale («ripple 5\%»)} \;\Rightarrow\; r = \frac{1}{2\sqrt{3}\,f_r R_L C}\ \ (\text{efficaci})$$
+
+   Scambiarle sbaglia $C$ di un fattore $\approx 3{,}5$. $f_r = 100$ Hz dopo il ponte, 50 Hz dopo la semionda — **conta i diodi**. Arrotonda $C$ al valore commerciale **superiore** (909 µF → 1000 µF).
+4. **Potenze** — $P_{BJT} = (V_{in} - V_{out})\,I_L$: sopra $\approx 1$ W serve dissipatore. Regolatore serie a BJT: $V_o = V_Z - 0{,}7$ e $V_{in} \ge V_o + 1$ V.
+
 **VERIFICA** — $V_{in}$ nel punto più basso del ripple è ancora $\ge V_{out} + 2{,}5$ V.
 **Ponte vs semionda** — il ponte usa **metà** avvolgimento secondario a parità di $V_o$: si preferisce sempre, il rame costa più di due diodi.
 
@@ -217,7 +272,7 @@ IL VINCOLO CHE COMANDA È IL DROPOUT, non il trasformatore. Ordine obbligato:
 
 | Grandezza | Valore da imporre | Perché |
 |---|---|---|
-| $R_G$ (JFET/MOSFET) | **1÷10 MΩ**, es. 5 MΩ | $I_G \approx 0$: nessuna equazione la vincola. Grande per non abbassare $Z_{in}$ |
+| $R_G$ (JFET/MOSFET) | **$1\div10$ MΩ**, es. 5 MΩ | $I_G \approx 0$: nessuna equazione la vincola. Grande per non abbassare $Z_{in}$ |
 | $V_E$ (BJT partitore) | $V_{CC}/10$ | caduta piccola ma sufficiente alla retroazione |
 | $V_{RC} = V_{CE}$ (BJT) | $9V_{CC}/20$ | escursione simmetrica + niente fuga termica |
 | $I$ nel partitore di base | $10\,I_B$, con $h_{FE,\min}$ | rende $V_B$ un riferimento fisso |
@@ -225,10 +280,10 @@ IL VINCOLO CHE COMANDA È IL DROPOUT, non il trasformatore. Ordine obbligato:
 | $V_{DS}$ (progetto MOS/JFET) | libera entro $V_{DS} \ge V_{GS}-V_t$; tipico $V_{DD}/2$ | massima escursione simmetrica |
 | $C_E$ di by-pass | $X_{CE} \le R_E/10$ | "molto minore" = rapporto almeno 10 |
 | $I_Z$ di progetto | $I_{ZT} \approx 5$ mA | sopra il ginocchio in ogni condizione |
-| $V_{r,pp}$ ammesso | ≈ **5%** di $V_{DC}$ | regola pratica |
+| $V_{r,pp}$ ammesso | $\approx$ **5%** di $V_{DC}$ | regola pratica |
 | Dropout 78xx/79xx | **2,5 V** | TABELLA 1 Mirandola |
 | $C_{in}$ / $C_{out}$ regolatore | 0,33 µF / 0,1 µF | stabilità |
-| Arrotondamenti | $C$ e potenze → commerciale **superiore**; una $R_{max}$ → commerciale **inferiore** | si arrotonda sempre dalla parte sicura |
+| Arrotondamenti | $C$ e potenze → commerciale **superiore**; una $R_{\max}$ → commerciale **inferiore** | si arrotonda sempre dalla parte sicura |
 
 **Costanti**: $V_\gamma$(Si) $= 0{,}7$ V · $V_\gamma$(Ge/Schottky) $= 0{,}2\div0{,}3$ V · $V_{BE} = 0{,}7$ V *(Carli su una verifica impone 0,8 V: usa il valore del testo)* · $V_{CE,sat} = 0{,}2$ V · $V_T = 26$ mV · $V_P < 0$ (JFET n) · $V_{th} > 0$ (MOSFET n arricchimento) · $\beta = 100\div300$.
 
