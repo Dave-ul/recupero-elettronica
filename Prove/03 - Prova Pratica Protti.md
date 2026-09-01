@@ -12,6 +12,11 @@ tipologia: Orale + Pratica (laboratorio)
 > di [[Calendario]] (30 agosto), insieme all'orale.
 
 
+> [!tip] ⏱️ Se mancano meno di due ore
+> Questo file è la preparazione. Per l'**ora fra lo scritto e la pratica** usa
+> [[07 - Ripasso 60 minuti — Orale Carli + Pratica Protti]]: la sequenza operativa e i sei
+> errori, in tredici minuti.
+
 > [!info] Dove serve
 > È la **prova pratica** di laboratorio del docente Giampaolo Protti. Si svolge in laboratorio: ti vengono chiesti **esercizi di misura** sull'oscilloscopio, sul collaudo di circuiti, e domande sul funzionamento di circuiti reali. È la prova dove "capisci se hai capito davvero".
 

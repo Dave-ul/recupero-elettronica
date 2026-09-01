@@ -23,6 +23,7 @@ fonte: "MAJORANA — Lettera di giudizio sospeso (Secondo Periodo), 09/06/2026"
 | # | File | Cos'è |
 |---|---|---|
 | **04** | [[04 - Verifica tipo Carli — Diodi]] | Le **39 domande aperte sui diodi** di due verifiche reali del Prof. Carli alla classe 4E (fogli fotografati, 2026-07-28): trascrizione fedele, mappa 39 domande → 27 argomenti, risposte da compito, checklist dei 15 disegni. Serve soprattutto la **02** (la LETTERA mette i diodi all'orale) |
+| **07** | [[07 - Ripasso 60 minuti — Orale Carli + Pratica Protti]] | Il piano cronometrato dell'**ora di pausa 13:00-14:00** del 1 settembre: 20 minuti di disegni sui diodi a memoria, le 5 domande 🔴, le 3 derivazioni di AC e filtri, la sequenza operativa di Protti. Serve la **02** e la **03**, nello stesso pomeriggio |
 
 > [!tip] Strategia di preparazione
 > Le prove **01** e **02** (Carli) sono **complementari**: ciò che non scrivi al compito lo puoi recuperare all'orale — quindi evita di lasciare completamente buchi in un argomento.
@@ -66,6 +67,7 @@ La lettera del consiglio di classe (09/06/2026) indica gli argomenti da recupera
 | **Batteria di allenamento** | [[Esercizi - Simulazione finale]] | — | 01 (5 esercizi in 75 min — **non** la prova reale, che dura 5 ore) |
 | **Le tre verifiche vere del prof.** | **[[05 - Verifiche FUSI (Carli)]]** | — | **01** — sono i checkpoint del [[Calendario]] |
 | **Ripasso finale (tutto in un file)** | **[[Ripasso finale — FUSI e Diodi]]** | — | **l'ultimo giro**: i 21 esercizi FUSI risolti in forma compatta + le risposte D1-D23 sui diodi |
+| **Ripasso dell'ultima ora** | **[[07 - Ripasso 60 minuti — Orale Carli + Pratica Protti]]** | — | **02, 03** — i 60 minuti fra lo scritto e l'orale, minuto per minuto |
 | **Audit delle note contro le fonti del docente** | [[06 - Audit delle note contro le fonti del docente]] | — | — (trasparenza: cosa delle note regge il confronto con Poggi e Carli) |
 
 ---
@@ -108,6 +110,9 @@ checkpoint sulle [[05 - Verifiche FUSI (Carli)|tre verifiche vere del prof.]].
 È tempo di studio, e va deciso adesso per non doverlo decidere allora. **Due cose sole**:
 le risposte **D1-D23** ([[diodi-risposte]]) e la Parte A (cheat sheet) del [[Formulario rapido#Parte A — Tabelle comparative (lookup 5 secondi)|Formulario rapido]].
 Niente esercizi, niente libro: il pomeriggio è orale, non scritto.
+
+> Il piano **minuto per minuto** di quell'ora è in
+> [[07 - Ripasso 60 minuti — Orale Carli + Pratica Protti]].
 
 ---
 

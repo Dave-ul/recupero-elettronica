@@ -16,6 +16,10 @@ tipologia: Orale
 > finale è il **giorno 12** (31 agosto), 40 minuti a voce.
 
 
+> [!tip] ⏱️ Se mancano meno di due ore
+> Questo file è la preparazione. Per l'**ora fra lo scritto e l'orale** usa
+> [[07 - Ripasso 60 minuti — Orale Carli + Pratica Protti]]: stesso contenuto, cronometrato.
+
 > [!info] Dove serve
 > È la **prova orale** di teoria del docente Carlo Carli. Non ci sono esercizi da risolvere davanti al foglio: ci sono **definizioni, teoremi, dimostrazioni rapide**, domande di ragionamento e analisi di schemi "a voce".
 
