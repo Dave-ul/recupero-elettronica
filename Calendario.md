@@ -632,6 +632,7 @@ prof. i «NON SVOLTO PER NULLA» pesano più degli «errato».
 **13:00 – 14:00 · pausa.** Un'ora, ed è tempo di studio. **Solo due cose**, decise adesso
 per non doverlo decidere allora: le risposte **D1-D23** ([[diodi-risposte]]) e il **cheat sheet** ([[Formulario rapido]], Parte A). Niente
 esercizi, niente libro, niente cose nuove — il pomeriggio è orale, non scritto.
+Il piano **minuto per minuto** di quest'ora: [[07 - Ripasso 60 minuti — Orale Carli + Pratica Protti]].
 
 **14:00 – 17:00 · orale e pratico insieme (Carli e Protti)** — 🧠 [[02 - Prova Orale Carli]] · [[03 - Prova Pratica Protti]]**.** Tre ore in cui si passa dal
 diodo a voce alle misure all'oscilloscopio. Per Carli: diodo, circuiti in alternata, filtri
